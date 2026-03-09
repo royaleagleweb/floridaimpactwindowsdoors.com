@@ -4,27 +4,27 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Contact Florida Impact Windows & Doors | Call, Email, or Visit Us",
   description:
-    "Contact Florida Impact Windows & Doors for impact windows and doors in South Florida. Call (786) 555-1234, email info@soflowindows.com, or visit our Miami showroom. Free estimates available.",
+    "Contact Florida Impact Windows & Doors for impact windows and doors in South Florida. Call (754) 600-4876, email info@floridaimpactwindowsdoors.com, or visit our Miami showroom. Free estimates available.",
 };
 
 const contactMethods = [
   {
     title: "Call Us",
-    detail: "(786) 555-1234",
+    detail: "(754) 600-4876",
     description: "Speak directly with our team. Available Monday through Saturday.",
     icon: (
       <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
     ),
-    href: "tel:+17865551234",
+    href: "tel:+17546004876",
   },
   {
     title: "Email Us",
-    detail: "info@soflowindows.com",
+    detail: "info@floridaimpactwindowsdoors.com",
     description: "Send us a message and we will respond within 24 hours.",
     icon: (
       <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
     ),
-    href: "mailto:info@soflowindows.com",
+    href: "mailto:info@floridaimpactwindowsdoors.com",
   },
   {
     title: "Visit Our Showroom",
@@ -119,7 +119,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2">Phone Number *</label>
-                    <input type="tel" id="phone" name="phone" required className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-palm-500 focus:ring-2 focus:ring-palm-500/20 outline-none transition-all" placeholder="(786) 555-1234" />
+                    <input type="tel" id="phone" name="phone" required className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-palm-500 focus:ring-2 focus:ring-palm-500/20 outline-none transition-all" placeholder="(754) 600-4876" />
                   </div>
                 </div>
                 <div>
@@ -154,11 +154,11 @@ export default function ContactPage() {
                   <p>1234 NW 79th Ave, Suite 200<br />Doral, FL 33126</p>
                   <p>
                     <span className="font-medium text-gray-900">Phone:</span>{" "}
-                    <a href="tel:+17865551234" className="text-palm-600 hover:text-palm-700">(786) 555-1234</a>
+                    <a href="tel:+17546004876" className="text-palm-600 hover:text-palm-700">(754) 600-4876</a>
                   </p>
                   <p>
                     <span className="font-medium text-gray-900">Email:</span>{" "}
-                    <a href="mailto:info@soflowindows.com" className="text-palm-600 hover:text-palm-700">info@soflowindows.com</a>
+                    <a href="mailto:info@floridaimpactwindowsdoors.com" className="text-palm-600 hover:text-palm-700">info@floridaimpactwindowsdoors.com</a>
                   </p>
                 </div>
               </div>

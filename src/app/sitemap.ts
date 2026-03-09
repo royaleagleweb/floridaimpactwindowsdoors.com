@@ -5,7 +5,7 @@ import { faqs } from "@/data/faq";
 
 export const dynamic = "force-static";
 
-const BASE = "https://www.soflowindows.com";
+const BASE = "https://floridaimpactwindowsdoors.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date().toISOString();

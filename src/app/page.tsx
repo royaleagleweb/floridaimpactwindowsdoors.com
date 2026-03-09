@@ -72,7 +72,7 @@ export default function HomePage() {
         <div className="absolute inset-0">
           <Image
             src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1920&q=80"
-            alt="Modern South Florida home with impact windows"
+            alt="Impact windows installed on modern Fort Lauderdale home - hurricane rated impact window installation in Broward County Florida"
             fill
             className="object-cover opacity-20"
             priority
@@ -254,7 +254,7 @@ export default function HomePage() {
             ].map((window) => (
               <Link key={window.name} href={window.href} className="group bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-palm-500/30 transition-all">
                 <div className="relative h-48 overflow-hidden">
-                  <Image src={window.image} alt={window.name} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <Image src={window.image} alt={`${window.name} - impact ${window.name.toLowerCase()} installation Fort Lauderdale Florida`} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
                   <div className="absolute bottom-4 left-4">
                     <span className="bg-palm-500 text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full">{window.name}</span>
@@ -463,7 +463,7 @@ export default function HomePage() {
             <div className="relative h-80 lg:h-[500px] rounded-2xl overflow-hidden">
               <Image
                 src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80"
-                alt="Professional impact window installation by Florida Impact Windows"
+                alt="Florida Impact Windows and Doors professional installation team installing hurricane rated impact windows in Fort Lauderdale home"
                 fill
                 className="object-cover"
               />

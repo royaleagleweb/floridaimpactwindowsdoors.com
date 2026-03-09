@@ -103,8 +103,25 @@ const categoryIcons: Record<string, ReactNode> = {
 };
 
 export default function FAQPage() {
+  const faqPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }}
+      />
       {/* Hero Section */}
       <section className="relative bg-ocean-950 overflow-hidden">
         <div className="absolute inset-0 bg-grid opacity-40" />
@@ -327,10 +344,10 @@ export default function FAQPage() {
                 Speak with an impact window expert today
               </p>
               <a
-                href="tel:+17865551234"
+                href="tel:+17546004876"
                 className="text-palm-600 font-bold text-lg hover:text-palm-700 transition-colors"
               >
-                (786) 555-1234
+                (754) 600-4876
               </a>
             </div>
 
@@ -436,7 +453,7 @@ export default function FAQPage() {
               </svg>
             </Link>
             <a
-              href="tel:+17865551234"
+              href="tel:+17546004876"
               className="inline-flex items-center gap-2 text-white font-semibold text-lg hover:text-palm-300 transition-colors"
             >
               <svg
@@ -452,7 +469,7 @@ export default function FAQPage() {
                   d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                 />
               </svg>
-              Or Call (786) 555-1234
+              Or Call (754) 600-4876
             </a>
           </div>
         </div>

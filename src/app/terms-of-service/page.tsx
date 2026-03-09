@@ -166,8 +166,8 @@ export default function TermsOfServicePage() {
                   <p className="font-bold text-gray-900">Florida Impact Windows & Doors</p>
                   <p>1234 NW 79th Ave, Suite 200</p>
                   <p>Doral, FL 33126</p>
-                  <p className="mt-2">Phone: <a href="tel:+17865551234" className="text-palm-600 font-medium">(786) 555-1234</a></p>
-                  <p>Email: <a href="mailto:info@soflowindows.com" className="text-palm-600 font-medium">info@soflowindows.com</a></p>
+                  <p className="mt-2">Phone: <a href="tel:+17546004876" className="text-palm-600 font-medium">(754) 600-4876</a></p>
+                  <p>Email: <a href="mailto:info@floridaimpactwindowsdoors.com" className="text-palm-600 font-medium">info@floridaimpactwindowsdoors.com</a></p>
                 </div>
               </div>
             </div>

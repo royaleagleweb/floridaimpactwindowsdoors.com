@@ -121,8 +121,8 @@ export default function PrivacyPolicyPage() {
                 </ul>
                 <p className="mt-4">
                   To exercise any of these rights, please contact us at{" "}
-                  <a href="mailto:privacy@soflowindows.com" className="text-palm-600 hover:text-palm-700 font-medium">privacy@soflowindows.com</a> or call us at{" "}
-                  <a href="tel:+17865551234" className="text-palm-600 hover:text-palm-700 font-medium">(786) 555-1234</a>. We will respond to your request within 30 days.
+                  <a href="mailto:privacy@floridaimpactwindowsdoors.com" className="text-palm-600 hover:text-palm-700 font-medium">privacy@floridaimpactwindowsdoors.com</a> or call us at{" "}
+                  <a href="tel:+17546004876" className="text-palm-600 hover:text-palm-700 font-medium">(754) 600-4876</a>. We will respond to your request within 30 days.
                 </p>
               </div>
 
@@ -152,8 +152,8 @@ export default function PrivacyPolicyPage() {
                   <p className="font-bold text-gray-900">Florida Impact Windows & Doors</p>
                   <p>1234 NW 79th Ave, Suite 200</p>
                   <p>Doral, FL 33126</p>
-                  <p className="mt-2">Phone: <a href="tel:+17865551234" className="text-palm-600 font-medium">(786) 555-1234</a></p>
-                  <p>Email: <a href="mailto:privacy@soflowindows.com" className="text-palm-600 font-medium">privacy@soflowindows.com</a></p>
+                  <p className="mt-2">Phone: <a href="tel:+17546004876" className="text-palm-600 font-medium">(754) 600-4876</a></p>
+                  <p>Email: <a href="mailto:privacy@floridaimpactwindowsdoors.com" className="text-palm-600 font-medium">privacy@floridaimpactwindowsdoors.com</a></p>
                 </div>
               </div>
             </div>

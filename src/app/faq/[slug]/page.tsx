@@ -66,8 +66,56 @@ export default async function FAQDetailPage({
     .split("\n\n")
     .filter((p) => p.trim().length > 0);
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: faq.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: faq.answer,
+        },
+      },
+    ],
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://www.floridaimpactwindowsdoors.com/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "FAQ",
+        item: "https://www.floridaimpactwindowsdoors.com/faq/",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: faq.question,
+        item: `https://www.floridaimpactwindowsdoors.com/faq/${faq.slug}/`,
+      },
+    ],
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       {/* Hero / Header */}
       <section className="relative bg-ocean-950 overflow-hidden">
         <div className="absolute inset-0 bg-grid opacity-40" />
@@ -259,10 +307,10 @@ export default async function FAQDetailPage({
                   Get Free Estimate
                 </Link>
                 <a
-                  href="tel:+17865551234"
+                  href="tel:+17546004876"
                   className="block w-full text-center mt-3 text-palm-600 font-semibold text-sm hover:text-palm-700 transition-colors"
                 >
-                  Or Call (786) 555-1234
+                  Or Call (754) 600-4876
                 </a>
               </div>
 
@@ -408,7 +456,7 @@ export default async function FAQDetailPage({
               </svg>
             </Link>
             <a
-              href="tel:+17865551234"
+              href="tel:+17546004876"
               className="inline-flex items-center gap-2 text-white font-semibold text-lg hover:text-palm-300 transition-colors"
             >
               <svg
@@ -424,7 +472,7 @@ export default async function FAQDetailPage({
                   d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                 />
               </svg>
-              Or Call (786) 555-1234
+              Or Call (754) 600-4876
             </a>
           </div>
         </div>

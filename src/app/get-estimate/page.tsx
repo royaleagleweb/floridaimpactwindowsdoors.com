@@ -2,9 +2,10 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Get a Free Estimate | Florida Impact Windows & Doors South Florida",
+  title: "Free Impact Window Estimate Fort Lauderdale | No Obligation Quote",
   description:
-    "Request a free in-home estimate for impact windows and doors from Florida Impact Windows & Doors. No obligation, no pressure. Serving Miami-Dade, Broward & Palm Beach County.",
+    "Get a free in-home estimate for impact windows and doors in Fort Lauderdale, Broward & Palm Beach County. No obligation, no pressure. Response within 2 hours. Call (754) 600-4876.",
+  alternates: { canonical: "/get-estimate/" },
 };
 
 const steps = [
@@ -185,9 +186,9 @@ export default function GetEstimatePage() {
               <div className="bg-gradient-to-br from-palm-50 to-ocean-50 rounded-2xl p-8 border border-palm-100">
                 <h3 className="text-lg font-bold text-gray-900 mb-3 font-display">Prefer to Call?</h3>
                 <p className="text-gray-600 mb-4">Speak directly with our team to schedule your free estimate right now.</p>
-                <a href="tel:+17865551234" className="inline-flex items-center gap-2 text-palm-600 font-bold text-xl hover:text-palm-700 transition-colors">
+                <a href="tel:+17546004876" className="inline-flex items-center gap-2 text-palm-600 font-bold text-xl hover:text-palm-700 transition-colors">
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
-                  (786) 555-1234
+                  (754) 600-4876
                 </a>
               </div>
 

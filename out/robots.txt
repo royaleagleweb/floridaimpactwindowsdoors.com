@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /.git/
+Disallow: /src/
+Disallow: /node_modules/
 
-Sitemap: https://www.soflowindows.com/sitemap.xml
+Sitemap: https://floridaimpactwindowsdoors.com/sitemap.xml
