@@ -214,60 +214,123 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Which Window Is Right For You */}
+      {/* Why Work With Us */}
       <section className="py-20 bg-ocean-950 relative overflow-hidden">
         <div className="absolute inset-0 bg-grid opacity-10" />
         <div className="absolute inset-0 mesh-gradient" />
         <div className="relative z-10 max-w-7xl mx-auto px-4">
           <div className="text-center mb-14">
-            <span className="inline-block text-sm font-semibold text-palm-400 uppercase tracking-wider mb-3">Window Types</span>
+            <span className="inline-block text-sm font-semibold text-palm-400 uppercase tracking-wider mb-3">Why Choose Us</span>
             <h2 className="text-3xl md:text-4xl font-bold font-display text-white">
-              Which Window Is Right For You?
+              Why Work With Us?
             </h2>
+            <p className="text-gray-400 mt-4 max-w-2xl mx-auto">From beachfront condos to luxury estates, we deliver expert impact window and door installations tailored to every property type across South Florida.</p>
           </div>
-          <div className="grid md:grid-cols-2 gap-6">
+          {/* Featured large card */}
+          <div className="mb-6">
+            <div className="group relative bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-palm-500/30 transition-all">
+              <div className="grid md:grid-cols-2">
+                <div className="relative h-64 md:h-auto min-h-[300px] overflow-hidden">
+                  <Image src="/images/property-1.jpg" alt="Luxury South Florida home with impact windows" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent to-ocean-950/50 hidden md:block" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-ocean-950/70 to-transparent md:hidden" />
+                </div>
+                <div className="p-8 md:p-10 flex flex-col justify-center">
+                  <div className="inline-flex items-center gap-2 bg-palm-500/10 text-palm-400 text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-full w-fit mb-4">
+                    <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                    Trusted by 5,000+ Homeowners
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-bold text-white font-display mb-4">Local Experts Who Know South Florida</h3>
+                  <p className="text-gray-400 leading-relaxed mb-6">With over 20 years of experience serving South Florida, we understand the unique challenges our climate presents. From hurricane-force winds to year-round UV exposure, we install products engineered specifically for our region.</p>
+                  <Link href="/get-estimate/" className="inline-flex items-center gap-2 text-palm-400 font-semibold group-hover:gap-3 transition-all">
+                    Get a Free Estimate <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* 4-card grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                name: "Single Hung Window",
-                href: "/services/window-types/single-hung/",
-                desc: "Two sashes with only the bottom moving up and down while the top stays fixed. One of the most common in South Florida homes \u2014 excellent ventilation, strong security, and a traditional look.",
-                image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80",
+                title: "Licensed & Insured",
+                desc: "Fully licensed Florida contractor with comprehensive insurance coverage. Every installation meets or exceeds Florida Building Code.",
+                image: "/images/property-2.jpg",
+                icon: "shield",
               },
               {
-                name: "Sliding Window",
-                href: "/services/window-types/sliding/",
-                desc: "Operates by sliding left or right along a reinforced track system. Offers smooth operation, minimal maintenance, and wide viewing areas. Well-suited for rooms with limited vertical space.",
-                image: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&q=80",
+                title: "Premium Products",
+                desc: "We partner with industry leaders like PGT, CGI, and ES Windows to deliver top-tier impact windows and doors built for Florida.",
+                image: "/images/property-3.jpg",
+                icon: "star",
               },
               {
-                name: "Casement Window",
-                href: "/services/window-types/casement/",
-                desc: "Opens outward like a door, operated by a handle. Provides maximum ventilation, superior air sealing, and excellent energy performance. Selected for unobstructed views and strong wind resistance.",
-                image: "https://images.unsplash.com/photo-1600573472550-8090b5e0745e?w=600&q=80",
+                title: "Expert Installation",
+                desc: "Our certified installation crews deliver precision craftsmanship on every project, from single-family homes to high-rise condos.",
+                image: "/images/property-4.jpg",
+                icon: "gear",
               },
               {
-                name: "Awning Window",
-                href: "/services/window-types/awning/",
-                desc: "Hinged at the top and opens outward from the bottom, forming a protective \u201Cawning\u201D shape. Enjoy ventilation even during light rain. Great for bathrooms, kitchens, and small openings.",
-                image: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600&q=80",
+                title: "Financing Available",
+                desc: "Flexible payment options and financing plans make protecting your home affordable. We also help you maximize insurance savings.",
+                image: "/images/property-5.jpg",
+                icon: "dollar",
               },
-            ].map((window) => (
-              <Link key={window.name} href={window.href} className="group bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-palm-500/30 transition-all">
-                <div className="relative h-48 overflow-hidden">
-                  <Image src={window.image} alt={`${window.name} - impact ${window.name.toLowerCase()} installation Fort Lauderdale Florida`} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
-                  <div className="absolute bottom-4 left-4">
-                    <span className="bg-palm-500 text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full">{window.name}</span>
+            ].map((item) => (
+              <div key={item.title} className="group bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-palm-500/30 transition-all">
+                <div className="relative h-40 overflow-hidden">
+                  <Image src={item.image} alt={item.title} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-ocean-950 via-ocean-950/40 to-transparent" />
+                  <div className="absolute bottom-3 left-4">
+                    <div className="w-9 h-9 rounded-xl bg-palm-500/20 backdrop-blur-sm flex items-center justify-center text-palm-400 border border-palm-500/20">
+                      {item.icon === "shield" && <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>}
+                      {item.icon === "star" && <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" /></svg>}
+                      {item.icon === "gear" && <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>}
+                      {item.icon === "dollar" && <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>}
+                    </div>
                   </div>
                 </div>
-                <div className="p-6">
-                  <p className="text-gray-400 text-sm leading-relaxed">{window.desc}</p>
-                  <span className="inline-flex items-center gap-2 text-palm-400 font-semibold text-sm mt-4 group-hover:gap-3 transition-all">
-                    Learn More <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-                  </span>
+                <div className="p-5">
+                  <h3 className="text-base font-bold text-white font-display mb-2">{item.title}</h3>
+                  <p className="text-gray-400 text-sm leading-relaxed">{item.desc}</p>
                 </div>
-              </Link>
+              </div>
             ))}
+          </div>
+
+          {/* Resources row */}
+          <div className="mt-10 grid md:grid-cols-3 gap-6">
+            <Link href="/services/" className="group flex items-center gap-4 bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-palm-500/30 transition-all">
+              <div className="w-12 h-12 rounded-2xl bg-ocean-500/10 flex items-center justify-center text-ocean-400 shrink-0">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
+              </div>
+              <div>
+                <h4 className="text-white font-bold text-sm">Our Services</h4>
+                <p className="text-gray-500 text-xs mt-0.5">Explore all window & door solutions</p>
+              </div>
+              <svg className="w-5 h-5 text-gray-600 ml-auto group-hover:text-palm-400 group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+            </Link>
+            <Link href="/blog/" className="group flex items-center gap-4 bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-palm-500/30 transition-all">
+              <div className="w-12 h-12 rounded-2xl bg-ocean-500/10 flex items-center justify-center text-ocean-400 shrink-0">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
+              </div>
+              <div>
+                <h4 className="text-white font-bold text-sm">Blog & Resources</h4>
+                <p className="text-gray-500 text-xs mt-0.5">Tips, guides & hurricane prep</p>
+              </div>
+              <svg className="w-5 h-5 text-gray-600 ml-auto group-hover:text-palm-400 group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+            </Link>
+            <Link href="/faq/" className="group flex items-center gap-4 bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-palm-500/30 transition-all">
+              <div className="w-12 h-12 rounded-2xl bg-ocean-500/10 flex items-center justify-center text-ocean-400 shrink-0">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+              </div>
+              <div>
+                <h4 className="text-white font-bold text-sm">FAQs</h4>
+                <p className="text-gray-500 text-xs mt-0.5">Common questions answered</p>
+              </div>
+              <svg className="w-5 h-5 text-gray-600 ml-auto group-hover:text-palm-400 group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+            </Link>
           </div>
         </div>
       </section>
