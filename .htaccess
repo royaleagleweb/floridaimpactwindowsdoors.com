@@ -1,0 +1,6 @@
+RewriteEngine On
+
+# Serve static files from the /out directory
+RewriteCond %{REQUEST_URI} !^/out/
+RewriteCond %{REQUEST_URI} !^/\.git
+RewriteRule ^(.*)$ /out/$1 [L]
