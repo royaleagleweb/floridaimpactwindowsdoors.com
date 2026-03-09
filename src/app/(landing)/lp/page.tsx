@@ -110,10 +110,7 @@ export default function LandingPage() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    window.location.href = "/get-estimate/";
-  };
+  const FORM_ENDPOINT = "https://formsubmit.co/roy@royaleagleweb.com";
 
   return (
     <div className="min-h-screen bg-white">
@@ -179,9 +176,18 @@ export default function LandingPage() {
           HERO SECTION
       ══════════════════════════════════════════════════════ */}
       <section className="relative bg-ocean-950 overflow-hidden">
+        {/* Hero background image */}
+        <Image
+          src="/images/hero-bg.jpg"
+          alt=""
+          fill
+          className="object-cover opacity-25"
+          priority
+          sizes="100vw"
+        />
         {/* Background effects */}
-        <div className="absolute inset-0 mesh-gradient opacity-60" />
-        <div className="absolute inset-0 bg-grid opacity-30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-ocean-950 via-ocean-950/90 to-ocean-950/70" />
+        <div className="absolute inset-0 mesh-gradient opacity-40" />
         <div className="absolute top-20 left-10 w-72 h-72 bg-palm-500/10 rounded-full blur-3xl animate-pulse-glow" />
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-ocean-500/10 rounded-full blur-3xl animate-pulse-glow" />
 
@@ -263,9 +269,13 @@ export default function LandingPage() {
                   </p>
                 </div>
 
-                <form onSubmit={handleSubmit} className="space-y-4">
+                <form action={FORM_ENDPOINT} method="POST" className="space-y-4">
+                  <input type="hidden" name="_subject" value="New Lead from Landing Page" />
+                  <input type="hidden" name="_captcha" value="false" />
+                  <input type="hidden" name="_next" value="https://floridaimpactwindowsdoors.com/get-estimate/" />
                   <input
                     type="text"
+                    name="name"
                     placeholder="Your Name"
                     required
                     value={formData.name}
@@ -274,6 +284,7 @@ export default function LandingPage() {
                   />
                   <input
                     type="tel"
+                    name="phone"
                     placeholder="Phone Number"
                     required
                     value={formData.phone}
@@ -282,22 +293,24 @@ export default function LandingPage() {
                   />
                   <input
                     type="email"
+                    name="email"
                     placeholder="Email Address"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-gray-50 text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-palm-500 focus:border-transparent transition text-sm"
                   />
                   <select
+                    name="service"
                     value={formData.service}
                     onChange={(e) => setFormData({ ...formData, service: e.target.value })}
                     className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-gray-50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-palm-500 focus:border-transparent transition text-sm appearance-none"
                   >
                     <option value="">What Do You Need?</option>
-                    <option value="impact-windows">Impact Windows</option>
-                    <option value="impact-doors">Impact Doors</option>
-                    <option value="hurricane-shutters">Hurricane Shutters</option>
-                    <option value="windows-and-doors">Windows &amp; Doors (Both)</option>
-                    <option value="other">Other / Not Sure</option>
+                    <option value="Impact Windows">Impact Windows</option>
+                    <option value="Impact Doors">Impact Doors</option>
+                    <option value="Hurricane Shutters">Hurricane Shutters</option>
+                    <option value="Windows & Doors (Both)">Windows &amp; Doors (Both)</option>
+                    <option value="Other / Not Sure">Other / Not Sure</option>
                   </select>
                   <button
                     type="submit"
@@ -708,14 +721,16 @@ export default function LandingPage() {
                 </div>
 
                 <form
-                  onSubmit={(e) => {
-                    e.preventDefault();
-                    window.location.href = "/get-estimate/";
-                  }}
+                  action={FORM_ENDPOINT}
+                  method="POST"
                   className="space-y-4"
                 >
+                  <input type="hidden" name="_subject" value="New Lead from Landing Page (Bottom Form)" />
+                  <input type="hidden" name="_captcha" value="false" />
+                  <input type="hidden" name="_next" value="https://floridaimpactwindowsdoors.com/get-estimate/" />
                   <input
                     type="text"
+                    name="name"
                     placeholder="Full Name"
                     required
                     value={bottomFormData.name}
@@ -725,6 +740,7 @@ export default function LandingPage() {
                   <div className="grid grid-cols-2 gap-4">
                     <input
                       type="tel"
+                      name="phone"
                       placeholder="Phone"
                       required
                       value={bottomFormData.phone}
@@ -733,6 +749,7 @@ export default function LandingPage() {
                     />
                     <input
                       type="email"
+                      name="email"
                       placeholder="Email"
                       value={bottomFormData.email}
                       onChange={(e) => setBottomFormData({ ...bottomFormData, email: e.target.value })}
@@ -741,22 +758,24 @@ export default function LandingPage() {
                   </div>
                   <input
                     type="text"
+                    name="address"
                     placeholder="Street Address (for accurate estimate)"
                     value={bottomFormData.address}
                     onChange={(e) => setBottomFormData({ ...bottomFormData, address: e.target.value })}
                     className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-gray-50 text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-palm-500 focus:border-transparent transition text-sm"
                   />
                   <select
+                    name="service"
                     value={bottomFormData.service}
                     onChange={(e) => setBottomFormData({ ...bottomFormData, service: e.target.value })}
                     className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-gray-50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-palm-500 focus:border-transparent transition text-sm appearance-none"
                   >
                     <option value="">What Do You Need?</option>
-                    <option value="impact-windows">Impact Windows</option>
-                    <option value="impact-doors">Impact Doors</option>
-                    <option value="hurricane-shutters">Hurricane Shutters</option>
-                    <option value="windows-and-doors">Windows &amp; Doors (Both)</option>
-                    <option value="other">Other / Not Sure</option>
+                    <option value="Impact Windows">Impact Windows</option>
+                    <option value="Impact Doors">Impact Doors</option>
+                    <option value="Hurricane Shutters">Hurricane Shutters</option>
+                    <option value="Windows & Doors (Both)">Windows &amp; Doors (Both)</option>
+                    <option value="Other / Not Sure">Other / Not Sure</option>
                   </select>
                   <button
                     type="submit"
