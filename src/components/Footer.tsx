@@ -39,6 +39,8 @@ const footerLinks = {
     { name: "Financing", href: "/financing/" },
     { name: "Our Process", href: "/our-process/" },
     { name: "Warranties", href: "/warranties/" },
+    { name: "Hurricane Tips", href: "/hurricane-tips/" },
+    { name: "Contractor Checklist", href: "/contractor-checklist/" },
     { name: "Careers", href: "/careers/" },
     { name: "Contact", href: "/contact/" },
   ],

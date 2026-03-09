@@ -27,6 +27,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/careers/`, changeFrequency: "monthly", priority: 0.5, lastModified: now },
     { url: `${BASE}/privacy-policy/`, changeFrequency: "yearly", priority: 0.3, lastModified: now },
     { url: `${BASE}/terms-of-service/`, changeFrequency: "yearly", priority: 0.3, lastModified: now },
+    { url: `${BASE}/hurricane-tips/`, changeFrequency: "monthly", priority: 0.8, lastModified: now },
+    { url: `${BASE}/contractor-checklist/`, changeFrequency: "monthly", priority: 0.8, lastModified: now },
   ];
 
   /* ── Service pages ──────────────────────────────────── */

@@ -65,8 +65,18 @@ const navigation = [
     ],
   },
   { name: "About", href: "/about/" },
-  { name: "Blog", href: "/blog/" },
-  { name: "FAQ", href: "/faq/" },
+  {
+    name: "Resources",
+    href: "/blog/",
+    children: [
+      { name: "Blog", href: "/blog/" },
+      { name: "FAQ", href: "/faq/" },
+      { name: "Hurricane Tips", href: "/hurricane-tips/" },
+      { name: "Contractor Checklist", href: "/contractor-checklist/" },
+      { name: "Our Process", href: "/our-process/" },
+      { name: "Financing", href: "/financing/" },
+    ],
+  },
 ];
 
 export default function Header() {
