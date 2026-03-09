@@ -539,8 +539,104 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Process */}
+      {/* Project Showcase Gallery */}
       <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-14">
+            <span className="inline-block text-sm font-semibold text-palm-600 uppercase tracking-wider mb-3">Our Work</span>
+            <h2 className="text-3xl md:text-4xl font-bold font-display text-gray-900 mb-4">
+              Impact Windows &amp; Doors We&apos;ve Installed
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">From luxury oceanfront condos to Mediterranean estates, see how impact windows transform South Florida homes.</p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {/* Large featured image */}
+            <div className="col-span-2 row-span-2 relative rounded-2xl overflow-hidden group cursor-pointer">
+              <div className="relative h-full min-h-[400px] md:min-h-[500px]">
+                <Image
+                  src="/images/gallery-1.jpg"
+                  alt="Luxury oceanfront penthouse with floor-to-ceiling impact windows overlooking the Atlantic Ocean in South Florida"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                <div className="absolute bottom-6 left-6 right-6">
+                  <span className="bg-palm-500 text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full">Oceanfront Penthouse</span>
+                  <p className="text-white text-sm mt-2 opacity-0 group-hover:opacity-100 transition-opacity">Floor-to-ceiling impact windows with panoramic ocean views</p>
+                </div>
+              </div>
+            </div>
+            {/* Top right */}
+            <div className="relative rounded-2xl overflow-hidden group cursor-pointer">
+              <div className="relative h-48 md:h-60">
+                <Image
+                  src="/images/gallery-2.jpg"
+                  alt="Luxury Miami high-rise condo with impact sliding glass doors and bay views"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                <div className="absolute bottom-4 left-4">
+                  <span className="bg-white/90 text-gray-900 text-xs font-bold px-3 py-1 rounded-full">Miami High-Rise</span>
+                </div>
+              </div>
+            </div>
+            {/* Bottom right */}
+            <div className="relative rounded-2xl overflow-hidden group cursor-pointer">
+              <div className="relative h-48 md:h-60">
+                <Image
+                  src="/images/gallery-3.jpg"
+                  alt="Mediterranean style South Florida mansion with arched impact windows and palm trees"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                <div className="absolute bottom-4 left-4">
+                  <span className="bg-white/90 text-gray-900 text-xs font-bold px-3 py-1 rounded-full">Mediterranean Estate</span>
+                </div>
+              </div>
+            </div>
+            {/* Bottom row - 3 images */}
+            <div className="relative rounded-2xl overflow-hidden group cursor-pointer">
+              <div className="relative h-48 md:h-60">
+                <Image
+                  src="/images/gallery-4.jpg"
+                  alt="Spanish colonial South Florida home with custom arched impact windows and bougainvillea"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                <div className="absolute bottom-4 left-4">
+                  <span className="bg-white/90 text-gray-900 text-xs font-bold px-3 py-1 rounded-full">Spanish Colonial</span>
+                </div>
+              </div>
+            </div>
+            <div className="col-span-2 relative rounded-2xl overflow-hidden group cursor-pointer">
+              <div className="relative h-48 md:h-60">
+                <Image
+                  src="/images/gallery-5.jpg"
+                  alt="Modern beachfront South Florida home with large impact windows and infinity pool"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                <div className="absolute bottom-4 left-4">
+                  <span className="bg-white/90 text-gray-900 text-xs font-bold px-3 py-1 rounded-full">Modern Beachfront</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="text-center mt-8">
+            <Link href="/gallery/" className="inline-flex items-center gap-2 text-palm-600 font-semibold hover:text-palm-700 transition-colors">
+              View Full Gallery
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Process */}
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-14">
             <span className="inline-block text-sm font-semibold text-palm-600 uppercase tracking-wider mb-3">How It Works</span>
