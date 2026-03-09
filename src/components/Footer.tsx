@@ -67,38 +67,8 @@ const footerLinks = {
 export default function Footer() {
   return (
     <footer className="bg-black text-white">
-      {/* CTA Banner */}
-      <div className="relative overflow-hidden bg-gradient-to-r from-ocean-950 via-ocean-900 to-ocean-950">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-palm-500/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-ocean-500/10 rounded-full blur-3xl" />
-        <div className="relative max-w-7xl mx-auto px-4 py-20 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold font-display mb-4">
-            Ready to Protect Your Home?
-          </h2>
-          <p className="text-lg text-gray-400 mb-8 max-w-2xl mx-auto">
-            Get a free, no-obligation estimate for impact windows and doors. Our experts will visit your home and provide a customized solution.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link
-              href="/get-estimate/"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-palm-500 to-palm-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:from-palm-600 hover:to-palm-700 transition-all shadow-lg shadow-palm-500/25 hover:shadow-palm-500/40"
-            >
-              Get Free Estimate
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-            </Link>
-            <a
-              href="tel:+17546004876"
-              className="inline-flex items-center gap-2 border-2 border-white/20 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/10 hover:border-palm-500/50 transition-all"
-            >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
-              (754) 600-4876
-            </a>
-          </div>
-        </div>
-      </div>
-
       {/* Links */}
-      <div className="border-t border-white/5">
+      <div>
         <div className="max-w-7xl mx-auto px-4 py-16">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
             {/* Brand */}
