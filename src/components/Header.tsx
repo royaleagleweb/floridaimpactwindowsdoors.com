@@ -64,7 +64,6 @@ const navigation = [
       { name: "View All Cities", href: "/areas/" },
     ],
   },
-  { name: "About", href: "/about/" },
   {
     name: "Resources",
     href: "/blog/",

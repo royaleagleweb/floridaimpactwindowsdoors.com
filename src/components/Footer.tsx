@@ -31,7 +31,6 @@ const footerLinks = {
     { name: "Storm Doors", href: "/services/door-types/storm/" },
   ],
   company: [
-    { name: "About Us", href: "/about/" },
     { name: "Reviews", href: "/reviews/" },
     { name: "Gallery", href: "/gallery/" },
     { name: "Blog", href: "/blog/" },

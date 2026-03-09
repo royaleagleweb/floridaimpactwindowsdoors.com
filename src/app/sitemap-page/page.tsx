@@ -12,7 +12,6 @@ const sitemapSections = [
     title: "Main Pages",
     links: [
       { name: "Home", href: "/" },
-      { name: "About Us", href: "/about/" },
       { name: "Contact Us", href: "/contact/" },
       { name: "Get Free Estimate", href: "/get-estimate/" },
       { name: "Reviews & Testimonials", href: "/reviews/" },
