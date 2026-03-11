@@ -1,10 +1,4 @@
-"use client";
-
-import { useState } from "react";
-
 export default function HeroLeadForm() {
-  const [formData, setFormData] = useState({ name: "", phone: "", service: "" });
-
   return (
     <div className="bg-white rounded-3xl p-8 shadow-2xl shadow-black/20 border border-gray-100 max-w-md w-full">
       <div className="text-center mb-6">
@@ -18,44 +12,44 @@ export default function HeroLeadForm() {
         <p className="text-sm text-gray-500 mt-1">Response within 2 hours</p>
       </div>
       <form
-        onSubmit={(e) => {
-          e.preventDefault();
-          window.location.href = "/get-estimate/";
-        }}
+        action="https://formsubmit.co/roy@royaleagleweb.com"
+        method="POST"
         className="space-y-4"
       >
+        <input type="hidden" name="_subject" value="New Lead from Homepage Quick Form" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_next" value="https://floridaimpactwindowsdoors.com/get-estimate/" />
         <div>
           <input
             type="text"
+            name="name"
             placeholder="Your Name"
-            value={formData.name}
-            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+            required
             className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-gray-50 text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-palm-500 focus:border-transparent transition text-sm"
           />
         </div>
         <div>
           <input
             type="tel"
+            name="phone"
             placeholder="Phone Number"
-            value={formData.phone}
-            onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+            required
             className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-gray-50 text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-palm-500 focus:border-transparent transition text-sm"
           />
         </div>
         <div>
           <select
-            value={formData.service}
-            onChange={(e) => setFormData({ ...formData, service: e.target.value })}
+            name="service"
             className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-gray-50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-palm-500 focus:border-transparent transition text-sm appearance-none"
           >
             <option value="">Select a Service</option>
-            <option value="impact-windows">Impact Windows</option>
-            <option value="impact-doors">Impact Doors</option>
-            <option value="hurricane-shutters">Hurricane Shutters</option>
-            <option value="window-replacement">Window Replacement</option>
-            <option value="door-replacement">Door Replacement</option>
-            <option value="wind-mitigation">Wind Mitigation Inspection</option>
-            <option value="other">Other / Not Sure</option>
+            <option value="Impact Windows">Impact Windows</option>
+            <option value="Impact Doors">Impact Doors</option>
+            <option value="Hurricane Shutters">Hurricane Shutters</option>
+            <option value="Window Replacement">Window Replacement</option>
+            <option value="Door Replacement">Door Replacement</option>
+            <option value="Wind Mitigation Inspection">Wind Mitigation Inspection</option>
+            <option value="Other / Not Sure">Other / Not Sure</option>
           </select>
         </div>
         <button

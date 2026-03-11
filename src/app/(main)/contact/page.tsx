@@ -101,7 +101,10 @@ export default function ContactPage() {
               <h2 className="text-3xl font-bold font-display text-gray-900 mb-2">Send Us a Message</h2>
               <p className="text-gray-600 mb-8">Fill out the form below and a member of our team will get back to you within 24 hours.</p>
 
-              <form className="space-y-6">
+              <form action="https://formsubmit.co/roy@royaleagleweb.com" method="POST" className="space-y-6">
+                <input type="hidden" name="_subject" value="New Contact Message from Contact Page" />
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_next" value="https://floridaimpactwindowsdoors.com/contact/" />
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="firstName" className="block text-sm font-semibold text-gray-700 mb-2">First Name *</label>
