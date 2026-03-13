@@ -231,7 +231,7 @@ export default function HomePage() {
             <div className="group relative bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-palm-500/30 transition-all">
               <div className="grid md:grid-cols-2">
                 <div className="relative h-64 md:h-auto min-h-[300px] overflow-hidden">
-                  <Image src="/images/property-1.jpg" alt="Luxury South Florida home with impact windows" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                  <Image src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1200&q=80" alt="Modern oceanfront South Florida home with floor-to-ceiling impact windows and pool" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent to-ocean-950/50 hidden md:block" />
                   <div className="absolute inset-0 bg-gradient-to-t from-ocean-950/70 to-transparent md:hidden" />
                 </div>
@@ -256,25 +256,25 @@ export default function HomePage() {
               {
                 title: "Licensed & Insured",
                 desc: "Fully licensed Florida contractor with comprehensive insurance coverage. Every installation meets or exceeds Florida Building Code.",
-                image: "/images/property-2.jpg",
+                image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80",
                 icon: "shield",
               },
               {
                 title: "Premium Products",
                 desc: "We partner with industry leaders like PGT, CGI, and ES Windows to deliver top-tier impact windows and doors built for Florida.",
-                image: "/images/property-3.jpg",
+                image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80",
                 icon: "star",
               },
               {
                 title: "Expert Installation",
                 desc: "Our certified installation crews deliver precision craftsmanship on every project, from single-family homes to high-rise condos.",
-                image: "/images/property-4.jpg",
+                image: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80",
                 icon: "gear",
               },
               {
                 title: "Financing Available",
                 desc: "Flexible payment options and financing plans make protecting your home affordable. We also help you maximize insurance savings.",
-                image: "/images/property-5.jpg",
+                image: "https://images.unsplash.com/photo-1600573472550-8090b5e0745e?w=800&q=80",
                 icon: "dollar",
               },
             ].map((item) => (
