@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Contact Florida Impact Windows & Doors | Call, Email, or Visit Us",
   description:
-    "Contact Florida Impact Windows & Doors for impact windows and doors in South Florida. Call (754) 600-4876, email info@floridaimpactwindowsdoors.com, or visit our Miami showroom. Free estimates available.",
+    "Contact Florida Impact Windows & Doors for impact windows and doors in South Florida. Call (754) 600-4876, email info@floridaimpactwindowsdoors.com, or visit our Hollywood showroom. Free estimates available.",
 };
 
 const contactMethods = [
@@ -28,8 +28,8 @@ const contactMethods = [
   },
   {
     title: "Visit Our Showroom",
-    detail: "1234 NW 79th Ave, Suite 200",
-    description: "Doral, FL 33126. See our products in person.",
+    detail: "3000 Stirling Rd",
+    description: "Hollywood, FL 33021. See our products in person.",
     icon: (
       <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
     ),
@@ -64,7 +64,7 @@ export default function ContactPage() {
               Contact <span className="gradient-text">Florida Impact Windows & Doors</span>
             </h1>
             <p className="text-lg text-gray-300 max-w-2xl leading-relaxed">
-              Have questions about impact windows or doors? Ready to schedule your free estimate? We are here to help. Reach out by phone, email, or visit our showroom in Doral.
+              Have questions about impact windows or doors? Ready to schedule your free estimate? We are here to help. Reach out by phone, email, or visit our showroom in Hollywood.
             </p>
           </div>
         </div>
@@ -154,7 +154,7 @@ export default function ContactPage() {
                 <h3 className="text-lg font-bold text-gray-900 mb-4 font-display">Office & Showroom</h3>
                 <div className="space-y-4 text-gray-600">
                   <p className="font-medium">Florida Impact Windows & Doors</p>
-                  <p>1234 NW 79th Ave, Suite 200<br />Doral, FL 33126</p>
+                  <p>3000 Stirling Rd<br />Hollywood, FL 33021</p>
                   <p>
                     <span className="font-medium text-gray-900">Phone:</span>{" "}
                     <a href="tel:+17546004876" className="text-palm-600 hover:text-palm-700">(754) 600-4876</a>
@@ -214,7 +214,7 @@ export default function ContactPage() {
             <div className="text-center">
               <svg className="w-16 h-16 text-gray-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
               <p className="text-gray-500 font-medium">Google Maps Embed</p>
-              <p className="text-sm text-gray-400">1234 NW 79th Ave, Suite 200, Doral, FL 33126</p>
+              <p className="text-sm text-gray-400">3000 Stirling Rd, Hollywood, FL 33021</p>
             </div>
           </div>
         </div>

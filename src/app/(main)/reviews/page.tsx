@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 const reviews = [
   {
-    name: "Maria Rodriguez",
+    name: "Verified Customer",
     location: "Coral Gables, FL",
     date: "November 2024",
     rating: 5,
@@ -17,7 +17,7 @@ const reviews = [
     text: "Florida Impact Windows & Doors transformed our 1960s home with beautiful PGT WinGuard impact windows. From the first estimate to the final walk-through, every interaction was professional and transparent. The installation team arrived on time every day, protected our furniture and floors, and cleaned up completely when they were done. Our energy bills dropped noticeably within the first month, and the noise reduction is remarkable. We used to hear every car passing on the street and now the house is wonderfully quiet. Could not be happier with our decision.",
   },
   {
-    name: "James Thompson",
+    name: "Verified Customer",
     location: "Fort Lauderdale, FL",
     date: "October 2024",
     rating: 5,
@@ -25,7 +25,7 @@ const reviews = [
     text: "After Hurricane Irma showed us the vulnerability of our old jalousie windows, we knew it was time to upgrade. We got quotes from five different companies and Florida Impact Windows & Doors stood out for their honesty and product knowledge. David walked us through every option without pressure and helped us choose CGI windows that fit our budget. The installation crew was outstanding and Miguel personally inspected everything. Our home feels completely different now. Secure, quiet, and cool even on the hottest days.",
   },
   {
-    name: "Patricia Chen",
+    name: "Verified Customer",
     location: "Boca Raton, FL",
     date: "September 2024",
     rating: 5,
@@ -33,7 +33,7 @@ const reviews = [
     text: "We compared five different companies and Florida Impact Windows & Doors offered the best combination of quality products and competitive pricing. We chose PGT EnergyVue vinyl impact windows for our whole home and the results exceeded our expectations. The vinyl frames look sharp, the Low-E glass keeps our house cooler than ever, and we have already seen a significant reduction in our FPL bill. The permit process was handled entirely by Florida Impact and we did not have to deal with a single piece of paperwork. Highly recommend.",
   },
   {
-    name: "Robert Williams",
+    name: "Verified Customer",
     location: "Miami Beach, FL",
     date: "August 2024",
     rating: 5,
@@ -41,7 +41,7 @@ const reviews = [
     text: "Living directly on the beach, we needed the strongest protection available for our condo. Florida Impact Windows & Doors recommended CGI Sentinel windows which are designed for high-rise coastal applications. The coordination with our condo association was handled smoothly and the installation was completed within the scheduled timeframe. The difference in noise reduction alone was worth the investment. We no longer hear the wind howling during storms and the salt spray stays outside where it belongs.",
   },
   {
-    name: "Diana Flores",
+    name: "Verified Customer",
     location: "Weston, FL",
     date: "July 2024",
     rating: 5,
@@ -49,7 +49,7 @@ const reviews = [
     text: "As first-time homebuyers on a tight budget, we were worried we could not afford impact windows for our whole house. Florida Impact Windows & Doors introduced us to ES Windows products that gave us genuine hurricane protection at a price we could manage. They also helped us get approved for 0% financing which made the monthly payments very comfortable. The installation team was courteous, efficient, and thorough. We feel so much safer knowing our home is protected and we did not have to break the bank to get there.",
   },
   {
-    name: "Michael Petrov",
+    name: "Verified Customer",
     location: "Aventura, FL",
     date: "June 2024",
     rating: 5,
@@ -57,7 +57,7 @@ const reviews = [
     text: "We worked with an architect to design a modern home with floor-to-ceiling glass and we needed impact products that could handle the large openings. Florida Impact Windows & Doors brought Custom Window Systems to the table and their multi-slide door system was exactly what we needed. The installation was complex but the Florida Impact crew handled it expertly. The finished product is stunning. We have a twelve-foot-wide opening that slides completely open to our pool deck. Modern design with Category 5 protection. Incredible.",
   },
   {
-    name: "Angela Morrison",
+    name: "Verified Customer",
     location: "Coconut Grove, FL",
     date: "May 2024",
     rating: 5,
@@ -65,7 +65,7 @@ const reviews = [
     text: "Our 1935 Coconut Grove home needed impact windows that would pass the historic preservation board requirements. Florida Impact Windows & Doors worked patiently with us and the board to specify PGT WinGuard windows with profiles that matched the original window proportions. The result is beautiful. You cannot tell the windows are new unless you look closely, but they provide full hurricane protection and incredible energy efficiency. The craftsmanship of the installation was impeccable.",
   },
   {
-    name: "Carlos and Elena Diaz",
+    name: "Verified Customer",
     location: "Doral, FL",
     date: "April 2024",
     rating: 5,
@@ -73,7 +73,7 @@ const reviews = [
     text: "We have referred Florida Impact Windows & Doors to three of our neighbors already and all of them have been just as satisfied as we are. Carlos the owner personally came to our first consultation and you could tell he genuinely cares about every project. The PGT WinGuard windows they installed are top quality, the installation was clean and fast, and the price was thousands less than the next closest quote. Our insurance company gave us a 35% discount on our hurricane premium as soon as we sent them the completion paperwork.",
   },
   {
-    name: "Thomas Wright",
+    name: "Verified Customer",
     location: "Palm Beach Gardens, FL",
     date: "March 2024",
     rating: 5,
@@ -81,7 +81,7 @@ const reviews = [
     text: "What impressed me most about Florida Impact Windows & Doors was their follow-through. They said the project would take three days and it took exactly three days. They said the permit would be handled and it was handled without a single call from me. They said the windows would reduce noise and our house went from hearing every landscaper in the neighborhood to absolute peace. CGI Estate windows have a premium look and feel that matches the quality of our home. Outstanding experience from start to finish.",
   },
   {
-    name: "Sarah Kim",
+    name: "Verified Customer",
     location: "Pembroke Pines, FL",
     date: "February 2024",
     rating: 5,
@@ -89,7 +89,7 @@ const reviews = [
     text: "I am a single mom on a budget and Florida Impact Windows & Doors treated me with the same respect and attention they would give to a million-dollar project. David spent over an hour at my house explaining every option and never once pressured me. They recommended ES Windows which fit my budget perfectly and helped me secure financing with payments I could handle. The installers were polite, wore shoe covers in my house, and left everything spotless. I finally feel safe during hurricane season.",
   },
   {
-    name: "Richard and Pamela Stern",
+    name: "Verified Customer",
     location: "Lighthouse Point, FL",
     date: "January 2024",
     rating: 5,
@@ -97,7 +97,7 @@ const reviews = [
     text: "Our waterfront home in Lighthouse Point takes a beating from salt air and we needed windows that could handle the coastal environment without corroding. Florida Impact Windows & Doors recommended CGI Sentinel windows with marine-grade aluminum and the results have been outstanding. Two years in and the finish still looks brand new despite constant salt exposure. The installation team dealt with some tricky framing situations in our older home and handled every challenge professionally. Worth every penny.",
   },
   {
-    name: "Jennifer Alvarez",
+    name: "Verified Customer",
     location: "Hialeah, FL",
     date: "December 2023",
     rating: 5,
@@ -162,8 +162,8 @@ export default function ReviewsPage() {
             </h2>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {reviews.map((review) => (
-              <div key={review.name} className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-all">
+            {reviews.map((review, index) => (
+              <div key={index} className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-all">
                 <div className="flex items-center gap-1 mb-3">
                   {[...Array(review.rating)].map((_, i) => (
                     <svg key={i} className="w-5 h-5 text-sun-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>

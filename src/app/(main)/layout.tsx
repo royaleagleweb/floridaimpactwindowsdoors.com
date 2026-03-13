@@ -100,16 +100,16 @@ function LocalBusinessJsonLd() {
     email: "info@floridaimpactwindowsdoors.com",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Fort Lauderdale",
-      addressLocality: "Fort Lauderdale",
+      streetAddress: "3000 Stirling Rd",
+      addressLocality: "Hollywood",
       addressRegion: "FL",
-      postalCode: "33301",
+      postalCode: "33021",
       addressCountry: "US",
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: 26.1224,
-      longitude: -80.1373,
+      latitude: 26.0112,
+      longitude: -80.1495,
     },
     areaServed: [
       {
