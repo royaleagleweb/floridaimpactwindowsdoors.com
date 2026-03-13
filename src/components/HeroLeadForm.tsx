@@ -1,12 +1,12 @@
 export default function HeroLeadForm() {
   return (
-    <div className="bg-white rounded-3xl p-8 shadow-2xl shadow-black/20 border border-gray-100 max-w-md w-full">
+    <div className="bg-white/5 backdrop-blur-xl rounded-3xl p-8 shadow-2xl shadow-black/40 border border-white/10 max-w-md w-full">
       <div className="text-center mb-6">
-        <div className="inline-flex items-center gap-2 bg-green-50 text-green-700 text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-full mb-3">
-          <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+        <div className="inline-flex items-center gap-2 bg-palm-500/10 text-palm-400 text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-full mb-3">
+          <span className="w-2 h-2 bg-palm-400 rounded-full animate-pulse" />
           Free &mdash; No Obligation
         </div>
-        <h3 className="text-2xl font-bold text-gray-900 font-display">
+        <h3 className="text-2xl font-bold text-white font-display">
           Get Your Free Estimate
         </h3>
         <p className="text-sm text-gray-500 mt-1">Response within 2 hours</p>
@@ -25,7 +25,7 @@ export default function HeroLeadForm() {
             name="name"
             placeholder="Your Name"
             required
-            className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-gray-50 text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-palm-500 focus:border-transparent transition text-sm"
+            className="w-full px-4 py-3.5 rounded-xl border border-white/10 bg-white/5 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-palm-500 focus:border-transparent transition text-sm"
           />
         </div>
         <div>
@@ -34,13 +34,13 @@ export default function HeroLeadForm() {
             name="phone"
             placeholder="Phone Number"
             required
-            className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-gray-50 text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-palm-500 focus:border-transparent transition text-sm"
+            className="w-full px-4 py-3.5 rounded-xl border border-white/10 bg-white/5 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-palm-500 focus:border-transparent transition text-sm"
           />
         </div>
         <div>
           <select
             name="service"
-            className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-gray-50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-palm-500 focus:border-transparent transition text-sm appearance-none"
+            className="w-full px-4 py-3.5 rounded-xl border border-white/10 bg-white/5 text-white focus:outline-none focus:ring-2 focus:ring-palm-500 focus:border-transparent transition text-sm appearance-none"
           >
             <option value="">Select a Service</option>
             <option value="Impact Windows">Impact Windows</option>
@@ -59,17 +59,17 @@ export default function HeroLeadForm() {
           Get My Free Quote
         </button>
       </form>
-      <div className="flex items-center justify-center gap-4 mt-5 text-xs text-gray-400">
+      <div className="flex items-center justify-center gap-4 mt-5 text-xs text-gray-500">
         <span className="flex items-center gap-1">
-          <svg className="w-3.5 h-3.5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
+          <svg className="w-3.5 h-3.5 text-palm-400" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
           No Spam
         </span>
         <span className="flex items-center gap-1">
-          <svg className="w-3.5 h-3.5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
+          <svg className="w-3.5 h-3.5 text-palm-400" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
           No Obligation
         </span>
         <span className="flex items-center gap-1">
-          <svg className="w-3.5 h-3.5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
+          <svg className="w-3.5 h-3.5 text-palm-400" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
           100% Free
         </span>
       </div>
