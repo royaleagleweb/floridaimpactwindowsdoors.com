@@ -478,39 +478,6 @@ export default function LandingPage() {
       </section>
 
       {/* ══════════════════════════════════════════════════════
-          SHOWCASE — GALLERY BAND
-      ══════════════════════════════════════════════════════ */}
-      <section className="bg-gray-50 py-16">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-10">
-            <span className="inline-block text-sm font-semibold text-palm-600 uppercase tracking-wider mb-3">
-              Our Work
-            </span>
-            <h2 className="text-3xl md:text-4xl font-black font-display text-gray-900 mb-2">
-              Installed Across South Florida
-            </h2>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            {[1, 2, 3, 4, 5].map((n) => (
-              <div
-                key={n}
-                className={`relative rounded-2xl overflow-hidden ${n === 1 ? "col-span-2 row-span-2 aspect-[4/3]" : "aspect-square"} group`}
-              >
-                <Image
-                  src={`/images/gallery-${n}.jpg`}
-                  alt={`Impact window installation project ${n}`}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  sizes={n === 1 ? "(max-width: 768px) 100vw, 66vw" : "(max-width: 768px) 50vw, 33vw"}
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ══════════════════════════════════════════════════════
           WHAT YOU GET — PROCESS STRIP
       ══════════════════════════════════════════════════════ */}
       <section className="py-20 bg-white">
