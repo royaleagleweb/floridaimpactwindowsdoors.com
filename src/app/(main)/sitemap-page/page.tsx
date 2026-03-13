@@ -15,7 +15,6 @@ const sitemapSections = [
       { name: "Contact Us", href: "/contact/" },
       { name: "Get Free Estimate", href: "/get-estimate/" },
       { name: "Reviews & Testimonials", href: "/reviews/" },
-      { name: "Project Gallery", href: "/gallery/" },
     ],
   },
   {

@@ -32,7 +32,6 @@ const footerLinks = {
   ],
   company: [
     { name: "Reviews", href: "/reviews/" },
-    { name: "Gallery", href: "/gallery/" },
     { name: "Blog", href: "/blog/" },
     { name: "FAQ", href: "/faq/" },
     { name: "Financing", href: "/financing/" },
