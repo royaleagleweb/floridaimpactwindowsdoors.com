@@ -12,37 +12,37 @@ export const metadata: Metadata = {
 
 const testimonials = [
   {
-    name: "Lilia Berezkina",
+    name: "Verified Customer",
     location: "Google Review",
     text: "If I could give 10 stars, I would! We replaced all the windows and doors in the house and the process was a breeze! From the first visit where Abe, who are the company owners, explained the process, realistic timeline and what to expect.",
     rating: 5,
   },
   {
-    name: "Patty Sabates",
+    name: "Verified Customer",
     location: "Google Review",
     text: "By far this was the best overall experience I have ever had with a contractor. From the initial consult appointment to permitting process to the install, everything went flawless. Thank you to both Abe for an exceptional buying experience.",
     rating: 5,
   },
   {
-    name: "Chris Mcmenamin",
+    name: "Verified Customer",
     location: "Google Review",
     text: "Abe have built and continue to operate an amazing business. Approaching each job with the utmost professionalism, personal attention and communication. From the first estimate to the installation it was almost effortless.",
     rating: 5,
   },
   {
-    name: "Valentin Morgunskiy",
+    name: "Verified Customer",
     location: "Google Review",
     text: "From the moment I first met with Abe, I was intrigued by how they've consistently achieved five-star reviews. Now, having experienced their service first-hand with the installation of 15 windows in my home, I've found the answer.",
     rating: 5,
   },
   {
-    name: "Borys Hankewych",
+    name: "Verified Customer",
     location: "Google Review",
     text: "This is the company you want to do your impact windows and sliding glass doors. I got 5 quotes. Three were crazy high. Florida Impact and the other were way less. The other company had no reviews so I went with Florida Impact due to great reviews.",
     rating: 5,
   },
   {
-    name: "Michael",
+    name: "Verified Customer",
     location: "Google Review",
     text: "I have to share a wonderful experience I had working with Florida Impact Windows. From the onset, Abe (the owners) were both very respectful, informative, and professional explaining the window installation process.",
     rating: 5,
@@ -231,7 +231,7 @@ export default function HomePage() {
             <div className="group relative bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-palm-500/30 transition-all">
               <div className="grid md:grid-cols-2">
                 <div className="relative h-64 md:h-auto min-h-[300px] overflow-hidden">
-                  <Image src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1200&q=80" alt="Modern oceanfront South Florida home with floor-to-ceiling impact windows and pool" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                  <Image src="/images/gallery-1.jpg" alt="Luxury South Florida home with impact windows" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent to-ocean-950/50 hidden md:block" />
                   <div className="absolute inset-0 bg-gradient-to-t from-ocean-950/70 to-transparent md:hidden" />
                 </div>
@@ -256,25 +256,25 @@ export default function HomePage() {
               {
                 title: "Licensed & Insured",
                 desc: "Fully licensed Florida contractor with comprehensive insurance coverage. Every installation meets or exceeds Florida Building Code.",
-                image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80",
+                image: "/images/gallery-2.jpg",
                 icon: "shield",
               },
               {
                 title: "Premium Products",
                 desc: "We partner with industry leaders like PGT, CGI, and ES Windows to deliver top-tier impact windows and doors built for Florida.",
-                image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80",
+                image: "/images/gallery-3.jpg",
                 icon: "star",
               },
               {
                 title: "Expert Installation",
                 desc: "Our certified installation crews deliver precision craftsmanship on every project, from single-family homes to high-rise condos.",
-                image: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80",
+                image: "/images/gallery-4.jpg",
                 icon: "gear",
               },
               {
                 title: "Financing Available",
                 desc: "Flexible payment options and financing plans make protecting your home affordable. We also help you maximize insurance savings.",
-                image: "https://images.unsplash.com/photo-1600573472550-8090b5e0745e?w=800&q=80",
+                image: "/images/gallery-5.jpg",
                 icon: "dollar",
               },
             ].map((item) => (
@@ -580,8 +580,8 @@ export default function HomePage() {
 
           {/* Review Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {testimonials.slice(1, 6).map((t) => (
-              <div key={t.name} className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
+            {testimonials.slice(1, 6).map((t, index) => (
+              <div key={index} className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
                 <div className="flex items-center gap-1 mb-3">
                   {[...Array(t.rating)].map((_, i) => (
                     <svg key={i} className="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>

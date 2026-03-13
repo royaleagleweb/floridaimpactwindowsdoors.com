@@ -89,7 +89,7 @@ export default function Footer() {
                 Premium Impact Windows &amp; Doors At Affordable Prices. Owner-installed, no subcontractors.
               </p>
               <p className="text-xs text-gray-600 mb-4">
-                2895 NE 32 Street, Fort Lauderdale, FL 33306
+                3000 Stirling Rd, Hollywood, FL 33021
               </p>
               <div className="flex items-center gap-4 mb-6">
                 <div className="flex items-center gap-1">
