@@ -102,6 +102,8 @@ export default function GetEstimatePage() {
                 <input type="hidden" name="_subject" value="New Estimate Request from Get Estimate Page" />
                 <input type="hidden" name="_captcha" value="false" />
                 <input type="hidden" name="_next" value="https://floridaimpactwindowsdoors.com/thank-you/" />
+                <input type="hidden" name="_template" value="box" />
+                <input type="hidden" name="_autoresponse" value="Thank you for requesting a free estimate from Florida Impact Windows & Doors! We've received your project details and a specialist will contact you within 24 hours to schedule your in-home consultation. If you need immediate assistance, please call us at (754) 600-4876. We look forward to helping protect your home! — The Florida Impact Windows & Doors Team" />
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="firstName" className="block text-sm font-semibold text-gray-700 mb-2">First Name *</label>

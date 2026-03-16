@@ -105,6 +105,8 @@ export default function ContactPage() {
                 <input type="hidden" name="_subject" value="New Contact Message from Contact Page" />
                 <input type="hidden" name="_captcha" value="false" />
                 <input type="hidden" name="_next" value="https://floridaimpactwindowsdoors.com/thank-you/" />
+                <input type="hidden" name="_template" value="box" />
+                <input type="hidden" name="_autoresponse" value="Thank you for contacting Florida Impact Windows & Doors! We've received your message and will get back to you within 24 hours. If you need immediate assistance, please call us at (754) 600-4876. We appreciate your interest! — The Florida Impact Windows & Doors Team" />
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="firstName" className="block text-sm font-semibold text-gray-700 mb-2">First Name *</label>

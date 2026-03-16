@@ -19,6 +19,8 @@ export default function HeroLeadForm() {
         <input type="hidden" name="_subject" value="New Lead from Homepage Quick Form" />
         <input type="hidden" name="_captcha" value="false" />
         <input type="hidden" name="_next" value="https://floridaimpactwindowsdoors.com/thank-you/" />
+        <input type="hidden" name="_template" value="box" />
+        <input type="hidden" name="_autoresponse" value="Thank you for reaching out to Florida Impact Windows & Doors! We've received your request and a member of our team will contact you within 24 hours to discuss your project. If you need immediate assistance, please call us at (754) 600-4876. We look forward to helping protect your home! — The Florida Impact Windows & Doors Team" />
         <div>
           <input
             type="text"
