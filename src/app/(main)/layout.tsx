@@ -151,10 +151,7 @@ function LocalBusinessJsonLd() {
       bestRating: "5",
       worstRating: "1",
     },
-    sameAs: [
-      "https://www.facebook.com/profile.php?id=61582625818330",
-      "https://www.instagram.com/sofloimpactwindows",
-    ],
+    sameAs: [],
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Impact Window & Door Services",
