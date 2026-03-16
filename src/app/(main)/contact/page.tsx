@@ -104,7 +104,7 @@ export default function ContactPage() {
               <form action="https://formsubmit.co/roy@royaleagleweb.com" method="POST" className="space-y-6">
                 <input type="hidden" name="_subject" value="New Contact Message from Contact Page" />
                 <input type="hidden" name="_captcha" value="false" />
-                <input type="hidden" name="_next" value="https://floridaimpactwindowsdoors.com/contact/" />
+                <input type="hidden" name="_next" value="https://floridaimpactwindowsdoors.com/thank-you/" />
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="firstName" className="block text-sm font-semibold text-gray-700 mb-2">First Name *</label>

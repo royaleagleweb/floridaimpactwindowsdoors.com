@@ -272,7 +272,7 @@ export default function LandingPage() {
                 <form action={FORM_ENDPOINT} method="POST" className="space-y-4">
                   <input type="hidden" name="_subject" value="New Lead from Landing Page" />
                   <input type="hidden" name="_captcha" value="false" />
-                  <input type="hidden" name="_next" value="https://floridaimpactwindowsdoors.com/get-estimate/" />
+                  <input type="hidden" name="_next" value="https://floridaimpactwindowsdoors.com/thank-you/" />
                   <input
                     type="text"
                     name="name"
@@ -694,7 +694,7 @@ export default function LandingPage() {
                 >
                   <input type="hidden" name="_subject" value="New Lead from Landing Page (Bottom Form)" />
                   <input type="hidden" name="_captcha" value="false" />
-                  <input type="hidden" name="_next" value="https://floridaimpactwindowsdoors.com/get-estimate/" />
+                  <input type="hidden" name="_next" value="https://floridaimpactwindowsdoors.com/thank-you/" />
                   <input
                     type="text"
                     name="name"

@@ -18,7 +18,7 @@ export default function HeroLeadForm() {
       >
         <input type="hidden" name="_subject" value="New Lead from Homepage Quick Form" />
         <input type="hidden" name="_captcha" value="false" />
-        <input type="hidden" name="_next" value="https://floridaimpactwindowsdoors.com/get-estimate/" />
+        <input type="hidden" name="_next" value="https://floridaimpactwindowsdoors.com/thank-you/" />
         <div>
           <input
             type="text"

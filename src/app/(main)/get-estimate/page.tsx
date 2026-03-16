@@ -101,7 +101,7 @@ export default function GetEstimatePage() {
               <form action="https://formsubmit.co/roy@royaleagleweb.com" method="POST" className="space-y-6 bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
                 <input type="hidden" name="_subject" value="New Estimate Request from Get Estimate Page" />
                 <input type="hidden" name="_captcha" value="false" />
-                <input type="hidden" name="_next" value="https://floridaimpactwindowsdoors.com/get-estimate/" />
+                <input type="hidden" name="_next" value="https://floridaimpactwindowsdoors.com/thank-you/" />
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="firstName" className="block text-sm font-semibold text-gray-700 mb-2">First Name *</label>
