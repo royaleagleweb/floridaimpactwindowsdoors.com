@@ -142,7 +142,7 @@ export default function HomePage() {
       </section>
 
       {/* Trust Bar */}
-      <section className="bg-white border-b border-gray-100">
+      <section className="bg-ocean-900 border-b border-white/5">
         <div className="max-w-7xl mx-auto px-4 py-6">
           <div className="flex flex-wrap items-center justify-center gap-8 md:gap-14">
             {[
@@ -151,8 +151,8 @@ export default function HomePage() {
               { icon: "\u26A1", text: "HVHZ Certified Experts" },
               { icon: "\uD83D\uDEE1\uFE0F", text: "Licensed & Insured" },
             ].map((item) => (
-              <div key={item.text} className="flex items-center gap-2 text-gray-600">
-                <span className="text-palm-500 text-lg">{item.icon}</span>
+              <div key={item.text} className="flex items-center gap-2 text-gray-400">
+                <span className="text-palm-400 text-lg">{item.icon}</span>
                 <span className="text-sm font-medium">{item.text}</span>
               </div>
             ))}
@@ -161,11 +161,11 @@ export default function HomePage() {
       </section>
 
       {/* Benefits Of Impact Windows & Doors */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-ocean-950">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-14">
-            <span className="inline-block text-sm font-semibold text-palm-600 uppercase tracking-wider mb-3">Why Impact Windows?</span>
-            <h2 className="text-3xl md:text-4xl font-bold font-display text-gray-900">
+            <span className="inline-block text-sm font-semibold text-palm-400 uppercase tracking-wider mb-3">Why Impact Windows?</span>
+            <h2 className="text-3xl md:text-4xl font-bold font-display text-white">
               Benefits Of Impact Windows &amp; Doors
             </h2>
           </div>
@@ -202,12 +202,12 @@ export default function HomePage() {
                 icon: <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>,
               },
             ].map((item) => (
-              <div key={item.title} className="relative bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:border-palm-200 hover:shadow-lg hover:shadow-palm-500/5 transition-all group">
-                <div className="w-14 h-14 rounded-2xl bg-palm-50 flex items-center justify-center text-palm-600 mb-5 group-hover:bg-palm-100 transition-colors">
+              <div key={item.title} className="relative bg-white/5 rounded-2xl p-8 border border-white/10 hover:border-palm-500/30 hover:shadow-lg hover:shadow-palm-500/10 transition-all group">
+                <div className="w-14 h-14 rounded-2xl bg-palm-500/10 flex items-center justify-center text-palm-400 mb-5 group-hover:bg-palm-500/20 transition-colors">
                   {item.icon}
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 font-display mb-3">{item.title}</h3>
-                <p className="text-gray-600 leading-relaxed text-sm">{item.desc}</p>
+                <h3 className="text-lg font-bold text-white font-display mb-3">{item.title}</h3>
+                <p className="text-gray-400 leading-relaxed text-sm">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -336,25 +336,25 @@ export default function HomePage() {
       </section>
 
       {/* Impact vs Regular — Comparison Table */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-ocean-900">
         <div className="max-w-4xl mx-auto px-4">
           <div className="text-center mb-14">
-            <span className="inline-block text-sm font-semibold text-palm-600 uppercase tracking-wider mb-3">See the Difference</span>
-            <h2 className="text-3xl md:text-4xl font-bold font-display text-gray-900">
+            <span className="inline-block text-sm font-semibold text-palm-400 uppercase tracking-wider mb-3">See the Difference</span>
+            <h2 className="text-3xl md:text-4xl font-bold font-display text-white">
               Impact Windows vs. Accordion Shutters
             </h2>
-            <p className="text-gray-600 mt-3 max-w-2xl mx-auto">Unlike shutters, which leave your home feeling like a dark cave, impact windows provide protection without sacrificing light, comfort, or peace of mind.</p>
+            <p className="text-gray-400 mt-3 max-w-2xl mx-auto">Unlike shutters, which leave your home feeling like a dark cave, impact windows provide protection without sacrificing light, comfort, or peace of mind.</p>
           </div>
-          <div className="rounded-2xl overflow-hidden border border-gray-200 bg-white shadow-sm">
+          <div className="rounded-2xl overflow-hidden border border-white/10 bg-white/5 backdrop-blur-sm">
             <table className="w-full text-left">
               <thead>
-                <tr className="bg-gray-50">
-                  <th className="px-6 py-4 text-sm font-semibold text-gray-500 uppercase tracking-wider">Feature</th>
-                  <th className="px-6 py-4 text-sm font-semibold text-gray-400 uppercase tracking-wider text-center">Shutters</th>
-                  <th className="px-6 py-4 text-sm font-semibold text-palm-600 uppercase tracking-wider text-center">Impact Windows</th>
+                <tr className="bg-white/5">
+                  <th className="px-6 py-4 text-sm font-semibold text-gray-400 uppercase tracking-wider">Feature</th>
+                  <th className="px-6 py-4 text-sm font-semibold text-gray-500 uppercase tracking-wider text-center">Shutters</th>
+                  <th className="px-6 py-4 text-sm font-semibold text-palm-400 uppercase tracking-wider text-center">Impact Windows</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-gray-100">
+              <tbody className="divide-y divide-white/5">
                 {[
                   { feature: "24/7 Hurricane Protection", shutters: false, impact: true },
                   { feature: "No Setup Required Before Storm", shutters: false, impact: true },
@@ -366,8 +366,8 @@ export default function HomePage() {
                   { feature: "Increases Home Value / Curb Appeal", shutters: false, impact: true },
                   { feature: "UV Protection (99%)", shutters: false, impact: true },
                 ].map((row) => (
-                  <tr key={row.feature} className="hover:bg-gray-50/50 transition-colors">
-                    <td className="px-6 py-4 text-sm text-gray-700 font-medium">{row.feature}</td>
+                  <tr key={row.feature} className="hover:bg-white/5 transition-colors">
+                    <td className="px-6 py-4 text-sm text-gray-300 font-medium">{row.feature}</td>
                     <td className="px-6 py-4 text-center">
                       {row.shutters === "partial" ? (
                         <span className="text-yellow-500 text-xs font-semibold">Partial</span>
@@ -393,11 +393,11 @@ export default function HomePage() {
       </section>
 
       {/* Impact Windows 101 — Educational FAQ */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-ocean-950">
         <div className="max-w-4xl mx-auto px-4">
           <div className="text-center mb-14">
-            <span className="inline-block text-sm font-semibold text-palm-600 uppercase tracking-wider mb-3">Impact Windows 101</span>
-            <h2 className="text-3xl md:text-4xl font-bold font-display text-gray-900 mb-4">
+            <span className="inline-block text-sm font-semibold text-palm-400 uppercase tracking-wider mb-3">Impact Windows 101</span>
+            <h2 className="text-3xl md:text-4xl font-bold font-display text-white mb-4">
               Everything You Need to Know
             </h2>
           </div>
@@ -424,17 +424,17 @@ export default function HomePage() {
                 a: "Tinted glass blocks more of the sun\u2019s light than heat. Low-E glass blocks more of the sun\u2019s heat than light. Low-E glass reflects about 70-85% of the sun\u2019s heat, tinted glass reflects about 40-60%, and clear laminated glass reflects only about 10-30%.",
               },
             ].map((faq) => (
-              <div key={faq.q} className="bg-gray-50 rounded-2xl p-6 md:p-8 border border-gray-100">
-                <h3 className="text-lg font-bold text-gray-900 font-display mb-3 flex items-start gap-3">
-                  <span className="text-palm-500 text-xl mt-0.5">Q:</span>
+              <div key={faq.q} className="bg-white/5 rounded-2xl p-6 md:p-8 border border-white/10">
+                <h3 className="text-lg font-bold text-white font-display mb-3 flex items-start gap-3">
+                  <span className="text-palm-400 text-xl mt-0.5">Q:</span>
                   {faq.q}
                 </h3>
-                <p className="text-gray-600 leading-relaxed text-sm pl-8">{faq.a}</p>
+                <p className="text-gray-400 leading-relaxed text-sm pl-8">{faq.a}</p>
               </div>
             ))}
           </div>
           <div className="text-center mt-8">
-            <Link href="/faq/" className="inline-flex items-center gap-2 text-palm-600 font-semibold hover:text-palm-700 transition-colors">
+            <Link href="/faq/" className="inline-flex items-center gap-2 text-palm-400 font-semibold hover:text-palm-300 transition-colors">
               View All FAQ Articles <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
             </Link>
           </div>
@@ -492,21 +492,21 @@ export default function HomePage() {
       </section>
 
       {/* Choose the Right Installer */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-ocean-900">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <span className="inline-block text-sm font-semibold text-palm-600 uppercase tracking-wider mb-3">Why Florida Impact</span>
-              <h2 className="text-3xl md:text-4xl font-bold font-display text-gray-900 mb-4">
+              <span className="inline-block text-sm font-semibold text-palm-400 uppercase tracking-wider mb-3">Why Florida Impact</span>
+              <h2 className="text-3xl md:text-4xl font-bold font-display text-white mb-4">
                 Choose the Right Window &amp; Installer
               </h2>
-              <p className="text-gray-600 leading-relaxed mb-6">
+              <p className="text-gray-400 leading-relaxed mb-6">
                 We&apos;ve built our reputation on honesty, integrity, and customer service. This commitment has helped us maintain 5-star reviews on Google, Yelp, and the Better Business Bureau, where we proudly hold an A+ Rating.
               </p>
-              <p className="text-gray-600 leading-relaxed mb-6">
-                Our company has earned a score of 111 on BuildZoom, placing us in the <span className="text-palm-600 font-bold">top 4% of 191,428 licensed contractors in the State of Florida</span>. No shortcuts and no subcontractors &mdash; every project is installed by our own team, led by one of our owners.
+              <p className="text-gray-400 leading-relaxed mb-6">
+                Our company has earned a score of 111 on BuildZoom, placing us in the <span className="text-palm-400 font-bold">top 4% of 191,428 licensed contractors in the State of Florida</span>. No shortcuts and no subcontractors &mdash; every project is installed by our own team, led by one of our owners.
               </p>
-              <p className="text-gray-700 font-medium italic mb-8">
+              <p className="text-gray-300 font-medium italic mb-8">
                 &ldquo;Even if you buy the best impact windows, they will not perform as well as they should if they are not installed properly.&rdquo;
               </p>
               <div className="grid grid-cols-2 gap-4">
@@ -516,8 +516,8 @@ export default function HomePage() {
                   { label: "BBB", value: "A+ Rating" },
                   { label: "BuildZoom", value: "Score: 111" },
                 ].map((item) => (
-                  <div key={item.label} className="bg-gray-50 rounded-xl p-4 border border-gray-100 text-center">
-                    <div className="text-lg font-bold text-palm-600 font-display">{item.value}</div>
+                  <div key={item.label} className="bg-white/5 rounded-xl p-4 border border-white/10 text-center">
+                    <div className="text-lg font-bold text-palm-400 font-display">{item.value}</div>
                     <div className="text-xs text-gray-500 mt-1">{item.label}</div>
                   </div>
                 ))}
@@ -542,11 +542,11 @@ export default function HomePage() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-ocean-950">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-14">
-            <span className="inline-block text-sm font-semibold text-palm-600 uppercase tracking-wider mb-3">A Reputation You Can Trust</span>
-            <h2 className="text-3xl md:text-4xl font-bold font-display text-gray-900">
+            <span className="inline-block text-sm font-semibold text-palm-400 uppercase tracking-wider mb-3">A Reputation You Can Trust</span>
+            <h2 className="text-3xl md:text-4xl font-bold font-display text-white">
               Consistently 5-Star Reviews
             </h2>
             <div className="flex items-center justify-center gap-2 mt-3">
@@ -560,7 +560,7 @@ export default function HomePage() {
           </div>
 
           {/* Featured Review */}
-          <div className="bg-ocean-950 rounded-3xl p-8 md:p-12 mb-8 relative overflow-hidden">
+          <div className="bg-white/5 rounded-3xl p-8 md:p-12 mb-8 relative overflow-hidden border border-white/10">
             <div className="absolute top-6 right-8 text-8xl font-display text-white/5 leading-none">&ldquo;</div>
             <div className="relative z-10 max-w-3xl">
               <div className="flex items-center gap-1 mb-4">
@@ -581,20 +581,20 @@ export default function HomePage() {
           {/* Review Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {testimonials.slice(1, 6).map((t, index) => (
-              <div key={index} className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
+              <div key={index} className="bg-white/5 rounded-2xl p-6 border border-white/10">
                 <div className="flex items-center gap-1 mb-3">
                   {[...Array(t.rating)].map((_, i) => (
                     <svg key={i} className="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
                   ))}
                 </div>
-                <p className="text-gray-600 text-sm leading-relaxed mb-4">&ldquo;{t.text}&rdquo;</p>
-                <p className="font-semibold text-gray-900 text-sm">{t.name}</p>
+                <p className="text-gray-400 text-sm leading-relaxed mb-4">&ldquo;{t.text}&rdquo;</p>
+                <p className="font-semibold text-white text-sm">{t.name}</p>
                 <p className="text-xs text-gray-500">{t.location}</p>
               </div>
             ))}
           </div>
           <div className="text-center mt-8">
-            <Link href="/reviews/" className="inline-flex items-center gap-2 text-palm-600 font-semibold hover:text-palm-700 transition-colors">
+            <Link href="/reviews/" className="inline-flex items-center gap-2 text-palm-400 font-semibold hover:text-palm-300 transition-colors">
               Read All Reviews
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
             </Link>
@@ -603,16 +603,16 @@ export default function HomePage() {
       </section>
 
       {/* Process */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-ocean-900">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-14">
-            <span className="inline-block text-sm font-semibold text-palm-600 uppercase tracking-wider mb-3">How It Works</span>
-            <h2 className="text-3xl md:text-4xl font-bold font-display text-gray-900">
+            <span className="inline-block text-sm font-semibold text-palm-400 uppercase tracking-wider mb-3">How It Works</span>
+            <h2 className="text-3xl md:text-4xl font-bold font-display text-white">
               Simple 4-Step Process
             </h2>
           </div>
           <div className="relative">
-            <div className="hidden lg:block absolute top-14 left-[12.5%] right-[12.5%] h-0.5 bg-gradient-to-r from-palm-200 via-palm-400 to-palm-200" />
+            <div className="hidden lg:block absolute top-14 left-[12.5%] right-[12.5%] h-0.5 bg-gradient-to-r from-palm-500/20 via-palm-400 to-palm-500/20" />
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 { step: "1", title: "Free Estimate", desc: "Abe visits your home, assesses your needs, takes measurements, and explains your options." },
@@ -621,11 +621,11 @@ export default function HomePage() {
                 { step: "4", title: "Owner-Led Installation", desc: "Our team installs every project \u2014 led by one of our owners, ensuring consistent quality." },
               ].map((item) => (
                 <div key={item.step} className="text-center">
-                  <div className="relative z-10 w-[72px] h-[72px] mx-auto rounded-full bg-white border-4 border-palm-400 flex items-center justify-center mb-5 shadow-lg shadow-palm-500/10">
-                    <span className="text-2xl font-bold text-palm-600 font-display">{item.step}</span>
+                  <div className="relative z-10 w-[72px] h-[72px] mx-auto rounded-full bg-ocean-950 border-4 border-palm-400 flex items-center justify-center mb-5 shadow-lg shadow-palm-500/20">
+                    <span className="text-2xl font-bold text-palm-400 font-display">{item.step}</span>
                   </div>
-                  <h3 className="text-lg font-bold text-gray-900 font-display mb-2">{item.title}</h3>
-                  <p className="text-sm text-gray-600 leading-relaxed">{item.desc}</p>
+                  <h3 className="text-lg font-bold text-white font-display mb-2">{item.title}</h3>
+                  <p className="text-sm text-gray-400 leading-relaxed">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -640,14 +640,14 @@ export default function HomePage() {
       </section>
 
       {/* Service Areas */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-ocean-950">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-14">
-            <span className="inline-block text-sm font-semibold text-palm-600 uppercase tracking-wider mb-3">Service Areas</span>
-            <h2 className="text-3xl md:text-4xl font-bold font-display text-gray-900 mb-4">
+            <span className="inline-block text-sm font-semibold text-palm-400 uppercase tracking-wider mb-3">Service Areas</span>
+            <h2 className="text-3xl md:text-4xl font-bold font-display text-white mb-4">
               Impact Windows &amp; Doors in Fort Lauderdale
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">Serving Broward and Palm Beach County from our Fort Lauderdale location. HVHZ certified for Miami-Dade and Broward County installations.</p>
+            <p className="text-gray-400 max-w-2xl mx-auto">Serving Broward and Palm Beach County from our Fort Lauderdale location. HVHZ certified for Miami-Dade and Broward County installations.</p>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {[
@@ -670,20 +670,20 @@ export default function HomePage() {
                 href: "/areas/miami/",
               },
             ].map((area) => (
-              <div key={area.county} className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm">
+              <div key={area.county} className="bg-white/5 rounded-2xl p-8 border border-white/10">
                 <div className="flex items-center gap-3 mb-4">
-                  <h3 className="text-xl font-bold text-gray-900 font-display">{area.county}</h3>
-                  {area.note && <span className="text-[10px] bg-palm-50 text-palm-700 font-bold uppercase tracking-wider px-2 py-0.5 rounded-full">{area.note}</span>}
+                  <h3 className="text-xl font-bold text-white font-display">{area.county}</h3>
+                  {area.note && <span className="text-[10px] bg-palm-500/10 text-palm-400 font-bold uppercase tracking-wider px-2 py-0.5 rounded-full">{area.note}</span>}
                 </div>
                 <ul className="space-y-2 mb-6">
                   {area.cities.map((city) => (
-                    <li key={city} className="flex items-center gap-2 text-gray-600 text-sm">
-                      <svg className="w-4 h-4 text-palm-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                    <li key={city} className="flex items-center gap-2 text-gray-400 text-sm">
+                      <svg className="w-4 h-4 text-palm-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                       {city}
                     </li>
                   ))}
                 </ul>
-                <Link href={area.href} className="inline-flex items-center gap-2 text-palm-600 font-semibold text-sm hover:text-palm-700 transition-colors">
+                <Link href={area.href} className="inline-flex items-center gap-2 text-palm-400 font-semibold text-sm hover:text-palm-300 transition-colors">
                   View All Cities <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
                 </Link>
               </div>

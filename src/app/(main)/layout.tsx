@@ -152,8 +152,8 @@ function LocalBusinessJsonLd() {
       worstRating: "1",
     },
     sameAs: [
-      "https://www.facebook.com/floridaimpactwindows",
-      "https://www.instagram.com/floridaimpactwindows",
+      "https://www.facebook.com/profile.php?id=61582625818330",
+      "https://www.instagram.com/sofloimpactwindows",
     ],
     hasOfferCatalog: {
       "@type": "OfferCatalog",

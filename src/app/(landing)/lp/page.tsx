@@ -272,7 +272,9 @@ export default function LandingPage() {
                 <form action={FORM_ENDPOINT} method="POST" className="space-y-4">
                   <input type="hidden" name="_subject" value="New Lead from Landing Page" />
                   <input type="hidden" name="_captcha" value="false" />
-                  <input type="hidden" name="_next" value="https://floridaimpactwindowsdoors.com/get-estimate/" />
+                  <input type="hidden" name="_next" value="https://floridaimpactwindowsdoors.com/thank-you/" />
+                  <input type="hidden" name="_template" value="box" />
+                  <input type="hidden" name="_autoresponse" value="Thank you for reaching out to Florida Impact Windows & Doors! We've received your request and a member of our team will contact you within 24 hours to discuss your project. If you need immediate assistance, please call us at (754) 600-4876. We look forward to helping protect your home! — The Florida Impact Windows & Doors Team" />
                   <input
                     type="text"
                     name="name"
@@ -694,7 +696,9 @@ export default function LandingPage() {
                 >
                   <input type="hidden" name="_subject" value="New Lead from Landing Page (Bottom Form)" />
                   <input type="hidden" name="_captcha" value="false" />
-                  <input type="hidden" name="_next" value="https://floridaimpactwindowsdoors.com/get-estimate/" />
+                  <input type="hidden" name="_next" value="https://floridaimpactwindowsdoors.com/thank-you/" />
+                  <input type="hidden" name="_template" value="box" />
+                  <input type="hidden" name="_autoresponse" value="Thank you for reaching out to Florida Impact Windows & Doors! We've received your request and a member of our team will contact you within 24 hours to discuss your project. If you need immediate assistance, please call us at (754) 600-4876. We look forward to helping protect your home! — The Florida Impact Windows & Doors Team" />
                   <input
                     type="text"
                     name="name"

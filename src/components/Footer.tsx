@@ -64,7 +64,7 @@ const footerLinks = {
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-white">
+    <footer className="bg-ocean-950 text-white border-t border-white/5">
       {/* Links */}
       <div>
         <div className="max-w-7xl mx-auto px-4 py-16">
