@@ -178,8 +178,8 @@ export default function LandingPage() {
       <section className="relative bg-ocean-950 overflow-hidden">
         {/* Hero background image */}
         <Image
-          src="/images/hero-bg.jpg"
-          alt=""
+          src="/images/windows4.jpg"
+          alt="Impact windows installed on South Florida home"
           fill
           className="object-cover opacity-25"
           priority

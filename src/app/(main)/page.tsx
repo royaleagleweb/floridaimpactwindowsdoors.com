@@ -71,8 +71,8 @@ export default function HomePage() {
       <section className="relative bg-ocean-950 overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1920&q=80"
-            alt="Impact windows installed on modern Fort Lauderdale home - hurricane rated impact window installation in Broward County Florida"
+            src="/images/windows3.jpg"
+            alt="Impact windows installed on South Florida home - hurricane rated impact window installation in Broward County Florida"
             fill
             className="object-cover opacity-20"
             priority
@@ -231,7 +231,7 @@ export default function HomePage() {
             <div className="group relative bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-palm-500/30 transition-all">
               <div className="grid md:grid-cols-2">
                 <div className="relative h-64 md:h-auto min-h-[300px] overflow-hidden">
-                  <Image src="/images/gallery-1.jpg" alt="Luxury South Florida home with impact windows" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                  <Image src="/images/windows.jpg" alt="South Florida home with impact windows installed" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent to-ocean-950/50 hidden md:block" />
                   <div className="absolute inset-0 bg-gradient-to-t from-ocean-950/70 to-transparent md:hidden" />
                 </div>
@@ -256,25 +256,25 @@ export default function HomePage() {
               {
                 title: "Licensed & Insured",
                 desc: "Fully licensed Florida contractor with comprehensive insurance coverage. Every installation meets or exceeds Florida Building Code.",
-                image: "/images/gallery-2.jpg",
+                image: "/images/windows2.jpg",
                 icon: "shield",
               },
               {
                 title: "Premium Products",
                 desc: "We partner with industry leaders like PGT, CGI, and ES Windows to deliver top-tier impact windows and doors built for Florida.",
-                image: "/images/gallery-3.jpg",
+                image: "/images/Casement Impact Windows.jpg",
                 icon: "star",
               },
               {
                 title: "Expert Installation",
                 desc: "Our certified installation crews deliver precision craftsmanship on every project, from single-family homes to high-rise condos.",
-                image: "/images/gallery-4.jpg",
+                image: "/images/doors.jpg",
                 icon: "gear",
               },
               {
                 title: "Financing Available",
                 desc: "Flexible payment options and financing plans make protecting your home affordable. We also help you maximize insurance savings.",
-                image: "/images/gallery-5.jpg",
+                image: "/images/windows5.jpg",
                 icon: "dollar",
               },
             ].map((item) => (
@@ -330,6 +330,49 @@ export default function HomePage() {
                 <p className="text-gray-500 text-xs mt-0.5">Common questions answered</p>
               </div>
               <svg className="w-5 h-5 text-gray-600 ml-auto group-hover:text-palm-400 group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Project Gallery */}
+      <section className="py-20 bg-ocean-900">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-14">
+            <span className="inline-block text-sm font-semibold text-palm-400 uppercase tracking-wider mb-3">Our Work</span>
+            <h2 className="text-3xl md:text-4xl font-bold font-display text-white">
+              Recent Projects
+            </h2>
+            <p className="text-gray-400 mt-4 max-w-2xl mx-auto">From single-family homes to large estates, see the quality of our impact window and door installations across South Florida.</p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {[
+              { src: "/images/doors 2.jpg", alt: "Impact door installation crew working on Fort Lauderdale home" },
+              { src: "/images/windows4.jpg", alt: "Completed impact window installation on South Florida home with palm trees" },
+              { src: "/images/doors4.jpg", alt: "Aerial view of full impact window and door replacement project" },
+              { src: "/images/windows6.jpg", alt: "Installation crew installing impact windows on residential home" },
+              { src: "/images/doors5.jpg", alt: "Professional crew installing impact doors on Florida home" },
+              { src: "/images/windows.jpg", alt: "Completed impact window installation on two-story Florida home" },
+              { src: "/images/imapct doors.jpg", alt: "Impact door installation in progress on South Florida residence" },
+              { src: "/images/picture window.jpg", alt: "Large impact picture window installed on Florida home" },
+            ].map((img, index) => (
+              <div key={index} className={`group relative overflow-hidden rounded-2xl border border-white/10 hover:border-palm-500/30 transition-all ${index === 0 || index === 5 ? "row-span-2" : ""}`}>
+                <div className={`relative w-full overflow-hidden ${index === 0 || index === 5 ? "h-full min-h-[320px]" : "h-48 md:h-56"}`}>
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-ocean-950/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="text-center mt-10">
+            <Link href="/get-estimate/" className="inline-flex items-center gap-2 bg-gradient-to-r from-palm-500 to-palm-600 text-white px-8 py-4 rounded-full font-bold hover:from-palm-600 hover:to-palm-700 transition-all shadow-lg shadow-palm-500/30">
+              Get a Free Estimate
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
             </Link>
           </div>
         </div>
@@ -525,8 +568,8 @@ export default function HomePage() {
             </div>
             <div className="relative h-80 lg:h-[500px] rounded-2xl overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80"
-                alt="Florida Impact Windows and Doors professional installation team installing hurricane rated impact windows in Fort Lauderdale home"
+                src="/images/doors 3.jpg"
+                alt="Florida Impact Windows and Doors professional installation team installing hurricane rated impact doors in Fort Lauderdale home"
                 fill
                 className="object-cover"
               />
