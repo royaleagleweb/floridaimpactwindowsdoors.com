@@ -122,14 +122,14 @@ export default function Header() {
   return (
     <>
       {/* Top Bar */}
-      <div className="bg-ocean-950 text-white text-sm py-2 border-b border-white/5">
+      <div className="bg-ocean-950 text-white text-sm py-2 border-b border-ocean-900">
         <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
           <div className="flex items-center gap-6">
             <a href="tel:+17546004876" className="flex items-center gap-2 hover:text-palm-400 transition-colors">
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
               (754) 600-4876
             </a>
-            <span className="hidden md:flex items-center gap-2 text-gray-400">
+            <span className="hidden md:flex items-center gap-2 text-gray-300">
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
               Hollywood, FL &bull; Serving Broward &amp; Palm Beach County
             </span>
@@ -140,7 +140,7 @@ export default function Header() {
       </div>
 
       {/* Main Header */}
-      <header className="sticky top-0 z-50 bg-ocean-900/95 backdrop-blur-xl border-b border-white/10 shadow-lg shadow-black/20">
+      <header className="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
@@ -154,8 +154,8 @@ export default function Header() {
                 priority
               />
               <div className="ml-2 hidden sm:block">
-                <span className="text-lg font-bold text-white font-display leading-tight block">
-                  Florida<span className="text-palm-400">Impact</span>
+                <span className="text-lg font-bold text-ocean-950 font-display leading-tight block">
+                  Florida<span className="text-palm-500">Impact</span>
                 </span>
                 <span className="text-[10px] uppercase tracking-[0.15em] text-gray-500 font-semibold">
                   Windows &amp; Doors
@@ -174,7 +174,7 @@ export default function Header() {
                 >
                   <a
                     href={item.href}
-                    className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-gray-300 hover:text-palm-400 transition-colors rounded-lg hover:bg-white/5"
+                    className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-ocean-900 hover:text-palm-500 transition-colors rounded-lg hover:bg-gray-100"
                     onClick={(e) => {
                       if (item.children) {
                         e.preventDefault();
@@ -189,10 +189,10 @@ export default function Header() {
                   </a>
                   {item.children && activeDropdown === item.name && (
                     <div className="absolute top-full left-0 pt-1 z-50">
-                      <div className="bg-ocean-800 rounded-xl shadow-2xl shadow-black/40 border border-white/10 py-2 min-w-[240px] overflow-hidden backdrop-blur-xl">
+                      <div className="bg-white rounded-xl shadow-2xl shadow-black/10 border border-gray-200 py-2 min-w-[240px] overflow-hidden">
                         <a
                           href={item.href}
-                          className="block px-4 py-2.5 text-sm font-semibold text-palm-400 hover:bg-white/5 transition-colors border-b border-white/5 mb-1"
+                          className="block px-4 py-2.5 text-sm font-semibold text-palm-500 hover:bg-gray-50 transition-colors border-b border-gray-100 mb-1"
                         >
                           View All {item.name} &rarr;
                         </a>
@@ -200,7 +200,7 @@ export default function Header() {
                           <a
                             key={child.name}
                             href={child.href}
-                            className="block px-4 py-2.5 text-sm text-gray-400 hover:text-palm-400 hover:bg-white/5 transition-colors"
+                            className="block px-4 py-2.5 text-sm text-gray-600 hover:text-palm-500 hover:bg-gray-50 transition-colors"
                           >
                             {child.name}
                           </a>
@@ -226,7 +226,7 @@ export default function Header() {
                   setMobileMenuOpen(!mobileMenuOpen);
                   if (mobileMenuOpen) setMobileExpanded(null);
                 }}
-                className="lg:hidden p-2 rounded-lg text-gray-300 hover:bg-white/10 transition-colors"
+                className="lg:hidden p-2 rounded-lg text-ocean-900 hover:bg-gray-100 transition-colors"
                 aria-label="Toggle menu"
               >
                 {mobileMenuOpen ? (
@@ -241,7 +241,7 @@ export default function Header() {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="lg:hidden bg-ocean-900 border-t border-white/5 max-h-[80vh] overflow-y-auto">
+          <div className="lg:hidden bg-white border-t border-gray-200 max-h-[80vh] overflow-y-auto">
             <div className="px-4 py-4 space-y-1">
               {navigation.map((item) => (
                 <div key={item.name}>
@@ -249,7 +249,7 @@ export default function Header() {
                     <>
                       <button
                         onClick={() => setMobileExpanded(mobileExpanded === item.name ? null : item.name)}
-                        className="flex items-center justify-between w-full px-4 py-3 text-base font-medium text-gray-200 hover:text-palm-400 hover:bg-white/5 rounded-lg transition-colors"
+                        className="flex items-center justify-between w-full px-4 py-3 text-base font-medium text-ocean-900 hover:text-palm-500 hover:bg-gray-50 rounded-lg transition-colors"
                       >
                         {item.name}
                         <svg className={`w-4 h-4 transition-transform ${mobileExpanded === item.name ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
@@ -258,7 +258,7 @@ export default function Header() {
                         <div className="pl-4 space-y-1 pb-2">
                           <a
                             href={item.href}
-                            className="block px-4 py-2 text-sm font-semibold text-palm-400 hover:bg-white/5 rounded-lg transition-colors"
+                            className="block px-4 py-2 text-sm font-semibold text-palm-500 hover:bg-gray-50 rounded-lg transition-colors"
                             onClick={() => setMobileMenuOpen(false)}
                           >
                             View All {item.name} &rarr;
@@ -267,7 +267,7 @@ export default function Header() {
                             <a
                               key={child.name}
                               href={child.href}
-                              className="block px-4 py-2 text-sm text-gray-500 hover:text-palm-400 hover:bg-white/5 rounded-lg transition-colors"
+                              className="block px-4 py-2 text-sm text-gray-600 hover:text-palm-500 hover:bg-gray-50 rounded-lg transition-colors"
                               onClick={() => setMobileMenuOpen(false)}
                             >
                               {child.name}
@@ -279,7 +279,7 @@ export default function Header() {
                   ) : (
                     <a
                       href={item.href}
-                      className="block px-4 py-3 text-base font-medium text-gray-200 hover:text-palm-400 hover:bg-white/5 rounded-lg transition-colors"
+                      className="block px-4 py-3 text-base font-medium text-ocean-900 hover:text-palm-500 hover:bg-gray-50 rounded-lg transition-colors"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       {item.name}
@@ -287,7 +287,7 @@ export default function Header() {
                   )}
                 </div>
               ))}
-              <div className="pt-4 border-t border-white/10">
+              <div className="pt-4 border-t border-gray-200">
                 <a
                   href="/get-estimate/"
                   className="block w-full text-center bg-gradient-to-r from-palm-500 to-palm-600 text-white px-6 py-3 rounded-full font-semibold"
