@@ -20,7 +20,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/areas/`, changeFrequency: "monthly", priority: 0.8, lastModified: now },
     { url: `${BASE}/financing/`, changeFrequency: "monthly", priority: 0.7, lastModified: now },
     { url: `${BASE}/reviews/`, changeFrequency: "monthly", priority: 0.7, lastModified: now },
-    { url: `${BASE}/gallery/`, changeFrequency: "monthly", priority: 0.6, lastModified: now },
     { url: `${BASE}/our-process/`, changeFrequency: "monthly", priority: 0.7, lastModified: now },
     { url: `${BASE}/warranties/`, changeFrequency: "monthly", priority: 0.6, lastModified: now },
     { url: `${BASE}/careers/`, changeFrequency: "monthly", priority: 0.5, lastModified: now },
@@ -31,6 +30,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   /* ── Service pages ──────────────────────────────────── */
+  const servicesIndex: MetadataRoute.Sitemap = [
+    { url: `${BASE}/services/`, changeFrequency: "monthly", priority: 0.9, lastModified: now },
+  ];
+
   const servicePages: MetadataRoute.Sitemap = [
     "impact-windows",
     "impact-doors",
@@ -56,6 +59,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "picture",
     "bay",
     "bow",
+    "hopper",
   ].map((w) => ({
     url: `${BASE}/services/window-types/${w}/`,
     changeFrequency: "monthly" as const,
@@ -144,6 +148,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     ...staticPages,
+    ...servicesIndex,
     ...servicePages,
     ...windowTypesIndex,
     ...windowTypes,
