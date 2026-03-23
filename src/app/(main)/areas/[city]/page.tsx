@@ -305,25 +305,21 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
               Why {city.name} Homeowners Need Impact Windows
             </h2>
             <div className="prose prose-lg max-w-none text-gray-600 space-y-6">
-              <p>
-                Located in {city.county} County, {city.name} sits in one of the
-                most hurricane-prone regions in the United States. South Florida
-                is directly in the path of Atlantic hurricanes, and homeowners in{" "}
-                {city.name} face the real threat of destructive winds, flying
-                debris, and storm surge every season from June through November.
-                Protecting your home with impact-rated windows and doors is not
-                just smart planning &mdash; it is essential.
-              </p>
-              <p>
-                {city.county} County enforces some of the strictest building
-                codes in the nation, specifically designed for hurricane-prone
-                areas. The Florida Building Code requires that homes in the High
-                Velocity Hurricane Zone (HVHZ) use impact-rated products or
-                approved hurricane protection systems on all openings. By
-                installing impact windows in your {city.name} home, you meet and
-                exceed these code requirements while gaining year-round benefits
-                including energy savings, noise reduction, and UV protection.
-              </p>
+              {city.hurricaneHistory && (
+                <p>
+                  <strong>Hurricane History:</strong> {city.hurricaneHistory}
+                </p>
+              )}
+              {city.localChallenges && (
+                <p>
+                  <strong>Local Challenges:</strong> {city.localChallenges}
+                </p>
+              )}
+              {city.architectureStyle && (
+                <p>
+                  <strong>Architecture & Fit:</strong> {city.architectureStyle}
+                </p>
+              )}
               <p>
                 Beyond code compliance, impact windows provide {city.name}{" "}
                 homeowners with significant financial advantages. Insurance
@@ -336,10 +332,7 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
               </p>
               <p>
                 At Florida Impact Windows & Doors, we understand the unique needs of {city.name}{" "}
-                homes. Whether your property is a waterfront estate, a suburban
-                family home, or a downtown condominium, our team designs and
-                installs impact window solutions that fit your architecture, your
-                budget, and your lifestyle. We handle all {city.county} County
+                homes. We handle all {city.county} County
                 permits and inspections so you can enjoy a hassle-free experience
                 from start to finish.
               </p>
@@ -518,12 +511,16 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
                 About {city.name}, Florida
               </h2>
               <div className="space-y-4 text-gray-600 leading-relaxed">
-                <p>
-                  {city.name} is located in {city.county} County on Florida&apos;s
-                  southeastern coast. As part of the greater South Florida
-                  metropolitan area, it is one of the most vibrant and diverse
-                  communities in the state.
-                </p>
+                {city.aboutCity ? (
+                  <p>{city.aboutCity}</p>
+                ) : (
+                  <p>
+                    {city.name} is located in {city.county} County on Florida&apos;s
+                    southeastern coast. As part of the greater South Florida
+                    metropolitan area, it is one of the most vibrant and diverse
+                    communities in the state.
+                  </p>
+                )}
                 <p>
                   Like all of {city.county} County, {city.name} is located within
                   the Florida High Velocity Hurricane Zone, meaning homes must
@@ -534,12 +531,29 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
                 </p>
                 <p>
                   Florida Impact Windows & Doors has been serving {city.name} homeowners with
-                  professional impact window and door installation for over 15
-                  years. Our deep knowledge of {city.county} County building codes,
+                  professional impact window and door installation. Our deep knowledge of{" "}
+                  {city.county} County building codes,
                   permitting processes, and local architecture ensures every
                   project is completed to the highest standards.
                 </p>
               </div>
+              {city.neighborhoods && city.neighborhoods.length > 0 && (
+                <div className="mt-6">
+                  <h3 className="text-lg font-bold font-display text-gray-900 mb-3">
+                    Neighborhoods We Serve in {city.name}
+                  </h3>
+                  <div className="flex flex-wrap gap-2">
+                    {city.neighborhoods.map((neighborhood) => (
+                      <span
+                        key={neighborhood}
+                        className="inline-block bg-palm-50 text-palm-700 text-sm px-3 py-1.5 rounded-full border border-palm-200"
+                      >
+                        {neighborhood}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
             <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8">
               <h3 className="text-xl font-bold font-display text-gray-900 mb-6">
