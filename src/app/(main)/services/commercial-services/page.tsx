@@ -147,7 +147,7 @@ export default function CommercialServicesPage() {
                 </a>
               </div>
             </div>
-            <div className="hidden lg:block">
+            <div>
               <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-black/30 border border-white/10">
                 <Image
                   src="/images/windows3.jpg"

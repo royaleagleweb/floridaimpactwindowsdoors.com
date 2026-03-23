@@ -124,7 +124,7 @@ export default function DoorReplacementPage() {
               </a>
             </div>
             </div>
-            <div className="hidden lg:block">
+            <div>
               <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-black/30 border border-white/10">
                 <Image
                   src="/images/doors 3.jpg"
