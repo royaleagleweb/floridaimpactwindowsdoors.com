@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -95,7 +96,8 @@ export default function EnergyEfficientWindowsPage() {
         <div className="absolute bottom-20 right-10 w-80 h-80 bg-sun-400/10 rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: "1.5s" }} />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 py-20 lg:py-28">
-          <div className="max-w-3xl">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/10 rounded-full px-4 py-1.5 mb-6">
               <span className="w-2 h-2 bg-palm-400 rounded-full animate-pulse" />
               <span className="text-sm text-palm-300 font-medium">Cut Energy Bills Up to 30%</span>
@@ -121,6 +123,19 @@ export default function EnergyEfficientWindowsPage() {
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
                 (754) 600-4876
               </a>
+            </div>
+            </div>
+            <div className="hidden lg:block">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-black/30 border border-white/10">
+                <Image
+                  src="/images/windows2.jpg"
+                  alt="Energy efficient impact windows on a South Florida home"
+                  width={600}
+                  height={450}
+                  className="w-full h-auto object-cover"
+                  priority
+                />
+              </div>
             </div>
           </div>
         </div>
