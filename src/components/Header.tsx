@@ -74,6 +74,9 @@ const navigation = [
       { name: "Contractor Checklist", href: "/contractor-checklist/" },
       { name: "Our Process", href: "/our-process/" },
       { name: "Financing", href: "/financing/" },
+      { name: "Door Quiz", href: "/quiz/door/" },
+      { name: "Service Quiz", href: "/quiz/service/" },
+      { name: "Get a Quote", href: "/get-quote/" },
     ],
   },
 ];

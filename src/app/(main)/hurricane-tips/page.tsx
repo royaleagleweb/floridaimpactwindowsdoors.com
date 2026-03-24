@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import HurricaneChecklist from "@/components/HurricaneChecklist";
 
 export const metadata: Metadata = {
   title: "Hurricane Preparedness Tips South Florida | Protect Your Home Guide",
@@ -232,6 +233,22 @@ export default function HurricaneTipsPage() {
               </a>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Interactive Hurricane Prep Checklist */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-5xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <span className="inline-block text-sm font-semibold text-palm-600 uppercase tracking-wider mb-3">Interactive Tool</span>
+            <h2 className="text-3xl md:text-4xl font-bold font-display text-gray-900 mb-4">
+              Track Your Hurricane Readiness
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Use our interactive checklist to track your preparation progress. Your selections are saved automatically so you can come back anytime.
+            </p>
+          </div>
+          <HurricaneChecklist />
         </div>
       </section>
 

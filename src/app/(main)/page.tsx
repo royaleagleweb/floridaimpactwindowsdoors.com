@@ -3,6 +3,7 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import HeroLeadForm from "@/components/HeroLeadForm";
 import StickyMobileCTA from "@/components/StickyMobileCTA";
+import HowItWorks from "@/components/HowItWorks";
 
 export const metadata: Metadata = {
   title: "Florida Impact Windows & Doors | Impact Windows & Doors in Fort Lauderdale | Broward & Palm Beach County",
@@ -213,6 +214,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* How It Works */}
+      <HowItWorks />
 
       {/* Why Work With Us */}
       <section className="py-20 bg-ocean-950 relative overflow-hidden">

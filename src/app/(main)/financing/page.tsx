@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import PaymentCalculator from "@/components/PaymentCalculator";
 
 export const metadata: Metadata = {
   title: "Impact Windows Financing Fort Lauderdale | $0 Down, 0% Interest & PACE",
@@ -218,6 +219,22 @@ export default function FinancingPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Payment Calculator */}
+      <section className="py-20 bg-white">
+        <div className="max-w-5xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <span className="inline-block text-sm font-semibold text-palm-600 uppercase tracking-wider mb-3">Estimate Your Payment</span>
+            <h2 className="text-3xl md:text-4xl font-bold font-display text-gray-900 mb-4">
+              Calculate Your Monthly Payment
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Use our calculator to estimate monthly payments based on your project size, financing term, and down payment.
+            </p>
+          </div>
+          <PaymentCalculator />
         </div>
       </section>
 

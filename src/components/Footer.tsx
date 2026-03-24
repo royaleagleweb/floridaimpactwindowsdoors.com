@@ -41,6 +41,9 @@ const footerLinks = {
     { name: "Contractor Checklist", href: "/contractor-checklist/" },
     { name: "Careers", href: "/careers/" },
     { name: "Contact", href: "/contact/" },
+    { name: "Door Quiz", href: "/quiz/door/" },
+    { name: "Service Quiz", href: "/quiz/service/" },
+    { name: "Get a Quote", href: "/get-quote/" },
   ],
   brands: [
     { name: "PGT Windows & Doors", href: "/brands/pgt/" },
