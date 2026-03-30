@@ -59,6 +59,14 @@ export const metadata: Metadata = {
       "Florida Impact Windows & Doors | #1 Impact Window Installation in Fort Lauderdale",
     description:
       "South Florida's premier impact window and door installation company. Hurricane-rated protection for Broward & Palm Beach County homes. Free estimates available.",
+    images: [
+      {
+        url: "https://floridaimpactwindowsdoors.com/images/hero-bg.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Florida Impact Windows & Doors - Professional Impact Window Installation in South Florida",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -66,6 +74,7 @@ export const metadata: Metadata = {
       "Florida Impact Windows & Doors | #1 Impact Windows in South Florida",
     description:
       "Premium impact windows & doors at affordable prices. A+ BBB rating. Free estimates. Call (754) 600-4876.",
+    images: ["https://floridaimpactwindowsdoors.com/images/hero-bg.jpg"],
   },
   robots: {
     index: true,
