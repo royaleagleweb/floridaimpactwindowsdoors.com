@@ -18,6 +18,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: `Hurricane Shutters in ${city.name}, FL | Florida Impact Windows & Doors`,
     description: `Professional hurricane shutter installation in ${city.name}, Florida. Accordion, roll-down, and colonial shutters for ${city.county} County homes. Free estimates. Call (754) 600-4876.`,
+    alternates: { canonical: `https://floridaimpactwindowsdoors.com/areas/${slug}/hurricane-shutters/` },
   };
 }
 
@@ -65,8 +66,16 @@ export default async function CityHurricaneShuttersPage({ params }: PageProps) {
     },
   ];
 
+  const faqSchema = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqs.map((faq) => ({ "@type": "Question", name: faq.q, acceptedAnswer: { "@type": "Answer", text: faq.a } })) };
+  const breadcrumbSchema = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: "https://floridaimpactwindowsdoors.com/" }, { "@type": "ListItem", position: 2, name: "Service Areas", item: "https://floridaimpactwindowsdoors.com/areas/" }, { "@type": "ListItem", position: 3, name: city.name, item: `https://floridaimpactwindowsdoors.com/areas/${city.slug}/` }, { "@type": "ListItem", position: 4, name: "Hurricane Shutters" }] };
+  const serviceSchema = { "@context": "https://schema.org", "@type": "Service", name: `Hurricane Shutter Installation in ${city.name}, FL`, description: `Professional hurricane shutter installation in ${city.name}, ${city.county} County, Florida.`, provider: { "@type": "HomeAndConstructionBusiness", name: "Florida Impact Windows & Doors", telephone: "+1-754-600-4876" }, areaServed: { "@type": "City", name: city.name, containedIn: { "@type": "State", name: "Florida" } }, serviceType: "Hurricane Shutter Installation" };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+
       {/* Breadcrumbs */}
       <div className="bg-gray-50 border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 py-3">

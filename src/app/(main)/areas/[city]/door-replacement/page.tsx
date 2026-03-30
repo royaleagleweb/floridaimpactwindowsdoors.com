@@ -18,6 +18,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: `Door Replacement in ${city.name}, FL - Professional Installation`,
     description: `Professional door replacement in ${city.name}, Florida. Entry doors, sliding glass doors, French doors, patio doors, and garage doors for ${city.county} County homes. Free estimates from Florida Impact Windows & Doors. Call (754) 600-4876.`,
+    alternates: { canonical: `https://floridaimpactwindowsdoors.com/areas/${slug}/door-replacement/` },
   };
 }
 
@@ -101,8 +102,14 @@ export default async function CityDoorReplacementPage({ params }: PageProps) {
     },
   ];
 
+  const breadcrumbSchema = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: "https://floridaimpactwindowsdoors.com/" }, { "@type": "ListItem", position: 2, name: "Service Areas", item: "https://floridaimpactwindowsdoors.com/areas/" }, { "@type": "ListItem", position: 3, name: city.name, item: `https://floridaimpactwindowsdoors.com/areas/${city.slug}/` }, { "@type": "ListItem", position: 4, name: "Door Replacement" }] };
+  const serviceSchema = { "@context": "https://schema.org", "@type": "Service", name: `Door Replacement in ${city.name}, FL`, description: `Professional door replacement services in ${city.name}, ${city.county} County, Florida.`, provider: { "@type": "HomeAndConstructionBusiness", name: "Florida Impact Windows & Doors", telephone: "+1-754-600-4876" }, areaServed: { "@type": "City", name: city.name, containedIn: { "@type": "State", name: "Florida" } }, serviceType: "Door Replacement" };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+
       {/* Breadcrumbs */}
       <div className="bg-gray-50 border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 py-3">

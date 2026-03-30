@@ -113,6 +113,11 @@ function LocalBusinessJsonLd() {
     areaServed: [
       {
         "@type": "County",
+        name: "Miami-Dade County",
+        containedIn: { "@type": "State", name: "Florida" },
+      },
+      {
+        "@type": "County",
         name: "Broward County",
         containedIn: { "@type": "State", name: "Florida" },
       },

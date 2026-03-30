@@ -28,6 +28,9 @@ export async function generateMetadata({
   return {
     title,
     description,
+    alternates: {
+      canonical: `https://floridaimpactwindowsdoors.com/areas/${slug}/`,
+    },
     openGraph: {
       title: `${title} | Florida Impact Windows & Doors`,
       description,
@@ -234,8 +237,70 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
     },
   ];
 
+  /* JSON-LD structured data for local SEO */
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://floridaimpactwindowsdoors.com/" },
+      { "@type": "ListItem", position: 2, name: "Service Areas", item: "https://floridaimpactwindowsdoors.com/areas/" },
+      { "@type": "ListItem", position: 3, name: city.name },
+    ],
+  };
+
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "HomeAndConstructionBusiness",
+    name: "Florida Impact Windows & Doors",
+    url: `https://floridaimpactwindowsdoors.com/areas/${city.slug}/`,
+    telephone: "+1-754-600-4876",
+    email: "info@floridaimpactwindowsdoors.com",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "3000 Stirling Rd",
+      addressLocality: "Hollywood",
+      addressRegion: "FL",
+      postalCode: "33021",
+      addressCountry: "US",
+    },
+    areaServed: {
+      "@type": "City",
+      name: city.name,
+      containedIn: {
+        "@type": "County",
+        name: `${city.county} County`,
+        containedIn: { "@type": "State", name: "Florida" },
+      },
+    },
+    priceRange: "$$",
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.9",
+      reviewCount: "2500",
+      bestRating: "5",
+      worstRating: "1",
+    },
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
+
       {/* Hero Section */}
       <section className="relative bg-ocean-950 overflow-hidden">
         <div className="absolute inset-0 bg-grid opacity-40" />
