@@ -39,77 +39,80 @@ export async function generateMetadata({
 // Data helpers
 // ---------------------------------------------------------------------------
 
-const services = [
-  {
-    title: "Impact Windows",
-    description:
-      "Hurricane-rated impact windows tested to withstand Category 5 winds and large missile impact.",
-    href: "/services/impact-windows/",
-    icon: (
-      <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <rect x="3" y="3" width="18" height="18" rx="2" strokeWidth={1.5} />
-        <line x1="3" y1="12" x2="21" y2="12" strokeWidth={1.5} />
-        <line x1="12" y1="3" x2="12" y2="21" strokeWidth={1.5} />
-      </svg>
-    ),
-  },
-  {
-    title: "Impact Doors",
-    description:
-      "Premium impact-rated entry, sliding glass, French, and patio doors for complete home protection.",
-    href: "/services/impact-doors/",
-    icon: (
-      <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 3h7v18H3zM10 3h7v18h-7M14 12h.01" />
-      </svg>
-    ),
-  },
-  {
-    title: "Hurricane Shutters",
-    description:
-      "Accordion, roll-down, and panel hurricane shutters for additional storm protection.",
-    href: "/services/hurricane-shutters/",
-    icon: (
-      <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 3v18M15 3v18M3 9h18M3 15h18" />
-        <rect x="3" y="3" width="18" height="18" rx="1" strokeWidth={1.5} />
-      </svg>
-    ),
-  },
-  {
-    title: "Window Replacement",
-    description:
-      "Full-service window replacement upgrading aging or damaged windows to modern impact protection.",
-    href: "/services/window-replacement/",
-    icon: (
-      <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-      </svg>
-    ),
-  },
-  {
-    title: "Energy Efficient Windows",
-    description:
-      "Low-E glass and argon-filled windows that reduce solar heat gain and lower energy bills.",
-    href: "/services/energy-efficient-windows/",
-    icon: (
-      <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
-      </svg>
-    ),
-  },
-  {
-    title: "Commercial Services",
-    description:
-      "Impact window and door solutions for storefronts, offices, and multi-unit properties.",
-    href: "/services/commercial-services/",
-    icon: (
-      <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-      </svg>
-    ),
-  },
-];
+/* Services with city-specific pages use dynamic hrefs */
+function getServices(citySlug: string) {
+  return [
+    {
+      title: "Impact Windows",
+      description:
+        "Hurricane-rated impact windows tested to withstand Category 5 winds and large missile impact.",
+      href: `/areas/${citySlug}/impact-windows/`,
+      icon: (
+        <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <rect x="3" y="3" width="18" height="18" rx="2" strokeWidth={1.5} />
+          <line x1="3" y1="12" x2="21" y2="12" strokeWidth={1.5} />
+          <line x1="12" y1="3" x2="12" y2="21" strokeWidth={1.5} />
+        </svg>
+      ),
+    },
+    {
+      title: "Impact Doors",
+      description:
+        "Premium impact-rated entry, sliding glass, French, and patio doors for complete home protection.",
+      href: `/areas/${citySlug}/impact-doors/`,
+      icon: (
+        <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 3h7v18H3zM10 3h7v18h-7M14 12h.01" />
+        </svg>
+      ),
+    },
+    {
+      title: "Hurricane Shutters",
+      description:
+        "Accordion, roll-down, and panel hurricane shutters for additional storm protection.",
+      href: `/areas/${citySlug}/hurricane-shutters/`,
+      icon: (
+        <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 3v18M15 3v18M3 9h18M3 15h18" />
+          <rect x="3" y="3" width="18" height="18" rx="1" strokeWidth={1.5} />
+        </svg>
+      ),
+    },
+    {
+      title: "Window Replacement",
+      description:
+        "Full-service window replacement upgrading aging or damaged windows to modern impact protection.",
+      href: `/areas/${citySlug}/window-replacement/`,
+      icon: (
+        <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+        </svg>
+      ),
+    },
+    {
+      title: "Door Replacement",
+      description:
+        "Complete door replacement services upgrading aging doors to modern impact-rated protection.",
+      href: `/areas/${citySlug}/door-replacement/`,
+      icon: (
+        <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+        </svg>
+      ),
+    },
+    {
+      title: "Commercial Services",
+      description:
+        "Impact window and door solutions for storefronts, offices, and multi-unit properties.",
+      href: "/services/commercial-services/",
+      icon: (
+        <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+        </svg>
+      ),
+    },
+  ];
+}
 
 const windowTypes = [
   { name: "Single Hung", href: "/services/window-types/single-hung/" },
@@ -209,6 +212,8 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
   const countyCities = getCitiesByCounty(city.county).filter(
     (c) => c.slug !== city.slug
   );
+
+  const services = getServices(city.slug);
 
   const faqs = [
     {
