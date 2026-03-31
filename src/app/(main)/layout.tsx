@@ -165,6 +165,10 @@ function LocalBusinessJsonLd() {
       worstRating: "1",
     },
     sameAs: [],
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["h1", "h2", ".hero-description", "[data-speakable]"],
+    },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Impact Window & Door Services",
@@ -266,6 +270,8 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
           rel="stylesheet"
         />
+        <link rel="alternate" type="text/plain" href="https://floridaimpactwindowsdoors.com/llms.txt" title="LLM-readable site info" />
+        <link rel="alternate" type="text/plain" href="https://floridaimpactwindowsdoors.com/llms-full.txt" title="Full LLM context" />
         <LocalBusinessJsonLd />
         <WebSiteJsonLd />
       </head>
