@@ -165,6 +165,29 @@ function LocalBusinessJsonLd() {
       worstRating: "1",
     },
     sameAs: [],
+    review: [
+      {
+        "@type": "Review",
+        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+        author: { "@type": "Person", name: "Verified Customer" },
+        reviewBody: "Florida Impact Windows & Doors transformed our 1960s home with beautiful PGT WinGuard impact windows. The installation team arrived on time every day, protected our furniture and floors, and cleaned up completely. Our energy bills dropped noticeably.",
+        datePublished: "2024-11-15",
+      },
+      {
+        "@type": "Review",
+        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+        author: { "@type": "Person", name: "Verified Customer" },
+        reviewBody: "After Hurricane Irma showed us the vulnerability of our old jalousie windows, we knew it was time to upgrade. Florida Impact Windows & Doors stood out for their honesty and product knowledge. Our home feels completely different now.",
+        datePublished: "2024-10-10",
+      },
+      {
+        "@type": "Review",
+        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+        author: { "@type": "Person", name: "Verified Customer" },
+        reviewBody: "We compared five different companies and Florida Impact Windows & Doors offered the best combination of quality products and competitive pricing. The permit process was handled entirely by them. Highly recommend.",
+        datePublished: "2024-09-20",
+      },
+    ],
     speakable: {
       "@type": "SpeakableSpecification",
       cssSelector: ["h1", "h2", ".hero-description", "[data-speakable]"],
@@ -270,6 +293,7 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
           rel="stylesheet"
         />
+        <link rel="alternate" type="application/rss+xml" href="https://floridaimpactwindowsdoors.com/feed.xml" title="Florida Impact Windows & Doors Blog" />
         <link rel="alternate" type="text/plain" href="https://floridaimpactwindowsdoors.com/llms.txt" title="LLM-readable site info" />
         <link rel="alternate" type="text/plain" href="https://floridaimpactwindowsdoors.com/llms-full.txt" title="Full LLM context" />
         <LocalBusinessJsonLd />

@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
 import ServiceAreaLinks from "@/components/ServiceAreaLinks";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Impact Doors Fort Lauderdale | Hurricane-Rated Sliding Glass, French & Entry Doors",
@@ -97,6 +98,7 @@ export default function ImpactDoorsPage() {
         <div className="absolute bottom-20 left-10 w-80 h-80 bg-palm-500/10 rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: "1.5s" }} />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 py-20 lg:py-28">
+          <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Services", href: "/services/impact-doors/" }, { label: "Impact Doors" }]} />
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/10 rounded-full px-4 py-1.5 mb-6">

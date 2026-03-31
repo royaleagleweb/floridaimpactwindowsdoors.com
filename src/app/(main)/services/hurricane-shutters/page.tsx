@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
 import ServiceAreaLinks from "@/components/ServiceAreaLinks";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Hurricane Shutters Fort Lauderdale | Accordion & Roll-Down Shutter Installation",
@@ -116,6 +117,7 @@ export default function HurricaneShuttersPage() {
         <div className="absolute bottom-10 left-20 w-80 h-80 bg-sun-400/10 rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: "2s" }} />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 py-20 lg:py-28">
+          <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Services", href: "/services/hurricane-shutters/" }, { label: "Hurricane Shutters" }]} />
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/10 rounded-full px-4 py-1.5 mb-6">
