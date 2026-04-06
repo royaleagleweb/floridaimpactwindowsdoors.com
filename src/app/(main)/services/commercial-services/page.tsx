@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "Commercial Impact Windows & Doors in South Florida | Storefronts & Buildings",
   description:
     "Commercial impact window and door solutions for South Florida businesses. Storefronts, office buildings, HOA communities & multi-family properties in Miami-Dade, Broward & Palm Beach County.",
+  alternates: { canonical: "https://floridaimpactwindowsdoors.com/services/commercial-services/" },
 };
 
 const benefits = [

@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Impact Patio Doors | Florida Impact Windows & Doors",
   description:
     "Impact patio doors designed for the South Florida lifestyle. Hurricane-rated doors that seamlessly connect indoor and outdoor living spaces in Miami-Dade, Broward & Palm Beach.",
+  alternates: {
+    canonical: "https://floridaimpactwindowsdoors.com/services/door-types/patio/",
+  },
 };
 
 const features = [

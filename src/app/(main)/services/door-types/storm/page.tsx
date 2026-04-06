@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Impact Storm Doors | Florida Impact Windows & Doors",
   description:
     "Heavy-duty impact storm doors for South Florida homes. Add an extra layer of hurricane protection with screen and glass options for year-round ventilation in Miami-Dade, Broward & Palm Beach.",
+  alternates: {
+    canonical: "https://floridaimpactwindowsdoors.com/services/door-types/storm/",
+  },
 };
 
 const features = [

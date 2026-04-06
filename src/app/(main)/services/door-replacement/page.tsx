@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: "Door Replacement in South Florida | Impact Sliding, Entry & French Doors",
   description:
     "Professional door replacement in Miami-Dade, Broward & Palm Beach County. Upgrade to impact-rated sliding glass, French, entry & patio doors. Free in-home estimates from Florida Impact Windows & Doors.",
+  alternates: { canonical: "https://floridaimpactwindowsdoors.com/services/door-replacement/" },
 };
 
 const benefits = [

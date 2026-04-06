@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Picture Impact Windows | Florida Impact Windows & Doors",
   description:
     "Picture impact windows for maximum natural light and unobstructed views. Fixed, non-operable hurricane-rated windows ideal for South Florida living rooms and great rooms. Free estimates.",
+  alternates: {
+    canonical: "https://floridaimpactwindowsdoors.com/services/window-types/picture/",
+  },
 };
 
 const features = [

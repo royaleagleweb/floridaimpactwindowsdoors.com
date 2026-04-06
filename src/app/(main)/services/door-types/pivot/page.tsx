@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Impact Pivot Doors | Florida Impact Windows & Doors",
   description:
     "Statement-making impact pivot doors for South Florida homes. Hurricane-rated modern pivot doors with dramatic central rotation, oversized options, and Category 5 protection.",
+  alternates: {
+    canonical: "https://floridaimpactwindowsdoors.com/services/door-types/pivot/",
+  },
 };
 
 const features = [

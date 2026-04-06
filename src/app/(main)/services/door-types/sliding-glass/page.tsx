@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Impact Sliding Glass Doors | Florida Impact Windows & Doors",
   description:
     "Premium impact sliding glass doors for South Florida homes. Hurricane-rated, energy efficient, and designed for seamless indoor-outdoor living in Miami-Dade, Broward & Palm Beach.",
+  alternates: {
+    canonical: "https://floridaimpactwindowsdoors.com/services/door-types/sliding-glass/",
+  },
 };
 
 const features = [

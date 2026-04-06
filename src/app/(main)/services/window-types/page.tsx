@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Impact Window Types | Florida Impact Windows & Doors",
   description:
     "Explore all impact window styles available from Florida Impact Windows & Doors: single hung, double hung, casement, awning, picture, sliding, bay, bow, and hopper. Hurricane-rated options for every South Florida home.",
+  alternates: { canonical: "https://floridaimpactwindowsdoors.com/services/window-types/" },
 };
 
 const windowTypes = [

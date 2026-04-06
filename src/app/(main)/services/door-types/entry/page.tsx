@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Impact Entry Doors | Florida Impact Windows & Doors",
   description:
     "Premium impact entry doors for South Florida homes. Hurricane-rated front doors with stunning curb appeal, maximum security, and energy efficiency for Miami-Dade, Broward & Palm Beach.",
+  alternates: {
+    canonical: "https://floridaimpactwindowsdoors.com/services/door-types/entry/",
+  },
 };
 
 const features = [

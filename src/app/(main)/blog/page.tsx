@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     description:
       "Expert articles on impact windows, hurricane protection, energy efficiency, insurance savings, and home improvement for South Florida homeowners.",
   },
+  alternates: { canonical: "https://floridaimpactwindowsdoors.com/blog/" },
 };
 
 const categories = Array.from(new Set(blogPosts.map((post) => post.category)));

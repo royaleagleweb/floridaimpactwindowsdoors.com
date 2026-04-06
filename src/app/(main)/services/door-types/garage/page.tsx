@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Impact Garage Doors | Florida Impact Windows & Doors",
   description:
     "Hurricane-rated impact garage doors for South Florida homes. Wind-rated insulated garage doors that protect vehicles and belongings in Miami-Dade, Broward & Palm Beach County.",
+  alternates: {
+    canonical: "https://floridaimpactwindowsdoors.com/services/door-types/garage/",
+  },
 };
 
 const features = [

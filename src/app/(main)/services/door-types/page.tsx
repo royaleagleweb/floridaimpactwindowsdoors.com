@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Impact Door Types | Florida Impact Windows & Doors",
   description:
     "Explore our full range of impact-rated door types for South Florida homes. Sliding glass, French, entry, patio, pivot, garage, and storm doors built for hurricane protection.",
+  alternates: { canonical: "https://floridaimpactwindowsdoors.com/services/door-types/" },
 };
 
 const doorTypes = [

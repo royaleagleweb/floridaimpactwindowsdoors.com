@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Our Installation Process | 6 Easy Steps | Florida Impact Windows & Doors",
   description:
     "Learn about the Florida Impact Windows & Doors 6-step impact window and door installation process. From free consultation to final inspection, we handle everything for a smooth, stress-free experience in South Florida.",
+  alternates: { canonical: "https://floridaimpactwindowsdoors.com/our-process/" },
 };
 
 const processSteps = [

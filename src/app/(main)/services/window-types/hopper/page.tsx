@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Hopper Impact Windows | Florida Impact Windows & Doors",
   description:
     "Hopper impact windows hinged at the bottom, opening inward for compact spaces. Hurricane-rated protection ideal for basements, bathrooms, and utility rooms in South Florida. Free estimates.",
+  alternates: {
+    canonical: "https://floridaimpactwindowsdoors.com/services/window-types/hopper/",
+  },
 };
 
 const features = [

@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: "Florida Impact Windows & Doors | Impact Windows & Doors in Fort Lauderdale | Broward & Palm Beach County",
   description:
     "Premium impact windows & doors at affordable prices. Serving Broward & Palm Beach County. A+ BBB rating, 5-star Google & Yelp reviews. HVHZ experts. Call (754) 600-4876.",
+  alternates: { canonical: "https://floridaimpactwindowsdoors.com/" },
 };
 
 const testimonials = [
@@ -51,8 +52,18 @@ const testimonials = [
 ];
 
 export default function HomePage() {
+  const homeSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: "Florida Impact Windows & Doors - South Florida's #1 Impact Window Installer",
+    description: "South Florida's premier impact window and door installation company. Hurricane-rated protection for homes in Miami-Dade, Broward & Palm Beach County.",
+    url: "https://floridaimpactwindowsdoors.com/",
+    isPartOf: { "@type": "WebSite", name: "Florida Impact Windows & Doors", url: "https://floridaimpactwindowsdoors.com" },
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(homeSchema) }} />
       <StickyMobileCTA />
 
       {/* Urgency / Promotion Banner */}

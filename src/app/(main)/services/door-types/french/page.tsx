@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Impact French Doors | Florida Impact Windows & Doors",
   description:
     "Elegant impact French doors for South Florida homes. Hurricane-rated double-swing doors with timeless style, energy efficiency, and Category 5 protection for Miami-Dade, Broward & Palm Beach.",
+  alternates: {
+    canonical: "https://floridaimpactwindowsdoors.com/services/door-types/french/",
+  },
 };
 
 const features = [

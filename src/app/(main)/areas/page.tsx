@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     description:
       "Florida Impact Windows & Doors serves Miami-Dade, Broward & Palm Beach County with professional impact window and door installation. Find your city and get a free estimate today.",
   },
+  alternates: { canonical: "https://floridaimpactwindowsdoors.com/areas/" },
 };
 
 const countyDescriptions: Record<string, string> = {

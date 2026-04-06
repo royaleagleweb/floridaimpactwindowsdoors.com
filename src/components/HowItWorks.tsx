@@ -10,7 +10,7 @@ const steps = [
     description:
       "Call (754) 600-4876 or fill out our online form for a free consultation. We'll discuss your needs and schedule a convenient time to visit.",
     icon: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
         <path
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -26,7 +26,7 @@ const steps = [
     description:
       "One of our owners visits your home, takes measurements, and provides a detailed written estimate with transparent pricing. No pressure, no surprises.",
     icon: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
         <path
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -42,7 +42,7 @@ const steps = [
     description:
       "Our own crew (never subcontractors) installs your impact windows and doors. An owner is on-site for every project to ensure quality.",
     icon: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
         <path
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -64,7 +64,7 @@ const steps = [
     description:
       "We schedule your city/county inspection. Once passed, we walk you through everything and make sure you're 100% satisfied.",
     icon: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
         <path
           strokeLinecap="round"
           strokeLinejoin="round"

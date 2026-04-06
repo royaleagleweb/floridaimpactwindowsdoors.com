@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Casement Impact Windows | Florida Impact Windows & Doors",
   description:
     "Casement impact windows with crank-operated, outward-swinging design for maximum airflow and unobstructed views. Hurricane-rated protection for South Florida homes. Free estimates.",
+  alternates: {
+    canonical: "https://floridaimpactwindowsdoors.com/services/window-types/casement/",
+  },
 };
 
 const features = [

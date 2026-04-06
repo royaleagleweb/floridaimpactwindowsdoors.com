@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Double Hung Impact Windows | Florida Impact Windows & Doors",
   description:
     "Double hung impact windows with both sashes operable for maximum ventilation. Hurricane-rated, energy-efficient protection for South Florida homes. Free estimates from Florida Impact Windows & Doors.",
+  alternates: {
+    canonical: "https://floridaimpactwindowsdoors.com/services/window-types/double-hung/",
+  },
 };
 
 const features = [

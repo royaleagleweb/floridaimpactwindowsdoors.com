@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Sliding Impact Windows | Florida Impact Windows & Doors",
   description:
     "Sliding impact windows with smooth horizontal operation for wide openings. Hurricane-rated, space-saving design popular throughout South Florida. Free estimates from Florida Impact Windows & Doors.",
+  alternates: {
+    canonical: "https://floridaimpactwindowsdoors.com/services/window-types/sliding/",
+  },
 };
 
 const features = [

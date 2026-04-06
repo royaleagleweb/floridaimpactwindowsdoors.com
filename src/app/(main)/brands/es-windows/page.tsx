@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "ES Windows | Authorized Dealer | Florida Impact Windows & Doors",
   description:
     "Florida Impact Windows & Doors is an authorized ES Windows dealer in South Florida. Affordable high-quality impact windows and doors. Series 100, 200, 300 and more. Free estimates.",
+  alternates: { canonical: "https://floridaimpactwindowsdoors.com/brands/es-windows/" },
 };
 
 const productLines = [
@@ -83,8 +84,19 @@ const whyChoose = [
 ];
 
 export default function ESWindowsBrandPage() {
+  const brandSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://floridaimpactwindowsdoors.com/" },
+      { "@type": "ListItem", position: 2, name: "Brands", item: "https://floridaimpactwindowsdoors.com/brands/" },
+      { "@type": "ListItem", position: 3, name: "ES Windows" },
+    ],
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(brandSchema) }} />
       {/* Hero Section */}
       <section className="relative min-h-[60vh] flex items-center bg-ocean-950 overflow-hidden">
         <div className="absolute inset-0 bg-grid opacity-40" />

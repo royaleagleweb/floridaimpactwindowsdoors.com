@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Bow Impact Windows | Florida Impact Windows & Doors",
   description:
     "Bow impact windows with four or five panels in a graceful curve for panoramic views and architectural elegance. Hurricane-rated curved projection windows for South Florida homes. Free estimates.",
+  alternates: {
+    canonical: "https://floridaimpactwindowsdoors.com/services/window-types/bow/",
+  },
 };
 
 const features = [

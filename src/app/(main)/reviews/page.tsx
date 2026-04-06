@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Customer Reviews & Testimonials | Florida Impact Windows & Doors",
   description:
     "Read real reviews from South Florida homeowners who chose Florida Impact Windows & Doors for their impact windows and doors. 5-star rated on Google with 2,500+ happy customers.",
+  alternates: { canonical: "https://floridaimpactwindowsdoors.com/reviews/" },
 };
 
 const reviews = [
@@ -114,8 +115,28 @@ const stats = [
 ];
 
 export default function ReviewsPage() {
+  const reviewSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: "Florida Impact Windows & Doors",
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "5.0",
+      reviewCount: "500",
+      bestRating: "5",
+      worstRating: "1",
+    },
+    review: reviews.slice(0, 5).map((r) => ({
+      "@type": "Review",
+      reviewRating: { "@type": "Rating", ratingValue: String(r.rating), bestRating: "5" },
+      author: { "@type": "Person", name: r.name },
+      reviewBody: r.text,
+    })),
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }} />
       {/* Hero Section */}
       <section className="relative py-20 bg-ocean-950 overflow-hidden">
         <div className="absolute inset-0 bg-grid opacity-40" />

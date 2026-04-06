@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Privacy Policy | Florida Impact Windows & Doors",
   description:
     "Florida Impact Windows & Doors privacy policy. Learn how we collect, use, and protect your personal information when you visit our website or use our home improvement services in South Florida.",
+  alternates: { canonical: "https://floridaimpactwindowsdoors.com/privacy-policy/" },
 };
 
 export default function PrivacyPolicyPage() {

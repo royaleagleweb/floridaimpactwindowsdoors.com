@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Single Hung Impact Windows | Florida Impact Windows & Doors",
   description:
     "Single hung impact windows for South Florida homes. Hurricane-rated protection with a classic vertical-sliding design. Serving Miami-Dade, Broward & Palm Beach. Free estimates from Florida Impact Windows & Doors.",
+  alternates: {
+    canonical: "https://floridaimpactwindowsdoors.com/services/window-types/single-hung/",
+  },
 };
 
 const features = [

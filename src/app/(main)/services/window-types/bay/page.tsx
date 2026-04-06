@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Bay Impact Windows | Florida Impact Windows & Doors",
   description:
     "Bay impact windows with three-panel projection for panoramic views and extra interior space. Hurricane-rated architectural statement pieces for South Florida homes. Free estimates.",
+  alternates: {
+    canonical: "https://floridaimpactwindowsdoors.com/services/window-types/bay/",
+  },
 };
 
 const features = [

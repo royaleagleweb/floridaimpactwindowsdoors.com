@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Awning Impact Windows | Florida Impact Windows & Doors",
   description:
     "Awning impact windows hinged at the top for rain-friendly ventilation. Hurricane-rated protection ideal for bathrooms, kitchens, and high placements. Serving South Florida.",
+  alternates: {
+    canonical: "https://floridaimpactwindowsdoors.com/services/window-types/awning/",
+  },
 };
 
 const features = [

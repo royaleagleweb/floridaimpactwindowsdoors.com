@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Custom Window Systems (CWS) | Authorized Dealer | Florida Impact Windows & Doors",
   description:
     "Florida Impact Windows & Doors is an authorized Custom Window Systems dealer in South Florida. Innovative impact windows and doors with sleek modern designs. Free estimates.",
+  alternates: { canonical: "https://floridaimpactwindowsdoors.com/brands/custom-window-systems/" },
 };
 
 const productLines = [
@@ -83,8 +84,19 @@ const whyChoose = [
 ];
 
 export default function CWSBrandPage() {
+  const brandSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://floridaimpactwindowsdoors.com/" },
+      { "@type": "ListItem", position: 2, name: "Brands", item: "https://floridaimpactwindowsdoors.com/brands/" },
+      { "@type": "ListItem", position: 3, name: "Custom Window Systems" },
+    ],
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(brandSchema) }} />
       {/* Hero Section */}
       <section className="relative min-h-[60vh] flex items-center bg-ocean-950 overflow-hidden">
         <div className="absolute inset-0 bg-grid opacity-40" />
