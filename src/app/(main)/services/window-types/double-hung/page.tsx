@@ -116,7 +116,7 @@ export default function DoubleHungPage() {
             <div className="hidden lg:block">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-black/30 border border-white/10">
                 <Image
-                  src="/images/Double Hung Impact Windows.jpg"
+                  src="/images/double-hung-impact-windows.jpg"
                   alt="Double hung impact windows installed on a South Florida home"
                   width={600}
                   height={450}

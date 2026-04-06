@@ -266,7 +266,7 @@ export default function HomePage() {
               {
                 title: "Premium Products",
                 desc: "We partner with industry leaders like PGT, CGI, and ES Windows to deliver top-tier impact windows and doors built for Florida.",
-                image: "/images/Casement Impact Windows.jpg",
+                image: "/images/casement-impact-windows.jpg",
                 icon: "star",
               },
               {
@@ -351,14 +351,14 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {[
-              { src: "/images/doors 2.jpg", alt: "Impact door installation crew working on Fort Lauderdale home" },
+              { src: "/images/doors-2.jpg", alt: "Impact door installation crew working on Fort Lauderdale home" },
               { src: "/images/windows4.jpg", alt: "Completed impact window installation on South Florida home with palm trees" },
               { src: "/images/doors4.jpg", alt: "Aerial view of full impact window and door replacement project" },
               { src: "/images/windows6.jpg", alt: "Installation crew installing impact windows on residential home" },
               { src: "/images/doors5.jpg", alt: "Professional crew installing impact doors on Florida home" },
               { src: "/images/windows.jpg", alt: "Completed impact window installation on two-story Florida home" },
-              { src: "/images/imapct doors.jpg", alt: "Impact door installation in progress on South Florida residence" },
-              { src: "/images/picture window.jpg", alt: "Large impact picture window installed on Florida home" },
+              { src: "/images/impact-doors.jpg", alt: "Impact door installation in progress on South Florida residence" },
+              { src: "/images/picture-window.jpg", alt: "Large impact picture window installed on Florida home" },
             ].map((img, index) => (
               <div key={index} className={`group relative overflow-hidden rounded-2xl border border-white/10 hover:border-palm-500/30 transition-all ${index === 0 || index === 5 ? "row-span-2" : ""}`}>
                 <div className={`relative w-full overflow-hidden ${index === 0 || index === 5 ? "h-full min-h-[320px]" : "h-48 md:h-56"}`}>
@@ -572,7 +572,7 @@ export default function HomePage() {
             </div>
             <div className="relative h-80 lg:h-[500px] rounded-2xl overflow-hidden">
               <Image
-                src="/images/doors 3.jpg"
+                src="/images/doors-3.jpg"
                 alt="Florida Impact Windows and Doors professional installation team installing hurricane rated impact doors in Fort Lauderdale home"
                 fill
                 className="object-cover"

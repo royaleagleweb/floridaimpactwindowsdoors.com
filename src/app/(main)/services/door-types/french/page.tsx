@@ -104,7 +104,7 @@ export default function FrenchDoorsPage() {
             <div className="hidden lg:block">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-black/30 border border-white/10">
                 <Image
-                  src="/images/doors 2.jpg"
+                  src="/images/doors-2.jpg"
                   alt="Impact-rated French doors on a South Florida home"
                   width={600}
                   height={450}

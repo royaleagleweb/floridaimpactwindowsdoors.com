@@ -1,40 +1,21 @@
+# Allow all crawlers including Googlebot to access everything
 User-agent: *
 Allow: /
+Allow: /_next/
+Allow: /images/
 
-# AI Search Engines & LLM Crawlers - Explicitly Allowed
+# AI Search Engine Crawlers - Explicitly allowed
 User-agent: GPTBot
-Allow: /
-
 User-agent: OAI-SearchBot
-Allow: /
-
 User-agent: ChatGPT-User
-Allow: /
-
 User-agent: Google-Extended
-Allow: /
-
 User-agent: ClaudeBot
-Allow: /
-
 User-agent: anthropic-ai
-Allow: /
-
 User-agent: Claude-Web
-Allow: /
-
 User-agent: PerplexityBot
-Allow: /
-
 User-agent: Bytespider
-Allow: /
-
 User-agent: CCBot
-Allow: /
-
 User-agent: cohere-ai
-Allow: /
-
 User-agent: meta-externalagent
 Allow: /
 

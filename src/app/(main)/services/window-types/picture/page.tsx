@@ -116,7 +116,7 @@ export default function PicturePage() {
             <div className="hidden lg:block">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-black/30 border border-white/10">
                 <Image
-                  src="/images/picture window.jpg"
+                  src="/images/picture-window.jpg"
                   alt="Picture impact windows with large glass area on a South Florida home"
                   width={600}
                   height={450}

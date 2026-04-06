@@ -116,7 +116,7 @@ export default function CasementPage() {
             <div className="hidden lg:block">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-black/30 border border-white/10">
                 <Image
-                  src="/images/Casement Impact Windows.jpg"
+                  src="/images/casement-impact-windows.jpg"
                   alt="Casement impact windows installed on a South Florida home"
                   width={600}
                   height={450}

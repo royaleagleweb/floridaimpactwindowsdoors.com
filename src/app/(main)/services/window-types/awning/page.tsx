@@ -116,7 +116,7 @@ export default function AwningPage() {
             <div className="hidden lg:block">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-black/30 border border-white/10">
                 <Image
-                  src="/images/types of windows.jpg"
+                  src="/images/types-of-windows.jpg"
                   alt="Awning impact windows on a South Florida home"
                   width={600}
                   height={450}

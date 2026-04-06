@@ -104,7 +104,7 @@ export default function PivotDoorsPage() {
             <div className="hidden lg:block">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-black/30 border border-white/10">
                 <Image
-                  src="/images/imapct doors.jpg"
+                  src="/images/impact-doors.jpg"
                   alt="Impact-rated pivot door on a South Florida home"
                   width={600}
                   height={450}
