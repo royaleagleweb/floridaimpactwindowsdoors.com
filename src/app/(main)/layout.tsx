@@ -47,9 +47,6 @@ export const metadata: Metadata = {
   authors: [{ name: "Florida Impact Windows & Doors" }],
   creator: "Florida Impact Windows & Doors",
   publisher: "Florida Impact Windows & Doors",
-  alternates: {
-    canonical: "/",
-  },
   openGraph: {
     type: "website",
     locale: "en_US",
