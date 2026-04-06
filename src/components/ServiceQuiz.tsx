@@ -467,7 +467,7 @@ export default function ServiceQuiz() {
                   href="/get-estimate/"
                   className="block w-full text-center bg-gradient-to-r from-palm-500 to-palm-600 text-white py-4 rounded-xl font-bold text-base hover:from-palm-600 hover:to-palm-700 transition-all shadow-lg shadow-palm-500/30 hover:shadow-palm-500/50 hover:scale-[1.02] active:scale-[0.98]"
                 >
-                  Schedule Your Free Estimate
+                  Protect Your Home Now
                 </Link>
                 <a
                   href="tel:+17546004876"

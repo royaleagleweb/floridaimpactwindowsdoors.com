@@ -292,7 +292,7 @@ export default function BlogPage() {
               href="/get-estimate/"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-palm-500 to-palm-600 text-white px-10 py-5 rounded-full font-bold text-lg hover:from-palm-600 hover:to-palm-700 transition-all shadow-lg shadow-palm-500/25 hover:shadow-palm-500/40"
             >
-              Get Free Estimate
+              Protect Your Home Now
               <svg
                 className="w-5 h-5"
                 fill="none"

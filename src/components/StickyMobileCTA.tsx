@@ -22,7 +22,7 @@ export default function StickyMobileCTA() {
         href="/get-estimate/"
         className="flex-1 text-center bg-gradient-to-r from-palm-500 to-palm-600 text-white py-3 rounded-full font-bold text-sm shadow-lg shadow-palm-500/30"
       >
-        Get Free Estimate
+        Protect Your Home Now
       </Link>
       <a
         href="tel:+17546004876"

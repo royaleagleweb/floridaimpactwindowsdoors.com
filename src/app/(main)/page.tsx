@@ -258,7 +258,7 @@ export default function HomePage() {
                   <h3 className="text-2xl md:text-3xl font-bold text-white font-display mb-4">Local Experts Who Know South Florida</h3>
                   <p className="text-gray-400 leading-relaxed mb-6">With over 20 years of experience serving South Florida, we understand the unique challenges our climate presents. From hurricane-force winds to year-round UV exposure, we install products engineered specifically for our region.</p>
                   <Link href="/get-estimate/" className="inline-flex items-center gap-2 text-palm-400 font-semibold group-hover:gap-3 transition-all">
-                    Get a Free Estimate <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                    Protect Your Home Now <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
                   </Link>
                 </div>
               </div>
@@ -386,7 +386,7 @@ export default function HomePage() {
           </div>
           <div className="text-center mt-10">
             <Link href="/get-estimate/" className="inline-flex items-center gap-2 bg-gradient-to-r from-palm-500 to-palm-600 text-white px-8 py-4 rounded-full font-bold hover:from-palm-600 hover:to-palm-700 transition-all shadow-lg shadow-palm-500/30">
-              Get a Free Estimate
+              Protect Your Home Now
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
             </Link>
           </div>
@@ -542,7 +542,7 @@ export default function HomePage() {
                 <p className="text-palm-300 text-sm font-medium">Financing available for projects not covered by the grant</p>
               </div>
               <Link href="/get-estimate/" className="block w-full text-center bg-gradient-to-r from-palm-500 to-palm-600 text-white px-8 py-4 rounded-full font-bold hover:from-palm-600 hover:to-palm-700 transition-all shadow-lg shadow-palm-500/25">
-                Schedule Your Free Estimate
+                Start Protecting Your Home
               </Link>
             </div>
           </div>
@@ -690,7 +690,7 @@ export default function HomePage() {
           </div>
           <div className="text-center mt-12">
             <Link href="/get-estimate/" className="inline-flex items-center gap-2 bg-gradient-to-r from-palm-500 to-palm-600 text-white px-8 py-4 rounded-full font-bold hover:from-palm-600 hover:to-palm-700 transition-all shadow-lg shadow-palm-500/30">
-              Schedule Your Free Estimate
+              Start Protecting Your Home
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
             </Link>
           </div>
@@ -771,7 +771,7 @@ export default function HomePage() {
               href="/get-estimate/"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-palm-500 to-palm-600 text-white px-10 py-5 rounded-full font-bold text-lg hover:from-palm-600 hover:to-palm-700 transition-all shadow-lg shadow-palm-500/30 hover:shadow-palm-500/50 hover:scale-105"
             >
-              Schedule Free Estimate
+              Protect Your Home Now
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
             </Link>
             <a

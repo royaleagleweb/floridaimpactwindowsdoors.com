@@ -254,7 +254,7 @@ export default async function BlogPostPage({
               {/* CTA Card */}
               <div className="bg-gradient-to-br from-palm-50 to-ocean-50 rounded-2xl p-8 border border-palm-100 mb-8">
                 <h3 className="text-xl font-bold font-display text-gray-900 mb-3">
-                  Get a Free Estimate
+                  Protect Your Home Now
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed mb-6">
                   Ready to upgrade your home with impact windows? Schedule a free
@@ -264,7 +264,7 @@ export default async function BlogPostPage({
                   href="/get-estimate/"
                   className="block w-full text-center bg-gradient-to-r from-palm-500 to-palm-600 text-white px-6 py-3 rounded-full font-bold hover:from-palm-600 hover:to-palm-700 transition-all shadow-lg shadow-palm-500/25"
                 >
-                  Schedule Consultation
+                  Start Protecting Your Home
                 </Link>
                 <a
                   href="tel:+17546004876"
@@ -446,7 +446,7 @@ export default async function BlogPostPage({
               href="/get-estimate/"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-palm-500 to-palm-600 text-white px-10 py-5 rounded-full font-bold text-lg hover:from-palm-600 hover:to-palm-700 transition-all shadow-lg shadow-palm-500/25 hover:shadow-palm-500/40"
             >
-              Get Free Estimate
+              Protect Your Home Now
               <svg
                 className="w-5 h-5"
                 fill="none"

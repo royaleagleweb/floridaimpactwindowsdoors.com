@@ -296,7 +296,7 @@ export default function Header() {
                   className="block w-full text-center bg-gradient-to-r from-palm-500 to-palm-600 text-white px-6 py-3 rounded-full font-semibold"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  Get Free Estimate
+                  Protect Your Home Now
                 </a>
               </div>
             </div>
