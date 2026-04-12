@@ -5,7 +5,7 @@ import { cities, getCitiesByCounty } from "@/data/cities";
 export const metadata: Metadata = {
   title: "Service Areas | Impact Windows & Doors Across South Florida",
   description:
-    "Florida Impact Windows & Doors serves Miami-Dade, Broward & Palm Beach County with professional impact window and door installation. Find your city and get a free estimate today.",
+    "Florida Impact Windows & Doors serves 88 cities across Miami-Dade, Broward, and Palm Beach counties. Find your city for local service.",
   openGraph: {
     title: "Service Areas | Impact Windows & Doors Across South Florida",
     description:

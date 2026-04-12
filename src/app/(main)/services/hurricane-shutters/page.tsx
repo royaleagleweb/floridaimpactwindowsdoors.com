@@ -7,7 +7,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 export const metadata: Metadata = {
   title: "Hurricane Shutters Fort Lauderdale | Accordion & Roll-Down Shutter Installation",
   description:
-    "Professional hurricane shutter installation in Fort Lauderdale, Broward & Palm Beach County. Accordion, roll-down, Bahama, colonial & storm panel shutters. Free estimates. Call (754) 600-4876.",
+    "Hurricane shutter installation in Fort Lauderdale & South Florida. Accordion, roll-down, Bahama & storm panels. Free estimates.",
   alternates: { canonical: "/services/hurricane-shutters/" },
 };
 

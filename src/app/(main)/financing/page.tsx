@@ -5,7 +5,7 @@ import PaymentCalculator from "@/components/PaymentCalculator";
 export const metadata: Metadata = {
   title: "Impact Windows Financing Fort Lauderdale | $0 Down, 0% Interest & PACE",
   description:
-    "Affordable impact window financing in Fort Lauderdale & Broward County. $0 down, 0% interest, PACE financing, FPL rebates & insurance discounts. Make hurricane protection affordable. Free quote.",
+    "Flexible financing for impact windows in South Florida. 0% interest options, PACE program, and payments from $89/month.",
   alternates: { canonical: "/financing/" },
 };
 

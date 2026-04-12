@@ -5,7 +5,7 @@ import { blogPosts } from "@/data/blog";
 export const metadata: Metadata = {
   title: "Blog | Impact Window Tips, Guides & News",
   description:
-    "Expert articles on impact windows, hurricane protection, energy efficiency, insurance savings, and home improvement for South Florida homeowners. Stay informed with Florida Impact Windows & Doors.",
+    "Expert advice on impact windows, hurricane protection, and home improvement for South Florida homeowners. Read our latest articles.",
   openGraph: {
     title: "Blog | Impact Window Tips, Guides & News | Florida Impact Windows & Doors",
     description:

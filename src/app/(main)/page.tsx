@@ -6,7 +6,7 @@ import StickyMobileCTA from "@/components/StickyMobileCTA";
 import HowItWorks from "@/components/HowItWorks";
 
 export const metadata: Metadata = {
-  title: "Florida Impact Windows & Doors | Impact Windows & Doors in Fort Lauderdale | Broward & Palm Beach County",
+  title: "Impact Windows & Doors Fort Lauderdale | #1 South Florida Installer",
   description:
     "Premium impact windows & doors at affordable prices. Serving Broward & Palm Beach County. A+ BBB rating, 5-star Google & Yelp reviews. HVHZ experts. Call (754) 600-4876.",
   alternates: { canonical: "https://floridaimpactwindowsdoors.com/" },

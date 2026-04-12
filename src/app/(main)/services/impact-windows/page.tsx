@@ -7,7 +7,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 export const metadata: Metadata = {
   title: "Impact Windows Installation Fort Lauderdale | #1 Hurricane Windows Broward County",
   description:
-    "Premium impact window installation in Fort Lauderdale, Broward & Palm Beach County. Category 5 hurricane-rated glass. Energy savings up to 70%, insurance discounts up to 45%. Free estimates. Call (754) 600-4876.",
+    "Premium impact window installation in Fort Lauderdale & South Florida. Category 5 rated. Energy savings up to 70%. Free estimates.",
   alternates: { canonical: "/services/impact-windows/" },
 };
 

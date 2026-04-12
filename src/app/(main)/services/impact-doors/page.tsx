@@ -7,7 +7,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 export const metadata: Metadata = {
   title: "Impact Doors Fort Lauderdale | Hurricane-Rated Sliding Glass, French & Entry Doors",
   description:
-    "Premium impact door installation in Fort Lauderdale, Broward & Palm Beach County. Hurricane-rated sliding glass doors, French doors, entry doors & patio doors. Free estimates. Call (754) 600-4876.",
+    "Impact door installation in Fort Lauderdale & South Florida. Hurricane-rated sliding glass, French & entry doors. Free estimates.",
   alternates: { canonical: "/services/impact-doors/" },
 };
 

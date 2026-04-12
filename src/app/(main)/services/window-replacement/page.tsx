@@ -7,7 +7,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 export const metadata: Metadata = {
   title: "Window Replacement Fort Lauderdale | Upgrade to Hurricane Impact Windows",
   description:
-    "Full-service window replacement in Fort Lauderdale, Broward & Palm Beach County. Replace aging windows with hurricane-rated impact glass. Energy efficient & insurance savings. Free estimates.",
+    "Window replacement in Fort Lauderdale & South Florida. Upgrade to hurricane-rated impact glass. Energy efficient. Free estimates.",
   alternates: { canonical: "/services/window-replacement/" },
 };
 

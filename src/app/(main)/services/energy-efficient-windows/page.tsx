@@ -6,7 +6,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 export const metadata: Metadata = {
   title: "Energy Efficient Impact Windows Fort Lauderdale | Low-E Glass & FPL Savings",
   description:
-    "Save up to 30% on FPL bills with energy efficient impact windows in Fort Lauderdale & Broward County. Low-E coatings, argon gas fill, solar heat reduction. Hurricane rated. Free estimates.",
+    "Save up to 30% on energy bills with impact windows in South Florida. Low-E coatings, argon gas fill. Hurricane rated. Free estimates.",
   alternates: { canonical: "/services/energy-efficient-windows/" },
 };
 

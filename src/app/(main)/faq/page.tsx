@@ -6,7 +6,7 @@ import { faqs } from "@/data/faq";
 export const metadata: Metadata = {
   title: "FAQ | Impact Window Questions Answered",
   description:
-    "Find answers to frequently asked questions about impact windows, hurricane protection, costs, installation, insurance savings, and maintenance for South Florida homeowners.",
+    "Answers to common questions about impact windows, costs, installation, insurance savings, and hurricane protection in South Florida.",
   openGraph: {
     title: "FAQ | Impact Window Questions Answered | Florida Impact Windows & Doors",
     description:
