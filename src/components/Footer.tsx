@@ -20,6 +20,7 @@ const footerLinks = {
     { name: "Picture", href: "/services/window-types/picture/" },
     { name: "Bay Windows", href: "/services/window-types/bay/" },
     { name: "Bow Windows", href: "/services/window-types/bow/" },
+    { name: "Hopper Windows", href: "/services/window-types/hopper/" },
   ],
   doorTypes: [
     { name: "Sliding Glass Doors", href: "/services/door-types/sliding-glass/" },

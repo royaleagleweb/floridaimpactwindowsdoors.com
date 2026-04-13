@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
+import RelatedWindowTypes from "@/components/RelatedWindowTypes";
 
 export const metadata: Metadata = {
   title: "Sliding Impact Windows | Florida Impact Windows & Doors",
@@ -344,6 +345,8 @@ export default function SlidingPage() {
           </p>
         </div>
       </section>
+
+      <RelatedWindowTypes current="/services/window-types/sliding/" />
 
       {/* CTA Section */}
       <section className="py-20 bg-ocean-950 relative overflow-hidden">

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "../globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -161,7 +162,11 @@ function LocalBusinessJsonLd() {
       bestRating: "5",
       worstRating: "1",
     },
-    sameAs: [],
+    sameAs: [
+      "https://www.google.com/maps/place/Florida+Impact+Windows+%26+Doors",
+      "https://www.yelp.com/biz/florida-impact-windows-and-doors-hollywood",
+      "https://www.bbb.org/us/fl/hollywood/profile/window-installation/florida-impact-windows-doors-0633-92029751",
+    ],
     review: [
       {
         "@type": "Review",
@@ -280,12 +285,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-SKF6705HJM" />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-SKF6705HJM');`,
-          }}
-        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
@@ -303,6 +302,13 @@ export default function RootLayout({
         <WebSiteJsonLd />
       </head>
       <body className="font-sans antialiased">
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-SKF6705HJM"
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-SKF6705HJM');`}
+        </Script>
         <Header />
         <main>{children}</main>
         <Footer />

@@ -61,9 +61,57 @@ export default function HomePage() {
     isPartOf: { "@type": "WebSite", name: "Florida Impact Windows & Doors", url: "https://floridaimpactwindowsdoors.com" },
   };
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "What makes an impact window so strong?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Impact windows are constructed with heavy-duty reinforced frames and impact-resistant laminated glass. A durable liner called polyvinyl butyral (PVB) keeps the glass bonded together even when cracked. A special silicone sealant anchors the laminated glass to the frame, ensuring the window continues to protect even after impact.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What is design pressure (DP) rating?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "The most important performance factor for impact windows. This rating measures how much wind load (positive and negative pressure) a window can withstand, measured in pounds per square foot (psf). In South Florida, building codes require windows to meet minimum DP ratings based on location, building height, and exposure.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Can impact windows get you a discount on your insurance?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes. Under Florida law (Statute §627.0629), all residential property insurance companies are required to offer discounts or credits to homeowners who harden their homes against hurricane damage, including through impact-resistant windows and doors.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What is a High Velocity Hurricane Zone (HVHZ)?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "The Florida Building Code designates high-velocity hurricane zones as areas most vulnerable to hurricanes. Only Miami-Dade and Broward County are designated as HVHZ. Of the 292 hurricanes that have hit the U.S. since 1851, 120 made landfall in Florida, and 57 hit Broward and Miami-Dade County.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What is the difference between Low-E glass and tinted glass?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Tinted glass blocks more of the sun's light than heat. Low-E glass blocks more of the sun's heat than light. Low-E glass reflects about 70-85% of the sun's heat, tinted glass reflects about 40-60%, and clear laminated glass reflects only about 10-30%.",
+        },
+      },
+    ],
+  };
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(homeSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <StickyMobileCTA />
 
       {/* Urgency / Promotion Banner */}
@@ -246,7 +294,7 @@ export default function HomePage() {
             <div className="group relative bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-palm-500/30 transition-all">
               <div className="grid md:grid-cols-2">
                 <div className="relative h-64 md:h-auto min-h-[300px] overflow-hidden">
-                  <Image src="/images/windows.jpg" alt="South Florida home with impact windows installed" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                  <Image src="/images/windows.jpg" alt="South Florida home with impact windows installed" fill loading="lazy" className="object-cover group-hover:scale-105 transition-transform duration-700" />
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent to-ocean-950/50 hidden md:block" />
                   <div className="absolute inset-0 bg-gradient-to-t from-ocean-950/70 to-transparent md:hidden" />
                 </div>
@@ -295,7 +343,7 @@ export default function HomePage() {
             ].map((item) => (
               <div key={item.title} className="group bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-palm-500/30 transition-all">
                 <div className="relative h-40 overflow-hidden">
-                  <Image src={item.image} alt={item.title} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <Image src={item.image} alt={item.title} fill loading="lazy" className="object-cover group-hover:scale-105 transition-transform duration-500" />
                   <div className="absolute inset-0 bg-gradient-to-t from-ocean-950 via-ocean-950/40 to-transparent" />
                   <div className="absolute bottom-3 left-4">
                     <div className="w-9 h-9 rounded-xl bg-palm-500/20 backdrop-blur-sm flex items-center justify-center text-palm-400 border border-palm-500/20">
@@ -377,6 +425,7 @@ export default function HomePage() {
                     src={img.src}
                     alt={img.alt}
                     fill
+                    loading="lazy"
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-ocean-950/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -586,6 +635,7 @@ export default function HomePage() {
                 src="/images/doors-3.jpg"
                 alt="Florida Impact Windows and Doors professional installation team installing hurricane rated impact doors in Fort Lauderdale home"
                 fill
+                loading="lazy"
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />

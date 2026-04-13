@@ -30,6 +30,7 @@ const navigation = [
       { name: "Picture Windows", href: "/services/window-types/picture/" },
       { name: "Bay Windows", href: "/services/window-types/bay/" },
       { name: "Bow Windows", href: "/services/window-types/bow/" },
+      { name: "Hopper Windows", href: "/services/window-types/hopper/" },
     ],
   },
   {
@@ -42,6 +43,7 @@ const navigation = [
       { name: "Patio Doors", href: "/services/door-types/patio/" },
       { name: "Pivot Doors", href: "/services/door-types/pivot/" },
       { name: "Garage Doors", href: "/services/door-types/garage/" },
+      { name: "Storm Doors", href: "/services/door-types/storm/" },
     ],
   },
   {

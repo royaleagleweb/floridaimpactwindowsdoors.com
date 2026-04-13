@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
+import RelatedDoorTypes from "@/components/RelatedDoorTypes";
 
 export const metadata: Metadata = {
   title: "Impact Sliding Glass Doors | Florida Impact Windows & Doors",
@@ -289,6 +290,8 @@ export default function SlidingGlassDoorsPage() {
           </div>
         </div>
       </section>
+
+      <RelatedDoorTypes current="/services/door-types/sliding-glass/" />
 
       {/* CTA Section */}
       <section className="py-20 bg-ocean-950 relative overflow-hidden">
