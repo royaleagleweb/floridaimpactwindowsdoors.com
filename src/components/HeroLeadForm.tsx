@@ -44,14 +44,14 @@ export default function HeroLeadForm() {
             name="service"
             className="w-full px-4 py-3.5 rounded-xl border border-white/10 bg-white/5 text-white focus:outline-none focus:ring-2 focus:ring-palm-500 focus:border-transparent transition text-sm appearance-none"
           >
-            <option value="">Select a Service</option>
-            <option value="Impact Windows">Impact Windows</option>
-            <option value="Impact Doors">Impact Doors</option>
-            <option value="Hurricane Shutters">Hurricane Shutters</option>
-            <option value="Window Replacement">Window Replacement</option>
-            <option value="Door Replacement">Door Replacement</option>
-            <option value="Wind Mitigation Inspection">Wind Mitigation Inspection</option>
-            <option value="Other / Not Sure">Other / Not Sure</option>
+            <option value="" style={{ backgroundColor: "#0a1628", color: "#fff" }}>Select a Service</option>
+            <option value="Impact Windows" style={{ backgroundColor: "#0a1628", color: "#fff" }}>Impact Windows</option>
+            <option value="Impact Doors" style={{ backgroundColor: "#0a1628", color: "#fff" }}>Impact Doors</option>
+            <option value="Hurricane Shutters" style={{ backgroundColor: "#0a1628", color: "#fff" }}>Hurricane Shutters</option>
+            <option value="Window Replacement" style={{ backgroundColor: "#0a1628", color: "#fff" }}>Window Replacement</option>
+            <option value="Door Replacement" style={{ backgroundColor: "#0a1628", color: "#fff" }}>Door Replacement</option>
+            <option value="Wind Mitigation Inspection" style={{ backgroundColor: "#0a1628", color: "#fff" }}>Wind Mitigation Inspection</option>
+            <option value="Other / Not Sure" style={{ backgroundColor: "#0a1628", color: "#fff" }}>Other / Not Sure</option>
           </select>
         </div>
         <button
