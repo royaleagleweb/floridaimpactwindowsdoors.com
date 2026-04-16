@@ -3,6 +3,7 @@ import Script from "next/script";
 import "../globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ChatBot from "@/components/ChatBot";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://floridaimpactwindowsdoors.com"),
@@ -312,6 +313,7 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
+        <ChatBot />
       </body>
     </html>
   );
