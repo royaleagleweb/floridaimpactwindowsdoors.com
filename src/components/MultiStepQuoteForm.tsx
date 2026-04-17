@@ -183,6 +183,26 @@ export default function MultiStepQuoteForm() {
 
   const handleSubmit = () => {
     if (!validate()) return;
+    fetch("https://formsubmit.co/ajax/roy@royaleagleweb.com", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
+      body: JSON.stringify({
+        _subject: "New Multi-Step Quote Request",
+        _template: "box",
+        name: form.name,
+        email: form.email,
+        phone: form.phone,
+        address: form.address,
+        city: form.city,
+        services: form.services.join(", "),
+        property_type: form.propertyType,
+        openings: form.openings,
+        property_age: form.propertyAge,
+        brand_preferences: form.brands.join(", "),
+        budget: form.budget,
+        timeline: form.timeline,
+      }),
+    }).catch(() => {});
     setSubmitted(true);
   };
 

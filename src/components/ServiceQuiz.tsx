@@ -236,6 +236,22 @@ export default function ServiceQuiz() {
 
   const handleFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    const recommendation = getRecommendation(answers);
+    fetch("https://formsubmit.co/ajax/roy@royaleagleweb.com", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
+      body: JSON.stringify({
+        _subject: "New Service Quiz Lead",
+        _template: "box",
+        name: formData.name,
+        phone: formData.phone,
+        email: formData.email,
+        address: formData.address,
+        recommended_service: recommendation.service,
+        urgency: recommendation.urgency,
+        ...answers,
+      }),
+    }).catch(() => {});
     setShowResult(true);
   };
 
