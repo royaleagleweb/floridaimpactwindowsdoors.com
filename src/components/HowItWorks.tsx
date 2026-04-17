@@ -40,7 +40,7 @@ const steps = [
     number: 3,
     title: "Expert Installation",
     description:
-      "Our own crew (never subcontractors) installs your impact windows and doors. An owner is on-site for every project to ensure quality.",
+      "Our own crew installs your impact windows and doors. An owner is on-site for every project to ensure quality.",
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
         <path

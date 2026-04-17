@@ -35,7 +35,7 @@ const knowledgeBase: KnowledgeEntry[] = [
     keywords: ["insurance", "premium", "discount", "save", "savings", "wind mitigation", "policy"],
     answer:
       "Yes! Florida law (Statute §627.0629) requires insurers to offer discounts for impact windows. Homeowners typically save $500-$2,000+ per year, up to 45% off windstorm premiums. You'll need a Wind Mitigation Inspection after installation to claim the max discount. We provide all the documentation needed.",
-    links: [{ label: "Learn More", href: "/faq/do-impact-windows-lower-insurance-premiums-in-florida/" }],
+    links: [{ label: "Learn More", href: "/faq/do-impact-windows-lower-insurance-in-florida/" }],
   },
   {
     keywords: ["value", "resale", "worth", "roi", "return", "investment", "home value", "property value"],

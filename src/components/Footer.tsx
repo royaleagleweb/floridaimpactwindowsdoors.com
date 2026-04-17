@@ -112,7 +112,7 @@ export default function Footer() {
                 </div>
               </Link>
               <p className="text-sm text-gray-500 mb-2">
-                Premium Impact Windows &amp; Doors At Affordable Prices. Owner-installed, no subcontractors.
+                Premium Impact Windows &amp; Doors At Affordable Prices. Owner-installed.
               </p>
               <p className="text-xs text-gray-600 mb-4">
                 3000 Stirling Rd, Hollywood, FL 33021
