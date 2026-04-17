@@ -1,11 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
+import ServiceAreaLinks from "@/components/ServiceAreaLinks";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Impact Doors Fort Lauderdale | Hurricane-Rated Sliding Glass, French & Entry Doors",
   description:
-    "Premium impact door installation in Fort Lauderdale, Broward & Palm Beach County. Hurricane-rated sliding glass doors, French doors, entry doors & patio doors. Free estimates. Call (754) 600-4876.",
+    "Impact door installation in Fort Lauderdale & South Florida. Hurricane-rated sliding glass, French & entry doors. Free estimates.",
   alternates: { canonical: "/services/impact-doors/" },
 };
 
@@ -96,6 +98,7 @@ export default function ImpactDoorsPage() {
         <div className="absolute bottom-20 left-10 w-80 h-80 bg-palm-500/10 rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: "1.5s" }} />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 py-20 lg:py-28">
+          <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Services", href: "/services/impact-doors/" }, { label: "Impact Doors" }]} />
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/10 rounded-full px-4 py-1.5 mb-6">
@@ -113,7 +116,7 @@ export default function ImpactDoorsPage() {
                 href="/get-estimate/"
                 className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-palm-500 to-palm-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:from-palm-600 hover:to-palm-700 transition-all shadow-lg shadow-palm-500/25 hover:shadow-palm-500/40 hover:scale-105"
               >
-                Get Free Estimate
+                Protect Your Home Now
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
               </Link>
               <a
@@ -125,10 +128,10 @@ export default function ImpactDoorsPage() {
               </a>
             </div>
             </div>
-            <div className="hidden lg:block">
+            <div>
               <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-black/30 border border-white/10">
                 <Image
-                  src="/images/imapct doors.jpg"
+                  src="/images/impact-doors.jpg"
                   alt="Premium impact doors installed on a South Florida home"
                   width={600}
                   height={450}
@@ -237,7 +240,7 @@ export default function ImpactDoorsPage() {
                 href="/get-estimate/"
                 className="block w-full text-center bg-gradient-to-r from-palm-500 to-palm-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:from-palm-600 hover:to-palm-700 transition-all shadow-lg shadow-palm-500/25"
               >
-                Schedule Free Consultation
+                Start Protecting Your Home
               </Link>
               <p className="text-center text-gray-500 text-sm mt-4">No obligation. No pressure. No cost.</p>
             </div>
@@ -281,54 +284,16 @@ export default function ImpactDoorsPage() {
       </section>
 
       {/* Service Areas */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <span className="inline-block text-sm font-semibold text-palm-600 uppercase tracking-wider mb-3">Service Areas</span>
-            <h2 className="text-3xl md:text-4xl font-bold font-display text-gray-900 mb-4">
-              Impact Door Installation Throughout South Florida
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              From oceanfront condos in Miami Beach to lakeside estates in Wellington, we install impact doors across the entire tri-county region.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                county: "Miami-Dade County",
-                cities: ["Miami", "Miami Beach", "Coral Gables", "Coconut Grove", "Doral", "Aventura", "Key Biscayne", "Pinecrest"],
-                href: "/areas/miami/",
-              },
-              {
-                county: "Broward County",
-                cities: ["Fort Lauderdale", "Hollywood", "Pembroke Pines", "Weston", "Coral Springs", "Plantation", "Parkland", "Davie"],
-                href: "/areas/fort-lauderdale/",
-              },
-              {
-                county: "Palm Beach County",
-                cities: ["West Palm Beach", "Boca Raton", "Delray Beach", "Jupiter", "Palm Beach Gardens", "Wellington", "Boynton Beach", "Lake Worth"],
-                href: "/areas/west-palm-beach/",
-              },
-            ].map((area) => (
-              <div key={area.county} className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
-                <h3 className="text-xl font-bold text-gray-900 mb-4 font-display">{area.county}</h3>
-                <ul className="space-y-2 mb-6">
-                  {area.cities.map((city) => (
-                    <li key={city} className="flex items-center gap-2 text-gray-600">
-                      <svg className="w-4 h-4 text-palm-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                      {city}
-                    </li>
-                  ))}
-                </ul>
-                <Link href={area.href} className="inline-flex items-center gap-2 text-palm-600 font-semibold hover:text-palm-700 transition-colors text-sm">
-                  View All {area.county} Cities
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <ServiceAreaLinks
+        serviceSlug="impact-doors"
+        title="Impact Door Installation Throughout South Florida"
+        subtitle="From oceanfront condos in Miami Beach to lakeside estates in Wellington, we install impact doors across the entire tri-county region."
+        counties={[
+          { county: "Miami-Dade County", cities: ["Miami", "Miami Beach", "Coral Gables", "Hialeah", "Doral", "Aventura", "Key Biscayne", "Pinecrest"], href: "/areas/miami/" },
+          { county: "Broward County", cities: ["Fort Lauderdale", "Hollywood", "Pembroke Pines", "Weston", "Coral Springs", "Plantation", "Parkland", "Davie"], href: "/areas/fort-lauderdale/" },
+          { county: "Palm Beach County", cities: ["West Palm Beach", "Boca Raton", "Delray Beach", "Jupiter", "Palm Beach Gardens", "Wellington", "Boynton Beach", "Lake Worth"], href: "/areas/west-palm-beach/" },
+        ]}
+      />
 
       {/* FAQ Section */}
       <section className="py-20 bg-white">

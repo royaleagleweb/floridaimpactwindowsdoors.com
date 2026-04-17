@@ -30,74 +30,40 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   /* ── Service pages ──────────────────────────────────── */
-  const servicesIndex: MetadataRoute.Sitemap = [
-    { url: `${BASE}/services/`, changeFrequency: "monthly", priority: 0.9, lastModified: now },
-  ];
-
   const servicePages: MetadataRoute.Sitemap = [
-    "impact-windows",
-    "impact-doors",
-    "hurricane-shutters",
-    "energy-efficient-windows",
-    "window-replacement",
-    "door-replacement",
-    "commercial-services",
-  ].map((s) => ({
-    url: `${BASE}/services/${s}/`,
-    changeFrequency: "monthly" as const,
-    priority: 0.9,
-    lastModified: now,
-  }));
+    { url: `${BASE}/services/`, changeFrequency: "monthly", priority: 0.9, lastModified: now },
+    ...["impact-windows", "impact-doors", "hurricane-shutters", "energy-efficient-windows", "window-replacement", "door-replacement", "commercial-services"].map((s) => ({
+      url: `${BASE}/services/${s}/`,
+      changeFrequency: "monthly" as const,
+      priority: 0.9,
+      lastModified: now,
+    })),
+  ];
 
   /* ── Window type pages ──────────────────────────────── */
   const windowTypes: MetadataRoute.Sitemap = [
-    "single-hung",
-    "double-hung",
-    "casement",
-    "awning",
-    "sliding",
-    "picture",
-    "bay",
-    "bow",
-    "hopper",
-  ].map((w) => ({
-    url: `${BASE}/services/window-types/${w}/`,
-    changeFrequency: "monthly" as const,
-    priority: 0.8,
-    lastModified: now,
-  }));
-
-  const windowTypesIndex: MetadataRoute.Sitemap = [
     { url: `${BASE}/services/window-types/`, changeFrequency: "monthly", priority: 0.8, lastModified: now },
+    ...["single-hung", "double-hung", "casement", "awning", "sliding", "picture", "bay", "bow", "hopper"].map((w) => ({
+      url: `${BASE}/services/window-types/${w}/`,
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+      lastModified: now,
+    })),
   ];
 
   /* ── Door type pages ────────────────────────────────── */
   const doorTypes: MetadataRoute.Sitemap = [
-    "sliding-glass",
-    "french",
-    "entry",
-    "patio",
-    "pivot",
-    "garage",
-    "storm",
-  ].map((d) => ({
-    url: `${BASE}/services/door-types/${d}/`,
-    changeFrequency: "monthly" as const,
-    priority: 0.8,
-    lastModified: now,
-  }));
-
-  const doorTypesIndex: MetadataRoute.Sitemap = [
     { url: `${BASE}/services/door-types/`, changeFrequency: "monthly", priority: 0.8, lastModified: now },
+    ...["sliding-glass", "french", "entry", "patio", "pivot", "garage", "storm"].map((d) => ({
+      url: `${BASE}/services/door-types/${d}/`,
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+      lastModified: now,
+    })),
   ];
 
   /* ── Brand pages ────────────────────────────────────── */
-  const brandPages: MetadataRoute.Sitemap = [
-    "pgt",
-    "cgi",
-    "es-windows",
-    "custom-window-systems",
-  ].map((b) => ({
+  const brandPages: MetadataRoute.Sitemap = ["pgt", "cgi", "es-windows", "custom-window-systems"].map((b) => ({
     url: `${BASE}/brands/${b}/`,
     changeFrequency: "monthly" as const,
     priority: 0.8,
@@ -113,14 +79,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   /* ── City × Service combo pages ─────────────────────── */
-  const cityServices = [
-    "impact-windows",
-    "impact-doors",
-    "hurricane-shutters",
-    "window-replacement",
-    "door-replacement",
-  ];
-
+  const cityServices = ["impact-windows", "impact-doors", "hurricane-shutters", "window-replacement", "door-replacement"];
   const cityServicePages: MetadataRoute.Sitemap = cities.flatMap((c) =>
     cityServices.map((s) => ({
       url: `${BASE}/areas/${c.slug}/${s}/`,
@@ -148,11 +107,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     ...staticPages,
-    ...servicesIndex,
     ...servicePages,
-    ...windowTypesIndex,
     ...windowTypes,
-    ...doorTypesIndex,
     ...doorTypes,
     ...brandPages,
     ...cityPages,

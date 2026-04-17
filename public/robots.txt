@@ -1,4 +1,22 @@
+# Allow all crawlers including Googlebot to access everything
 User-agent: *
+Allow: /
+Allow: /_next/
+Allow: /images/
+
+# AI Search Engine Crawlers - Explicitly allowed
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: Google-Extended
+User-agent: ClaudeBot
+User-agent: anthropic-ai
+User-agent: Claude-Web
+User-agent: PerplexityBot
+User-agent: Bytespider
+User-agent: CCBot
+User-agent: cohere-ai
+User-agent: meta-externalagent
 Allow: /
 
 Sitemap: https://floridaimpactwindowsdoors.com/sitemap.xml

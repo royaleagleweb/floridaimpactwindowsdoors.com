@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Warranty Information | Product & Workmanship Warranties | Florida Impact Windows & Doors",
   description:
     "Learn about the product warranties and workmanship guarantees that protect your impact window and door investment. PGT, CGI, ES Windows, and CWS warranty details plus our labor guarantee.",
+  alternates: { canonical: "https://floridaimpactwindowsdoors.com/warranties/" },
 };
 
 const manufacturerWarranties = [
@@ -310,7 +311,7 @@ export default function WarrantiesPage() {
               href="/get-estimate/"
               className="inline-flex items-center gap-2 bg-white text-ocean-700 px-10 py-5 rounded-full font-bold text-lg hover:bg-gray-100 transition-all shadow-lg"
             >
-              Get Free Estimate
+              Protect Your Home Now
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
             </Link>
             <a href="tel:+17546004876" className="inline-flex items-center gap-2 text-white font-semibold text-lg hover:text-palm-200 transition-colors">

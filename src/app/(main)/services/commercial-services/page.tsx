@@ -1,11 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Commercial Impact Windows & Doors in South Florida | Storefronts & Buildings",
   description:
     "Commercial impact window and door solutions for South Florida businesses. Storefronts, office buildings, HOA communities & multi-family properties in Miami-Dade, Broward & Palm Beach County.",
+  alternates: { canonical: "https://floridaimpactwindowsdoors.com/services/commercial-services/" },
 };
 
 const benefits = [
@@ -118,6 +120,7 @@ export default function CommercialServicesPage() {
         <div className="absolute bottom-10 left-20 w-80 h-80 bg-palm-500/10 rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: "2s" }} />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 py-20 lg:py-28">
+          <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Services", href: "/services/commercial-services/" }, { label: "Commercial Services" }]} />
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/10 rounded-full px-4 py-1.5 mb-6">
@@ -147,7 +150,7 @@ export default function CommercialServicesPage() {
                 </a>
               </div>
             </div>
-            <div className="hidden lg:block">
+            <div>
               <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-black/30 border border-white/10">
                 <Image
                   src="/images/windows3.jpg"

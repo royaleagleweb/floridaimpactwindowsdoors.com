@@ -18,6 +18,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: `Door Replacement in ${city.name}, FL - Professional Installation`,
     description: `Professional door replacement in ${city.name}, Florida. Entry doors, sliding glass doors, French doors, patio doors, and garage doors for ${city.county} County homes. Free estimates from Florida Impact Windows & Doors. Call (754) 600-4876.`,
+    alternates: { canonical: `https://floridaimpactwindowsdoors.com/areas/${slug}/door-replacement/` },
   };
 }
 
@@ -101,8 +102,14 @@ export default async function CityDoorReplacementPage({ params }: PageProps) {
     },
   ];
 
+  const breadcrumbSchema = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: "https://floridaimpactwindowsdoors.com/" }, { "@type": "ListItem", position: 2, name: "Service Areas", item: "https://floridaimpactwindowsdoors.com/areas/" }, { "@type": "ListItem", position: 3, name: city.name, item: `https://floridaimpactwindowsdoors.com/areas/${city.slug}/` }, { "@type": "ListItem", position: 4, name: "Door Replacement" }] };
+  const serviceSchema = { "@context": "https://schema.org", "@type": "Service", name: `Door Replacement in ${city.name}, FL`, description: `Professional door replacement services in ${city.name}, ${city.county} County, Florida.`, provider: { "@type": "HomeAndConstructionBusiness", name: "Florida Impact Windows & Doors", telephone: "+1-754-600-4876" }, areaServed: { "@type": "City", name: city.name, containedIn: { "@type": "State", name: "Florida" } }, serviceType: "Door Replacement" };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+
       {/* Breadcrumbs */}
       <div className="bg-gray-50 border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 py-3">
@@ -137,7 +144,7 @@ export default async function CityDoorReplacementPage({ params }: PageProps) {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/get-estimate/" className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-palm-500 to-palm-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:from-palm-600 hover:to-palm-700 transition-all shadow-lg shadow-palm-500/25">
-                Get Free Estimate in {city.name}
+                Protect Your {city.name} Home Now
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
               </Link>
               <a href="tel:+17546004876" className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/20 transition-all">
@@ -342,7 +349,7 @@ export default async function CityDoorReplacementPage({ params }: PageProps) {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link href="/get-estimate/" className="inline-flex items-center gap-2 bg-white text-ocean-900 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-all shadow-lg">
-              Get Free Estimate
+              Protect Your Home Now
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
             </Link>
             <a href="tel:+17546004876" className="inline-flex items-center gap-2 border-2 border-white/30 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/10 transition-all">

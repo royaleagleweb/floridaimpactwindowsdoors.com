@@ -1,10 +1,11 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import PaymentCalculator from "@/components/PaymentCalculator";
 
 export const metadata: Metadata = {
   title: "Impact Windows Financing Fort Lauderdale | $0 Down, 0% Interest & PACE",
   description:
-    "Affordable impact window financing in Fort Lauderdale & Broward County. $0 down, 0% interest, PACE financing, FPL rebates & insurance discounts. Make hurricane protection affordable. Free quote.",
+    "Flexible financing for impact windows in South Florida. 0% interest options, PACE program, and payments from $89/month.",
   alternates: { canonical: "/financing/" },
 };
 
@@ -221,6 +222,22 @@ export default function FinancingPage() {
         </div>
       </section>
 
+      {/* Payment Calculator */}
+      <section className="py-20 bg-white">
+        <div className="max-w-5xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <span className="inline-block text-sm font-semibold text-palm-600 uppercase tracking-wider mb-3">Estimate Your Payment</span>
+            <h2 className="text-3xl md:text-4xl font-bold font-display text-gray-900 mb-4">
+              Calculate Your Monthly Payment
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Use our calculator to estimate monthly payments based on your project size, financing term, and down payment.
+            </p>
+          </div>
+          <PaymentCalculator />
+        </div>
+      </section>
+
       {/* How Financing Works - 4 Steps */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
@@ -305,7 +322,7 @@ export default function FinancingPage() {
               <div className="text-6xl font-bold font-display text-gray-900 mb-2">$89<span className="text-3xl text-gray-500">/mo</span></div>
               <p className="text-gray-600 mb-8">Per window with approved credit</p>
               <Link href="/get-estimate/" className="inline-flex items-center gap-2 bg-gradient-to-r from-palm-500 to-palm-600 text-white px-8 py-4 rounded-full font-bold hover:from-palm-600 hover:to-palm-700 transition-all shadow-lg shadow-palm-500/25 w-full justify-center">
-                Get Free Estimate
+                Protect Your Home Now
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
               </Link>
             </div>
@@ -367,7 +384,7 @@ export default function FinancingPage() {
               href="/get-estimate/"
               className="inline-flex items-center gap-2 bg-white text-palm-700 px-10 py-5 rounded-full font-bold text-lg hover:bg-gray-100 transition-all shadow-lg"
             >
-              Get Free Estimate
+              Protect Your Home Now
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
             </Link>
             <a href="tel:+17546004876" className="inline-flex items-center gap-2 text-white font-semibold text-lg hover:text-sun-200 transition-colors">

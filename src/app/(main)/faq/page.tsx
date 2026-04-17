@@ -6,7 +6,7 @@ import { faqs } from "@/data/faq";
 export const metadata: Metadata = {
   title: "FAQ | Impact Window Questions Answered",
   description:
-    "Find answers to frequently asked questions about impact windows, hurricane protection, costs, installation, insurance savings, and maintenance for South Florida homeowners.",
+    "Answers to common questions about impact windows, costs, installation, insurance savings, and hurricane protection in South Florida.",
   openGraph: {
     title: "FAQ | Impact Window Questions Answered | Florida Impact Windows & Doors",
     description:
@@ -437,7 +437,7 @@ export default function FAQPage() {
               href="/get-estimate/"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-palm-500 to-palm-600 text-white px-10 py-5 rounded-full font-bold text-lg hover:from-palm-600 hover:to-palm-700 transition-all shadow-lg shadow-palm-500/25 hover:shadow-palm-500/40"
             >
-              Schedule Free Consultation
+              Start Protecting Your Home
               <svg
                 className="w-5 h-5"
                 fill="none"

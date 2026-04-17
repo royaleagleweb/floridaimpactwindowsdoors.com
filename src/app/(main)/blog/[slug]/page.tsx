@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { blogPosts } from "@/data/blog";
+import { addBlogInternalLinks } from "@/lib/blogLinks";
 
 export function generateStaticParams() {
   return blogPosts.map((post) => ({
@@ -26,6 +27,9 @@ export async function generateMetadata({
   return {
     title: post.title,
     description: post.excerpt,
+    alternates: {
+      canonical: `https://floridaimpactwindowsdoors.com/blog/${slug}/`,
+    },
     openGraph: {
       title: `${post.title} | Florida Impact Windows & Doors Blog`,
       description: post.excerpt,
@@ -71,8 +75,36 @@ export default async function BlogPostPage({
 
   const allRelated = [...relatedPosts, ...additionalPosts];
 
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.title,
+    description: post.excerpt,
+    datePublished: post.date,
+    author: { "@type": "Person", name: post.author },
+    publisher: {
+      "@type": "Organization",
+      name: "Florida Impact Windows & Doors",
+      url: "https://floridaimpactwindowsdoors.com",
+    },
+    mainEntityOfPage: `https://floridaimpactwindowsdoors.com/blog/${post.slug}/`,
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://floridaimpactwindowsdoors.com/" },
+      { "@type": "ListItem", position: 2, name: "Blog", item: "https://floridaimpactwindowsdoors.com/blog/" },
+      { "@type": "ListItem", position: 3, name: post.title },
+    ],
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+
       {/* Hero / Header */}
       <section className="relative bg-ocean-950 overflow-hidden">
         <div className="absolute inset-0 bg-grid opacity-40" />
@@ -195,7 +227,7 @@ export default async function BlogPostPage({
               {/* Article Body */}
               <div
                 className="prose prose-lg max-w-none prose-headings:font-display prose-headings:text-gray-900 prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4 prose-p:text-gray-600 prose-p:leading-relaxed prose-a:text-palm-600 prose-a:no-underline hover:prose-a:underline prose-strong:text-gray-900"
-                dangerouslySetInnerHTML={{ __html: post.content }}
+                dangerouslySetInnerHTML={{ __html: addBlogInternalLinks(post.content) }}
               />
 
               {/* Tags */}
@@ -222,7 +254,7 @@ export default async function BlogPostPage({
               {/* CTA Card */}
               <div className="bg-gradient-to-br from-palm-50 to-ocean-50 rounded-2xl p-8 border border-palm-100 mb-8">
                 <h3 className="text-xl font-bold font-display text-gray-900 mb-3">
-                  Get a Free Estimate
+                  Protect Your Home Now
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed mb-6">
                   Ready to upgrade your home with impact windows? Schedule a free
@@ -232,7 +264,7 @@ export default async function BlogPostPage({
                   href="/get-estimate/"
                   className="block w-full text-center bg-gradient-to-r from-palm-500 to-palm-600 text-white px-6 py-3 rounded-full font-bold hover:from-palm-600 hover:to-palm-700 transition-all shadow-lg shadow-palm-500/25"
                 >
-                  Schedule Consultation
+                  Start Protecting Your Home
                 </Link>
                 <a
                   href="tel:+17546004876"
@@ -414,7 +446,7 @@ export default async function BlogPostPage({
               href="/get-estimate/"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-palm-500 to-palm-600 text-white px-10 py-5 rounded-full font-bold text-lg hover:from-palm-600 hover:to-palm-700 transition-all shadow-lg shadow-palm-500/25 hover:shadow-palm-500/40"
             >
-              Get Free Estimate
+              Protect Your Home Now
               <svg
                 className="w-5 h-5"
                 fill="none"

@@ -1,11 +1,15 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
+import RelatedDoorTypes from "@/components/RelatedDoorTypes";
 
 export const metadata: Metadata = {
   title: "Impact Entry Doors | Florida Impact Windows & Doors",
   description:
     "Premium impact entry doors for South Florida homes. Hurricane-rated front doors with stunning curb appeal, maximum security, and energy efficiency for Miami-Dade, Broward & Palm Beach.",
+  alternates: {
+    canonical: "https://floridaimpactwindowsdoors.com/services/door-types/entry/",
+  },
 };
 
 const features = [
@@ -89,7 +93,7 @@ export default function EntryDoorsPage() {
                   href="/get-estimate/"
                   className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-palm-500 to-palm-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:from-palm-600 hover:to-palm-700 transition-all shadow-lg shadow-palm-500/25 hover:shadow-palm-500/40 hover:scale-105"
                 >
-                  Get Free Estimate
+                  Protect Your Home Now
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
                 </Link>
                 <a
@@ -286,6 +290,8 @@ export default function EntryDoorsPage() {
           </div>
         </div>
       </section>
+
+      <RelatedDoorTypes current="/services/door-types/entry/" />
 
       {/* CTA Section */}
       <section className="py-20 bg-ocean-950 relative overflow-hidden">

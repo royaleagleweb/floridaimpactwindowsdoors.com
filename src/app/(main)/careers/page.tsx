@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Careers at Florida Impact Windows & Doors | Join Our Team in South Florida",
   description:
     "Join the Florida Impact Windows & Doors team. We are hiring Project Managers, Installation Technicians, Sales Consultants, and more. Competitive pay, benefits, and growth opportunities in South Florida.",
+  alternates: { canonical: "https://floridaimpactwindowsdoors.com/careers/" },
 };
 
 const cultureValues = [

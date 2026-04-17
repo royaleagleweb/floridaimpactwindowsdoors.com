@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Impact Window Types | Florida Impact Windows & Doors",
   description:
     "Explore all impact window styles available from Florida Impact Windows & Doors: single hung, double hung, casement, awning, picture, sliding, bay, bow, and hopper. Hurricane-rated options for every South Florida home.",
+  alternates: { canonical: "https://floridaimpactwindowsdoors.com/services/window-types/" },
 };
 
 const windowTypes = [
@@ -99,7 +100,7 @@ export default function WindowTypesPage() {
               href="/get-estimate/"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-palm-500 to-palm-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:from-palm-600 hover:to-palm-700 transition-all shadow-lg shadow-palm-500/25"
             >
-              Get Free Estimate
+              Protect Your Home Now
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
@@ -195,7 +196,7 @@ export default function WindowTypesPage() {
                 href="/get-estimate/"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-palm-600 to-palm-500 text-white px-8 py-4 rounded-full font-bold hover:from-palm-700 hover:to-palm-600 transition-all shadow-lg shadow-palm-500/25"
               >
-                Schedule Free Consultation
+                Start Protecting Your Home
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
@@ -257,7 +258,7 @@ export default function WindowTypesPage() {
               href="/get-estimate/"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-palm-500 to-palm-600 text-white px-10 py-5 rounded-full font-bold text-lg hover:from-palm-600 hover:to-palm-700 transition-all shadow-lg shadow-palm-500/25"
             >
-              Get Free Estimate
+              Protect Your Home Now
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>

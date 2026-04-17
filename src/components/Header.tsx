@@ -30,6 +30,7 @@ const navigation = [
       { name: "Picture Windows", href: "/services/window-types/picture/" },
       { name: "Bay Windows", href: "/services/window-types/bay/" },
       { name: "Bow Windows", href: "/services/window-types/bow/" },
+      { name: "Hopper Windows", href: "/services/window-types/hopper/" },
     ],
   },
   {
@@ -42,6 +43,7 @@ const navigation = [
       { name: "Patio Doors", href: "/services/door-types/patio/" },
       { name: "Pivot Doors", href: "/services/door-types/pivot/" },
       { name: "Garage Doors", href: "/services/door-types/garage/" },
+      { name: "Storm Doors", href: "/services/door-types/storm/" },
     ],
   },
   {
@@ -74,6 +76,9 @@ const navigation = [
       { name: "Contractor Checklist", href: "/contractor-checklist/" },
       { name: "Our Process", href: "/our-process/" },
       { name: "Financing", href: "/financing/" },
+      { name: "Door Quiz", href: "/quiz/door/" },
+      { name: "Service Quiz", href: "/quiz/service/" },
+      { name: "Get a Quote", href: "/get-quote/" },
     ],
   },
 ];
@@ -126,11 +131,11 @@ export default function Header() {
         <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
           <div className="flex items-center gap-6">
             <a href="tel:+17546004876" className="flex items-center gap-2 hover:text-palm-400 transition-colors">
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
               (754) 600-4876
             </a>
             <span className="hidden md:flex items-center gap-2 text-gray-300">
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
               Hollywood, FL &bull; Serving Broward &amp; Palm Beach County
             </span>
           </div>
@@ -219,7 +224,7 @@ export default function Header() {
                 className="hidden sm:inline-flex items-center gap-2 bg-gradient-to-r from-palm-500 to-palm-600 text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:from-palm-600 hover:to-palm-700 transition-all shadow-lg shadow-palm-500/25 hover:shadow-palm-500/40"
               >
                 Free Estimate
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
               </Link>
               <button
                 onClick={() => {
@@ -230,9 +235,9 @@ export default function Header() {
                 aria-label="Toggle menu"
               >
                 {mobileMenuOpen ? (
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
                 ) : (
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" /></svg>
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" /></svg>
                 )}
               </button>
             </div>
@@ -293,7 +298,7 @@ export default function Header() {
                   className="block w-full text-center bg-gradient-to-r from-palm-500 to-palm-600 text-white px-6 py-3 rounded-full font-semibold"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  Get Free Estimate
+                  Protect Your Home Now
                 </a>
               </div>
             </div>

@@ -1,11 +1,15 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
+import RelatedWindowTypes from "@/components/RelatedWindowTypes";
 
 export const metadata: Metadata = {
   title: "Bow Impact Windows | Florida Impact Windows & Doors",
   description:
     "Bow impact windows with four or five panels in a graceful curve for panoramic views and architectural elegance. Hurricane-rated curved projection windows for South Florida homes. Free estimates.",
+  alternates: {
+    canonical: "https://floridaimpactwindowsdoors.com/services/window-types/bow/",
+  },
 };
 
 const features = [
@@ -97,7 +101,7 @@ export default function BowPage() {
                   href="/get-estimate/"
                   className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-palm-500 to-palm-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:from-palm-600 hover:to-palm-700 transition-all shadow-lg shadow-palm-500/25"
                 >
-                  Get Free Estimate
+                  Protect Your Home Now
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
@@ -342,6 +346,8 @@ export default function BowPage() {
         </div>
       </section>
 
+      <RelatedWindowTypes current="/services/window-types/bow/" />
+
       {/* CTA Section */}
       <section className="py-20 bg-ocean-950 relative overflow-hidden">
         <div className="absolute inset-0 bg-grid opacity-30" />
@@ -358,7 +364,7 @@ export default function BowPage() {
               href="/get-estimate/"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-palm-500 to-palm-600 text-white px-10 py-5 rounded-full font-bold text-lg hover:from-palm-600 hover:to-palm-700 transition-all shadow-lg shadow-palm-500/25"
             >
-              Schedule Free Estimate
+              Protect Your Home Now
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>

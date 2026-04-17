@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Contact Florida Impact Windows & Doors | Call, Email, or Visit Us",
   description:
     "Contact Florida Impact Windows & Doors for impact windows and doors in South Florida. Call (754) 600-4876, email info@floridaimpactwindowsdoors.com, or visit our Hollywood showroom. Free estimates available.",
+  alternates: { canonical: "https://floridaimpactwindowsdoors.com/contact/" },
 };
 
 const contactMethods = [

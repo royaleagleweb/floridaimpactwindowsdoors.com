@@ -90,10 +90,10 @@ export default function GetEstimatePage() {
                 <span className="text-sm text-palm-300 font-medium">100% Free &middot; No Obligation</span>
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-display text-white leading-tight mb-6">
-                Get Your <span className="gradient-text">Free Estimate</span>
+                Start <span className="gradient-text">Protecting What Matters Most</span>
               </h1>
               <p className="text-lg text-gray-300 max-w-lg leading-relaxed mb-10">
-                Take the first step toward protecting your South Florida home. Our free in-home consultation includes precise measurements, expert product recommendations, and a detailed proposal — all with zero obligation.
+                Your family deserves hurricane-proof peace of mind. Our free in-home consultation includes precise measurements, expert product recommendations, and a detailed proposal — all with zero obligation.
               </p>
 
               {/* Trust Signals */}

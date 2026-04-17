@@ -5,12 +5,13 @@ import { blogPosts } from "@/data/blog";
 export const metadata: Metadata = {
   title: "Blog | Impact Window Tips, Guides & News",
   description:
-    "Expert articles on impact windows, hurricane protection, energy efficiency, insurance savings, and home improvement for South Florida homeowners. Stay informed with Florida Impact Windows & Doors.",
+    "Expert advice on impact windows, hurricane protection, and home improvement for South Florida homeowners. Read our latest articles.",
   openGraph: {
     title: "Blog | Impact Window Tips, Guides & News | Florida Impact Windows & Doors",
     description:
       "Expert articles on impact windows, hurricane protection, energy efficiency, insurance savings, and home improvement for South Florida homeowners.",
   },
+  alternates: { canonical: "https://floridaimpactwindowsdoors.com/blog/" },
 };
 
 const categories = Array.from(new Set(blogPosts.map((post) => post.category)));
@@ -291,7 +292,7 @@ export default function BlogPage() {
               href="/get-estimate/"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-palm-500 to-palm-600 text-white px-10 py-5 rounded-full font-bold text-lg hover:from-palm-600 hover:to-palm-700 transition-all shadow-lg shadow-palm-500/25 hover:shadow-palm-500/40"
             >
-              Get Free Estimate
+              Protect Your Home Now
               <svg
                 className="w-5 h-5"
                 fill="none"

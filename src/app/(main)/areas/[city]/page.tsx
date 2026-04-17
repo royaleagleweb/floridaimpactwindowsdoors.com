@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { cities, getCityBySlug, getCitiesByCounty } from "@/data/cities";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 // ---------------------------------------------------------------------------
 // Static params & metadata
@@ -28,6 +29,9 @@ export async function generateMetadata({
   return {
     title,
     description,
+    alternates: {
+      canonical: `https://floridaimpactwindowsdoors.com/areas/${slug}/`,
+    },
     openGraph: {
       title: `${title} | Florida Impact Windows & Doors`,
       description,
@@ -39,77 +43,80 @@ export async function generateMetadata({
 // Data helpers
 // ---------------------------------------------------------------------------
 
-const services = [
-  {
-    title: "Impact Windows",
-    description:
-      "Hurricane-rated impact windows tested to withstand Category 5 winds and large missile impact.",
-    href: "/services/impact-windows/",
-    icon: (
-      <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <rect x="3" y="3" width="18" height="18" rx="2" strokeWidth={1.5} />
-        <line x1="3" y1="12" x2="21" y2="12" strokeWidth={1.5} />
-        <line x1="12" y1="3" x2="12" y2="21" strokeWidth={1.5} />
-      </svg>
-    ),
-  },
-  {
-    title: "Impact Doors",
-    description:
-      "Premium impact-rated entry, sliding glass, French, and patio doors for complete home protection.",
-    href: "/services/impact-doors/",
-    icon: (
-      <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 3h7v18H3zM10 3h7v18h-7M14 12h.01" />
-      </svg>
-    ),
-  },
-  {
-    title: "Hurricane Shutters",
-    description:
-      "Accordion, roll-down, and panel hurricane shutters for additional storm protection.",
-    href: "/services/hurricane-shutters/",
-    icon: (
-      <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 3v18M15 3v18M3 9h18M3 15h18" />
-        <rect x="3" y="3" width="18" height="18" rx="1" strokeWidth={1.5} />
-      </svg>
-    ),
-  },
-  {
-    title: "Window Replacement",
-    description:
-      "Full-service window replacement upgrading aging or damaged windows to modern impact protection.",
-    href: "/services/window-replacement/",
-    icon: (
-      <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-      </svg>
-    ),
-  },
-  {
-    title: "Energy Efficient Windows",
-    description:
-      "Low-E glass and argon-filled windows that reduce solar heat gain and lower energy bills.",
-    href: "/services/energy-efficient-windows/",
-    icon: (
-      <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
-      </svg>
-    ),
-  },
-  {
-    title: "Commercial Services",
-    description:
-      "Impact window and door solutions for storefronts, offices, and multi-unit properties.",
-    href: "/services/commercial-services/",
-    icon: (
-      <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-      </svg>
-    ),
-  },
-];
+/* Services with city-specific pages use dynamic hrefs */
+function getServices(citySlug: string) {
+  return [
+    {
+      title: "Impact Windows",
+      description:
+        "Hurricane-rated impact windows tested to withstand Category 5 winds and large missile impact.",
+      href: `/areas/${citySlug}/impact-windows/`,
+      icon: (
+        <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <rect x="3" y="3" width="18" height="18" rx="2" strokeWidth={1.5} />
+          <line x1="3" y1="12" x2="21" y2="12" strokeWidth={1.5} />
+          <line x1="12" y1="3" x2="12" y2="21" strokeWidth={1.5} />
+        </svg>
+      ),
+    },
+    {
+      title: "Impact Doors",
+      description:
+        "Premium impact-rated entry, sliding glass, French, and patio doors for complete home protection.",
+      href: `/areas/${citySlug}/impact-doors/`,
+      icon: (
+        <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 3h7v18H3zM10 3h7v18h-7M14 12h.01" />
+        </svg>
+      ),
+    },
+    {
+      title: "Hurricane Shutters",
+      description:
+        "Accordion, roll-down, and panel hurricane shutters for additional storm protection.",
+      href: `/areas/${citySlug}/hurricane-shutters/`,
+      icon: (
+        <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 3v18M15 3v18M3 9h18M3 15h18" />
+          <rect x="3" y="3" width="18" height="18" rx="1" strokeWidth={1.5} />
+        </svg>
+      ),
+    },
+    {
+      title: "Window Replacement",
+      description:
+        "Full-service window replacement upgrading aging or damaged windows to modern impact protection.",
+      href: `/areas/${citySlug}/window-replacement/`,
+      icon: (
+        <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+        </svg>
+      ),
+    },
+    {
+      title: "Door Replacement",
+      description:
+        "Complete door replacement services upgrading aging doors to modern impact-rated protection.",
+      href: `/areas/${citySlug}/door-replacement/`,
+      icon: (
+        <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+        </svg>
+      ),
+    },
+    {
+      title: "Commercial Services",
+      description:
+        "Impact window and door solutions for storefronts, offices, and multi-unit properties.",
+      href: "/services/commercial-services/",
+      icon: (
+        <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+        </svg>
+      ),
+    },
+  ];
+}
 
 const windowTypes = [
   { name: "Single Hung", href: "/services/window-types/single-hung/" },
@@ -210,6 +217,8 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
     (c) => c.slug !== city.slug
   );
 
+  const services = getServices(city.slug);
+
   const faqs = [
     {
       question: `How much do impact windows cost in ${city.name}?`,
@@ -229,8 +238,70 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
     },
   ];
 
+  /* JSON-LD structured data for local SEO */
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://floridaimpactwindowsdoors.com/" },
+      { "@type": "ListItem", position: 2, name: "Service Areas", item: "https://floridaimpactwindowsdoors.com/areas/" },
+      { "@type": "ListItem", position: 3, name: city.name },
+    ],
+  };
+
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "HomeAndConstructionBusiness",
+    name: "Florida Impact Windows & Doors",
+    url: `https://floridaimpactwindowsdoors.com/areas/${city.slug}/`,
+    telephone: "+1-754-600-4876",
+    email: "info@floridaimpactwindowsdoors.com",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "3000 Stirling Rd",
+      addressLocality: "Hollywood",
+      addressRegion: "FL",
+      postalCode: "33021",
+      addressCountry: "US",
+    },
+    areaServed: {
+      "@type": "City",
+      name: city.name,
+      containedIn: {
+        "@type": "County",
+        name: `${city.county} County`,
+        containedIn: { "@type": "State", name: "Florida" },
+      },
+    },
+    priceRange: "$$",
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.9",
+      reviewCount: "2500",
+      bestRating: "5",
+      worstRating: "1",
+    },
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
+
       {/* Hero Section */}
       <section className="relative bg-ocean-950 overflow-hidden">
         <div className="absolute inset-0 bg-grid opacity-40" />
@@ -239,22 +310,7 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
         <div className="absolute bottom-10 left-10 w-80 h-80 bg-ocean-500/10 rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: "1.5s" }} />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 py-20 lg:py-28">
-          {/* Breadcrumbs */}
-          <nav className="flex items-center gap-2 text-sm text-gray-400 mb-8">
-            <Link href="/" className="hover:text-white transition-colors">
-              Home
-            </Link>
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-            <Link href="/areas/" className="hover:text-white transition-colors">
-              Service Areas
-            </Link>
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-            <span className="text-white">{city.name}</span>
-          </nav>
+          <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Service Areas", href: "/areas/" }, { label: `${city.name}, FL` }]} />
 
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/10 rounded-full px-4 py-1.5 mb-6">
@@ -275,7 +331,7 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
                 href="/get-estimate/"
                 className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-palm-500 to-palm-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:from-palm-600 hover:to-palm-700 transition-all shadow-lg shadow-palm-500/25 hover:shadow-palm-500/40 hover:scale-105"
               >
-                Get Free Estimate
+                Protect Your Home Now
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
@@ -727,7 +783,7 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
               href="/get-estimate/"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-palm-500 to-palm-600 text-white px-10 py-5 rounded-full font-bold text-lg hover:from-palm-600 hover:to-palm-700 transition-all shadow-lg shadow-palm-500/25 hover:shadow-palm-500/40"
             >
-              Get Free Estimate in {city.name}
+              Protect Your {city.name} Home Now
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>

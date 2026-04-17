@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Terms of Service | Florida Impact Windows & Doors",
   description:
     "Florida Impact Windows & Doors terms of service. Review the terms and conditions governing the use of our website and home improvement services for impact windows and doors in South Florida.",
+  alternates: { canonical: "https://floridaimpactwindowsdoors.com/terms-of-service/" },
 };
 
 export default function TermsOfServicePage() {

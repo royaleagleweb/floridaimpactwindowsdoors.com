@@ -3,11 +3,13 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import HeroLeadForm from "@/components/HeroLeadForm";
 import StickyMobileCTA from "@/components/StickyMobileCTA";
+import HowItWorks from "@/components/HowItWorks";
 
 export const metadata: Metadata = {
-  title: "Florida Impact Windows & Doors | Impact Windows & Doors in Fort Lauderdale | Broward & Palm Beach County",
+  title: "Impact Windows & Doors Fort Lauderdale | #1 South Florida Installer",
   description:
     "Premium impact windows & doors at affordable prices. Serving Broward & Palm Beach County. A+ BBB rating, 5-star Google & Yelp reviews. HVHZ experts. Call (754) 600-4876.",
+  alternates: { canonical: "https://floridaimpactwindowsdoors.com/" },
 };
 
 const testimonials = [
@@ -50,8 +52,66 @@ const testimonials = [
 ];
 
 export default function HomePage() {
+  const homeSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: "Florida Impact Windows & Doors - South Florida's #1 Impact Window Installer",
+    description: "South Florida's premier impact window and door installation company. Hurricane-rated protection for homes in Miami-Dade, Broward & Palm Beach County.",
+    url: "https://floridaimpactwindowsdoors.com/",
+    isPartOf: { "@type": "WebSite", name: "Florida Impact Windows & Doors", url: "https://floridaimpactwindowsdoors.com" },
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "What makes an impact window so strong?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Impact windows are constructed with heavy-duty reinforced frames and impact-resistant laminated glass. A durable liner called polyvinyl butyral (PVB) keeps the glass bonded together even when cracked. A special silicone sealant anchors the laminated glass to the frame, ensuring the window continues to protect even after impact.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What is design pressure (DP) rating?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "The most important performance factor for impact windows. This rating measures how much wind load (positive and negative pressure) a window can withstand, measured in pounds per square foot (psf). In South Florida, building codes require windows to meet minimum DP ratings based on location, building height, and exposure.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Can impact windows get you a discount on your insurance?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes. Under Florida law (Statute §627.0629), all residential property insurance companies are required to offer discounts or credits to homeowners who harden their homes against hurricane damage, including through impact-resistant windows and doors.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What is a High Velocity Hurricane Zone (HVHZ)?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "The Florida Building Code designates high-velocity hurricane zones as areas most vulnerable to hurricanes. Only Miami-Dade and Broward County are designated as HVHZ. Of the 292 hurricanes that have hit the U.S. since 1851, 120 made landfall in Florida, and 57 hit Broward and Miami-Dade County.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What is the difference between Low-E glass and tinted glass?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Tinted glass blocks more of the sun's light than heat. Low-E glass blocks more of the sun's heat than light. Low-E glass reflects about 70-85% of the sun's heat, tinted glass reflects about 40-60%, and clear laminated glass reflects only about 10-30%.",
+        },
+      },
+    ],
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(homeSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <StickyMobileCTA />
 
       {/* Urgency / Promotion Banner */}
@@ -214,6 +274,9 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* How It Works */}
+      <HowItWorks />
+
       {/* Why Work With Us */}
       <section className="py-20 bg-ocean-950 relative overflow-hidden">
         <div className="absolute inset-0 bg-grid opacity-10" />
@@ -231,7 +294,7 @@ export default function HomePage() {
             <div className="group relative bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-palm-500/30 transition-all">
               <div className="grid md:grid-cols-2">
                 <div className="relative h-64 md:h-auto min-h-[300px] overflow-hidden">
-                  <Image src="/images/windows.jpg" alt="South Florida home with impact windows installed" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                  <Image src="/images/windows.jpg" alt="South Florida home with impact windows installed" fill loading="lazy" className="object-cover group-hover:scale-105 transition-transform duration-700" />
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent to-ocean-950/50 hidden md:block" />
                   <div className="absolute inset-0 bg-gradient-to-t from-ocean-950/70 to-transparent md:hidden" />
                 </div>
@@ -243,7 +306,7 @@ export default function HomePage() {
                   <h3 className="text-2xl md:text-3xl font-bold text-white font-display mb-4">Local Experts Who Know South Florida</h3>
                   <p className="text-gray-400 leading-relaxed mb-6">With over 20 years of experience serving South Florida, we understand the unique challenges our climate presents. From hurricane-force winds to year-round UV exposure, we install products engineered specifically for our region.</p>
                   <Link href="/get-estimate/" className="inline-flex items-center gap-2 text-palm-400 font-semibold group-hover:gap-3 transition-all">
-                    Get a Free Estimate <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                    Protect Your Home Now <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
                   </Link>
                 </div>
               </div>
@@ -262,7 +325,7 @@ export default function HomePage() {
               {
                 title: "Premium Products",
                 desc: "We partner with industry leaders like PGT, CGI, and ES Windows to deliver top-tier impact windows and doors built for Florida.",
-                image: "/images/Casement Impact Windows.jpg",
+                image: "/images/casement-impact-windows.jpg",
                 icon: "star",
               },
               {
@@ -280,7 +343,7 @@ export default function HomePage() {
             ].map((item) => (
               <div key={item.title} className="group bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-palm-500/30 transition-all">
                 <div className="relative h-40 overflow-hidden">
-                  <Image src={item.image} alt={item.title} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <Image src={item.image} alt={item.title} fill loading="lazy" className="object-cover group-hover:scale-105 transition-transform duration-500" />
                   <div className="absolute inset-0 bg-gradient-to-t from-ocean-950 via-ocean-950/40 to-transparent" />
                   <div className="absolute bottom-3 left-4">
                     <div className="w-9 h-9 rounded-xl bg-palm-500/20 backdrop-blur-sm flex items-center justify-center text-palm-400 border border-palm-500/20">
@@ -347,14 +410,14 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {[
-              { src: "/images/doors 2.jpg", alt: "Impact door installation crew working on Fort Lauderdale home" },
+              { src: "/images/doors-2.jpg", alt: "Impact door installation crew working on Fort Lauderdale home" },
               { src: "/images/windows4.jpg", alt: "Completed impact window installation on South Florida home with palm trees" },
               { src: "/images/doors4.jpg", alt: "Aerial view of full impact window and door replacement project" },
               { src: "/images/windows6.jpg", alt: "Installation crew installing impact windows on residential home" },
               { src: "/images/doors5.jpg", alt: "Professional crew installing impact doors on Florida home" },
               { src: "/images/windows.jpg", alt: "Completed impact window installation on two-story Florida home" },
-              { src: "/images/imapct doors.jpg", alt: "Impact door installation in progress on South Florida residence" },
-              { src: "/images/picture window.jpg", alt: "Large impact picture window installed on Florida home" },
+              { src: "/images/impact-doors.jpg", alt: "Impact door installation in progress on South Florida residence" },
+              { src: "/images/picture-window.jpg", alt: "Large impact picture window installed on Florida home" },
             ].map((img, index) => (
               <div key={index} className={`group relative overflow-hidden rounded-2xl border border-white/10 hover:border-palm-500/30 transition-all ${index === 0 || index === 5 ? "row-span-2" : ""}`}>
                 <div className={`relative w-full overflow-hidden ${index === 0 || index === 5 ? "h-full min-h-[320px]" : "h-48 md:h-56"}`}>
@@ -362,6 +425,7 @@ export default function HomePage() {
                     src={img.src}
                     alt={img.alt}
                     fill
+                    loading="lazy"
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-ocean-950/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -371,7 +435,7 @@ export default function HomePage() {
           </div>
           <div className="text-center mt-10">
             <Link href="/get-estimate/" className="inline-flex items-center gap-2 bg-gradient-to-r from-palm-500 to-palm-600 text-white px-8 py-4 rounded-full font-bold hover:from-palm-600 hover:to-palm-700 transition-all shadow-lg shadow-palm-500/30">
-              Get a Free Estimate
+              Protect Your Home Now
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
             </Link>
           </div>
@@ -527,7 +591,7 @@ export default function HomePage() {
                 <p className="text-palm-300 text-sm font-medium">Financing available for projects not covered by the grant</p>
               </div>
               <Link href="/get-estimate/" className="block w-full text-center bg-gradient-to-r from-palm-500 to-palm-600 text-white px-8 py-4 rounded-full font-bold hover:from-palm-600 hover:to-palm-700 transition-all shadow-lg shadow-palm-500/25">
-                Schedule Your Free Estimate
+                Start Protecting Your Home
               </Link>
             </div>
           </div>
@@ -568,9 +632,10 @@ export default function HomePage() {
             </div>
             <div className="relative h-80 lg:h-[500px] rounded-2xl overflow-hidden">
               <Image
-                src="/images/doors 3.jpg"
+                src="/images/doors-3.jpg"
                 alt="Florida Impact Windows and Doors professional installation team installing hurricane rated impact doors in Fort Lauderdale home"
                 fill
+                loading="lazy"
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
@@ -675,7 +740,7 @@ export default function HomePage() {
           </div>
           <div className="text-center mt-12">
             <Link href="/get-estimate/" className="inline-flex items-center gap-2 bg-gradient-to-r from-palm-500 to-palm-600 text-white px-8 py-4 rounded-full font-bold hover:from-palm-600 hover:to-palm-700 transition-all shadow-lg shadow-palm-500/30">
-              Schedule Your Free Estimate
+              Start Protecting Your Home
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
             </Link>
           </div>
@@ -756,7 +821,7 @@ export default function HomePage() {
               href="/get-estimate/"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-palm-500 to-palm-600 text-white px-10 py-5 rounded-full font-bold text-lg hover:from-palm-600 hover:to-palm-700 transition-all shadow-lg shadow-palm-500/30 hover:shadow-palm-500/50 hover:scale-105"
             >
-              Schedule Free Estimate
+              Protect Your Home Now
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
             </Link>
             <a

@@ -1,98 +1,120 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { cities } from "@/data/cities";
+import { blogPosts } from "@/data/blog";
 
 export const metadata: Metadata = {
   title: "Sitemap | Florida Impact Windows & Doors",
   description:
-    "Browse the complete sitemap for Florida Impact Windows & Doors. Find links to all pages including services, brands, areas, and resources.",
+    "Browse the complete sitemap for Florida Impact Windows & Doors. Find links to all pages including services, brands, areas, blog posts, and resources.",
+  alternates: {
+    canonical: "https://floridaimpactwindowsdoors.com/sitemap-page/",
+  },
 };
 
-const sitemapSections = [
-  {
-    title: "Main Pages",
-    links: [
-      { name: "Home", href: "/" },
-      { name: "Contact Us", href: "/contact/" },
-      { name: "Get Free Estimate", href: "/get-estimate/" },
-      { name: "Reviews & Testimonials", href: "/reviews/" },
-    ],
-  },
-  {
-    title: "Services",
-    links: [
-      { name: "Impact Windows", href: "/services/impact-windows/" },
-      { name: "Impact Doors", href: "/services/impact-doors/" },
-      { name: "Hurricane Shutters", href: "/services/hurricane-shutters/" },
-      { name: "Energy Efficient Windows", href: "/services/energy-efficient-windows/" },
-      { name: "Window Replacement", href: "/services/window-replacement/" },
-      { name: "Commercial Services", href: "/services/commercial-services/" },
-    ],
-  },
-  {
-    title: "Window Types",
-    links: [
-      { name: "Single Hung Windows", href: "/services/window-types/single-hung/" },
-      { name: "Double Hung Windows", href: "/services/window-types/double-hung/" },
-      { name: "Casement Windows", href: "/services/window-types/casement/" },
-      { name: "Awning Windows", href: "/services/window-types/awning/" },
-      { name: "Sliding Windows", href: "/services/window-types/sliding/" },
-      { name: "Picture Windows", href: "/services/window-types/picture/" },
-      { name: "Bay Windows", href: "/services/window-types/bay/" },
-      { name: "Bow Windows", href: "/services/window-types/bow/" },
-    ],
-  },
-  {
-    title: "Door Types",
-    links: [
-      { name: "Sliding Glass Doors", href: "/services/door-types/sliding-glass/" },
-      { name: "French Doors", href: "/services/door-types/french/" },
-      { name: "Entry Doors", href: "/services/door-types/entry/" },
-      { name: "Patio Doors", href: "/services/door-types/patio/" },
-      { name: "Pivot Doors", href: "/services/door-types/pivot/" },
-      { name: "Garage Doors", href: "/services/door-types/garage/" },
-    ],
-  },
-  {
-    title: "Brands",
-    links: [
-      { name: "PGT Windows & Doors", href: "/brands/pgt/" },
-      { name: "CGI Windows & Doors", href: "/brands/cgi/" },
-      { name: "ES Windows", href: "/brands/es-windows/" },
-      { name: "Custom Window Systems", href: "/brands/custom-window-systems/" },
-    ],
-  },
-  {
-    title: "Service Areas",
-    links: [
-      { name: "Miami", href: "/areas/miami/" },
-      { name: "Fort Lauderdale", href: "/areas/fort-lauderdale/" },
-      { name: "West Palm Beach", href: "/areas/west-palm-beach/" },
-      { name: "Coral Gables", href: "/areas/coral-gables/" },
-      { name: "Boca Raton", href: "/areas/boca-raton/" },
-      { name: "Hollywood", href: "/areas/hollywood/" },
-      { name: "Pembroke Pines", href: "/areas/pembroke-pines/" },
-      { name: "Aventura", href: "/areas/aventura/" },
-    ],
-  },
-  {
-    title: "Resources",
-    links: [
-      { name: "Financing Options", href: "/financing/" },
-      { name: "Our Installation Process", href: "/our-process/" },
-      { name: "Warranty Information", href: "/warranties/" },
-      { name: "Careers", href: "/careers/" },
-    ],
-  },
-  {
-    title: "Legal",
-    links: [
-      { name: "Privacy Policy", href: "/privacy-policy/" },
-      { name: "Terms of Service", href: "/terms-of-service/" },
-    ],
-  },
+const services = [
+  { name: "Impact Windows", href: "/services/impact-windows/" },
+  { name: "Impact Doors", href: "/services/impact-doors/" },
+  { name: "Hurricane Shutters", href: "/services/hurricane-shutters/" },
+  { name: "Energy Efficient Windows", href: "/services/energy-efficient-windows/" },
+  { name: "Window Replacement", href: "/services/window-replacement/" },
+  { name: "Door Replacement", href: "/services/door-replacement/" },
+  { name: "Commercial Services", href: "/services/commercial-services/" },
 ];
 
+const cityServices = [
+  { label: "Impact Windows", slug: "impact-windows" },
+  { label: "Impact Doors", slug: "impact-doors" },
+  { label: "Hurricane Shutters", slug: "hurricane-shutters" },
+  { label: "Window Replacement", slug: "window-replacement" },
+  { label: "Door Replacement", slug: "door-replacement" },
+];
+
+const windowTypes = [
+  { name: "Single Hung", href: "/services/window-types/single-hung/" },
+  { name: "Double Hung", href: "/services/window-types/double-hung/" },
+  { name: "Casement", href: "/services/window-types/casement/" },
+  { name: "Awning", href: "/services/window-types/awning/" },
+  { name: "Sliding", href: "/services/window-types/sliding/" },
+  { name: "Picture", href: "/services/window-types/picture/" },
+  { name: "Bay", href: "/services/window-types/bay/" },
+  { name: "Bow", href: "/services/window-types/bow/" },
+  { name: "Hopper", href: "/services/window-types/hopper/" },
+];
+
+const doorTypes = [
+  { name: "Sliding Glass", href: "/services/door-types/sliding-glass/" },
+  { name: "French", href: "/services/door-types/french/" },
+  { name: "Entry", href: "/services/door-types/entry/" },
+  { name: "Patio", href: "/services/door-types/patio/" },
+  { name: "Pivot", href: "/services/door-types/pivot/" },
+  { name: "Garage", href: "/services/door-types/garage/" },
+  { name: "Storm", href: "/services/door-types/storm/" },
+];
+
+const brands = [
+  { name: "PGT Windows & Doors", href: "/brands/pgt/" },
+  { name: "CGI Windows & Doors", href: "/brands/cgi/" },
+  { name: "ES Windows", href: "/brands/es-windows/" },
+  { name: "Custom Window Systems", href: "/brands/custom-window-systems/" },
+];
+
+const mainPages = [
+  { name: "Home", href: "/" },
+  { name: "Contact Us", href: "/contact/" },
+  { name: "Get Free Estimate", href: "/get-estimate/" },
+  { name: "Reviews & Testimonials", href: "/reviews/" },
+  { name: "FAQ", href: "/faq/" },
+  { name: "Blog", href: "/blog/" },
+  { name: "All Service Areas", href: "/areas/" },
+];
+
+const resources = [
+  { name: "Financing Options", href: "/financing/" },
+  { name: "Our Installation Process", href: "/our-process/" },
+  { name: "Warranty Information", href: "/warranties/" },
+  { name: "Careers", href: "/careers/" },
+  { name: "Privacy Policy", href: "/privacy-policy/" },
+  { name: "Terms of Service", href: "/terms-of-service/" },
+];
+
+const miamDadeCities = cities.filter((c) => c.county === "Miami-Dade County");
+const browardCities = cities.filter((c) => c.county === "Broward County");
+const palmBeachCities = cities.filter((c) => c.county === "Palm Beach County");
+
+function SitemapSection({ title, children }: { title: string; children: React.ReactNode }) {
+  return (
+    <div className="mb-10">
+      <h2 className="text-lg font-bold text-gray-900 font-display mb-4 pb-2 border-b-2 border-palm-500">
+        {title}
+      </h2>
+      {children}
+    </div>
+  );
+}
+
+function LinkList({ links }: { links: { name: string; href: string }[] }) {
+  return (
+    <ul className="space-y-1.5">
+      {links.map((link) => (
+        <li key={link.href}>
+          <Link
+            href={link.href}
+            className="text-sm text-gray-600 hover:text-palm-600 transition-colors"
+          >
+            {link.name}
+          </Link>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
 export default function SitemapPage() {
+  const sortedPosts = [...blogPosts].sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+  );
+
   return (
     <>
       {/* Hero Section */}
@@ -103,33 +125,98 @@ export default function SitemapPage() {
           <h1 className="text-4xl md:text-5xl font-bold font-display text-white leading-tight mb-4">
             Sitemap
           </h1>
-          <p className="text-lg text-gray-300">Browse all pages on the Florida Impact Windows & Doors website.</p>
+          <p className="text-lg text-gray-300">
+            Browse all {cities.length * 5 + blogPosts.length + services.length + windowTypes.length + doorTypes.length + brands.length + mainPages.length + resources.length}+ pages on the Florida Impact Windows & Doors website.
+          </p>
         </div>
       </section>
 
       {/* Sitemap Content */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
-            {sitemapSections.map((section) => (
-              <div key={section.title}>
-                <h2 className="text-lg font-bold text-gray-900 font-display mb-4 pb-2 border-b-2 border-palm-500">
-                  {section.title}
-                </h2>
-                <ul className="space-y-2">
-                  {section.links.map((link) => (
-                    <li key={link.href}>
-                      <Link
-                        href={link.href}
-                        className="flex items-center gap-2 text-gray-600 hover:text-palm-600 transition-colors group"
-                      >
-                        <svg className="w-3 h-3 text-palm-400 opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
-                        <span className="text-sm">{link.name}</span>
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
+          {/* Main Pages, Services, Brands */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-16">
+            <SitemapSection title="Main Pages">
+              <LinkList links={mainPages} />
+            </SitemapSection>
+
+            <SitemapSection title="Services">
+              <LinkList links={services} />
+            </SitemapSection>
+
+            <div>
+              <SitemapSection title="Window Types">
+                <LinkList links={windowTypes} />
+              </SitemapSection>
+              <SitemapSection title="Door Types">
+                <LinkList links={doorTypes} />
+              </SitemapSection>
+            </div>
+
+            <div>
+              <SitemapSection title="Brands">
+                <LinkList links={brands} />
+              </SitemapSection>
+              <SitemapSection title="Resources">
+                <LinkList links={resources} />
+              </SitemapSection>
+            </div>
+          </div>
+
+          {/* Service Areas by County */}
+          <h2 className="text-2xl font-bold font-display text-gray-900 mb-8">
+            Service Areas ({cities.length} Cities)
+          </h2>
+
+          {[
+            { title: "Miami-Dade County", citiesList: miamDadeCities },
+            { title: "Broward County", citiesList: browardCities },
+            { title: "Palm Beach County", citiesList: palmBeachCities },
+          ].map(({ title, citiesList }) => (
+            <div key={title} className="mb-10">
+              <h3 className="text-lg font-bold text-gray-900 font-display mb-4 pb-2 border-b border-gray-200">
+                {title} ({citiesList.length} cities)
+              </h3>
+              <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-4">
+                {citiesList.map((city) => (
+                  <div key={city.slug}>
+                    <Link
+                      href={`/areas/${city.slug}/`}
+                      className="text-sm font-semibold text-palm-600 hover:text-palm-700 transition-colors"
+                    >
+                      {city.name}
+                    </Link>
+                    <ul className="mt-1 space-y-0.5">
+                      {cityServices.map((svc) => (
+                        <li key={svc.slug}>
+                          <Link
+                            href={`/areas/${city.slug}/${svc.slug}/`}
+                            className="text-xs text-gray-500 hover:text-palm-600 transition-colors"
+                          >
+                            {svc.label}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
               </div>
+            </div>
+          ))}
+
+          {/* Blog Posts */}
+          <h2 className="text-2xl font-bold font-display text-gray-900 mb-8 mt-16">
+            Blog ({blogPosts.length} Articles)
+          </h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-3">
+            {sortedPosts.map((post) => (
+              <Link
+                key={post.id}
+                href={`/blog/${post.slug}/`}
+                className="text-sm text-gray-600 hover:text-palm-600 transition-colors leading-snug"
+              >
+                {post.title}
+              </Link>
             ))}
           </div>
         </div>

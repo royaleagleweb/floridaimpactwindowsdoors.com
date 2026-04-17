@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   description:
     "Thank you for contacting Florida Impact Windows & Doors. We have received your request and will be in touch within 24 hours.",
   robots: { index: false, follow: false },
+  alternates: { canonical: "https://floridaimpactwindowsdoors.com/thank-you/" },
 };
 
 export default function ThankYouPage() {

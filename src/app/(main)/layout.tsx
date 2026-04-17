@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "../globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ChatBot from "@/components/ChatBot";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://floridaimpactwindowsdoors.com"),
@@ -47,9 +49,6 @@ export const metadata: Metadata = {
   authors: [{ name: "Florida Impact Windows & Doors" }],
   creator: "Florida Impact Windows & Doors",
   publisher: "Florida Impact Windows & Doors",
-  alternates: {
-    canonical: "/",
-  },
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -59,6 +58,14 @@ export const metadata: Metadata = {
       "Florida Impact Windows & Doors | #1 Impact Window Installation in Fort Lauderdale",
     description:
       "South Florida's premier impact window and door installation company. Hurricane-rated protection for Broward & Palm Beach County homes. Free estimates available.",
+    images: [
+      {
+        url: "https://floridaimpactwindowsdoors.com/images/hero-bg.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Florida Impact Windows & Doors - Professional Impact Window Installation in South Florida",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -66,6 +73,7 @@ export const metadata: Metadata = {
       "Florida Impact Windows & Doors | #1 Impact Windows in South Florida",
     description:
       "Premium impact windows & doors at affordable prices. A+ BBB rating. Free estimates. Call (754) 600-4876.",
+    images: ["https://floridaimpactwindowsdoors.com/images/hero-bg.jpg"],
   },
   robots: {
     index: true,
@@ -113,6 +121,11 @@ function LocalBusinessJsonLd() {
     areaServed: [
       {
         "@type": "County",
+        name: "Miami-Dade County",
+        containedIn: { "@type": "State", name: "Florida" },
+      },
+      {
+        "@type": "County",
         name: "Broward County",
         containedIn: { "@type": "State", name: "Florida" },
       },
@@ -150,7 +163,38 @@ function LocalBusinessJsonLd() {
       bestRating: "5",
       worstRating: "1",
     },
-    sameAs: [],
+    sameAs: [
+      "https://www.google.com/maps/place/Florida+Impact+Windows+%26+Doors",
+      "https://www.yelp.com/biz/florida-impact-windows-and-doors-hollywood",
+      "https://www.bbb.org/us/fl/hollywood/profile/window-installation/florida-impact-windows-doors-0633-92029751",
+    ],
+    review: [
+      {
+        "@type": "Review",
+        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+        author: { "@type": "Person", name: "Verified Customer" },
+        reviewBody: "Florida Impact Windows & Doors transformed our 1960s home with beautiful PGT WinGuard impact windows. The installation team arrived on time every day, protected our furniture and floors, and cleaned up completely. Our energy bills dropped noticeably.",
+        datePublished: "2024-11-15",
+      },
+      {
+        "@type": "Review",
+        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+        author: { "@type": "Person", name: "Verified Customer" },
+        reviewBody: "After Hurricane Irma showed us the vulnerability of our old jalousie windows, we knew it was time to upgrade. Florida Impact Windows & Doors stood out for their honesty and product knowledge. Our home feels completely different now.",
+        datePublished: "2024-10-10",
+      },
+      {
+        "@type": "Review",
+        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+        author: { "@type": "Person", name: "Verified Customer" },
+        reviewBody: "We compared five different companies and Florida Impact Windows & Doors offered the best combination of quality products and competitive pricing. The permit process was handled entirely by them. Highly recommend.",
+        datePublished: "2024-09-20",
+      },
+    ],
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["h1", "h2", ".hero-description", "[data-speakable]"],
+    },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Impact Window & Door Services",
@@ -249,16 +293,27 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap"
           rel="stylesheet"
         />
+        <link rel="alternate" type="application/rss+xml" href="https://floridaimpactwindowsdoors.com/feed.xml" title="Florida Impact Windows & Doors Blog" />
+        <link rel="alternate" type="text/plain" href="https://floridaimpactwindowsdoors.com/llms.txt" title="LLM-readable site info" />
+        <link rel="alternate" type="text/plain" href="https://floridaimpactwindowsdoors.com/llms-full.txt" title="Full LLM context" />
         <LocalBusinessJsonLd />
         <WebSiteJsonLd />
       </head>
       <body className="font-sans antialiased">
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-SKF6705HJM"
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-SKF6705HJM');`}
+        </Script>
         <Header />
         <main>{children}</main>
         <Footer />
+        <ChatBot />
       </body>
     </html>
   );
