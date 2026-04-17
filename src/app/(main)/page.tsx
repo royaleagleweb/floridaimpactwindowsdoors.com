@@ -163,7 +163,7 @@ export default function HomePage() {
                 Protect your home with high-quality impact windows installed by HVHZ experts. Serving Broward &amp; Palm Beach County from Fort Lauderdale.
               </p>
               <p className="text-base text-gray-400 mb-8 max-w-xl leading-relaxed">
-                Every project installed by our own team, led by one of our owners &mdash; no shortcuts and no subcontractors. Florida&apos;s most trusted brands for impact windows and doors.
+                Every project installed by our own team, led by one of our owners &mdash; no shortcuts. Florida&apos;s most trusted brands for impact windows and doors.
               </p>
 
               {/* Trust Row */}
@@ -611,7 +611,7 @@ export default function HomePage() {
                 We&apos;ve built our reputation on honesty, integrity, and customer service. This commitment has helped us maintain 5-star reviews on Google, Yelp, and the Better Business Bureau, where we proudly hold an A+ Rating.
               </p>
               <p className="text-gray-400 leading-relaxed mb-6">
-                Our company has earned a score of 111 on BuildZoom, placing us in the <span className="text-palm-400 font-bold">top 4% of 191,428 licensed contractors in the State of Florida</span>. No shortcuts and no subcontractors &mdash; every project is installed by our own team, led by one of our owners.
+                Our company has earned a score of 111 on BuildZoom, placing us in the <span className="text-palm-400 font-bold">top 4% of 191,428 licensed contractors in the State of Florida</span>. No shortcuts &mdash; every project is installed by our own team, led by one of our owners.
               </p>
               <p className="text-gray-300 font-medium italic mb-8">
                 &ldquo;Even if you buy the best impact windows, they will not perform as well as they should if they are not installed properly.&rdquo;
