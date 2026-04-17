@@ -7,15 +7,25 @@
  *   3. Thin pages: URLs with >100 impressions but <1% CTR (SEO weak points).
  *   4. Zombie pages: URLs that got ≥1 impression 90d ago but none in the last 28d.
  *
- * Setup (one-time):
- *   1. Create a Google Cloud service account, enable Search Console API.
- *   2. Download the JSON key.
- *   3. In Search Console → Settings → Users and permissions, add the
- *      service account email as a "Full" user on the property.
- *   4. export GOOGLE_APPLICATION_CREDENTIALS=/abs/path/to/key.json
+ * Setup — pick ONE of these auth paths:
  *
- * Run:
- *   npx tsx scripts/seo-report.ts
+ *   Path A (easiest, no JSON key — uses your own Google account):
+ *     1. Install gcloud CLI: https://cloud.google.com/sdk/docs/install
+ *     2. In Google Cloud Console, create a project and enable the
+ *        "Google Search Console API".
+ *     3. Run once:
+ *          gcloud auth application-default login \
+ *            --scopes=https://www.googleapis.com/auth/webmasters.readonly,https://www.googleapis.com/auth/cloud-platform
+ *        Sign in with the Google account that owns the Search Console property.
+ *     4. npx tsx scripts/seo-report.ts
+ *
+ *   Path B (service account — requires key creation, may be blocked
+ *           by org policy):
+ *     1. Create a service account, download JSON key, enable Search
+ *        Console API, add the service-account email as a Full user on
+ *        the GSC property.
+ *     2. export GOOGLE_APPLICATION_CREDENTIALS=/abs/path/to/key.json
+ *     3. npx tsx scripts/seo-report.ts
  */
 
 import { google } from "googleapis";
@@ -70,16 +80,21 @@ function section(title: string): void {
 }
 
 async function main(): Promise<void> {
-  if (!process.env.GOOGLE_APPLICATION_CREDENTIALS) {
-    console.error("Error: GOOGLE_APPLICATION_CREDENTIALS env var is not set.");
-    console.error("See script header for setup instructions.");
-    process.exit(1);
-  }
-
   const auth = new google.auth.GoogleAuth({
     scopes: ["https://www.googleapis.com/auth/webmasters.readonly"],
   });
-  const searchconsole = google.searchconsole({ version: "v1", auth: await auth.getClient() as never });
+
+  let authClient;
+  try {
+    authClient = await auth.getClient();
+  } catch (err) {
+    console.error("Could not load Google credentials.");
+    console.error("See script header for setup options (gcloud ADC or service account).");
+    console.error(`\nUnderlying error: ${(err as Error).message}`);
+    process.exit(1);
+  }
+
+  const searchconsole = google.searchconsole({ version: "v1", auth: authClient as never });
 
   const currentEnd = daysAgo(3);
   const currentStart = daysAgo(30);
