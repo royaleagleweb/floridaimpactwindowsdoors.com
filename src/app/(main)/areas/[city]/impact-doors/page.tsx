@@ -35,7 +35,7 @@ export default async function CityImpactDoorsPage({ params }: PageProps) {
     { name: "Entry Impact Doors", slug: "entry", description: "Make a bold first impression with a hurricane-rated front door that combines curb appeal with maximum security." },
     { name: "Patio Impact Doors", slug: "patio", description: "Durable impact-rated patio doors built for South Florida living. Smooth operation and airtight seal." },
     { name: "Pivot Impact Doors", slug: "pivot", description: "Modern oversized pivot doors with impact glass. A striking architectural statement with full storm protection." },
-    { name: "Multi-Slide Impact Doors", slug: "multi-slide", description: "Expansive multi-panel door systems that stack or pocket for a seamless indoor-outdoor transition." },
+    { name: "Storm Impact Doors", slug: "storm", description: "Heavy-duty storm doors that add an extra layer of hurricane protection with screen and glass options for year-round versatility." },
   ];
 
   const benefits = [

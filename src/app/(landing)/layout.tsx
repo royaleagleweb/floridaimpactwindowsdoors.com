@@ -10,6 +10,10 @@ export const metadata: Metadata = {
       follow: false,
     },
   },
+  icons: {
+    icon: "/favicon.png",
+    apple: "/apple-touch-icon.png",
+  },
 };
 
 export default function LandingLayout({

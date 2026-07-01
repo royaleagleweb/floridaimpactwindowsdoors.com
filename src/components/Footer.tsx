@@ -83,7 +83,7 @@ const footerLinks = {
     { name: "Jupiter", href: "/areas/jupiter/" },
     { name: "Palm Beach Gardens", href: "/areas/palm-beach-gardens/" },
     { name: "Wellington", href: "/areas/wellington/" },
-    { name: "Lake Worth", href: "/areas/lake-worth/" },
+    { name: "Lake Worth Beach", href: "/areas/lake-worth-beach/" },
     { name: "Royal Palm Beach", href: "/areas/royal-palm-beach/" },
     { name: "View All Cities →", href: "/areas/" },
   ],
