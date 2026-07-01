@@ -284,8 +284,8 @@ export const blogPosts: BlogPost[] = [
   // ============================================
   {
     id: 17,
-    title: "How Much Do Impact Windows Cost in South Florida? A 2025 Price Guide",
-    slug: "impact-windows-cost-south-florida-2025",
+    title: "How Much Do Impact Windows Cost in South Florida? A 2026 Price Guide",
+    slug: "impact-windows-cost-south-florida-2026",
     excerpt: "We believe in being upfront about pricing. After 15 years in the business, here is our honest breakdown of what impact windows really cost in South Florida.",
     content: `<p>One of the most common questions South Florida homeowners ask us is how much impact windows will cost for their home. The honest answer is that it depends on several factors, including window size, style, frame material, glass options, and the complexity of installation. After 15 years and thousands of installations across Miami-Dade, Broward, and Palm Beach counties, we have a good feel for where prices land, and we believe homeowners deserve straight answers instead of vague ranges designed to get you on the phone.</p>
 <h2>What Determines the Cost of Impact Windows</h2>
@@ -768,9 +768,9 @@ export const blogPosts: BlogPost[] = [
   // ============================================
   {
     id: 43,
-    title: "Modern Window Design Trends for South Florida Homes in 2025",
-    slug: "modern-window-design-trends-south-florida-2025",
-    excerpt: "We are seeing some incredible design trends in impact windows right now. From floor-to-ceiling glass to matte black frames, here is what our customers are choosing in 2025.",
+    title: "Modern Window Design Trends for South Florida Homes in 2026",
+    slug: "modern-window-design-trends-south-florida-2026",
+    excerpt: "We are seeing some incredible design trends in impact windows right now. From floor-to-ceiling glass to matte black frames, here is what our customers are choosing in 2026.",
     content: `<p>South Florida architecture is evolving rapidly, and window design plays a central role in defining the look and feel of modern homes throughout the region. The days when impact windows meant limited style choices are long gone. Today's impact window offerings encompass the full spectrum of contemporary design trends, allowing South Florida homeowners to achieve stunning architectural effects while maintaining complete hurricane protection.</p>
 <p>Floor-to-ceiling glass is one of the most prominent design trends in South Florida residential architecture. Builders and homeowners are maximizing glass area to blur the line between indoor and outdoor living spaces, taking full advantage of South Florida's tropical views and natural light. Impact window manufacturers have responded with larger panel sizes, slimmer frame profiles, and multi-panel configurations that create expansive glass walls capable of withstanding hurricane-force conditions. These systems pair beautifully with South Florida's contemporary and coastal modern architectural styles.</p>
 <p>Black and dark bronze aluminum frames have surged in popularity throughout South Florida, replacing the white and beige frames that dominated for decades. The bold contrast of dark frames against light-colored walls creates a striking contemporary aesthetic that complements modern, mid-century modern, and transitional home designs. Most major impact window manufacturers now offer factory-applied black and dark bronze finishes that are durable, fade-resistant, and designed to withstand South Florida's intense UV exposure. These finishes maintain their color and appearance for years without the fading or peeling that can affect aftermarket paint applications.</p>
