@@ -6,9 +6,9 @@ export default function HeroLeadForm() {
           <span className="w-2 h-2 bg-palm-400 rounded-full animate-pulse" />
           Free &mdash; No Obligation
         </div>
-        <h3 className="text-2xl font-bold text-white font-display">
+        <h2 className="text-2xl font-bold text-white font-display">
           Get Your Free Estimate
-        </h3>
+        </h2>
         <p className="text-sm text-gray-500 mt-1">Response within 2 hours</p>
       </div>
       <form

@@ -31,8 +31,8 @@ const linkMap: [RegExp, string, string][] = [
   [/\bCoral Springs\b/, "/areas/coral-springs/", "Coral Springs"],
   // Key resources
   [/\bfree estimate\b/i, "/get-estimate/", "free estimate"],
-  [/\bwind mitigation\b/i, "/blog/wind-mitigation-inspections-maximizing-insurance-discount/", "wind mitigation"],
-  [/\bFlorida Building Code\b/, "/blog/florida-building-code-requirements-impact-windows/", "Florida Building Code"],
+  [/\bwind mitigation\b/i, "/blog/wind-mitigation-inspection-insurance-discount/", "wind mitigation"],
+  [/\bFlorida Building Code\b/, "/blog/florida-building-code-impact-window-requirements/", "Florida Building Code"],
   // Brands
   [/\bPGT\b/, "/brands/pgt/", "PGT"],
   [/\bCGI\b/, "/brands/cgi/", "CGI"],
