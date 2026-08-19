@@ -12,7 +12,7 @@ export const faqs: FAQ[] = [
     id: 1,
     question: "How much do impact windows cost in South Florida?",
     answer:
-      "The cost of impact windows in South Florida typically ranges from $40 to $100+ per square foot, installed. For a standard-sized window, homeowners can expect to pay between $500 and $1,500 per window, depending on the size, frame material (vinyl, aluminum, or wood-clad), glass type, and design style. A full-home replacement for an average South Florida residence with 15 to 20 windows generally falls in the $10,000 to $30,000 range, though larger homes in areas like Coral Gables, Boca Raton, or Jupiter can exceed that significantly.\n\nSeveral factors influence the final price. Custom shapes, oversized openings, and high-performance Low-E coatings or laminated glass upgrades will add to the cost. Labor rates in Miami-Dade and Broward counties also tend to be slightly higher than in Palm Beach County due to stricter code requirements and permitting processes. At Florida Impact Windows & Doors, we provide free, no-obligation estimates so you can see an exact breakdown of material and installation costs specific to your home.\n\nIt is worth considering that impact windows are an investment that pays for itself over time through insurance premium reductions, energy savings, increased home value, and the elimination of the recurring cost of putting up and storing hurricane shutters. Many South Florida homeowners find that the long-term return makes impact windows one of the smartest upgrades they can make.",
+      "Impact windows in South Florida typically cost $400 to $1,500 per window installed, depending on size, style, glass, and frame. Sliding glass doors often run $1,500 to $5,000+ installed. A full-home project commonly lands between $10,000 and $30,000, though larger or custom homes can exceed that. Price moves with brand, Low-E or insulated glass, custom shapes, two-story access, and whether the opening is in Miami-Dade or Broward’s High-Velocity Hurricane Zone. These are typical ranges, not a quote. Labor and permit rules are stricter in the HVHZ, which can raise the total. A measured in-home estimate is the only reliable price for your openings.",
     slug: "how-much-do-impact-windows-cost-in-south-florida",
     category: "Cost & Pricing",
   },
@@ -20,120 +20,413 @@ export const faqs: FAQ[] = [
     id: 2,
     question: "What financing options are available for impact windows?",
     answer:
-      "Florida Impact Windows & Doors partners with several reputable lending institutions to offer flexible financing options that make impact window installation accessible to virtually every homeowner in South Florida. We offer plans ranging from 12 to 120 months, with competitive interest rates and, in many cases, promotional periods with zero percent interest for qualified buyers. Whether you own a single-family home in Pembroke Pines or a waterfront condo in Fort Lauderdale, we can help you find a payment plan that fits your budget.\n\nIn addition to traditional financing, South Florida homeowners may qualify for the Property Assessed Clean Energy (PACE) program, which allows you to finance energy-efficient and storm-protection improvements through your property tax bill with no money down. PACE financing is available in Miami-Dade, Broward, and Palm Beach counties and has no minimum credit score requirement, making it an attractive option for many residents. Some local municipalities also offer rebate programs or incentives for hurricane-hardening your home.\n\nOur team walks you through every available option during your in-home consultation, including any current manufacturer promotions or seasonal discounts. We believe that protecting your family and property from South Florida's hurricane season should never be out of reach due to cost, and we work hard to make sure it isn't.",
+      "Financing is commonly offered in terms from 12 to 120 months, including promotional 0% interest periods if you qualify. Florida Impact Windows & Doors also discusses PACE (Property Assessed Clean Energy) financing, which may be available in Miami-Dade, Broward, and Palm Beach and is typically repaid on the property tax bill. Approval, APR, and whether a promo applies depend on credit, the lender, and program rules at the time you apply. Financing does not replace a written contract or a building permit. Call (754) 600-4876 during a free estimate to compare monthly options. Read the lender’s disclosures before you sign.",
     slug: "financing-options-for-impact-windows",
     category: "Cost & Pricing",
   },
   {
     id: 3,
+    question: "How much does a full-house impact window replacement cost?",
+    answer:
+      "A typical full-house impact window and door replacement in South Florida often falls between $10,000 and $30,000. Homes with about 15–20 standard openings sit in that band; larger houses, oversized sliders, two-story access, or premium brands can run higher. The total depends on size, brand, glass package, and municipality. Replacing every opening at once costs more upfront than a partial job, but it usually simplifies permitting, inspection, and insurance paperwork. Grants and financing change your out-of-pocket amount, not the contract price. Ask for a line-item estimate that separates windows, doors, labor, and permit handling.",
+    slug: "how-much-does-a-full-house-impact-window-replacement-cost",
+    category: "Cost & Pricing",
+  },
+  {
+    id: 4,
+    question:
+      "How much do impact sliding glass doors cost — 2-panel vs. 3- or 4-panel?",
+    answer:
+      "Impact sliding glass doors in South Florida commonly range from $1,500 to $5,000+ installed. A standard two-panel slider usually sits in the lower-to-mid part of that range. Three- and four-panel, extra-wide, or pocket configurations cost more because they use more glass, heavier frames, and a higher design-pressure assembly. Corner sliders, custom finishes, and Low-E insulated glass also push the number up. Exact cost depends on width, height, brand, and the city that will inspect the opening. Note whether the header or track needs structural work. A site visit is required to price 3- and 4-panel units accurately.",
+    slug: "impact-sliding-glass-door-cost-2-panel-vs-3-or-4-panel",
+    category: "Cost & Pricing",
+  },
+  {
+    id: 5,
+    question: "How much do impact French doors cost?",
+    answer:
+      "Impact French doors typically cost more than a single window and often land in a similar band to other large impact door openings, depending on size, brand, and glass. Inswing versus outswing, sidelights, transoms, and multipoint hardware all change the price. Coastal or HVHZ assemblies need a design pressure that matches that opening, which can require a heavier frame than an inland door. Cost depends on size, brand, and municipality—there is no single catalog price. Pairing French doors with matching impact windows keeps the elevation consistent for HOA review. Put the unit, labor, disposal, and permit on one quote so you are not comparing a door-only number to a turnkey number.",
+    slug: "how-much-do-impact-french-doors-cost",
+    category: "Cost & Pricing",
+  },
+  {
+    id: 6,
+    question: "How much does an impact garage door cost?",
+    answer:
+      "An impact-rated or wind-rated garage door is priced separately from windows and depends on width, height, wind rating, insulation, and whether you need new tracks or an opener. Retrofit wind kits cost less than a full door replacement but only work when the existing door and opening qualify. For insurance and HVHZ compliance, the garage is an opening that usually must be protected if you want full opening-protection credit. Typical cost varies widely by size, brand, and municipality; put it on the same estimate as the windows. Confirm the product approval (NOA or FL#) matches the installation method the inspector will see.",
+    slug: "how-much-does-an-impact-garage-door-cost",
+    category: "Cost & Pricing",
+  },
+  {
+    id: 7,
+    question: "What does an impact window quote include?",
+    answer:
+      "A complete quote should list each opening (size, style, brand, glass), labor to remove and install, disposal, flashing and sealing, and who pulls and closes the permit. It should also state whether the price includes product-approval documents, final inspection coordination, and any buck, stucco, or paint work. Financing, grants, and insurance credits are not automatic deductions from the contract. Compare apples to apples: a product-only number is not the same as a permitted, installed price. If a bid omits permit handling, dumpsters, or after-hours access, the out-the-door cost will rise later. Ask every bidder to use the same opening schedule.",
+    slug: "what-does-an-impact-window-quote-include",
+    category: "Cost & Pricing",
+  },
+  {
+    id: 8,
+    question: "How do I compare impact window quotes?",
+    answer:
+      "Compare brand and series, glass package (laminated, insulated, Low-E), design-pressure rating, and whether each product has a current NOA or FL# for your jurisdiction. Then compare scope: permit, inspection, disposal, stucco or paint touch-up, and warranty (manufacturer plus workmanship). The lowest number often leaves out HVHZ hardware, stainless fasteners, or custom sizes. Ask every bidder to price the same opening list. Confirm the installer—not only a salesperson—will follow the NOA’s anchor schedule. A free in-home measurement is more reliable than a phone price, and a vague “per window” average hides door and two-story costs.",
+    slug: "how-to-compare-impact-window-quotes",
+    category: "Cost & Pricing",
+  },
+  {
+    id: 9,
+    question: "What is the typical deposit and payment schedule?",
+    answer:
+      "Most impact window contracts collect a deposit when you sign, then remaining payments at manufacturing, delivery, or completion—the exact split belongs in the written agreement. Avoid large cash deposits and do not pay the full balance before product is on site and work is substantially done. Typical practice is a partial deposit with the rest tied to milestones; treat that as a pattern, not a legal cap. Ask for the payment schedule, change-order rules, and what happens if the permit is delayed. Keep copies of checks or lender disbursements with the signed proposal. Progress payments should match visible progress.",
+    slug: "impact-window-deposit-and-payment-schedule",
+    category: "Cost & Pricing",
+  },
+  {
+    id: 10,
+    question: "What do impact windows cost after a My Safe Florida Home grant?",
+    answer:
+      "The contract price does not drop when you receive a My Safe Florida Home grant; the grant can reduce what you pay out of pocket. MSFH is a Florida program that can cover a large share of qualifying mitigation, with an advertised cap of up to $10,000. Eligibility, funding, and the share you actually receive change with each program cycle. Do not treat the grant as cash in hand until you have written approval for a qualifying scope. Start from a line-item estimate so you know the full job cost first. Financing can cover any remaining balance if you qualify.",
+    slug: "impact-window-cost-after-my-safe-florida-home-grant",
+    category: "Cost & Pricing",
+  },
+  {
+    id: 11,
+    question: "Why do HVHZ impact window jobs cost more?",
+    answer:
+      "Jobs in the High-Velocity Hurricane Zone (Miami-Dade and Broward) cost more because products and installations must meet the state’s strictest wind and debris standards. That usually means Miami-Dade NOA assemblies, specified anchors and spacings, and inspections that reject substitutions. Larger or higher openings need higher design-pressure ratings, which can require heavier frames and more expensive glass. Permit documentation and inspection cycles add time. Palm Beach County is still in a wind-borne debris region but is not HVHZ, so requirements differ by municipality. The extra cost is for tested systems and inspection, not a brand markup alone.",
+    slug: "why-hvhz-impact-window-jobs-cost-more",
+    category: "Cost & Pricing",
+  },
+  {
+    id: 12,
     question: "Do impact windows increase home value?",
     answer:
-      "Absolutely. Impact windows are one of the highest-return home improvements you can make in South Florida. Studies and real estate data consistently show that impact-resistant windows and doors can increase a home's resale value by anywhere from $10,000 to $30,000 or more, depending on the size of the home and the scope of the installation. In competitive South Florida markets like Weston, Delray Beach, and Aventura, buyers actively seek out homes that already have full impact window protection because it means they won't have to make the investment themselves.\n\nBeyond the raw dollar increase, impact windows make your home significantly more attractive to prospective buyers. They signal that the property is well-maintained, code-compliant, and ready for hurricane season without the hassle of shutters. Homes with impact windows also appraise higher and often sell faster than comparable homes without them. Real estate agents across Broward and Palm Beach counties frequently cite impact windows as one of the top features buyers ask about.\n\nThe value goes beyond resale as well. While you live in the home, you benefit from lower energy bills thanks to the insulating properties of laminated glass, reduced outside noise, enhanced security against break-ins, and the peace of mind that comes with year-round storm protection. When you factor in the insurance savings many homeowners receive, impact windows often pay for themselves well before you ever decide to sell.",
+      "Yes. Impact windows are a permanent upgrade South Florida buyers often look for, and they can support a stronger listing than a house that still needs opening protection. Value depends on the rest of the home, install quality, and whether every opening is protected and permitted. Contractor marketing sometimes cites resale bumps in the $10,000 to $30,000 range; that is not a guarantee, and appraisers still price location, roof, and condition first. Lower cooling costs, quieter rooms, and a current wind-mitigation form help the house show well.",
     slug: "do-impact-windows-increase-home-value",
     category: "Cost & Pricing",
   },
 
   // Product
   {
-    id: 4,
+    id: 13,
     question: "What are hurricane impact windows?",
     answer:
-      "Hurricane impact windows, also known as impact-resistant windows, are specially engineered window systems designed to withstand the extreme forces of a hurricane. They feature a laminated glass construction, which consists of two panes of tempered or heat-strengthened glass bonded together with a strong interlayer, typically made of polyvinyl butyral (PVB) or ethylene-vinyl acetate (EVA). This construction means that even if the glass cracks upon impact from flying debris, the interlayer holds the broken pieces in place, preventing dangerous wind and water from entering your home.\n\nIn South Florida, impact windows must meet rigorous testing standards, including the Miami-Dade County Notice of Acceptance (NOA) protocol, which is considered the gold standard nationwide. During testing, windows are subjected to large and small missile impact tests (simulating debris strikes at hurricane-force speeds) followed by thousands of cycles of positive and negative air pressure to simulate sustained hurricane winds. Products that earn a Miami-Dade NOA or Florida Building Code approval have proven they can protect your home in Category 5 conditions.\n\nBeyond hurricane protection, impact windows deliver a host of everyday benefits that South Florida homeowners appreciate. They block up to 99 percent of harmful UV rays, protecting your furniture, flooring, and artwork from fading. They significantly reduce outside noise from traffic, construction, and aircraft, which is especially valuable near busy corridors like I-95, US-1, or Fort Lauderdale-Hollywood International Airport. And because they are always in place, you never have to scramble to put up shutters when a storm approaches.",
+      "Hurricane impact windows use laminated glass—two lites bonded with a PVB or EVA interlayer—so the pane can crack under debris without blowing out. In South Florida, tested products must survive a large-missile impact (a 9-pound 2x4 at about 34 mph) and then cyclic wind pressure. The frame, glass, and anchors are one system; glass alone is not “impact” if it is not in an approved assembly. Impact windows stay in place year-round, block most UV, and resist smash-and-grab attacks better than annealed glass. They are debris-rated, not ballistic-rated.",
     slug: "what-are-hurricane-impact-windows",
     category: "Product",
   },
   {
-    id: 5,
+    id: 14,
     question: "Are there different grades of impact windows?",
     answer:
-      "Yes, impact windows come in different performance levels and classifications, and understanding the distinctions is important when choosing the right product for your South Florida home. The two primary rating systems you will encounter are the Miami-Dade County protocols and the Florida Building Code standards. Miami-Dade approved products (carrying a Notice of Acceptance) meet the most stringent testing requirements in the country, including both large missile and small missile impact tests. Products approved under the broader Florida Building Code may meet slightly different criteria depending on the wind zone and exposure category of your property.\n\nWithin these standards, impact windows are further differentiated by their design pressure (DP) rating, which measures how much wind load the window can withstand. A higher DP rating means the window can handle greater wind speeds and pressure. Homes in High Velocity Hurricane Zones (HVHZ) like Miami-Dade and Broward counties require products with higher DP ratings compared to homes in inland or lower-wind-zone areas. At Florida Impact Windows & Doors, we help you select the correct rating for your specific location, whether you are on a barrier island in Palm Beach or in a suburban neighborhood in Davie.\n\nThere are also distinctions in glass composition and coatings. Standard impact glass provides storm protection, but you can upgrade to Low-E (low emissivity) coatings that reflect heat and reduce cooling costs, tinted glass for additional glare reduction, or high-performance laminated insulated glass units that combine impact resistance with superior energy efficiency. Our consultants will walk you through all available options so you can choose the level of protection, efficiency, and comfort that best suits your home and budget.",
+      "Yes. Grades show up as the product-approval path and Design Pressure (DP), not as generic good/better/best labels. Miami-Dade Notice of Acceptance (NOA) is the HVHZ benchmark; Florida Product Approval (FL#) is the statewide listing. Higher DP means the assembly is tested to higher wind loads. Homes in Miami-Dade and Broward (HVHZ) generally need HVHZ-approved products and the DP required for that opening. Glass packages also vary: laminated only, insulated laminated, Low-E, and tinted. Match the approval and DP to the address. A cheaper, lower-rated unit can fail plan review.",
     slug: "different-grades-of-impact-windows",
     category: "Product",
   },
   {
-    id: 6,
+    id: 15,
     question: "How long do impact windows last?",
     answer:
-      "High-quality impact windows installed by a professional team are built to last 25 to 30 years or more in South Florida's demanding climate. The laminated glass itself does not degrade over time and will maintain its structural integrity and impact resistance for the full life of the product. The aluminum or vinyl frames used in most impact window systems are engineered to resist corrosion from the salt air that is prevalent along the South Florida coastline, from Key Biscayne up through Jupiter and beyond.\n\nThe longevity of your impact windows depends in part on proper installation and routine maintenance. Windows that are correctly installed with appropriate flashing, sealant, and anchoring will perform reliably through decades of hurricane seasons. Periodic maintenance, such as cleaning the tracks, lubricating hardware, and inspecting the weatherstripping, will help ensure smooth operation and optimal sealing. South Florida's intense sun and humidity can accelerate wear on seals and gaskets, but these components are inexpensive to replace and do not affect the structural performance of the window.\n\nAt Florida Impact Windows & Doors, every installation is backed by both manufacturer warranties (which typically cover the glass and frame for 10 to lifetime, depending on the product line) and our own workmanship warranty. We stand behind our installations because we know that when impact windows are done right, they protect your home season after season without the need for costly repairs or early replacement.",
+      "High-quality impact windows commonly last 25 to 30 years or more when frames, seals, and hardware are maintained. Laminated glass does not expire on a calendar, but seals can fail and coastal hardware can corrode if it is neglected. Aluminum and vinyl frames both hold up in South Florida if you rinse salt and keep weep holes open. Manufacturer warranties often run from about 10 years to a limited lifetime on specific parts; that is coverage, not a promise the unit will look new for 30 years. Annual checks of locks, rollers, and weatherstrip extend service life.",
     slug: "how-long-do-impact-windows-last",
     category: "Product",
   },
   {
-    id: 7,
+    id: 16,
     question: "Can impact windows stop a bullet?",
     answer:
-      "This is one of the most common questions we hear, and the short answer is no, standard hurricane impact windows are not designed or rated to stop bullets. Impact windows are engineered to resist windborne debris during a hurricane, such as roof tiles, tree branches, and gravel propelled at high speeds. The testing standards, including the Miami-Dade large missile test (a nine-pound 2x4 lumber piece launched at 34 miles per hour), simulate storm debris, not ballistic threats. A bullet travels at far greater velocity and concentrates its energy on a much smaller point of impact.\n\nThat said, impact windows do provide a meaningful layer of security against break-ins and forced entry. The laminated glass construction makes it extremely difficult for an intruder to smash through the window quickly. Even repeated blows with a heavy object will typically only crack and spider the glass rather than create an opening, because the PVB interlayer holds the fragments together. This buys valuable time for alarm systems to activate and authorities to respond. Many South Florida homeowners in neighborhoods across Miami, Fort Lauderdale, and West Palm Beach cite enhanced security as one of the top reasons they chose impact windows.\n\nIf you need true ballistic-rated glass, that is a specialized product category with its own testing standards (such as UL 752) and significantly higher costs. For the vast majority of South Florida homeowners, standard impact windows deliver outstanding protection against hurricanes, break-ins, UV damage, and noise. If you have specific security concerns beyond storm protection, our team at Florida Impact Windows & Doors can discuss options that pair impact windows with additional security features.",
+      "No. Impact windows are rated for wind-borne debris, not ballistics. The laminated interlayer can stop a 2x4 and resist smash-and-grab attacks, but it is not UL 752 bullet-resistant glass. Repeated shots or rifle rounds can penetrate. True ballistic glazing is a different product, permit path, and price. For storms and everyday security, a permitted impact assembly is the correct specification. Do not treat “hurricane glass” marketing as a substitute for a safe room or a ballistic-rated opening.",
     slug: "can-impact-windows-stop-a-bullet",
     category: "Product",
+  },
+  {
+    id: 17,
+    question: "What is the difference between impact glass and regular glass?",
+    answer:
+      "Regular annealed or standard tempered glass can shatter and leave an opening that lets wind and water pressurize the house. Impact glass is laminated; even when it cracks, the interlayer holds the shards and the opening stays closed if the frame and anchors hold. Tempered glass is stronger than annealed glass but is not a hurricane-impact system by itself. Code-approved protection is either an impact-rated window or door assembly, or an approved shutter or screen over a non-impact opening. Film applied to regular glass is not the same as a tested impact unit.",
+    slug: "impact-glass-vs-regular-glass",
+    category: "Product",
+  },
+  {
+    id: 18,
+    question:
+      "What is the difference between a Miami-Dade NOA and a Florida Product Approval (FL#)?",
+    answer:
+      "A Miami-Dade Notice of Acceptance (NOA) is a product approval issued after HVHZ testing, including large-missile impact and pressure cycling. A Florida Product Approval number (FL#) is a statewide listing under the Florida Building Code. In Miami-Dade and Broward’s HVHZ, inspectors typically require an NOA or an HVHZ-qualified approval, not a generic inland FL# alone. Palm Beach County often accepts FL# products that meet local wind-borne debris rules, but the municipality still decides. Always give the building department the exact approval that matches the model, glass, and anchor schedule you will install.",
+    slug: "noa-vs-florida-product-approval-fl-number",
+    category: "Product",
+  },
+  {
+    id: 19,
+    question:
+      "What Design Pressure (DP) rating do I need for my address or high-rise?",
+    answer:
+      "Design Pressure (DP) is the wind load, in pounds per square foot, the assembly is tested to resist. The DP you need depends on your address, building height, exposure (open coast versus suburban), and whether the opening is at a corner. High-rises and oceanfront elevations usually need higher DP than a one-story inland house. A salesperson’s “standard DP” may be too low for an upper-floor condo. Your contractor or engineer should size DP per opening from the code and the product approval. Installing a lower-DP unit than the permit requires will fail inspection.",
+    slug: "what-dp-rating-do-i-need",
+    category: "Product",
+  },
+  {
+    id: 20,
+    question: "Should I choose vinyl or aluminum frames in South Florida?",
+    answer:
+      "Both vinyl and aluminum impact frames are used across Miami-Dade, Broward, and Palm Beach; the better choice depends on opening size, coastal exposure, and energy goals. Aluminum is stiffer, so it suits large sliders and taller units; specify a coastal finish and stainless hardware near the ocean. Vinyl can offer better thermal performance and a warmer interior frame, but very large openings may still need aluminum. Color, HOA rules, and brand series matter as much as the material name. Compare the actual NOA or FL#, DP, and glass package—not just “vinyl versus aluminum.”",
+    slug: "vinyl-vs-aluminum-impact-windows-south-florida",
+    category: "Product",
+  },
+  {
+    id: 21,
+    question: "What is Low-E glass, and is it worth it on impact windows?",
+    answer:
+      "Low-E is a microscopic metal coating that reflects radiant heat and blocks much of the UV that fades floors and furniture. In South Florida it can cut cooling load when paired with the right solar-heat-gain rating, especially on west and south elevations. Low-E is an add-on to the impact laminate; it does not make a window more hurricane-resistant. Argon-filled insulated units with Low-E add cost and a bit of thickness. Whether it is worth it depends on sun exposure, electric rates, and how long you will stay in the home. Ask for the NFRC numbers on the exact series.",
+    slug: "what-is-low-e-glass-on-impact-windows",
+    category: "Product",
+  },
+  {
+    id: 22,
+    question: "What is Florida’s 25% window replacement rule?",
+    answer:
+      "Florida’s “25% rule” is a building-code trigger: if you replace more than a set share of openings in a wall or building—often 25%, though the exact application depends on the jurisdiction and current code—you may have to bring the remaining openings on that elevation up to today’s wind and impact standards. Municipalities in the HVHZ enforce this closely. Replacing a few windows to save money can force a larger project after plan review. Confirm the rule with the city that will issue the permit before you phase a job. A whole-house plan avoids surprise upgrades mid-permit.",
+    slug: "florida-25-percent-window-replacement-rule",
+    category: "Product",
+  },
+  {
+    id: 23,
+    question: "Do impact windows reduce noise and energy bills?",
+    answer:
+      "Yes, within limits. Laminated impact glass dampens street, aircraft, and storm noise better than single-pane non-impact glass; insulated laminated units do more. They will not make a home on a flight path silent. Energy savings come from tighter frames, Low-E coatings, and insulated glass that reduce heat gain. Large UV-block percentages are typical of laminated glass, not a utility-bill guarantee. Results depend on orientation, existing insulation, and HVAC condition. Treat quieter rooms and lower cooling hours as a bonus on top of wind protection, not the only reason to buy.",
+    slug: "do-impact-windows-reduce-noise-and-energy-bills",
+    category: "Product",
+  },
+
+  // Brands
+  {
+    id: 24,
+    question: "PGT vs. ES Windows — which should I choose?",
+    answer:
+      "PGT and ES Windows are both Florida-made impact lines that Florida Impact Windows & Doors installs, along with CGI and CWS. PGT (including series such as WinGuard) is a widely specified residential brand with broad size and style coverage. ES is a South Florida manufacturer often chosen for value and local lead times on common configurations. Neither logo is automatically better; compare the specific series, DP, glass, hardware, and warranty for your openings. Oceanfront or high-rise jobs may require a heavier series regardless of brand. Ask to see the NOA or FL# for the exact model on your bid.",
+    slug: "pgt-vs-es-windows",
+    category: "Brands",
+  },
+  {
+    id: 25,
+    question: "PGT vs. CGI — what’s the difference?",
+    answer:
+      "PGT is a high-volume Florida residential brand; CGI (including series such as Sentinel) is a Miami-area manufacturer often specified when openings need higher design pressures or a more custom look. CGI can cost more on comparable sizes; PGT can be easier to match across a whole house. The right pick depends on size, brand series, and municipality—not the name alone. Review sightlines, finish options, and the approval documents side by side. Price both on the same opening schedule so you are not mixing a premium series on one bid with a builder series on another.",
+    slug: "pgt-vs-cgi",
+    category: "Brands",
+  },
+  {
+    id: 26,
+    question: "Are PGT, CGI, ES Windows, and CWS NOA approved?",
+    answer:
+      "PGT, CGI, ES Windows, and Custom Window Systems (CWS) all offer impact products with Miami-Dade NOAs and/or Florida Product Approvals, but approval is by model and configuration—not by company name. A series can have an NOA for one glass and frame combination and a different listing for another. In the HVHZ, the installed unit must match the NOA’s bill of materials and anchor schedule. Ask for the NOA or FL# number on the proposal and keep a copy for the inspector and your insurer. If a bidder cannot produce the current approval, do not sign.",
+    slug: "are-pgt-cgi-es-cws-noa-approved",
+    category: "Brands",
+  },
+  {
+    id: 27,
+    question:
+      "Which brand should I pick for an oceanfront home versus an inland home?",
+    answer:
+      "Oceanfront and barrier-island homes usually need higher design pressures, corrosion-resistant hardware, and finishes that tolerate salt spray; aluminum impact frames are common on large coastal openings. Inland homes in the same county may use a wider mix of vinyl and aluminum if the DP and product approval still meet the permit. Brand choice should follow the opening schedule: pick the series that has a current NOA or FL# at the required DP, then decide on glass and color. Do not assume an inland “standard” package is legal on a high-rise or beachfront elevation.",
+    slug: "oceanfront-vs-inland-impact-window-brand",
+    category: "Brands",
   },
 
   // Installation
   {
-    id: 8,
-    question: "How long does it take to install impact windows?",
+    id: 28,
+    question: "How long does impact window installation take?",
     answer:
-      "The timeline for a complete impact window installation depends on the size of the project, but most South Florida homes can be fully outfitted in one to three days. A smaller home or condo with 8 to 12 windows can often be completed in a single day, while a larger residence with 20 or more openings, including sliding glass doors and custom shapes, may take two to three days. Our installation crews at Florida Impact Windows & Doors are experienced professionals who work efficiently without cutting corners, and we always aim to minimize disruption to your daily routine.\n\nThe process begins well before installation day. After your in-home consultation and product selection, we take precise measurements of every opening. Your custom windows are then manufactured, which typically takes four to eight weeks depending on the product line and current demand. Once your windows arrive at our warehouse, we schedule your installation at a time that works for you. On the day of installation, our crew removes the old windows, prepares the openings, sets the new impact windows, seals and secures them, and performs a thorough cleanup.\n\nOne important factor unique to South Florida is the permitting and inspection process. Miami-Dade and Broward counties require permits for impact window installations, and a county inspector must sign off on the completed work. Florida Impact Windows & Doors handles all permit applications and coordinates inspections on your behalf, so you do not have to navigate the bureaucracy yourself. From the moment you sign your contract to the final inspection approval, our team manages every step of the process.",
+      "Most residential impact installations take 1 to 3 days once the product is on site. Homes with about 8–12 openings can finish in a day; 20 or more openings, two-story work, or heavy doors can take 2–3 days. Manufacturing typically adds 4 to 8 weeks after measurements and order. Permit review can add time, especially in Miami-Dade and busy Broward cities. Weather, HOA access rules, and a failed inspection extend the calendar. Plan on factory lead time, not just the install days, when you are racing hurricane season.",
     slug: "how-long-to-install-impact-windows",
     category: "Installation",
   },
   {
-    id: 9,
+    id: 29,
     question: "Do I need a permit for impact window installation?",
     answer:
-      "Yes, a building permit is required for impact window installation throughout South Florida. This applies whether you live in Miami-Dade, Broward, or Palm Beach County, and it is true for both full-frame replacements and retrofit (insert) installations. The permitting process ensures that the products being installed meet the Florida Building Code requirements for your specific wind zone and that the installation is performed according to the manufacturer's specifications and local regulations.\n\nThe permit application typically requires detailed information including the product specifications, the manufacturer's Florida Product Approval or Miami-Dade Notice of Acceptance number, engineering drawings or calculations, and a scope of work. In the High Velocity Hurricane Zone (HVHZ) that covers Miami-Dade and Broward counties, the requirements are especially stringent, and inspectors are thorough in verifying that every aspect of the installation meets code. Failure to obtain proper permits can result in fines, complications when selling your home, and, most critically, an installation that may not perform as expected during a hurricane.\n\nAt Florida Impact Windows & Doors, we handle the entire permitting process from start to finish. Our team prepares all documentation, submits the application to your local building department, and schedules the required inspections once the installation is complete. We have deep experience working with building departments across South Florida, from the City of Miami to Boca Raton, and we know exactly what each jurisdiction requires. You should never have to worry about permits when you work with us.",
+      "Yes. A building permit is required for impact window and door replacement throughout Miami-Dade, Broward, and Palm Beach counties. The permit ties the product approval and installation method to your address and lets the city inspect the work. Unpermitted work can stall a sale, weaken a warranty claim, and block insurance credits. Florida Impact Windows & Doors pulls the permit and coordinates inspections as part of the job. You still need to provide access and any HOA letters the city requests. Do not let anyone start demolition without a posted permit.",
     slug: "do-i-need-permit-for-impact-window-installation",
     category: "Installation",
   },
   {
-    id: 10,
+    id: 30,
     question: "Can impact windows be installed in older homes?",
     answer:
-      "Yes, impact windows can absolutely be installed in older South Florida homes, and in fact, upgrading older properties is one of the most common projects we handle at Florida Impact Windows & Doors. Many homes built in the 1950s through 1990s across neighborhoods in Miami Shores, Wilton Manors, Lake Worth, and throughout the tri-county area were constructed before modern hurricane codes were adopted. Replacing the original single-pane or non-impact windows with today's impact-resistant systems is one of the best ways to bring these homes up to current safety standards.\n\nOlder homes can present unique installation challenges that require experienced professionals. The window openings may not be perfectly square, the surrounding wall construction might be concrete block, stucco over frame, or a combination of materials, and there may be non-standard sizes or shapes that require custom fabrication. In some cases, structural reinforcements or modifications to the rough opening are needed to support the heavier impact window assemblies. Our installation teams are well-versed in working with every type of construction found in South Florida's diverse housing stock, from 1920s coral rock homes in Coral Gables to 1970s CBS construction in Plantation.\n\nOne concern homeowners sometimes raise is whether new impact windows will look out of place on a historic or architecturally distinctive older home. The good news is that modern impact windows are available in a wide range of styles, including single-hung, casement, awning, and picture windows, with frame finishes and profiles that complement both contemporary and traditional architecture. If your home is in a designated historic district, such as parts of Old Fort Lauderdale or West Palm Beach, we can work with you to select products that satisfy both the building code and any historic preservation guidelines.",
+      "Yes. Pre-code and pre-1990s homes across Hollywood and the rest of South Florida can take impact windows; many replacement jobs are in older CBS and wood-frame houses. Openings may need custom sizes, new bucks, or extra anchoring because the original nail-fin window was never designed for today’s loads. Historic districts add design review on grids and frame color, but age alone does not block an upgrade. Budget time for hidden rot or out-of-square openings discovered at demo. A site measure beats ordering a catalog size.",
     slug: "impact-windows-in-older-homes",
+    category: "Installation",
+  },
+  {
+    id: 31,
+    question: "How do I verify an impact window contractor’s license in Florida?",
+    answer:
+      "Look up the contractor on the Florida Department of Business and Professional Regulation site (MyFloridaLicense.gov) and confirm the license is current, the name matches the contract, and there are no serious open violations. Also verify local business tax and that general liability and workers’ compensation certificates are in force. Do not accept a wallet photo or a number typed on a flyer as proof. The company on the permit should be the company you pay. If you cannot verify the license, do not sign or send a deposit.",
+    slug: "how-to-verify-impact-window-contractor-license",
+    category: "Installation",
+  },
+  {
+    id: 32,
+    question: "Can I install impact windows myself (DIY)?",
+    answer:
+      "No. Impact windows in South Florida are engineered assemblies; the glass, frame, and anchors must follow the product approval, and the work needs a permit and inspection. DIY installs are commonly rejected, can void the manufacturer warranty, and will not produce a clean wind-mitigation form. Cutting a nail-fin unit into an old opening without the specified fasteners is not close enough. Hire a licensed contractor who will pull the permit and stand the inspection. Save DIY for painting and landscaping, not HVHZ openings.",
+    slug: "can-i-install-impact-windows-myself",
+    category: "Installation",
+  },
+  {
+    id: 33,
+    question: "What is the lead time from estimate to installation?",
+    answer:
+      "From signed contract to finished inspection, many homes see about 4 to 8 weeks of manufacturing plus permit time and 1 to 3 install days. Permit turnaround varies by municipality and season; hurricane-season rushes add delay. Custom colors, oversized sliders, and high-DP series can run longer than common builder sizes. Ask for a written production window, not a verbal “about a month.” If you have a closing date or a storm in the Gulf, say so at the estimate so ordering and inspections can be sequenced.",
+    slug: "impact-window-lead-time",
+    category: "Installation",
+  },
+  {
+    id: 34,
+    question: "Should I replace all windows at once or in phases?",
+    answer:
+      "Replacing every opening at once is usually the cleaner path for permits, the 25% rule, HOA review, and insurance. Partial jobs can trigger a requirement to upgrade the rest of a wall, and a mix of old non-impact and new impact openings may limit wind-mitigation credits until everything is protected. Phasing is sometimes necessary for budget; if you phase, get the city’s rule in writing and protect leftover openings with approved shutters. One mobilization also costs less in setup than two or three return trips.",
+    slug: "replace-all-windows-at-once",
+    category: "Installation",
+  },
+  {
+    id: 35,
+    question: "Must the window product and anchors match the NOA?",
+    answer:
+      "Yes. The model, glass type, frame, and anchor size and spacing must match the NOA or Florida Product Approval listed on the permit. Substituting drywall screws, skipping a required buck, or changing glass thickness can fail inspection and void the approval. In the HVHZ, inspectors check this closely. Keep the approval sheets on site during the job. If a crew says they always install a certain way, ask them to show that page in the NOA. Insurance and warranty claims are weaker when the install does not match the tested system.",
+    slug: "must-product-and-anchors-match-the-noa",
     category: "Installation",
   },
 
   // Insurance
   {
-    id: 11,
-    question: "Do impact windows lower insurance premiums in Florida?",
+    id: 36,
+    question: "Do impact windows lower insurance premiums?",
     answer:
-      "Yes, installing impact windows can lead to significant reductions in your homeowner's insurance premiums in Florida. Under Florida law, insurance companies are required to offer discounts or credits for hurricane mitigation features, and impact-rated windows and doors are among the most impactful upgrades you can make. Homeowners across South Florida regularly report annual insurance savings ranging from several hundred dollars to over $2,000 per year, depending on their policy, carrier, and the extent of the mitigation improvements.\n\nTo claim the maximum discount, you will need a Wind Mitigation Inspection performed by a qualified inspector after your impact windows are installed. This inspection documents the hurricane-resistant features of your home, including the window and door protection, roof shape, roof-to-wall connections, and secondary water barrier. When your inspector marks that all openings are protected with approved impact-rated products, your insurance company applies the corresponding credit to your policy. The combination of impact windows with a code-compliant roof can yield the largest savings.\n\nAt Florida Impact Windows & Doors, we provide all the documentation your inspector will need, including the product approvals, Notice of Acceptance numbers, and installation permits. We also recommend trusted Wind Mitigation Inspectors throughout Miami-Dade, Broward, and Palm Beach counties who can perform the inspection promptly after your installation is complete. Many of our customers find that the insurance savings alone cover a meaningful portion of their monthly financing payment, making the upgrade essentially self-funding over time.",
+      "Impact windows often reduce the wind portion of a Florida homeowners policy when a wind-mitigation inspection documents that openings are protected. The amount depends on the carrier, the rest of the roof and house, and whether every opening—including the garage—is protected. Marketing ranges of 20% to 45% describe some outcomes, not a promise. Credits apply after you file an OIR-B1-1802 (or the form your insurer accepts) and the carrier endorses the policy. Florida Impact Windows & Doors can supply product paperwork for that inspection; call (754) 600-4876 if you need copies after closeout.",
     slug: "do-impact-windows-lower-insurance-in-florida",
     category: "Insurance",
   },
   {
-    id: 12,
-    question: "Do I still need shutters with impact windows?",
+    id: 37,
+    question: "Do impact windows get the same insurance credit as shutters?",
     answer:
-      "No, if you have properly rated and installed impact windows covering all openings in your home, you do not need hurricane shutters. Impact windows are approved as a standalone hurricane protection system under the Florida Building Code and the Miami-Dade High Velocity Hurricane Zone standards. They are tested to withstand both debris impact and sustained cyclical wind pressure, which means they provide continuous protection without any additional barrier. This is one of the primary advantages of impact windows over shutters: they are always in place and always ready.\n\nThat said, some homeowners choose to keep or add shutters over their impact windows as a secondary layer of protection, particularly on oceanfront or bay-front properties that face the most extreme exposure. While this is not required by code, it can provide extra peace of mind and an additional barrier against debris. If you already have shutters and are adding impact windows, you are free to remove them, keep them in storage, or leave them in place. Your insurance Wind Mitigation Inspection will note the impact windows as your primary opening protection regardless.\n\nFrom a practical standpoint, eliminating shutters is a major quality-of-life improvement for South Florida homeowners. Anyone who has spent a sweltering afternoon putting up panels or accordion shutters before a storm knows how physically demanding and time-consuming it can be. With impact windows from Florida Impact Windows & Doors, there is nothing to install, nothing to store in your garage, and no need to rush home from vacation when a storm threatens. Your home is protected around the clock, every day of the year.",
-    slug: "do-i-still-need-shutters-with-impact-windows",
+      "Qualified impact windows and qualified shutters can both earn opening-protection credit when they are approved products, properly installed, and recorded on the wind-mitigation form. They are not automatically identical line by line; some carriers treat permanent impact glazing more cleanly than removable panels an inspector cannot confirm will be installed. If shutters are used, they must cover the listed openings and be deployable. Mixing both is allowed if each opening is protected. Ask your insurer how they score impact glass versus shutters before you choose a hybrid plan.",
+    slug: "do-impact-windows-get-the-same-insurance-credit-as-shutters",
     category: "Insurance",
+  },
+  {
+    id: 38,
+    question: "What is OIR-B1-1802?",
+    answer:
+      "OIR-B1-1802 is Florida’s Uniform Mitigation Verification Inspection Form. A qualified inspector uses it to record roof geometry, roof covering, roof deck, opening protection, and other wind features. Insurers use those checkboxes to apply or deny credits. Impact windows help only if they are permitted, approved products and the inspector marks opening protection correctly. The form is not a permit and not a grant application. After a replacement job, schedule a new inspection so the form matches the house you have now, not the old jalousies or single-pane sliders.",
+    slug: "what-is-oir-b1-1802",
+    category: "Insurance",
+  },
+  {
+    id: 39,
+    question: "Must the garage door be protected too for insurance credits?",
+    answer:
+      "Usually yes, if you want full opening-protection credit. The garage door is a large opening; an unprotected garage can keep the inspector from marking the house as fully protected. Options include a wind-rated garage door, an approved retrofit system, or—in some cases—an approved shutter over the opening. Requirements depend on door size, the product approval, and the carrier. Include the garage on the same plan as the windows so you do not spend on glass and still fail the 1802. Confirm the rating before you buy a decorative door from a retail aisle.",
+    slug: "must-the-garage-door-be-protected-too",
+    category: "Insurance",
+  },
+  {
+    id: 40,
+    question: "Who is eligible for the My Safe Florida Home grant?",
+    answer:
+      "My Safe Florida Home is a Florida program that may offer a wind inspection and a grant toward qualifying mitigation. The advertised cap is up to $10,000; the share you actually receive depends on eligibility, the approved scope, and whether the program is funded. Rules have included homestead and other residency or insurance conditions, and they change. Condos and some association-controlled buildings may not apply the same way as a single-family house. Check current DFS/MSFH guidance before you count on money. A grant does not replace a building permit or a product approval.",
+    slug: "my-safe-florida-home-eligibility",
+    category: "Insurance",
+  },
+  {
+    id: 41,
+    question:
+      "Can I start impact window work before My Safe Florida Home grant approval?",
+    answer:
+      "Generally, no. Starting demolition or ordering a scope the program has not approved can make the project ineligible. Grants are tied to a qualifying scope and the rules in effect when you apply. You can still get a free in-home estimate and a permit-ready plan while you wait; do not pay to manufacture custom units you may have to change. If funding pauses, you can proceed out of pocket or with financing. Keep every MSFH letter with the contract so the final invoice matches the approved work.",
+    slug: "can-i-start-work-before-msfh-grant-approval",
+    category: "Insurance",
+  },
+
+  // vs Shutters
+  {
+    id: 42,
+    question: "Do I still need shutters if I have impact windows?",
+    answer:
+      "Not if every exterior opening is protected with a code-approved impact window or door. Impact glass is accepted as standalone opening protection under the Florida Building Code and HVHZ rules, so you do not stack shutters on those units for code. You would still need approved protection on any opening you leave as non-impact glass—including some garages, transoms, or older sliders. Accordion or panel shutters remain a valid choice on those leftover openings. Confirm the permit and the 1802 list every opening, not just the new glass.",
+    slug: "do-i-still-need-shutters-with-impact-windows",
+    category: "vs Shutters",
+  },
+  {
+    id: 43,
+    question: "Are impact windows better than accordion shutters?",
+    answer:
+      "For most occupied homes, impact windows are more convenient than accordion shutters because protection is always in place—no deployment, no storage, and a clearer insurance photo. Accordion shutters usually cost less per opening and still meet code when they are approved and closed before a storm. They block light and egress when deployed and need track maintenance. Impact glass also improves noise, UV control, and everyday security. The better system is the one that will actually be closed when the cone shifts; many owners choose glass for living areas and shutters only where budget forces it.",
+    slug: "are-impact-windows-better-than-accordion-shutters",
+    category: "vs Shutters",
+  },
+  {
+    id: 44,
+    question: "Can I mix impact windows and shutters on the same house?",
+    answer:
+      "Yes. You can use impact windows on some openings and approved shutters on others, as long as each opening has a legal protection method and the combination is permitted. Hybrids are common when a historic elevation, a huge opening, or a budget cap makes full glass impractical. Insurers will credit only the openings that are documented as protected. Mixing brands of glass is fine; leaving unprotected openings next to new impact glass is what hurts the 1802. Put the hybrid plan on one permit set so inspectors and the HOA see the same layout.",
+    slug: "can-i-mix-impact-windows-and-shutters",
+    category: "vs Shutters",
   },
 
   // Maintenance
   {
-    id: 13,
+    id: 45,
     question: "How do you clean and maintain impact windows?",
     answer:
-      "Cleaning and maintaining impact windows is straightforward and requires no special products or techniques. For routine cleaning, simply use a mild soap or a standard glass cleaner with a soft cloth or squeegee, just as you would with any window. Avoid abrasive cleaners, steel wool, or razor blades, as these can scratch the glass surface or damage the laminated interlayer's seal. In South Florida, where salt air, pollen, and hard water spots are common, we recommend cleaning your windows at least once a month to keep them looking their best.\n\nBeyond the glass, it is important to maintain the window tracks, hardware, and weatherstripping. Use a soft brush or vacuum to remove debris from the tracks every few months, and apply a silicone-based lubricant to the tracks and moving hardware twice a year. This prevents the rollers and operators from sticking, which is especially important in South Florida's humid climate where moisture and fine sand can accumulate quickly. Check the weatherstripping annually for signs of cracking or compression, and replace it if you notice gaps that could allow air or water infiltration.\n\nFlorida Impact Windows & Doors recommends a simple annual inspection of your impact windows to ensure everything is performing optimally. Look for any visible cracks in the glass (rare, but worth checking after a severe storm), confirm that all locks and latches engage properly, and make sure the window seals tightly when closed. If you notice any issues, contact our service team. Most maintenance items are minor and inexpensive, and staying on top of them ensures your impact windows continue to deliver top performance for decades.",
+      "Use mild soap or a non-abrasive glass cleaner and a soft cloth; skip razor blades, steel wool, and harsh chemicals that scratch glass or stain frames. In coastal South Florida, rinse salt monthly and vacuum tracks every few months so weep holes drain. Lubricate rollers and locks with a silicone spray about twice a year. Inspect weatherstripping annually and after major storms. Do not force a stuck sash—clear the track first. Standing water in the track is a maintenance issue, not a reason to stop rinsing salt off the frame.",
     slug: "how-to-clean-and-maintain-impact-windows",
     category: "Maintenance",
   },
   {
-    id: 14,
-    question: "Can impact glass be repaired if cracked?",
+    id: 46,
+    question: "Can cracked impact glass be repaired?",
     answer:
-      "In most cases, cracked impact glass cannot be repaired and the affected glass unit will need to be replaced. Unlike a standard automotive windshield, which can sometimes be repaired with a resin injection for small chips, impact window glass is a laminated assembly that relies on the full integrity of its layers to provide hurricane protection. If the outer or inner pane is cracked, the structural performance of the laminated unit may be compromised, and replacement is the recommended course of action to ensure your home remains fully protected.\n\nThe good news is that a cracked impact window does not need to be an emergency. Because of the laminated interlayer, even a cracked pane will remain in place and continue to provide a barrier against water intrusion and break-ins. The window will not shatter and fall out the way conventional glass would. However, you should not rely on a cracked impact window for hurricane protection, so it is important to schedule a replacement before storm season. In South Florida, that means having any damage addressed well before June 1, when hurricane season officially begins.\n\nAt Florida Impact Windows & Doors, we offer glass replacement services for impact windows, even if we did not perform the original installation. Our team will identify the exact glass specification, order the replacement unit, and install it efficiently. If your windows are still under the manufacturer's warranty, the glass replacement may be covered at no cost to you. We recommend contacting us as soon as you notice any damage so we can assess the situation and get your home back to full protection as quickly as possible.",
+      "Usually you replace the insulated glass unit (IGU) or laminated lite; you do not patch hurricane glass with resin the way you might a windshield chip. The interlayer will typically hold cracked glass in the frame, so the opening may still keep weather out until a new unit arrives, but a cracked lite should be scheduled for replacement—especially before hurricane season. Glass-only replacement is often possible without a new frame if the frame is sound. Check whether the manufacturer warranty covers seal failure or storm damage; debris impact is often excluded.",
     slug: "can-impact-glass-be-repaired-if-cracked",
     category: "Maintenance",
   },
   {
-    id: 15,
+    id: 47,
     question: "What warranty comes with impact windows?",
     answer:
-      "Impact windows typically come with two separate warranties: a manufacturer's product warranty and an installer's workmanship warranty. The manufacturer's warranty covers defects in the glass, frame, hardware, and other components. Depending on the product line, these warranties range from 10 years to a limited lifetime. Premium brands commonly installed in South Florida often include a limited lifetime warranty on the glass and frame for the original homeowner, with provisions for transferability to subsequent owners that vary by manufacturer.\n\nThe workmanship warranty covers the quality of the installation itself, including proper sealing, anchoring, flashing, and finishing. At Florida Impact Windows & Doors, we provide a robust workmanship warranty because we stand behind the quality of our installation teams. If you experience any issues related to how your windows were installed, such as water infiltration due to improper sealing or operational problems caused by incorrect fitting, we will address it promptly at no cost. We use only factory-trained installers who follow the manufacturer's installation specifications to the letter, which is critical for maintaining the validity of both warranties.\n\nIt is important to understand what can void a warranty. Common issues include improper cleaning methods that damage the glass coating, unauthorized modifications or repairs, and failure to perform basic maintenance. We provide every customer with a care and maintenance guide specific to their product so they know exactly how to keep their windows in warranty-compliant condition. If you ever have a warranty claim, Florida Impact Windows & Doors acts as your advocate with the manufacturer, handling the communication and coordinating any necessary service so you can focus on enjoying your home rather than navigating warranty bureaucracy.",
+      "Two warranties apply: the manufacturer’s product warranty (often about 10 years to a limited lifetime on listed parts such as glass, frame, or hardware) and the installer’s workmanship warranty for sealing, anchoring, and fit. Florida Impact Windows & Doors provides a workmanship warranty and helps with manufacturer claims. Read the exclusions: coastal corrosion, undocumented impact, and skipped maintenance are commonly limited. Keep the permit, NOA or FL#, and care instructions with the closing packet. Transfer rules vary by brand, so ask before you list the house.",
     slug: "what-warranty-comes-with-impact-windows",
     category: "Maintenance",
+  },
+  {
+    id: 48,
+    question:
+      "What should I do if impact glass looks foggy or is delaminating?",
+    answer:
+      "Fog between panes usually means the insulated-glass seal failed; a cloudy or amber interlayer can mean the laminate is breaking down. Neither is a DIY polish job. Seal failure is typically resolved by replacing the IGU; delamination needs a new laminated lite or unit. Note whether moisture is inside the air space or only on the room-side surface—those are different problems. Take photos, the original order number, and warranty paperwork to the installer. Coastal heat and failed seals are common over a long service life; schedule service even if the opening still holds weather.",
+    slug: "foggy-or-delaminating-impact-glass",
+    category: "Maintenance",
+  },
+
+  // Local / HOA
+  {
+    id: 49,
+    question: "Do I need HOA or condo approval for impact windows?",
+    answer:
+      "Most HOAs and condo associations require an architectural application before you change windows or doors, even when the product is impact-rated. Expect to submit brochures, colors, grid patterns, and sometimes the permit set. Associations often control appearance; they are on weaker ground if they try to block hurricane protection outright, but you still follow the application process and any recorded rules. Condo work may also need board sign-off and elevator or loading reservations. Start the HOA packet at the same time as the city permit. Florida Impact Windows & Doors can provide cut sheets for that application.",
+    slug: "do-i-need-hoa-or-condo-approval",
+    category: "Local / HOA",
+  },
+  {
+    id: 50,
+    question:
+      "Can an HOA deny impact windows, or can it only control color and style?",
+    answer:
+      "An HOA generally cannot leave you with no legal way to protect openings, and Florida has limited associations’ ability to forbid hurricane protection, but it can usually regulate color, finish, and grid style so the street view stays consistent. A denial that is really about aesthetics should come back as “use this approved color or series,” not “no impact glass.” Recorded declarations, condo bylaws, and current Florida statutes all matter; a manager’s email is not the last word. Ask the board for the written standard and have the contractor propose a complying finish. Do not install first and apply later.",
+    slug: "can-an-hoa-deny-impact-windows",
+    category: "Local / HOA",
   },
 ];
