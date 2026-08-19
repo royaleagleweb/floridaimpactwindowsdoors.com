@@ -1,12 +1,12 @@
 export default function HeroLeadForm() {
   return (
-    <div className="bg-[#0d1b33] rounded-2xl p-7 md:p-8 shadow-2xl shadow-black/40 max-w-md w-full">
-      <div className="mb-6">
-        <h2 className="text-2xl font-bold text-white font-display">
+    <div className="bg-[#0d1b33]/95 backdrop-blur-sm rounded-[1.5rem] p-8 md:p-9 shadow-2xl shadow-black/35 max-w-md w-full ring-1 ring-white/10">
+      <div className="mb-7">
+        <h2 className="text-[1.65rem] font-bold text-white font-display tracking-tight">
           Get Your Free Estimate
         </h2>
-        <p className="text-sm text-white/80 mt-1.5">
-          &#9889; Response within 2 hours
+        <p className="text-sm text-white/70 mt-2">
+          Response within 2 hours
         </p>
       </div>
       <form
@@ -30,7 +30,7 @@ export default function HeroLeadForm() {
             placeholder="Name"
             required
             autoComplete="name"
-            className="w-full px-4 py-3.5 rounded-lg border border-white/15 bg-white text-[#0d1b33] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-palm-500 focus:border-transparent transition text-sm"
+            className="w-full px-4 py-3.5 rounded-xl border-0 bg-white text-[#0d1b33] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#e8930f] transition text-[15px]"
           />
         </div>
         <div>
@@ -44,7 +44,7 @@ export default function HeroLeadForm() {
             placeholder="Phone"
             required
             autoComplete="tel"
-            className="w-full px-4 py-3.5 rounded-lg border border-white/15 bg-white text-[#0d1b33] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-palm-500 focus:border-transparent transition text-sm"
+            className="w-full px-4 py-3.5 rounded-xl border-0 bg-white text-[#0d1b33] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#e8930f] transition text-[15px]"
           />
         </div>
         <div>
@@ -54,7 +54,7 @@ export default function HeroLeadForm() {
           <select
             id="hero-service"
             name="service"
-            className="w-full px-4 py-3.5 rounded-lg border border-white/15 bg-white text-[#0d1b33] focus:outline-none focus:ring-2 focus:ring-palm-500 focus:border-transparent transition text-sm appearance-none"
+            className="w-full px-4 py-3.5 rounded-xl border-0 bg-white text-[#0d1b33] focus:outline-none focus:ring-2 focus:ring-[#e8930f] transition text-[15px] appearance-none"
             defaultValue=""
           >
             <option value="" disabled>
@@ -71,12 +71,12 @@ export default function HeroLeadForm() {
         </div>
         <button
           type="submit"
-          className="w-full bg-[#e8930f] hover:bg-palm-600 text-white py-4 rounded-lg font-bold text-base transition-all shadow-lg shadow-black/20 hover:shadow-xl"
+          className="w-full bg-[#e8930f] hover:bg-[#d17d04] text-white py-4 rounded-xl font-bold text-base transition-colors"
         >
           Get My Free Quote
         </button>
       </form>
-      <p className="text-center text-xs text-white/60 mt-5">
+      <p className="text-center text-xs text-white/50 mt-6 tracking-wide">
         Your information is secure and private.
       </p>
     </div>
