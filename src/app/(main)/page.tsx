@@ -6,10 +6,17 @@ import StickyMobileCTA from "@/components/StickyMobileCTA";
 import HowItWorks from "@/components/HowItWorks";
 
 export const metadata: Metadata = {
-  title: "Impact Windows & Doors Fort Lauderdale | #1 South Florida Installer",
+  title: "Impact Windows & Doors Hollywood | Serving South Florida",
   description:
     "Premium impact windows & doors at affordable prices. Serving Broward & Palm Beach County. A+ BBB rating, 5-star reviews. HVHZ experts. Call (754) 600-4876.",
   alternates: { canonical: "https://floridaimpactwindowsdoors.com/" },
+  openGraph: {
+    title: "Impact Windows & Doors Hollywood | Serving South Florida",
+    url: "https://floridaimpactwindowsdoors.com/",
+  },
+  twitter: {
+    title: "Impact Windows & Doors Hollywood | Serving South Florida",
+  },
 };
 
 const testimonials = [
@@ -55,7 +62,7 @@ export default function HomePage() {
   const homeSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "Florida Impact Windows & Doors - South Florida's #1 Impact Window Installer",
+    name: "Impact Windows & Doors Hollywood | Serving South Florida",
     description: "South Florida's premier impact window and door installation company. Hurricane-rated protection for homes in Miami-Dade, Broward & Palm Beach County.",
     url: "https://floridaimpactwindowsdoors.com/",
     isPartOf: { "@type": "WebSite", name: "Florida Impact Windows & Doors", url: "https://floridaimpactwindowsdoors.com" },
@@ -155,9 +162,8 @@ export default function HomePage() {
               </div>
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-display text-white leading-[1.1] mb-6">
-                Premium{" "}
                 <span className="gradient-text">Impact Windows</span>{" "}
-                &amp; Doors At Affordable Prices
+                &amp; Doors in Hollywood, Serving South Florida
               </h1>
               <p className="text-lg text-gray-300 mb-4 max-w-xl leading-relaxed">
                 Protect your home with high-quality impact windows installed by HVHZ experts. Serving Broward &amp; Palm Beach County from Fort Lauderdale.
