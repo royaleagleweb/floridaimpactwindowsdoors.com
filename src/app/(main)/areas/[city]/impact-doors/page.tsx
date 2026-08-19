@@ -19,6 +19,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title: `Impact Doors in ${city.name}, FL | Florida Impact Windows & Doors`,
     description: `Professional impact door installation in ${city.name}, Florida. Hurricane-rated entry, sliding glass, and French doors for ${city.county} County homes. Free estimates. Call (754) 600-4876.`,
     alternates: { canonical: `https://floridaimpactwindowsdoors.com/areas/${slug}/impact-doors/` },
+    robots: { index: false, follow: false },
   };
 }
 

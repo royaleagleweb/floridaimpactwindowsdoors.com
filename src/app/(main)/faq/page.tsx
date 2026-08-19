@@ -145,9 +145,9 @@ export default function FAQPage() {
               <span className="gradient-text">FAQ</span>
             </h1>
             <p className="text-lg text-gray-300 max-w-2xl leading-relaxed">
-              Get answers to the most common questions about impact windows,
-              pricing, installation, insurance savings, and maintenance from
-              South Florida&apos;s trusted impact window experts.
+              First sentence answers the question. Cost, HVHZ vs Palm Beach FL#,
+              OIR-B1-1802 insurance credits, My Safe Florida Home, and
+              installation — from the installer at 3000 Stirling Rd, Hollywood.
             </p>
           </div>
         </div>

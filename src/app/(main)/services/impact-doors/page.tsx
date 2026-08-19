@@ -5,9 +5,9 @@ import ServiceAreaLinks from "@/components/ServiceAreaLinks";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "Impact Doors Fort Lauderdale | Hurricane-Rated Sliding Glass, French & Entry Doors",
+  title: "Impact Doors | Sliding Glass, French & Entry | Hollywood Installer",
   description:
-    "Impact door installation in Fort Lauderdale & South Florida. Hurricane-rated sliding glass, French & entry doors. Free estimates.",
+    "Impact-rated sliding glass, French, and entry doors installed from Hollywood. HVHZ/NOA in Miami-Dade and Broward; FL# often accepted in Palm Beach. Free estimates. (754) 600-4876.",
   alternates: { canonical: "/services/impact-doors/" },
 };
 
@@ -106,10 +106,10 @@ export default function ImpactDoorsPage() {
               <span className="text-sm text-palm-300 font-medium">Hurricane-Rated Impact Doors</span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-display text-white leading-tight mb-6">
-              Premium <span className="gradient-text">Impact Doors</span> for South Florida Living
+              <span className="gradient-text">Impact Doors</span> — Sliders, French, and Entry
             </h1>
             <p className="text-lg text-gray-300 mb-8 max-w-xl leading-relaxed">
-              Sliding glass, French, entry, and patio impact doors built to withstand Category 5 hurricanes. Beautiful designs that protect your family while enhancing your home across Miami-Dade, Broward, and Palm Beach County.
+              An impact door is a tested door and laminated lite that stays in the opening after a debris hit. Sliding glass doors are usually the largest opening on a South Florida house — and the one that fails the OIR-B1-1802 credit if you skip them. We install from Hollywood.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link

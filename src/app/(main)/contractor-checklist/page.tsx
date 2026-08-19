@@ -4,17 +4,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Impact Window Contractor Checklist | How to Hire the Right Contractor in Florida",
   description:
-    "Use this comprehensive impact window contractor checklist to verify licensing, insurance, experience, and warranties before hiring. Protect your South Florida home by hiring the right contractor.",
-  keywords: [
-    "impact window contractor checklist florida",
-    "how to hire impact window contractor",
-    "impact window contractor near me",
-    "hurricane window contractor checklist",
-    "florida impact window installer checklist",
-    "verify impact window contractor license florida",
-    "impact window contractor insurance requirements",
-    "hiring impact window contractor south florida",
-  ],
+    "Checklist for hiring an impact window installer in South Florida: permits, NOA vs FL#, OIR-B1-1802 paperwork, and questions to ask before you sign. Call (754) 600-4876.",
   alternates: {
     canonical: "/contractor-checklist/",
   },

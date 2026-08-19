@@ -2,9 +2,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Free Impact Window Estimate Fort Lauderdale | No Obligation Quote",
+  title: "Free Impact Window Estimate | Hollywood Installer, South Florida",
   description:
-    "Get a free in-home estimate for impact windows and doors in Fort Lauderdale, Broward & Palm Beach County. No obligation, no pressure. Response within 2 hours. Call (754) 600-4876.",
+    "Free in-home estimate for impact windows and doors. We measure from 3000 Stirling Rd, Hollywood, FL and install PGT, CGI, ES Windows, and CWS across Miami-Dade, Broward, and Palm Beach. Call (754) 600-4876.",
   alternates: { canonical: "/get-estimate/" },
 };
 
@@ -90,10 +90,10 @@ export default function GetEstimatePage() {
                 <span className="text-sm text-palm-300 font-medium">100% Free &middot; No Obligation</span>
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-display text-white leading-tight mb-6">
-                Start <span className="gradient-text">Protecting What Matters Most</span>
+                Get a Free <span className="gradient-text">Impact Window Estimate</span>
               </h1>
               <p className="text-lg text-gray-300 max-w-lg leading-relaxed mb-10">
-                Your family deserves hurricane-proof peace of mind. Our free in-home consultation includes precise measurements, expert product recommendations, and a detailed proposal — all with zero obligation.
+                A free estimate is an in-home measure from our Hollywood shop — not a phone-book price per window. We will tell you whether the job needs a Miami-Dade NOA (HVHZ) or an FL# (typical Palm Beach) and which of PGT, CGI, ES, or CWS fits the openings.
               </p>
 
               {/* Trust Signals */}

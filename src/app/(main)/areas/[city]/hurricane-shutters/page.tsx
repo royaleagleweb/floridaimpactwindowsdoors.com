@@ -19,6 +19,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title: `Hurricane Shutters in ${city.name}, FL | Florida Impact Windows & Doors`,
     description: `Professional hurricane shutter installation in ${city.name}, Florida. Accordion, roll-down, and colonial shutters for ${city.county} County homes. Free estimates. Call (754) 600-4876.`,
     alternates: { canonical: `https://floridaimpactwindowsdoors.com/areas/${slug}/hurricane-shutters/` },
+    robots: { index: false, follow: false },
   };
 }
 

@@ -44,7 +44,7 @@ const footerLinks = {
     { name: "Contact", href: "/contact/" },
     { name: "Door Quiz", href: "/quiz/door/" },
     { name: "Service Quiz", href: "/quiz/service/" },
-    { name: "Get a Quote", href: "/get-quote/" },
+    { name: "Get a Free Estimate", href: "/get-estimate/" },
   ],
   brands: [
     { name: "PGT Windows & Doors", href: "/brands/pgt/" },

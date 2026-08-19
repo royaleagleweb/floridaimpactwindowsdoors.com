@@ -8,44 +8,11 @@ import ChatBot from "@/components/ChatBot";
 export const metadata: Metadata = {
   metadataBase: new URL("https://floridaimpactwindowsdoors.com"),
   title: {
-    default:
-      "Florida Impact Windows & Doors | #1 Impact Window Installation in Fort Lauderdale",
+    default: "Impact Windows & Doors Hollywood | Serving South Florida",
     template: "%s | Florida Impact Windows & Doors",
   },
   description:
     "South Florida's premier impact window and door installation company. Hurricane-rated protection for homes in Broward & Palm Beach County. A+ BBB rated. Call (754) 600-4876 for a free estimate.",
-  keywords: [
-    "impact windows",
-    "impact doors",
-    "hurricane windows",
-    "hurricane doors",
-    "impact windows cost",
-    "impact windows Florida",
-    "impact windows Fort Lauderdale",
-    "impact windows near me",
-    "impact windows Boca Raton",
-    "impact windows Palm Beach",
-    "impact windows Broward County",
-    "hurricane impact windows",
-    "impact window installation",
-    "impact resistant windows",
-    "hurricane rated windows",
-    "impact sliding glass doors",
-    "energy efficient impact windows",
-    "impact windows price",
-    "best impact windows",
-    "hurricane protection windows South Florida",
-    "impact windows vs hurricane shutters",
-    "PGT impact windows",
-    "CGI impact windows",
-    "window replacement Fort Lauderdale",
-    "door replacement South Florida",
-    "My Safe Florida Home Program",
-    "impact window free estimate",
-    "impact windows financing",
-    "South Florida hurricane protection",
-    "HVHZ windows",
-  ],
   authors: [{ name: "Florida Impact Windows & Doors" }],
   creator: "Florida Impact Windows & Doors",
   publisher: "Florida Impact Windows & Doors",
@@ -54,8 +21,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://floridaimpactwindowsdoors.com",
     siteName: "Florida Impact Windows & Doors",
-    title:
-      "Florida Impact Windows & Doors | #1 Impact Window Installation in Fort Lauderdale",
+    title: "Impact Windows & Doors Hollywood | Serving South Florida",
     description:
       "South Florida's premier impact window and door installation company. Hurricane-rated protection for Broward & Palm Beach County homes. Free estimates available.",
     images: [
@@ -69,8 +35,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title:
-      "Florida Impact Windows & Doors | #1 Impact Windows in South Florida",
+    title: "Impact Windows & Doors Hollywood | Serving South Florida",
     description:
       "Premium impact windows & doors at affordable prices. A+ BBB rating. Free estimates. Call (754) 600-4876.",
     images: ["https://floridaimpactwindowsdoors.com/images/og-image.jpg"],
@@ -160,40 +125,9 @@ function LocalBusinessJsonLd() {
         closes: "14:00",
       },
     ],
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.9",
-      reviewCount: "2500",
-      bestRating: "5",
-      worstRating: "1",
-    },
     sameAs: [
-      "https://www.google.com/maps/place/Florida+Impact+Windows+%26+Doors",
       "https://www.yelp.com/biz/florida-impact-windows-and-doors-hollywood",
       "https://www.bbb.org/us/fl/hollywood/profile/window-installation/florida-impact-windows-doors-0633-92029751",
-    ],
-    review: [
-      {
-        "@type": "Review",
-        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-        author: { "@type": "Person", name: "Verified Customer" },
-        reviewBody: "Florida Impact Windows & Doors transformed our 1960s home with beautiful PGT WinGuard impact windows. The installation team arrived on time every day, protected our furniture and floors, and cleaned up completely. Our energy bills dropped noticeably.",
-        datePublished: "2024-11-15",
-      },
-      {
-        "@type": "Review",
-        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-        author: { "@type": "Person", name: "Verified Customer" },
-        reviewBody: "After Hurricane Irma showed us the vulnerability of our old jalousie windows, we knew it was time to upgrade. Florida Impact Windows & Doors stood out for their honesty and product knowledge. Our home feels completely different now.",
-        datePublished: "2024-10-10",
-      },
-      {
-        "@type": "Review",
-        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-        author: { "@type": "Person", name: "Verified Customer" },
-        reviewBody: "We compared five different companies and Florida Impact Windows & Doors offered the best combination of quality products and competitive pricing. The permit process was handled entirely by them. Highly recommend.",
-        datePublished: "2024-09-20",
-      },
     ],
     speakable: {
       "@type": "SpeakableSpecification",
@@ -266,12 +200,6 @@ function WebSiteJsonLd() {
     "@type": "WebSite",
     name: "Florida Impact Windows & Doors",
     url: "https://floridaimpactwindowsdoors.com",
-    potentialAction: {
-      "@type": "SearchAction",
-      target:
-        "https://floridaimpactwindowsdoors.com/search?q={search_term_string}",
-      "query-input": "required name=search_term_string",
-    },
   };
 
   return (

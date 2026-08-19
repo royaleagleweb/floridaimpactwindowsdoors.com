@@ -4,9 +4,9 @@ import type { Metadata } from "next";
 import RelatedDoorTypes from "@/components/RelatedDoorTypes";
 
 export const metadata: Metadata = {
-  title: "Impact Sliding Glass Doors | Florida Impact Windows & Doors",
+  title: "Impact Sliding Glass Doors | The Opening That Fails the 1802",
   description:
-    "Premium impact sliding glass doors for South Florida homes. Hurricane-rated, energy efficient, and designed for seamless indoor-outdoor living in Miami-Dade, Broward & Palm Beach.",
+    "Impact sliding glass doors for lanais and water views. Often the largest opening — and the one that zeros a wind-mitigation credit if skipped. Installed from Hollywood. (754) 600-4876.",
   alternates: {
     canonical: "https://floridaimpactwindowsdoors.com/services/door-types/sliding-glass/",
   },
@@ -86,7 +86,7 @@ export default function SlidingGlassDoorsPage() {
                 <span className="gradient-text">Doors</span>
               </h1>
               <p className="text-lg text-gray-300 mb-8 max-w-2xl leading-relaxed">
-                Experience the ultimate in South Florida living with our impact-rated sliding glass doors. Expansive glass panels, smooth operation, and Category 5 hurricane protection combine to deliver the perfect balance of beauty and safety.
+                An impact sliding glass door is a tested multi-panel unit with laminated lites. It is usually the largest opening on a South Florida house — and the one that zeros an OIR-B1-1802 opening-protection credit if you leave the old aluminum slider in the wall.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link

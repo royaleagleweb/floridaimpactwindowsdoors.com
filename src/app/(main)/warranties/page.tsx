@@ -1,10 +1,11 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { faqPageJsonLd } from "@/lib/faqSchema";
 
 export const metadata: Metadata = {
-  title: "Warranty Information | Product & Workmanship Warranties | Florida Impact Windows & Doors",
+  title: "Impact Window Warranties | PGT, CGI, ES, CWS + Labor",
   description:
-    "Learn about the product warranties and workmanship guarantees that protect your impact window and door investment. PGT, CGI, ES Windows, and CWS warranty details plus our labor guarantee.",
+    "Manufacturer product warranties (PGT, CGI, ES Windows, CWS) plus our installation workmanship. We are the Hollywood installer, not the factory. (754) 600-4876.",
   alternates: { canonical: "https://floridaimpactwindowsdoors.com/warranties/" },
 };
 
@@ -129,8 +130,10 @@ const warrantyFaqs = [
 ];
 
 export default function WarrantiesPage() {
+  const warrantyFaqItems = warrantyFaqs.map((f) => ({ question: f.q, answer: f.a }));
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageJsonLd(warrantyFaqItems)) }} />
       {/* Hero Section */}
       <section className="relative py-20 bg-ocean-950 overflow-hidden">
         <div className="absolute inset-0 bg-grid opacity-40" />
@@ -144,10 +147,10 @@ export default function WarrantiesPage() {
               <span className="text-sm text-palm-300 font-medium">Your Investment Protected</span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-display text-white leading-tight mb-6">
-              Warranty <span className="gradient-text">Information</span>
+              What Warranty Comes with <span className="gradient-text">Impact Windows</span>?
             </h1>
             <p className="text-lg text-gray-300 max-w-2xl leading-relaxed">
-              When you invest in impact windows and doors through Florida Impact Windows & Doors, your investment is protected by both the manufacturer&apos;s product warranty and our own workmanship guarantee. Here is everything you need to know.
+              Two documents matter: the manufacturer&apos;s product warranty (PGT, CGI, ES Windows, or CWS) and our workmanship on the install. Hurricane damage is usually an insurance claim, not a factory warranty. We register the product and stand behind the labor from Hollywood.
             </p>
           </div>
         </div>

@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Impact Door Types | Florida Impact Windows & Doors",
   description:
-    "Explore our full range of impact-rated door types for South Florida homes. Sliding glass, French, entry, patio, pivot, garage, and storm doors built for hurricane protection.",
+    "Impact sliding glass, French, entry, patio, garage, and storm doors installed from Hollywood. Opening protection is all-or-nothing on the OIR-B1-1802 form. (754) 600-4876.",
   alternates: { canonical: "https://floridaimpactwindowsdoors.com/services/door-types/" },
 };
 
@@ -82,7 +82,7 @@ export default function DoorTypesPage() {
               Homes
             </h1>
             <p className="text-lg text-gray-300 mb-8 max-w-2xl leading-relaxed">
-              From sliding glass doors that embrace the Florida sunshine to hurricane-rated entry doors that protect your family, we offer every style of impact door to suit your home and lifestyle.
+              Sliding glass doors are the opening most South Florida houses leave unprotected. Entry, French, garage, and storm doors count on the same wind-mitigation form. We install the type that fits the opening — from Hollywood.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link

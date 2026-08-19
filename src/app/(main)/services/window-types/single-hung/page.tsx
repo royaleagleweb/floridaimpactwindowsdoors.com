@@ -4,9 +4,9 @@ import type { Metadata } from "next";
 import RelatedWindowTypes from "@/components/RelatedWindowTypes";
 
 export const metadata: Metadata = {
-  title: "Single Hung Impact Windows | Florida Impact Windows & Doors",
+  title: "Single Hung Impact Windows | Most Common South Florida Style",
   description:
-    "Single hung impact windows for South Florida homes. Hurricane-rated protection with a classic vertical-sliding design. Serving Miami-Dade, Broward & Palm Beach. Free estimates from Florida Impact Windows & Doors.",
+    "Single-hung impact windows: bottom sash slides, top sash stays fixed. The usual whole-house spec on CBS ranches. Installed from Hollywood. Free estimates. (754) 600-4876.",
   alternates: {
     canonical: "https://floridaimpactwindowsdoors.com/services/window-types/single-hung/",
   },
@@ -94,7 +94,7 @@ export default function SingleHungPage() {
                 <span className="gradient-text">Impact Windows</span>
               </h1>
               <p className="text-lg text-gray-300 mb-8 leading-relaxed max-w-2xl">
-                The most popular and affordable impact window style in South Florida. Classic vertical-sliding operation with the bottom sash moving upward while the top sash stays fixed, delivering reliable hurricane protection for homes across Miami-Dade, Broward, and Palm Beach counties.
+                A single-hung impact window has a moving bottom sash and a fixed top sash. It is the most common replacement on South Florida CBS houses because the opening already looks like that, and the unit is usually the lowest-cost path to a full-house NOA or FL# list.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link

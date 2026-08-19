@@ -106,10 +106,10 @@ export default function DoorReplacementPage() {
               <span className="text-sm text-palm-300 font-medium">Sliding, Entry & French Doors</span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-display text-white leading-tight mb-6">
-              Expert <span className="gradient-text">Door Replacement</span> Across South Florida
+              <span className="gradient-text">Door Replacement</span> with Impact-Rated Units
             </h1>
             <p className="text-lg text-gray-300 mb-8 max-w-xl leading-relaxed">
-              Upgrade your home&apos;s doors to modern impact-rated models that provide hurricane protection, enhanced security, and beautiful aesthetics. Serving Miami-Dade, Broward, and Palm Beach County.
+              Replacing a slider or entry door is usually the largest single opening on the job — and the one that fails a wind-mitigation credit if it stays unprotected. We install permitted impact doors from Hollywood.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link

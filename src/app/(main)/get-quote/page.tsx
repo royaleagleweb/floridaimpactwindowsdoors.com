@@ -5,8 +5,9 @@ import MultiStepQuoteForm from "@/components/MultiStepQuoteForm";
 export const metadata: Metadata = {
   title: "Get a Free Quote | Florida Impact Windows & Doors",
   description:
-    "Get a personalized quote for impact windows and doors. Tell us about your project and we'll provide a detailed estimate within 24 hours.",
-  alternates: { canonical: "/get-quote/" },
+    "Get a personalized quote for impact windows and doors. This URL redirects to our free estimate form.",
+  alternates: { canonical: "/get-estimate/" },
+  robots: { index: false, follow: true },
 };
 
 export default function GetQuotePage() {

@@ -5,9 +5,9 @@ import ServiceAreaLinks from "@/components/ServiceAreaLinks";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "Window Replacement Fort Lauderdale | Upgrade to Hurricane Impact Windows",
+  title: "Window Replacement | Impact Glass from Hollywood",
   description:
-    "Window replacement in Fort Lauderdale & South Florida. Upgrade to hurricane-rated impact glass. Energy efficient. Free estimates.",
+    "Replace aging aluminum or jalousie windows with permitted impact glass. Miami-Dade/Broward NOA path; Palm Beach often FL#. Free estimates from Hollywood. (754) 600-4876.",
   alternates: { canonical: "/services/window-replacement/" },
 };
 
@@ -124,10 +124,10 @@ export default function WindowReplacementPage() {
               <span className="text-sm text-palm-300 font-medium">Full-Service Window Replacement</span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-display text-white leading-tight mb-6">
-              Professional <span className="gradient-text">Window Replacement</span> in South Florida
+              <span className="gradient-text">Window Replacement</span> with Impact Glass
             </h1>
             <p className="text-lg text-gray-300 mb-8 max-w-xl leading-relaxed">
-              Upgrade aging, damaged, or non-impact windows to modern hurricane-rated impact glass. Complete turnkey replacement service for homes throughout Miami-Dade, Broward, and Palm Beach County.
+              Most South Florida replacements are 1970s–90s aluminum or jalousie openings that leak air and fail a wind-mitigation form. We replace them with permitted impact units from PGT, CGI, ES, or CWS and pull the local permit from our Hollywood shop.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link

@@ -81,7 +81,15 @@ export default async function BlogPostPage({
     headline: post.title,
     description: post.excerpt,
     datePublished: post.date,
-    author: { "@type": "Person", name: post.author },
+    author: {
+      "@type": "Person",
+      name: post.author,
+      worksFor: {
+        "@type": "Organization",
+        name: "Florida Impact Windows & Doors",
+        url: "https://floridaimpactwindowsdoors.com",
+      },
+    },
     publisher: {
       "@type": "Organization",
       name: "Florida Impact Windows & Doors",

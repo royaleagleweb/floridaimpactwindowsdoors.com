@@ -4,9 +4,9 @@ import type { Metadata } from "next";
 import RelatedDoorTypes from "@/components/RelatedDoorTypes";
 
 export const metadata: Metadata = {
-  title: "Impact Entry Doors | Florida Impact Windows & Doors",
+  title: "Impact Entry Doors | Front Door That Counts on the 1802",
   description:
-    "Premium impact entry doors for South Florida homes. Hurricane-rated front doors with stunning curb appeal, maximum security, and energy efficiency for Miami-Dade, Broward & Palm Beach.",
+    "Impact entry doors are a glazed opening on the OIR-B1-1802 form. We install permitted units from Hollywood. Free estimates. (754) 600-4876.",
   alternates: {
     canonical: "https://floridaimpactwindowsdoors.com/services/door-types/entry/",
   },

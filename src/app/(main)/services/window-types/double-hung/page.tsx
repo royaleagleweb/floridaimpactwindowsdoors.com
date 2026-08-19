@@ -4,9 +4,9 @@ import type { Metadata } from "next";
 import RelatedWindowTypes from "@/components/RelatedWindowTypes";
 
 export const metadata: Metadata = {
-  title: "Double Hung Impact Windows | Florida Impact Windows & Doors",
+  title: "Double Hung Impact Windows | Both Sashes Tilt In",
   description:
-    "Double hung impact windows with both sashes operable for maximum ventilation. Hurricane-rated, energy-efficient protection for South Florida homes. Free estimates from Florida Impact Windows & Doors.",
+    "Double-hung impact windows: both sashes move and tilt in for cleaning. Common on two-story and historic-look homes. Installed from Hollywood. (754) 600-4876.",
   alternates: {
     canonical: "https://floridaimpactwindowsdoors.com/services/window-types/double-hung/",
   },

@@ -146,7 +146,7 @@ export default function CGIBrandPage() {
               <span className="gradient-text">for Coastal and High-Load Openings</span>
             </h1>
             <p className="text-lg text-gray-300 mb-8 max-w-2xl leading-relaxed">
-              CGI is the Miami-made line we install when the opening is the problem — ocean fetch, high-rise design pressure, a slider other plants will not stamp. We are the Hollywood dealer-installer, not the factory. If your house is fifteen ordinary single-hungs, start on the PGT or ES pages instead of this one.
+              CGI is the Miami-made line we install when the opening is the problem — ocean fetch, high-rise design pressure, a slider other plants will not stamp. We are the Hollywood dealer-installer, not the factory. If your house is fifteen ordinary single-hungs, start on the PGT or ES pages instead of this one. MITER discontinued most CGI retail lines in late 2025; existing CGI glass still has valid approvals, and new quotes that used to specify Sentinel or Estate are re-specified to a current approved line.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link

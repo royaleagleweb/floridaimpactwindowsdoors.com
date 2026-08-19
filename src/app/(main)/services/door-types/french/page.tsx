@@ -4,9 +4,9 @@ import type { Metadata } from "next";
 import RelatedDoorTypes from "@/components/RelatedDoorTypes";
 
 export const metadata: Metadata = {
-  title: "Impact French Doors | Florida Impact Windows & Doors",
+  title: "Impact French Doors | Swing Pair, Tested Glass",
   description:
-    "Elegant impact French doors for South Florida homes. Hurricane-rated double-swing doors with timeless style, energy efficiency, and Category 5 protection for Miami-Dade, Broward & Palm Beach.",
+    "Impact French doors for lanais and Mizner-style elevations. Count as glazed openings on the wind-mitigation form. Installed from Hollywood. (754) 600-4876.",
   alternates: {
     canonical: "https://floridaimpactwindowsdoors.com/services/door-types/french/",
   },

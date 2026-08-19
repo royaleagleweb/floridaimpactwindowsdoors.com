@@ -3,11 +3,12 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import ServiceAreaLinks from "@/components/ServiceAreaLinks";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import { faqPageJsonLd } from "@/lib/faqSchema";
 
 export const metadata: Metadata = {
-  title: "Impact Windows Installation Fort Lauderdale | #1 Hurricane Windows Broward County",
+  title: "Impact Windows Installation | Hollywood HVHZ Installer",
   description:
-    "Premium impact window installation in Fort Lauderdale & South Florida. Category 5 rated. Energy savings up to 70%. Free estimates.",
+    "Impact window installation from 3000 Stirling Rd, Hollywood. Miami-Dade and Broward need NOA products; Palm Beach often accepts an FL#. PGT, CGI, ES, CWS. Free estimates. (754) 600-4876.",
   alternates: { canonical: "/services/impact-windows/" },
 };
 
@@ -97,6 +98,7 @@ const faqs = [
 export default function ImpactWindowsPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageJsonLd(faqs)) }} />
       {/* Hero Section */}
       <section className="relative min-h-[60vh] flex items-center bg-ocean-950 overflow-hidden">
         <div className="absolute inset-0 bg-grid opacity-40" />
@@ -113,10 +115,10 @@ export default function ImpactWindowsPage() {
               <span className="text-sm text-palm-300 font-medium">South Florida&apos;s Impact Window Specialists</span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-display text-white leading-tight mb-6">
-              Premium <span className="gradient-text">Impact Windows</span> for South Florida Homes
+              <span className="gradient-text">Impact Windows</span> Installed from Hollywood
             </h1>
             <p className="text-lg text-gray-300 mb-8 max-w-xl leading-relaxed">
-              Hurricane-rated impact windows engineered for Category 5 protection. Reduce energy costs, lower insurance premiums, and protect your family year-round in Miami-Dade, Broward, and Palm Beach County.
+              Impact windows are laminated glass in a tested frame — they stay in the opening after a debris hit so wind and water do not enter the house. We install PGT, CGI, ES Windows, and CWS from 3000 Stirling Rd, Hollywood, and pull the permit for Miami-Dade, Broward, and Palm Beach addresses.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
@@ -156,24 +158,24 @@ export default function ImpactWindowsPage() {
         <div className="max-w-4xl mx-auto px-4">
           <span className="inline-block text-sm font-semibold text-palm-600 uppercase tracking-wider mb-3">About Impact Windows</span>
           <h2 className="text-3xl md:text-4xl font-bold font-display text-gray-900 mb-8">
-            The Gold Standard in South Florida Hurricane Protection
+            What Are Impact Windows, and What Does HVHZ Change?
           </h2>
 
           <div className="prose prose-lg max-w-none text-gray-600 space-y-6">
             <p>
-              Impact windows are the premier hurricane protection solution for homes and buildings throughout South Florida. Engineered with laminated glass bonded to a durable interlayer, these windows are designed to withstand the extreme wind pressures and flying debris produced by Category 5 hurricanes. Unlike temporary solutions such as plywood or hurricane shutters, impact windows provide continuous, maintenance-free protection every day of the year without any preparation when a storm approaches.
+              Impact windows are two panes of glass laminated to a PVB or similar interlayer inside a frame that has been tested for missile impact and cyclic wind pressure. If debris cracks the glass, the interlayer is supposed to keep the opening closed so the roof does not become a sail.
             </p>
             <p>
-              At Florida Impact Windows & Doors, we specialize exclusively in impact window installation across Miami-Dade, Broward, and Palm Beach counties. Our team has installed over 5,000 impact windows in communities ranging from the coastal high-rises of Miami Beach and Fort Lauderdale to the suburban neighborhoods of Coral Springs, Weston, Boca Raton, and Palm Beach Gardens. Every installation is performed by our own certified crews, permitted through your local building department, and inspected to ensure full compliance with the Florida Building Code and the High Velocity Hurricane Zone standards.
+              Miami-Dade and Broward are the High-Velocity Hurricane Zone. Replacement units there generally need a current Miami-Dade Notice of Acceptance on the permit. Palm Beach County is a wind-borne debris region, not HVHZ — a Florida Product Approval (FL#) is often accepted. We do not copy a Broward NOA packet onto a Boca or West Palm job by default, and we do not sell an FL#-only unit into Miami.
             </p>
             <p>
-              The technology behind modern impact windows has advanced significantly over the past decade. Today&apos;s impact glass features Low-E coatings that reflect solar heat, argon gas fills that improve insulation, and advanced laminated interlayers that hold the glass in place even under extreme force. These innovations mean your impact windows do far more than protect against hurricanes. They reduce energy consumption by blocking up to 70% of solar heat gain, cut outside noise by up to 60%, block 99% of harmful UV rays, and provide a permanent barrier against break-ins and forced entry.
+              Insurance credit is not automatic. Florida Statute §627.0629 requires carriers to offer wind-mitigation discounts. A licensed inspector documents openings on form OIR-B1-1802 (the April 1, 2026 revision is required for new inspections). Opening protection is all-or-nothing: one leftover unprotected window can zero the credit. The form is typically good for five years if the house is unchanged.
             </p>
             <p>
-              South Florida homeowners who install impact windows on every opening in their home typically qualify for the largest available discounts on windstorm insurance premiums. Savings of 20% to 45% are common, and for many families the annual insurance reduction alone offsets a significant portion of the monthly financing payment. Combined with lower energy bills and increased property value, impact windows are one of the smartest home improvement investments you can make in the Miami, Fort Lauderdale, and West Palm Beach metro areas.
-            </p>
-            <p>
-              Whether you are building a new home, replacing aging aluminum windows from the 1970s or 1980s, or upgrading from hurricane shutters to a permanent solution, Florida Impact Windows & Doors provides a complete turnkey experience. We handle everything from the initial in-home consultation and product selection through permitting, professional installation, final inspection, and warranty registration. Our goal is to make the process simple, transparent, and stress-free so you can focus on enjoying your protected, comfortable, and energy-efficient home.
+              We are the dealer-installer at 3000 Stirling Rd, Hollywood — not PGT, CGI, ES, or CWS. Those factories make the units. We measure, permit, set the anchors on the approval, and leave the paperwork you need for the inspector and, later, the wind-mitigation inspector. See{" "}
+              <a href="/faq/how-much-do-impact-windows-cost-in-south-florida/">what impact windows cost</a>,{" "}
+              <a href="/financing/">financing</a>, and{" "}
+              <a href="/brands/pgt/">PGT</a> if you are still choosing a line.
             </p>
           </div>
         </div>
@@ -185,7 +187,7 @@ export default function ImpactWindowsPage() {
           <div className="text-center mb-16">
             <span className="inline-block text-sm font-semibold text-palm-600 uppercase tracking-wider mb-3">Key Benefits</span>
             <h2 className="text-3xl md:text-4xl font-bold font-display text-gray-900 mb-4">
-              Why South Florida Homeowners Choose Impact Windows
+              Why Do South Florida Homeowners Replace Shutters with Impact Glass?
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Impact windows deliver a comprehensive package of protection, comfort, and value that no other home improvement can match.
@@ -224,7 +226,7 @@ export default function ImpactWindowsPage() {
                 {[
                   "Authorized dealer for PGT, CGI, ES Windows, and CWS",
                   "Licensed, insured, and Florida-certified contractor",
-                  "In-house installation crews, never subcontracted",
+                  "Owner-led crews that measure, permit, and install",
                   "Full permit handling and building department inspections",
                   "Lifetime manufacturer warranties on all products",
                   "Flexible financing with payments starting at $89/month",

@@ -19,6 +19,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title: `Door Replacement in ${city.name}, FL - Professional Installation`,
     description: `Professional door replacement in ${city.name}, Florida. Entry doors, sliding glass doors, French doors, patio doors, and garage doors for ${city.county} County homes. Free estimates from Florida Impact Windows & Doors. Call (754) 600-4876.`,
     alternates: { canonical: `https://floridaimpactwindowsdoors.com/areas/${slug}/door-replacement/` },
+    robots: { index: false, follow: false },
   };
 }
 

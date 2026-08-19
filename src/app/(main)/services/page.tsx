@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Our Services | Impact Windows, Doors & Hurricane Protection",
   description:
-    "Complete impact window, door, and hurricane protection services for South Florida homes. Expert installation by owner-operated team. Free estimates.",
+    "Impact windows, impact doors, shutters, and replacements installed from 3000 Stirling Rd, Hollywood. HVHZ/NOA in Miami-Dade and Broward. Free estimates. (754) 600-4876.",
   alternates: {
     canonical: "https://floridaimpactwindowsdoors.com/services/",
   },
@@ -105,9 +105,10 @@ export default function ServicesPage() {
               Impact Window &amp; Door Services
             </h1>
             <p className="text-lg text-gray-400 leading-relaxed">
-              From impact windows and doors to hurricane shutters, we provide
-              complete hurricane protection for South Florida homes. Every
-              project is installed by our own team, led by one of our owners.
+              Impact windows, impact doors, shutters, and replacements — measured
+              and permitted from our Hollywood shop. Miami-Dade and Broward jobs
+              use HVHZ/NOA products. Palm Beach jobs often use an FL#. Every
+              project is led by an owner.
             </p>
           </div>
         </div>

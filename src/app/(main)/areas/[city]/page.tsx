@@ -284,13 +284,6 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
       },
     },
     priceRange: "$$",
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.9",
-      reviewCount: "2500",
-      bestRating: "5",
-      worstRating: "1",
-    },
   };
 
   return (

@@ -1,10 +1,30 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import PageFaqSection from "@/components/PageFaqSection";
+import { faqPageJsonLd } from "@/lib/faqSchema";
+
+const cwsFaqs = [
+  {
+    question: "When should I choose CWS instead of PGT?",
+    answer:
+      "Choose CWS when the opening is custom: a geometric lite, a multi-slide, or a sightline an architect already drew. PGT WinGuard is the usual whole-house catalog. We install both from Hollywood.",
+  },
+  {
+    question: "Does CWS meet Miami-Dade NOA / HVHZ rules?",
+    answer:
+      "CWS publishes Miami-Dade NOA and Florida Product Approval documents on the lines we install. We put the matching approval on the permit. Palm Beach jobs often accept an FL#; Miami-Dade and Broward generally need the NOA path.",
+  },
+  {
+    question: "Are you the CWS factory?",
+    answer:
+      "No. Florida Impact Windows & Doors is the dealer-installer at 3000 Stirling Rd, Hollywood. CWS manufactures. We measure, permit, and set the unit. Call (754) 600-4876.",
+  },
+];
 
 export const metadata: Metadata = {
-  title: "Custom Window Systems (CWS) | Authorized Dealer | Florida Impact Windows & Doors",
+  title: "CWS Impact Windows | Custom Shapes & Multi-Slides | Hollywood",
   description:
-    "Florida Impact Windows & Doors is an authorized Custom Window Systems dealer in South Florida. Innovative impact windows and doors with sleek modern designs. Free estimates.",
+    "Custom Window Systems (CWS) dealer-installer in Hollywood. Narrow sightlines, custom shapes, and multi-slide doors when a catalog single-hung will not fit. Free estimates. (754) 600-4876.",
   alternates: { canonical: "https://floridaimpactwindowsdoors.com/brands/custom-window-systems/" },
 };
 
@@ -97,6 +117,7 @@ export default function CWSBrandPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(brandSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageJsonLd(cwsFaqs)) }} />
       {/* Hero Section */}
       <section className="relative min-h-[60vh] flex items-center bg-ocean-950 overflow-hidden">
         <div className="absolute inset-0 bg-grid opacity-40" />
@@ -115,7 +136,7 @@ export default function CWSBrandPage() {
               <span className="gradient-text">Authorized Dealer</span>
             </h1>
             <p className="text-lg text-gray-300 mb-8 max-w-2xl leading-relaxed">
-              Florida Impact Windows & Doors is your authorized Custom Window Systems dealer in South Florida. CWS delivers innovative, design-forward impact windows and doors that bring modern architectural vision to life without compromising hurricane protection.
+              CWS is the line we quote when the opening is not a catalog single-hung: a custom shape, a narrow-sightline wall, or a multi-slide that other plants will not stamp. We are the Hollywood installer — CWS manufactures; we measure, permit, and set the unit.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
@@ -142,11 +163,11 @@ export default function CWSBrandPage() {
         <div className="max-w-4xl mx-auto px-4">
           <span className="inline-block text-sm font-semibold text-palm-600 uppercase tracking-wider mb-3">About CWS</span>
           <h2 className="text-3xl md:text-4xl font-bold font-display text-gray-900 mb-8">
-            Where Design Meets Hurricane Protection
+            When Do We Specify CWS Instead of PGT or ES?
           </h2>
           <div className="space-y-6 text-gray-600 leading-relaxed text-lg">
             <p>
-              Custom Window Systems, commonly known as CWS, has established itself as one of the more innovative impact window and door manufacturers operating in the South Florida market. While the brand may not have the sheer size of some competitors, CWS has built a loyal following among architects, custom home builders, and design-conscious homeowners who demand impact products that do more than just meet code. CWS products are engineered to make a visual statement while delivering the structural performance required by the Florida Building Code and Miami-Dade County standards.
+              We specify Custom Window Systems when the opening is the problem: a geometric lite, a multi-slide that needs a pocket or stack, or a sightline an architect already drew. PGT WinGuard covers most whole-house lists. ES Windows is the value aluminum path. CWS is not a cheaper PGT — it is the custom-shape and large-format conversation.
             </p>
             <p>
               What distinguishes CWS from the rest of the field is their willingness to push design boundaries. Where traditional impact window manufacturers stick to standard rectangular shapes and conventional frame profiles, CWS embraces custom geometry, ultra-narrow sightlines, and large-format door systems that blur the line between indoor and outdoor living. Their multi-slide doors, oversized pivot entries, and custom geometric fixed windows give architects tools that previously were only available in non-impact configurations, unlocking design possibilities for hurricane-zone homes that were difficult or impossible to achieve a decade ago.
@@ -274,6 +295,8 @@ export default function CWSBrandPage() {
           </p>
         </div>
       </section>
+
+      <PageFaqSection heading="CWS questions we hear on estimates" faqs={cwsFaqs} />
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-palm-600 via-ocean-700 to-ocean-900 relative overflow-hidden">
