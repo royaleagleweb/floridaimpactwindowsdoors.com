@@ -29,7 +29,7 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section className="home-section bg-[#f4f5f7]">
+    <section id="how-it-works" className="home-section bg-[#f4f5f7]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="max-w-2xl mb-16 md:mb-20">
           <h2 className="home-title text-4xl md:text-5xl text-[#0d1b33]">

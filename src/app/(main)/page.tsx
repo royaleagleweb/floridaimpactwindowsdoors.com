@@ -140,7 +140,7 @@ export default function HomePage() {
         </p>
       </div>
 
-      <section className="relative overflow-hidden min-h-[680px] lg:min-h-[820px]">
+      <section id="hero" className="relative overflow-hidden min-h-[680px] lg:min-h-[820px]">
         <div className="absolute inset-0">
           <Image
             src="/images/hero-bg.jpg"
@@ -431,7 +431,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="home-section bg-[#f4f5f7]">
+      <section id="recent-projects" className="home-section bg-[#f4f5f7]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="max-w-2xl mb-16 md:mb-20">
             <h2 className="home-title text-4xl md:text-5xl text-[#0d1b33]">
@@ -593,7 +593,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="home-section bg-[#0d1b33] text-white">
+      <section id="msfh" className="home-section bg-[#0d1b33] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-12 lg:gap-16 items-center">
             <div>
@@ -693,7 +693,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="home-section bg-[#f4f5f7]">
+      <section id="reviews" className="home-section bg-[#f4f5f7]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="max-w-2xl mb-16">
             <h2 className="home-title text-4xl md:text-5xl text-[#0d1b33]">
