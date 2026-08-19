@@ -1,12 +1,42 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import PageFaqSection from "@/components/PageFaqSection";
+import { faqPageJsonLd } from "@/lib/faqSchema";
 
 export const metadata: Metadata = {
-  title: "ES Windows | Authorized Dealer | Florida Impact Windows & Doors",
+  title: "ES Windows Impact Windows South Florida | Local Dealer-Installer",
   description:
-    "Florida Impact Windows & Doors is an authorized ES Windows dealer in South Florida. Affordable high-quality impact windows and doors. Series 100, 200, 300 and more. Free estimates.",
+    "Florida Impact Windows & Doors installs ES Windows impact windows in South Florida. South Florida-made aluminum, shorter lead times, HVHZ NOA. Dealer-installer — not the factory. Free estimates. (754) 600-4876.",
   alternates: { canonical: "https://floridaimpactwindowsdoors.com/brands/es-windows/" },
 };
+
+const esFaqs = [
+  {
+    question: "Is ES Windows a cheaper version of PGT, or a different plant?",
+    answer:
+      "Different plant. ES Windows is a South Florida manufacturer. PGT builds in Venice. We install both. ES is the conversation when you want code-legal impact glass on every opening without paying for a broader catalog you will not use. It is not a downgrade of laminated glass or a skip on Miami-Dade NOA — it is a tighter options list and a local production story.",
+  },
+  {
+    question: "When is ES the wrong brand for my house?",
+    answer:
+      "If you need vinyl EnergyVue-style thermal packages across the house, a huge options list, or an oversized oceanfront slider that needs a high design-pressure custom stamp, we will steer you to PGT or CGI instead of forcing ES into that opening. Inland Miramar two-stories, Hollywood Hills ranches, and typical aluminum single-hungs are where ES earns the bid.",
+  },
+  {
+    question: "Does ES Windows meet Broward HVHZ / Miami-Dade NOA?",
+    answer:
+      "ES impact products we install carry Miami-Dade Notices of Acceptance and Florida Product Approvals. Approval is by the exact model on the permit. Hollywood and Miramar (Broward HVHZ) typically need that NOA path. Boca Raton (Palm Beach) often accepts an FL# — we submit what the city asks for, not a copied Broward packet.",
+  },
+  {
+    question: "Why do people say ES is faster than PGT?",
+    answer:
+      "ES builds in South Florida for this market. PGT’s Venice campus is large and consistent, but a local plant can beat a statewide queue on common aluminum sizes. We will not promise a week count on a webpage. The estimate has the production window for the units on your opening list.",
+  },
+  {
+    question: "Can I mix ES windows with a CGI slider?",
+    answer:
+      "Yes, when the openings disagree. A house can wear ES single-hungs and a CGI or PGT sliding door if the permit lists each approval. Mixing brands to save money on bedrooms and spend it on the lanai is a normal South Florida bid — mixing unapproved leftover openings next to new glass is not.",
+  },
+];
 
 const productLines = [
   {
@@ -97,6 +127,7 @@ export default function ESWindowsBrandPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(brandSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageJsonLd(esFaqs)) }} />
       {/* Hero Section */}
       <section className="relative min-h-[60vh] flex items-center bg-ocean-950 overflow-hidden">
         <div className="absolute inset-0 bg-grid opacity-40" />
@@ -111,11 +142,11 @@ export default function ESWindowsBrandPage() {
               <span className="text-sm text-sun-300 font-medium">Authorized ES Windows Dealer</span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-display text-white leading-tight mb-6">
-              ES Windows{" "}
-              <span className="gradient-text">Authorized Dealer</span>
+              ES Windows Impact Windows{" "}
+              <span className="gradient-text">from a South Florida Installer</span>
             </h1>
             <p className="text-lg text-gray-300 mb-8 max-w-2xl leading-relaxed">
-              Florida Impact Windows & Doors is your authorized ES Windows dealer in South Florida. ES Windows delivers reliable impact protection at an exceptional value, making hurricane-rated windows and doors accessible for every homeowner.
+              ES is the South Florida-made line we install when the job is every opening, not a showroom wall. We are the Hollywood dealer-installer — we pull the permit and set the units. ES builds the frames. If you wanted PGT&apos;s full catalog or CGI&apos;s coastal custom shop, those pages are a click away; this page is the value-and-lead-time argument.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
@@ -253,6 +284,113 @@ export default function ESWindowsBrandPage() {
           </div>
         </div>
       </section>
+
+      {/* Who should buy ES */}
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4">
+          <span className="inline-block text-sm font-semibold text-palm-600 uppercase tracking-wider mb-3">Who ES is for</span>
+          <h2 className="text-3xl md:text-4xl font-bold font-display text-gray-900 mb-6">
+            Buy ES when the goal is a finished house, not a longer options list
+          </h2>
+          <div className="space-y-6 text-gray-600 leading-relaxed text-lg">
+            <p>
+              The homeowners who leave this page with an ES bid are usually protecting every bedroom, not agonizing over a powder-coat fan deck. They live in inland Broward — Miramar two-stories that still have shutter tracks, Hollywood Hills ranches west of US-1, Pembroke-adjacent CBS — and they want laminated glass that a Broward inspector will stamp. They do not need a Venice-sized catalog to replace a horizontal roller over the kitchen sink.
+            </p>
+            <p>
+              ES is a South Florida maker. That is the lead-time argument, not a romance about craft. Common aluminum single-hungs, picture windows, and two-panel sliders do not have to sit in a statewide queue behind someone else&apos;s custom arch-top. We still will not print a week count here; the estimate has the production window for your sizes.{" "}
+              <Link href="/brands/pgt/" className="text-palm-600 font-semibold hover:text-palm-700 underline underline-offset-2">PGT</Link>{" "}
+              remains the pick when you want vinyl EnergyVue, a wider color and style grid, or one factory for an odd mix of shapes.{" "}
+              <Link href="/brands/cgi/" className="text-palm-600 font-semibold hover:text-palm-700 underline underline-offset-2">CGI</Link>{" "}
+              remains the pick when the opening itself is the problem — ocean fetch, high-rise DP, a slider other plants will not stamp.
+            </p>
+            <p>
+              HVHZ (Hollywood, Miramar, the rest of Broward and Miami-Dade) still means a current NOA on the exact unit. Palm Beach (Boca Raton) is a wind-borne debris region, not HVHZ — an FL# is often enough. ES products we install are built for that South Florida paperwork. We pull the permit from 3000 Stirling Rd. You are not buying a box of glass from a website.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Comparison — lead time / value angle, not the PGT table */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="max-w-3xl mb-12">
+            <span className="inline-block text-sm font-semibold text-palm-600 uppercase tracking-wider mb-3">ES vs PGT vs CGI</span>
+            <h2 className="text-3xl md:text-4xl font-bold font-display text-gray-900 mb-4">
+              Lead time and coverage — not a logo hierarchy
+            </h2>
+            <p className="text-lg text-gray-600 leading-relaxed">
+              If you came from the PGT page, you already saw a table about catalogs. This page is the calendar and the checkbook. Same three brands, different question: how fast can we glaze the whole house without leaving a shutter on the guest room.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="bg-white rounded-2xl p-8 border-2 border-sun-200 shadow-sm">
+              <p className="text-sm font-semibold text-sun-600 uppercase tracking-wider mb-2">This page</p>
+              <h3 className="text-xl font-bold font-display text-gray-900 mb-3">ES Windows</h3>
+              <p className="text-gray-600 leading-relaxed mb-4">
+                South Florida manufacturing, aluminum-forward lineup, NOA on the impact units we install. Best when the opening list is ordinary and you want every hole covered this season.
+              </p>
+              <p className="text-sm text-gray-500">Inland / typical DP · often the shorter local queue</p>
+            </div>
+            <div className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm">
+              <p className="text-sm font-semibold text-palm-600 uppercase tracking-wider mb-2">Sibling brand</p>
+              <h3 className="text-xl font-bold font-display text-gray-900 mb-3">
+                <Link href="/brands/pgt/" className="hover:text-palm-600">PGT WinGuard</Link>
+              </h3>
+              <p className="text-gray-600 leading-relaxed mb-4">
+                Venice-scale catalog: vinyl and aluminum, EnergyVue when thermal is the brief, one factory for a messy mix of styles. Best when the house is not all the same opening.
+              </p>
+              <p className="text-sm text-gray-500">Consistent campus lead times · broader options</p>
+            </div>
+            <div className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm">
+              <p className="text-sm font-semibold text-ocean-600 uppercase tracking-wider mb-2">Sibling brand</p>
+              <h3 className="text-xl font-bold font-display text-gray-900 mb-3">
+                <Link href="/brands/cgi/" className="hover:text-ocean-600">CGI</Link>
+              </h3>
+              <p className="text-gray-600 leading-relaxed mb-4">
+                Miami plant aimed at high-load and oversized work. Wrong default for a standard Miramar bedroom. Right default when the lanai slider is the reason the other bids came back &quot;can&apos;t build.&quot;
+              </p>
+              <p className="text-sm text-gray-500">Coastal / high DP · custom sizes can wait longer</p>
+            </div>
+          </div>
+          <p className="mt-8 text-gray-600">
+            Written comparisons:{" "}
+            <Link href="/faq/pgt-vs-es-windows/" className="text-palm-600 font-semibold hover:text-palm-700 underline underline-offset-2">PGT vs ES Windows</Link>
+            {" "}and{" "}
+            <Link href="/faq/pgt-vs-cgi/" className="text-palm-600 font-semibold hover:text-palm-700 underline underline-offset-2">PGT vs CGI</Link>.
+          </p>
+        </div>
+      </section>
+
+      <section className="py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4">
+          <h2 className="text-2xl font-bold font-display text-gray-900 mb-6">Next steps on an ES bid</h2>
+          <div className="grid sm:grid-cols-2 gap-3">
+            {[
+              { href: "/get-estimate/", label: "Free ES Windows estimate" },
+              { href: "/financing/", label: "Financing" },
+              { href: "/services/window-replacement/", label: "Whole-house window replacement" },
+              { href: "/services/window-types/single-hung/", label: "Single-hung impact windows" },
+              { href: "/services/door-types/sliding-glass/", label: "Impact sliding glass doors" },
+              { href: "/faq/how-much-do-impact-windows-cost-in-south-florida/", label: "What impact windows cost" },
+            ].map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="flex items-center justify-between rounded-xl border border-gray-200 px-4 py-3 hover:border-sun-300 hover:bg-sun-50 transition-all font-medium text-gray-700"
+              >
+                {item.label}
+                <span aria-hidden className="text-sun-600">→</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <PageFaqSection
+        heading="ES Windows — installer questions, not factory marketing"
+        faqs={esFaqs}
+        accent="sun"
+      />
 
       {/* Authorized Dealer Section */}
       <section className="py-20 bg-gray-50">
