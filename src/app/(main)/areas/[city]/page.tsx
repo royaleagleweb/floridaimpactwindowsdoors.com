@@ -2,7 +2,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { cities, getCityBySlug, getCitiesByCounty } from "@/data/cities";
+import { getCityPageOverride } from "@/data/cityPageOverrides";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import { faqPageJsonLd } from "@/lib/faqSchema";
 
 // ---------------------------------------------------------------------------
 // Static params & metadata
@@ -23,8 +25,11 @@ export async function generateMetadata({
     return { title: "City Not Found" };
   }
 
-  const title = `Impact Windows & Doors in ${city.name}, FL`;
-  const description = `Florida Impact Windows & Doors provides professional impact window and door installation in ${city.name}, ${city.county} County, FL. Hurricane-rated protection, energy savings & free estimates. Call today!`;
+  const override = getCityPageOverride(slug);
+  const title = override?.title ?? `Impact Windows & Doors in ${city.name}, FL`;
+  const description =
+    override?.description ??
+    `Florida Impact Windows & Doors provides professional impact window and door installation in ${city.name}, ${city.county} County, FL. Hurricane-rated protection, energy savings & free estimates. Call today!`;
 
   return {
     title,
@@ -218,8 +223,9 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
   );
 
   const services = getServices(city.slug);
+  const override = getCityPageOverride(city.slug);
 
-  const faqs = [
+  const defaultFaqs = [
     {
       question: `How much do impact windows cost in ${city.name}?`,
       answer: `Impact window prices in ${city.name} typically range from $400 to $1,500 per window installed, depending on the window size, style, and glass specifications. Factors such as your home's architecture, the number of openings, and specific ${city.county} County building code requirements all influence the final cost. We provide free in-home estimates so you can get an accurate price for your ${city.name} property.`,
@@ -238,19 +244,10 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
     },
   ];
 
+  const faqs = override?.faqs ?? defaultFaqs;
+
   /* JSON-LD structured data for local SEO */
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqs.map((faq) => ({
-      "@type": "Question",
-      name: faq.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: faq.answer,
-      },
-    })),
-  };
+  const faqSchema = faqPageJsonLd(faqs);
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
@@ -316,15 +313,19 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/10 rounded-full px-4 py-1.5 mb-6">
               <span className="w-2 h-2 bg-palm-400 rounded-full animate-pulse" />
               <span className="text-sm text-palm-300 font-medium">
-                {city.county} County
+                {override?.countyBadge ?? `${city.county} County`}
               </span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-display text-white leading-tight mb-6">
-              Impact Windows & Doors in{" "}
-              <span className="gradient-text">{city.name}</span>, Florida
+              {override?.h1 ?? (
+                <>
+                  Impact Windows & Doors in{" "}
+                  <span className="gradient-text">{city.name}</span>, Florida
+                </>
+              )}
             </h1>
             <p className="text-lg text-gray-300 max-w-2xl leading-relaxed mb-8">
-              {city.description}
+              {override?.heroIntro ?? city.description}
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
@@ -376,22 +377,33 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
                   <strong>Architecture & Fit:</strong> {city.architectureStyle}
                 </p>
               )}
-              <p>
-                Beyond code compliance, impact windows provide {city.name}{" "}
-                homeowners with significant financial advantages. Insurance
-                companies offer substantial premium discounts &mdash; often 20%
-                to 45% &mdash; for homes with fully protected openings. Combined
-                with energy savings from the insulating properties of
-                impact-rated glass, most {city.name} homeowners find that their
-                impact windows begin paying for themselves within a few years of
-                installation.
-              </p>
-              <p>
-                At Florida Impact Windows & Doors, we understand the unique needs of {city.name}{" "}
-                homes. We handle all {city.county} County
-                permits and inspections so you can enjoy a hassle-free experience
-                from start to finish.
-              </p>
+              {override ? (
+                <div className="space-y-6">
+                  <h3 className="text-2xl font-bold font-display text-gray-900 pt-4">
+                    {override.uniqueHeading}
+                  </h3>
+                  <div className="space-y-6">{override.uniqueBody}</div>
+                </div>
+              ) : (
+                <>
+                  <p>
+                    Beyond code compliance, impact windows provide {city.name}{" "}
+                    homeowners with significant financial advantages. Insurance
+                    companies offer substantial premium discounts &mdash; often 20%
+                    to 45% &mdash; for homes with fully protected openings. Combined
+                    with energy savings from the insulating properties of
+                    impact-rated glass, most {city.name} homeowners find that their
+                    impact windows begin paying for themselves within a few years of
+                    installation.
+                  </p>
+                  <p>
+                    At Florida Impact Windows & Doors, we understand the unique needs of {city.name}{" "}
+                    homes. We handle all {city.county} County
+                    permits and inspections so you can enjoy a hassle-free experience
+                    from start to finish.
+                  </p>
+                </>
+              )}
             </div>
           </div>
         </div>
@@ -577,14 +589,18 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
                     communities in the state.
                   </p>
                 )}
-                <p>
-                  Like all of {city.county} County, {city.name} is located within
-                  the Florida High Velocity Hurricane Zone, meaning homes must
-                  meet the strictest wind resistance standards in the nation.
-                  Impact windows and doors are the preferred method of hurricane
-                  protection for homeowners who want permanent, maintenance-free
-                  storm readiness.
-                </p>
+                {override ? (
+                  <p>{override.codeParagraph}</p>
+                ) : (
+                  <p>
+                    Like all of {city.county} County, {city.name} is located within
+                    the Florida High Velocity Hurricane Zone, meaning homes must
+                    meet the strictest wind resistance standards in the nation.
+                    Impact windows and doors are the preferred method of hurricane
+                    protection for homeowners who want permanent, maintenance-free
+                    storm readiness.
+                  </p>
+                )}
                 <p>
                   Florida Impact Windows & Doors has been serving {city.name} homeowners with
                   professional impact window and door installation. Our deep knowledge of{" "}
@@ -620,6 +636,14 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
                   <dt className="text-gray-500 font-medium">County</dt>
                   <dd className="text-gray-900 font-semibold">{city.county}</dd>
                 </div>
+                {override?.officeLine && (
+                  <div className="flex justify-between items-center py-3 border-b border-gray-100">
+                    <dt className="text-gray-500 font-medium">Our shop</dt>
+                    <dd className="text-gray-900 font-semibold text-right max-w-[60%]">
+                      {override.officeLine}
+                    </dd>
+                  </div>
+                )}
                 {city.population && (
                   <div className="flex justify-between items-center py-3 border-b border-gray-100">
                     <dt className="text-gray-500 font-medium">Population</dt>
@@ -634,14 +658,16 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
                 </div>
                 <div className="flex justify-between items-center py-3 border-b border-gray-100">
                   <dt className="text-gray-500 font-medium">Hurricane Zone</dt>
-                  <dd className="text-gray-900 font-semibold">HVHZ</dd>
+                  <dd className="text-gray-900 font-semibold text-right max-w-[60%]">
+                    {override?.hurricaneZone ?? "HVHZ"}
+                  </dd>
                 </div>
                 <div className="flex justify-between items-center py-3 border-b border-gray-100">
                   <dt className="text-gray-500 font-medium">
                     Building Code
                   </dt>
-                  <dd className="text-gray-900 font-semibold">
-                    Florida Building Code 7th Ed.
+                  <dd className="text-gray-900 font-semibold text-right max-w-[60%]">
+                    {override?.buildingCodeNote ?? "Florida Building Code 7th Ed."}
                   </dd>
                 </div>
                 {city.zipCodes && city.zipCodes.length > 0 && (

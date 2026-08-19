@@ -1,12 +1,42 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import PageFaqSection from "@/components/PageFaqSection";
+import { faqPageJsonLd } from "@/lib/faqSchema";
 
 export const metadata: Metadata = {
-  title: "PGT Windows & Doors | Authorized Dealer | Florida Impact Windows & Doors",
+  title: "PGT Impact Windows South Florida | Authorized Dealer-Installer",
   description:
-    "Florida Impact Windows & Doors is a PGT authorized dealer in South Florida. Premium PGT impact windows and doors with professional installation. WinGuard, EnergyVue, ClassicVue and more. Free estimates.",
+    "Florida Impact Windows & Doors installs PGT impact windows in South Florida — WinGuard dealer-installer, not the manufacturer. Permits pulled, Hollywood shop. Free estimates. (754) 600-4876.",
   alternates: { canonical: "https://floridaimpactwindowsdoors.com/brands/pgt/" },
 };
+
+const pgtFaqs = [
+  {
+    question: "Are you the PGT factory, or a South Florida installer?",
+    answer:
+      "We are a dealer-installer. PGT manufactures in Venice, Florida. Florida Impact Windows & Doors measures, permits, and installs PGT impact windows and doors from our Hollywood shop at 3000 Stirling Rd. Factory warranties stay valid when the unit is installed to PGT specifications.",
+  },
+  {
+    question: "Who should choose PGT WinGuard instead of ES Windows or CGI?",
+    answer:
+      "Choose PGT when you want one Florida catalog that covers a typical house — vinyl and aluminum, single-hungs, rollers, and sliding glass doors — with consistent Broward and Miami-Dade NOA paperwork. Pick ES Windows when covering every opening on a tighter budget or a shorter local production story matters more. Pick CGI when an oceanfront opening, high-rise elevation, or oversized slider needs a heavier coastal assembly than a standard WinGuard residential size.",
+  },
+  {
+    question: "Is PGT approved for HVHZ homes in Broward and Miami-Dade?",
+    answer:
+      "PGT impact lines, including WinGuard, carry Miami-Dade Notices of Acceptance and Florida Product Approvals. Approval is by model and glass package, not by the logo on the truck. We put the exact NOA on the permit so the inspector sees the same unit we set in the wall.",
+  },
+  {
+    question: "How long do PGT impact windows take to arrive?",
+    answer:
+      "PGT runs a large Venice campus, so common WinGuard sizes are a predictable production path compared with one-off coastal custom work. Lead time still depends on color, configuration, and season — we give a written production window on the estimate, not a verbal “about a month.” ES Windows, made in South Florida, is often the faster conversation on simple aluminum openings. CGI oversized sliders can run longer because the opening is the hard part.",
+  },
+  {
+    question: "Can I finance a PGT installation?",
+    answer:
+      "Yes. Ask about financing on your free estimate. We pull the permit and install; lending is a separate application. Call (754) 600-4876 or start from the financing page.",
+  },
+];
 
 const productLines = [
   {
@@ -97,6 +127,7 @@ export default function PGTBrandPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(brandSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageJsonLd(pgtFaqs)) }} />
       {/* Hero Section */}
       <section className="relative min-h-[60vh] flex items-center bg-ocean-950 overflow-hidden">
         <div className="absolute inset-0 bg-grid opacity-40" />
@@ -111,11 +142,11 @@ export default function PGTBrandPage() {
               <span className="text-sm text-palm-300 font-medium">Authorized PGT Dealer</span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-display text-white leading-tight mb-6">
-              PGT Windows & Doors{" "}
-              <span className="gradient-text">Authorized Dealer</span>
+              PGT Impact Windows{" "}
+              <span className="gradient-text">Installed in South Florida</span>
             </h1>
             <p className="text-lg text-gray-300 mb-8 max-w-2xl leading-relaxed">
-              Florida Impact Windows & Doors is proud to be an authorized PGT dealer serving South Florida. As the largest impact window manufacturer in the Southeast, PGT delivers unmatched quality, selection, and hurricane protection for your home.
+              We are a Hollywood-based PGT dealer-installer — not the Venice factory. If you want WinGuard impact windows and doors set, permitted, and inspected in Broward or Miami-Dade HVHZ (or an FL# path in Palm Beach), the crew that shows up is ours.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
@@ -258,6 +289,119 @@ export default function PGTBrandPage() {
           </div>
         </div>
       </section>
+
+      {/* Who should buy PGT */}
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4">
+          <span className="inline-block text-sm font-semibold text-palm-600 uppercase tracking-wider mb-3">Who PGT is for</span>
+          <h2 className="text-3xl md:text-4xl font-bold font-display text-gray-900 mb-6">
+            When a typical South Florida house should specify PGT
+          </h2>
+          <div className="space-y-6 text-gray-600 leading-relaxed text-lg">
+            <p>
+              PGT is the brand we reach for when the job is a whole house, not a single trophy opening. WinGuard is the impact line most Broward and Miami-Dade inspectors already know how to read on a permit. EnergyVue is the conversation when vinyl thermal performance is the priority on that same impact path. We do not need a custom coastal series to replace fifteen single-hungs and a two-panel slider in Hollywood Hills or west Miramar.
+            </p>
+            <p>
+              Inland and suburban openings — CBS ranches, two-story planned-community homes, typical lanai sliders — are PGT&apos;s home turf. Oceanfront condos and floor-to-ceiling glass still can be PGT when the NOA and design pressure match the elevation; they are not automatically a CGI job. The split is the opening, not the zip code. If the unit is a standard residential size with an HVHZ approval, WinGuard is usually the simpler specification. If the unit is an oversized multi-slide facing the Atlantic, we price{" "}
+              <Link href="/brands/cgi/" className="text-palm-600 font-semibold hover:text-palm-700 underline underline-offset-2">CGI</Link>{" "}
+              on the same list so you can see why the heavier assembly costs more.
+            </p>
+            <p>
+              HVHZ (Broward and Miami-Dade) jobs need a current Miami-Dade NOA that matches glass and anchors. Palm Beach jobs, including Boca Raton, often run on a Florida Product Approval instead. PGT publishes both. We pull the permit either way from 3000 Stirling Rd, Hollywood.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* PGT vs ES vs CGI — catalog / availability angle */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="max-w-3xl mb-12">
+            <span className="inline-block text-sm font-semibold text-palm-600 uppercase tracking-wider mb-3">PGT vs ES vs CGI</span>
+            <h2 className="text-3xl md:text-4xl font-bold font-display text-gray-900 mb-4">
+              Why we still stock ES and CGI if PGT covers so much
+            </h2>
+            <p className="text-lg text-gray-600 leading-relaxed">
+              A dealer with one logo has to make every opening look like that logo&apos;s problem. We install three impact makers so the catalog, the lead time, and the coastal spec can disagree. This comparison is from the PGT chair — the other brand pages argue the same facts from their side.
+            </p>
+          </div>
+          <div className="overflow-x-auto rounded-2xl border border-gray-100 bg-white shadow-sm">
+            <table className="w-full text-left text-sm md:text-base">
+              <thead className="bg-ocean-950 text-white">
+                <tr>
+                  <th className="p-4 font-display font-bold">If this is the job…</th>
+                  <th className="p-4 font-display font-bold">We usually start with</th>
+                  <th className="p-4 font-display font-bold">Lead-time story</th>
+                  <th className="p-4 font-display font-bold">DP / exposure</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-100 text-gray-700">
+                <tr className="bg-palm-50/60">
+                  <td className="p-4 font-semibold text-gray-900">Typical house, mixed vinyl + aluminum, one permit set</td>
+                  <td className="p-4">PGT WinGuard (this page)</td>
+                  <td className="p-4">Large Venice campus — common sizes are a known production path</td>
+                  <td className="p-4">HVHZ NOA on standard residential DPs; FL# available in Palm Beach</td>
+                </tr>
+                <tr>
+                  <td className="p-4 font-semibold text-gray-900">Every opening on a tighter budget; simple aluminum sizes</td>
+                  <td className="p-4">
+                    <Link href="/brands/es-windows/" className="text-palm-600 font-semibold hover:text-palm-700">ES Windows</Link>
+                  </td>
+                  <td className="p-4">South Florida maker — often the shorter wait on common configs</td>
+                  <td className="p-4">NOA / FBC for typical inland and suburban openings</td>
+                </tr>
+                <tr>
+                  <td className="p-4 font-semibold text-gray-900">Oceanfront, high-rise, or a slider other plants will not stamp</td>
+                  <td className="p-4">
+                    <Link href="/brands/cgi/" className="text-palm-600 font-semibold hover:text-palm-700">CGI Sentinel / Estate</Link>
+                  </td>
+                  <td className="p-4">Miami plant — oversized and high-DP units can take longer</td>
+                  <td className="p-4">Built for higher coastal / elevation design pressures</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-6 text-gray-600">
+            Side-by-side writeups:{" "}
+            <Link href="/faq/pgt-vs-es-windows/" className="text-palm-600 font-semibold hover:text-palm-700 underline underline-offset-2">PGT vs ES Windows</Link>
+            {" "}and{" "}
+            <Link href="/faq/pgt-vs-cgi/" className="text-palm-600 font-semibold hover:text-palm-700 underline underline-offset-2">PGT vs CGI</Link>.
+            We also published a longer{" "}
+            <Link href="/blog/pgt-vs-cgi-impact-windows-comparison/" className="text-palm-600 font-semibold hover:text-palm-700 underline underline-offset-2">PGT vs CGI comparison</Link>.
+          </p>
+        </div>
+      </section>
+
+      {/* Internal links */}
+      <section className="py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4">
+          <h2 className="text-2xl font-bold font-display text-gray-900 mb-6">PGT jobs we actually bid next</h2>
+          <div className="grid sm:grid-cols-2 gap-3">
+            {[
+              { href: "/get-estimate/", label: "Free PGT estimate" },
+              { href: "/financing/", label: "Financing" },
+              { href: "/services/window-types/single-hung/", label: "Single-hung impact windows" },
+              { href: "/services/door-types/sliding-glass/", label: "Impact sliding glass doors" },
+              { href: "/services/energy-efficient-windows/", label: "Energy-efficient impact glass" },
+              { href: "/faq/do-i-need-permit-for-impact-window-installation/", label: "Permits for impact windows" },
+            ].map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="flex items-center justify-between rounded-xl border border-gray-200 px-4 py-3 hover:border-palm-300 hover:bg-palm-50 transition-all font-medium text-gray-700"
+              >
+                {item.label}
+                <span aria-hidden className="text-palm-600">→</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <PageFaqSection
+        heading="PGT impact windows — questions we get in the Hollywood shop"
+        faqs={pgtFaqs}
+      />
 
       {/* Authorized Dealer Section */}
       <section className="py-20 bg-gray-50">
