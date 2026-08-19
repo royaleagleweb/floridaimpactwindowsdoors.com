@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { blogPosts } from "@/data/blog";
 import { addBlogInternalLinks } from "@/lib/blogLinks";
+import AuthorBio from "@/components/AuthorBio";
 
 export function generateStaticParams() {
   return blogPosts.map((post) => ({
@@ -81,7 +82,17 @@ export default async function BlogPostPage({
     headline: post.title,
     description: post.excerpt,
     datePublished: post.date,
-    author: { "@type": "Person", name: post.author },
+    author: {
+      "@type": "Person",
+      name: post.author,
+      jobTitle: "Owner",
+      url: "https://floridaimpactwindowsdoors.com/#organization",
+      worksFor: {
+        "@type": "Organization",
+        name: "Florida Impact Windows & Doors",
+        url: "https://floridaimpactwindowsdoors.com",
+      },
+    },
     publisher: {
       "@type": "Organization",
       name: "Florida Impact Windows & Doors",
@@ -184,11 +195,11 @@ export default async function BlogPostPage({
           {/* Author */}
           <div className="flex items-center gap-4">
             <div className="w-12 h-12 rounded-full bg-gradient-to-br from-palm-400 to-ocean-500 flex items-center justify-center">
-              <span className="text-white text-sm font-bold">SW</span>
+              <span className="text-white text-sm font-bold">RB</span>
             </div>
             <div>
               <p className="text-white font-semibold">{post.author}</p>
-              <p className="text-sm text-gray-400">Impact Window Specialists</p>
+              <p className="text-sm text-gray-400">15+ Years Installing Impact Windows in South Florida</p>
             </div>
           </div>
         </div>
@@ -247,6 +258,7 @@ export default async function BlogPostPage({
                 </div>
               </div>
 
+              <AuthorBio />
             </article>
 
             {/* Sidebar */}
