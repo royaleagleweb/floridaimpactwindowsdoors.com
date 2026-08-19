@@ -54,7 +54,7 @@ const benefits = [
   {
     title: "Insurance Savings",
     description:
-      "Qualifying impact windows can reduce your homeowner insurance premiums by up to 45%, often paying for themselves within a few years.",
+      "A current OIR-B1-1802 inspection can unlock wind-mitigation credits once every opening is protected. Your carrier sets the percentage — it is not a guaranteed 45%.",
   },
 ];
 

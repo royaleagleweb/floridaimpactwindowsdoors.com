@@ -178,7 +178,7 @@ export default function DoorTypesPage() {
               <ul className="space-y-4">
                 {[
                   "Category 5 hurricane rated (up to 200 mph winds)",
-                  "Insurance premium discounts up to 45%",
+                  "Wind-mitigation credits after an OIR-B1-1802 inspection (carrier-set, not a guaranteed 45%)",
                   "Energy savings with Low-E glass options",
                   "24/7 security with laminated impact glass",
                   "Noise reduction up to 60%",
@@ -199,7 +199,7 @@ export default function DoorTypesPage() {
               <div className="grid grid-cols-2 gap-6">
                 {[
                   { value: "200 mph", label: "Wind Rating" },
-                  { value: "45%", label: "Insurance Savings" },
+                  { value: "OIR form", label: "Wind-mit paperwork" },
                   { value: "99%", label: "UV Blocked" },
                   { value: "60%", label: "Noise Reduction" },
                 ].map((stat) => (

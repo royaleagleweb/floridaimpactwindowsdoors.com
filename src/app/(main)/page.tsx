@@ -784,9 +784,9 @@ export default function HomePage() {
           <div className="text-center mb-14">
             <span className="inline-block text-sm font-semibold text-palm-400 uppercase tracking-wider mb-3">Service Areas</span>
             <h2 className="text-3xl md:text-4xl font-bold font-display text-white mb-4">
-              Impact Windows &amp; Doors in Fort Lauderdale
+              Impact Windows &amp; Doors from Hollywood
             </h2>
-            <p className="text-gray-400 max-w-2xl mx-auto">Serving Broward and Palm Beach County from our Fort Lauderdale location. HVHZ certified for Miami-Dade and Broward County installations.</p>
+            <p className="text-gray-400 max-w-2xl mx-auto">We install from 3000 Stirling Rd in Hollywood. Miami-Dade and Broward are HVHZ. Palm Beach is a wind-borne debris region — Fort Lauderdale is a service city, not our headquarters.</p>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {[

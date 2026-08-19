@@ -144,7 +144,7 @@ const impactAdvantages = [
     ),
     title: "Insurance Discounts",
     description:
-      "South Florida homeowners with impact windows on all openings save up to 45% on hurricane insurance premiums. For many families, the annual insurance savings alone offset a significant portion of the monthly financing payment for their new windows.",
+      "Opening protection is all-or-nothing on the OIR-B1-1802 (Rev. 04/26) form. Credits apply only after every opening is protected and your carrier prices the file — not a guaranteed 45%.",
   },
 ];
 

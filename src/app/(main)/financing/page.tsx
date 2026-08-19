@@ -102,8 +102,8 @@ const savingsPrograms = [
   {
     title: "Hurricane Insurance Discounts",
     description:
-      "Impact windows can reduce your hurricane insurance premiums by up to 45%. Many South Florida homeowners find that their annual insurance savings partially or fully offset their monthly financing payment, making impact windows essentially free in the long run.",
-    amount: "Up to 45% off premiums",
+      "A current OIR-B1-1802 (Rev. 04/26) wind-mitigation inspection can unlock credits once every opening is protected. The percentage is set by your carrier — we do not quote a guaranteed 45%. Many homeowners still see the credit help offset a monthly payment.",
+    amount: "Carrier-set credits",
   },
   {
     title: "ENERGY STAR Tax Credits",

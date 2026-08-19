@@ -23,7 +23,7 @@ const benefits = [
     icon: "💰",
     title: "Insurance Premium Discounts",
     description:
-      "South Florida homeowners save up to 45% on windstorm insurance premiums by installing impact windows. Our products qualify for all major carrier discount programs.",
+      "A current OIR-B1-1802 inspection can unlock wind-mitigation credits once every opening is protected. The percentage is set by your carrier, not a guaranteed 45%.",
   },
   {
     icon: "⚡",
