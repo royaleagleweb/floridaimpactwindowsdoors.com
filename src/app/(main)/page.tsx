@@ -127,11 +127,10 @@ export default function HomePage() {
       {/* Grant banner */}
       <div className="bg-[#e8930f] text-white text-center py-2.5 px-4">
         <p className="text-sm font-semibold tracking-wide">
-          <span className="hidden sm:inline">My Safe Florida Home Program &mdash; </span>
-          <span className="font-bold">Up to $10,000 Grant</span>
-          <span className="hidden sm:inline"> &mdash; See If You Qualify</span>
-          <Link href="/get-estimate/" className="ml-3 underline underline-offset-2 font-bold hover:text-white/85 transition">
-            See If You Qualify &gt;
+          <Link href="/get-estimate/" className="hover:text-white/85 transition">
+            <span className="hidden sm:inline">My Safe Florida Home Program &mdash; </span>
+            <span className="font-bold">Up to $10,000 Grant</span>
+            <span className="hidden sm:inline"> &mdash; See If You Qualify &gt;</span>
           </Link>
         </p>
       </div>
