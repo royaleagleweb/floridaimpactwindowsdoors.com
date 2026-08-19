@@ -1,12 +1,37 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { faqPageJsonLd } from "@/lib/faqSchema";
+import PageFaqSection from "@/components/PageFaqSection";
 
 export const metadata: Metadata = {
-  title: "Our Installation Process | 6 Easy Steps | Florida Impact Windows & Doors",
+  title: "How Impact Window Installation Works | 6 Steps from Hollywood",
   description:
-    "Learn about the Florida Impact Windows & Doors 6-step impact window and door installation process. From free consultation to final inspection, we handle everything for a smooth, stress-free experience in South Florida.",
+    "How we install impact windows: free consult, measure, product pick, permit, install, inspection. Miami-Dade/Broward NOA path; Palm Beach often FL#. (754) 600-4876.",
   alternates: { canonical: "https://floridaimpactwindowsdoors.com/our-process/" },
 };
+
+const processFaqs = [
+  {
+    question: "How long does impact window installation take?",
+    answer:
+      "Most houses take one to three days on site after the units arrive. Manufacturing is usually four to eight weeks, and the permit often adds two to four weeks depending on the city. See the installation FAQ for the longer version.",
+  },
+  {
+    question: "Do you pull the permit?",
+    answer:
+      "Yes. We prepare the product-approval packet (Miami-Dade NOA in the HVHZ; often an FL# in Palm Beach) and pull the local permit. Unpermitted glass is a problem at resale and on a wind-mitigation form.",
+  },
+  {
+    question: "Can I stay in the house during installation?",
+    answer:
+      "Yes. We protect floors and furniture, work opening by opening, and clean up each day. You can remain home for a typical residential job.",
+  },
+  {
+    question: "What happens after the last window is set?",
+    answer:
+      "We do an internal quality check, schedule the building-department inspection, walk the operation of each unit, and leave the documents you need for warranty registration and a later OIR-B1-1802 inspection.",
+  },
+];
 
 const processSteps = [
   {
@@ -138,8 +163,24 @@ const expectations = [
 ];
 
 export default function OurProcessPage() {
+  const howToSchema = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: "How Florida Impact Windows & Doors installs impact windows",
+    description:
+      "Six-step impact window installation from the Hollywood shop: consultation, measurement, product selection, permitting, installation, and final inspection.",
+    step: processSteps.map((step, index) => ({
+      "@type": "HowToStep",
+      position: index + 1,
+      name: step.title,
+      text: step.description,
+    })),
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageJsonLd(processFaqs)) }} />
       {/* Hero Section */}
       <section className="relative py-20 bg-ocean-950 overflow-hidden">
         <div className="absolute inset-0 bg-grid opacity-40" />
@@ -153,10 +194,10 @@ export default function OurProcessPage() {
               <span className="text-sm text-palm-300 font-medium">Step by Step</span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-display text-white leading-tight mb-6">
-              Our <span className="gradient-text">Installation Process</span>
+              How Does <span className="gradient-text">Impact Window Installation</span> Work?
             </h1>
             <p className="text-lg text-gray-300 max-w-2xl leading-relaxed">
-              From your first call to the final inspection, we make the impact window and door installation process smooth, transparent, and completely hassle-free. Here is exactly what to expect at every step.
+              Six real steps: consult, measure, choose the line, pull the permit, install, inspect. We run them from 3000 Stirling Rd in Hollywood — not a call center and not the factory.
             </p>
           </div>
         </div>
@@ -168,7 +209,7 @@ export default function OurProcessPage() {
           <div className="text-center mb-16">
             <span className="inline-block text-sm font-semibold text-palm-600 uppercase tracking-wider mb-3">The Process</span>
             <h2 className="text-3xl md:text-4xl font-bold font-display text-gray-900 mb-4">
-              6 Steps to a Protected Home
+              What Are the Six Steps from Estimate to Inspection?
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               We have refined our process over 15 years and 5,000+ installations to make your experience seamless and stress-free.
@@ -274,6 +315,11 @@ export default function OurProcessPage() {
           </div>
         </div>
       </section>
+
+      <PageFaqSection
+        heading="Installation questions homeowners ask"
+        faqs={processFaqs}
+      />
 
       {/* CTA */}
       <section className="py-20 bg-gradient-to-br from-palm-600 via-ocean-700 to-ocean-900 relative overflow-hidden">

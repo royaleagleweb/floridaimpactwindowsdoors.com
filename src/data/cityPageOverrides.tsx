@@ -1,6 +1,18 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import type { FaqItem } from "@/lib/faqSchema";
+import {
+  aventura,
+  coralSprings,
+  davie,
+  delrayBeach,
+  fortLauderdale,
+  miami,
+  pembrokePines,
+  plantation,
+  weston,
+  westPalmBeach,
+} from "./cityHubOverrides";
 
 export interface CityPageOverride {
   title: string;
@@ -345,6 +357,16 @@ export const cityPageOverrides: Record<string, CityPageOverride> = {
   hollywood,
   "boca-raton": bocaRaton,
   miramar,
+  "fort-lauderdale": fortLauderdale,
+  miami,
+  weston,
+  "pembroke-pines": pembrokePines,
+  "coral-springs": coralSprings,
+  plantation,
+  davie,
+  aventura,
+  "delray-beach": delrayBeach,
+  "west-palm-beach": westPalmBeach,
 };
 
 export function getCityPageOverride(slug: string): CityPageOverride | undefined {

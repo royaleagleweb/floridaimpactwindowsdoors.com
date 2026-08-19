@@ -19,6 +19,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title: `Window Replacement in ${city.name}, FL | Florida Impact Windows & Doors`,
     description: `Professional window replacement services in ${city.name}, Florida. Upgrade aging windows to modern impact-rated glass. Energy savings, security, and storm protection. Free estimates. Call (754) 600-4876.`,
     alternates: { canonical: `https://floridaimpactwindowsdoors.com/areas/${slug}/window-replacement/` },
+    robots: { index: false, follow: false },
   };
 }
 

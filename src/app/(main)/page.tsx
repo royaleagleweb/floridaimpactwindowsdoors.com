@@ -6,7 +6,7 @@ import StickyMobileCTA from "@/components/StickyMobileCTA";
 import HowItWorks from "@/components/HowItWorks";
 
 export const metadata: Metadata = {
-  title: "Impact Windows & Doors Fort Lauderdale | #1 South Florida Installer",
+  title: "Impact Windows & Doors Hollywood | Serving South Florida",
   description:
     "Premium impact windows & doors at affordable prices. Serving Broward & Palm Beach County. A+ BBB rating, 5-star reviews. HVHZ experts. Call (754) 600-4876.",
   alternates: { canonical: "https://floridaimpactwindowsdoors.com/" },
@@ -55,7 +55,7 @@ export default function HomePage() {
   const homeSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "Florida Impact Windows & Doors - South Florida's #1 Impact Window Installer",
+    name: "Impact Windows & Doors Hollywood | Serving South Florida",
     description: "South Florida's premier impact window and door installation company. Hurricane-rated protection for homes in Miami-Dade, Broward & Palm Beach County.",
     url: "https://floridaimpactwindowsdoors.com/",
     isPartOf: { "@type": "WebSite", name: "Florida Impact Windows & Doors", url: "https://floridaimpactwindowsdoors.com" },
@@ -86,7 +86,7 @@ export default function HomePage() {
         name: "Can impact windows get you a discount on your insurance?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes. Under Florida law (Statute §627.0629), all residential property insurance companies are required to offer discounts or credits to homeowners who harden their homes against hurricane damage, including through impact-resistant windows and doors.",
+          text: "Yes — after a licensed inspector documents every glazed opening on form OIR-B1-1802. Florida Statute §627.0629 requires carriers to offer wind-mitigation credits. Opening protection is all-or-nothing, and new inspections on or after April 1, 2026 use the revised form. The credit is not a fixed percentage for every house.",
         },
       },
       {
@@ -160,7 +160,7 @@ export default function HomePage() {
                 &amp; Doors At Affordable Prices
               </h1>
               <p className="text-lg text-gray-300 mb-4 max-w-xl leading-relaxed">
-                Protect your home with high-quality impact windows installed by HVHZ experts. Serving Broward &amp; Palm Beach County from Fort Lauderdale.
+                Protect your home with high-quality impact windows installed by HVHZ experts. We measure, permit, and install from 3000 Stirling Rd in Hollywood — serving Miami-Dade, Broward, and Palm Beach.
               </p>
               <p className="text-base text-gray-400 mb-8 max-w-xl leading-relaxed">
                 Every project installed by our own team, led by one of our owners &mdash; no shortcuts. Florida&apos;s most trusted brands for impact windows and doors.
@@ -201,6 +201,37 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold font-display text-gray-900 mb-6">
+            Who Installs the Windows, and Which County Rules Apply?
+          </h2>
+          <div className="space-y-4 text-gray-600 leading-relaxed text-lg">
+            <p>
+              Florida Impact Windows &amp; Doors is the installer at 3000 Stirling Rd, Hollywood, FL 33021 — (754) 600-4876. We are not PGT, CGI, ES Windows, or CWS. Those factories make the units; we measure, permit, and set them in Miami-Dade, Broward, and Palm Beach.
+            </p>
+            <p>
+              Miami-Dade and Broward are the High-Velocity Hurricane Zone. Replacement glass there generally needs a current Miami-Dade NOA. Palm Beach is a wind-borne debris region, not HVHZ — a Florida Product Approval (FL#) is often accepted. Fort Lauderdale is a service city in that HVHZ band, not our headquarters.
+            </p>
+            <p>
+              Insurance credits need form OIR-B1-1802 after every glazed opening is protected. My Safe Florida Home is a separate state grant with a program inspection first — do not start work before written approval. See{" "}
+              <Link href="/faq/do-impact-windows-lower-insurance-in-florida/" className="text-palm-600 font-semibold underline">
+                insurance FAQ
+              </Link>
+              ,{" "}
+              <Link href="/financing/" className="text-palm-600 font-semibold underline">
+                financing
+              </Link>
+              , and{" "}
+              <Link href="/brands/pgt/" className="text-palm-600 font-semibold underline">
+                PGT
+              </Link>
+              .
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Trust Bar */}
       <section className="bg-ocean-900 border-b border-white/5">
         <div className="max-w-7xl mx-auto px-4 py-6">
@@ -226,7 +257,7 @@ export default function HomePage() {
           <div className="text-center mb-14">
             <span className="inline-block text-sm font-semibold text-palm-400 uppercase tracking-wider mb-3">Why Impact Windows?</span>
             <h2 className="text-3xl md:text-4xl font-bold font-display text-white">
-              Benefits Of Impact Windows &amp; Doors
+              What Do Impact Windows Actually Do?
             </h2>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -753,9 +784,9 @@ export default function HomePage() {
           <div className="text-center mb-14">
             <span className="inline-block text-sm font-semibold text-palm-400 uppercase tracking-wider mb-3">Service Areas</span>
             <h2 className="text-3xl md:text-4xl font-bold font-display text-white mb-4">
-              Impact Windows &amp; Doors in Fort Lauderdale
+              Impact Windows &amp; Doors from Hollywood
             </h2>
-            <p className="text-gray-400 max-w-2xl mx-auto">Serving Broward and Palm Beach County from our Fort Lauderdale location. HVHZ certified for Miami-Dade and Broward County installations.</p>
+            <p className="text-gray-400 max-w-2xl mx-auto">We install from 3000 Stirling Rd in Hollywood. Miami-Dade and Broward are HVHZ. Palm Beach is a wind-borne debris region — Fort Lauderdale is a service city, not our headquarters.</p>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {[

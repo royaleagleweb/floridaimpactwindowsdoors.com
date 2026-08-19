@@ -78,16 +78,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: now,
   }));
 
-  /* ── City × Service combo pages ─────────────────────── */
-  const cityServices = ["impact-windows", "impact-doors", "hurricane-shutters", "window-replacement", "door-replacement"];
-  const cityServicePages: MetadataRoute.Sitemap = cities.flatMap((c) =>
-    cityServices.map((s) => ({
-      url: `${BASE}/areas/${c.slug}/${s}/`,
-      changeFrequency: "monthly" as const,
-      priority: 0.7,
-      lastModified: now,
-    }))
-  );
+  /* City × service combo URLs stay generated for generateStaticParams
+     but are noindexed and omitted here so they do not compete with city hubs. */
 
   /* ── Blog posts ─────────────────────────────────────── */
   const blogPages: MetadataRoute.Sitemap = blogPosts.map((p) => ({
@@ -112,7 +104,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...doorTypes,
     ...brandPages,
     ...cityPages,
-    ...cityServicePages,
     ...blogPages,
     ...faqPages,
   ];

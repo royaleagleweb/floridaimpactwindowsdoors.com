@@ -1,11 +1,12 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import PaymentCalculator from "@/components/PaymentCalculator";
+import { faqPageJsonLd } from "@/lib/faqSchema";
 
 export const metadata: Metadata = {
-  title: "Impact Windows Financing Fort Lauderdale | $0 Down, 0% Interest & PACE",
+  title: "Impact Window Financing | $0 Down, PACE & MSFH | Hollywood",
   description:
-    "Flexible financing for impact windows in South Florida. 0% interest options, PACE program, and payments from $89/month.",
+    "Financing for impact windows from our Hollywood shop: promotional 0% plans, longer terms, and PACE where it fits. My Safe Florida Home is a separate state grant with its own rules. (754) 600-4876.",
   alternates: { canonical: "/financing/" },
 };
 
@@ -101,8 +102,8 @@ const savingsPrograms = [
   {
     title: "Hurricane Insurance Discounts",
     description:
-      "Impact windows can reduce your hurricane insurance premiums by up to 45%. Many South Florida homeowners find that their annual insurance savings partially or fully offset their monthly financing payment, making impact windows essentially free in the long run.",
-    amount: "Up to 45% off premiums",
+      "A current OIR-B1-1802 (Rev. 04/26) wind-mitigation inspection can unlock credits once every opening is protected. The percentage is set by your carrier — we do not quote a guaranteed 45%. Many homeowners still see the credit help offset a monthly payment.",
+    amount: "Carrier-set credits",
   },
   {
     title: "ENERGY STAR Tax Credits",
@@ -154,13 +155,19 @@ const faqs = [
   {
     question: "Can I combine financing with FPL rebates and insurance discounts?",
     answer:
-      "Yes. Our financing options can be combined with all available rebates, tax credits, and insurance discounts. Many homeowners find that when they factor in insurance savings, FPL rebates, and energy cost reductions, their net monthly cost for impact windows is very manageable.",
+      "Yes. Lender plans can sit next to utility rebates and a later wind-mitigation credit. Insurance savings are not a guaranteed dollar amount — they require a completed OIR-B1-1802 after every glazed opening is protected. See our insurance FAQ for the form rules.",
+  },
+  {
+    question: "Is My Safe Florida Home the same as financing?",
+    answer:
+      "No. My Safe Florida Home is a Florida Department of Financial Services grant (up to $10,000 for qualifying homesteaded homes) after a program inspection. Typical rules include a site-built home permitted before January 1, 2008, and — except for low-income applicants — an insured dwelling value at or below $700,000. Starting work before written grant approval can disqualify the project. Check MySafeFLHome.com for the current cycle.",
   },
 ];
 
 export default function FinancingPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageJsonLd(faqs)) }} />
       {/* Hero Section */}
       <section className="relative py-20 bg-ocean-950 overflow-hidden">
         <div className="absolute inset-0 bg-grid opacity-40" />
@@ -174,10 +181,10 @@ export default function FinancingPage() {
               <span className="text-sm text-sun-300 font-medium">$0 Down Payment Options</span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-display text-white leading-tight mb-6">
-              Affordable <span className="gradient-text">Financing Options</span>
+              How Do You <span className="gradient-text">Finance Impact Windows</span>?
             </h1>
             <p className="text-lg text-gray-300 max-w-2xl leading-relaxed">
-              Hurricane protection should not be out of reach. Florida Impact Windows & Doors offers $0 down financing, 0% interest plans, PACE financing, FPL rebates, and insurance discount assistance so you can protect your home now and pay over time.
+              Most jobs use a lender plan (promotional 0% or a longer fixed term) or, where it fits, PACE on the tax bill. My Safe Florida Home is not financing — it is a state grant with a program inspection first, homestead rules, and a written approval before any work starts. We walk both paths from Hollywood.
             </p>
           </div>
         </div>
@@ -189,7 +196,7 @@ export default function FinancingPage() {
           <div className="text-center mb-16">
             <span className="inline-block text-sm font-semibold text-palm-600 uppercase tracking-wider mb-3">Financing Plans</span>
             <h2 className="text-3xl md:text-4xl font-bold font-display text-gray-900 mb-4">
-              Choose the Plan That Fits Your Budget
+              What Financing Plans Are Available?
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               We offer multiple financing paths so every South Florida homeowner can afford impact window and door protection.
@@ -377,7 +384,7 @@ export default function FinancingPage() {
             Protect Your Home Today, Pay Over Time
           </h2>
           <p className="text-lg text-white/80 mb-8 max-w-2xl mx-auto">
-            Do not wait for the next hurricane to wish you had impact windows. With $0 down financing, FPL rebates, and insurance discounts, there is no reason to delay. Get your free estimate today.
+            Compare plans, then <Link href="/faq/financing-options-for-impact-windows/" className="underline font-semibold">read the financing FAQ</Link> or start a <Link href="/get-estimate/" className="underline font-semibold">free estimate</Link>. Brand pages: <Link href="/brands/pgt/" className="underline font-semibold">PGT</Link>.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link

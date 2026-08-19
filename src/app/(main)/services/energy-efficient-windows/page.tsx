@@ -4,9 +4,9 @@ import type { Metadata } from "next";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "Energy Efficient Impact Windows Fort Lauderdale | Low-E Glass & FPL Savings",
+  title: "Energy Efficient Impact Windows | Low-E Glass | Hollywood",
   description:
-    "Save up to 30% on energy bills with impact windows in South Florida. Low-E coatings, argon gas fill. Hurricane rated. Free estimates.",
+    "Low-E impact windows that cut solar heat and still meet HVHZ or Palm Beach product approval. Installed from Hollywood. Free estimates. (754) 600-4876.",
   alternates: { canonical: "/services/energy-efficient-windows/" },
 };
 
@@ -105,10 +105,10 @@ export default function EnergyEfficientWindowsPage() {
               <span className="text-sm text-palm-300 font-medium">Cut Energy Bills Up to 30%</span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-display text-white leading-tight mb-6">
-              <span className="gradient-text">Energy Efficient</span> Impact Windows for South Florida
+              <span className="gradient-text">Low-E Impact Windows</span> for South Florida Heat
             </h1>
             <p className="text-lg text-gray-300 mb-8 max-w-xl leading-relaxed">
-              Low-E glass and argon gas technology that slashes your energy bills while providing Category 5 hurricane protection. Engineered specifically for the South Florida climate in Miami-Dade, Broward, and Palm Beach County.
+              Low-E coatings reflect more solar heat than clear laminated glass, which is why FPL bills drop on many whole-house jobs. The unit still has to carry the right NOA or FL# for the county. We spec the glass package from Hollywood — we do not sell a &quot;energy only&quot; window that fails inspection.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link

@@ -2,15 +2,15 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Customer Reviews & Testimonials | Florida Impact Windows & Doors",
+  title: "Customer Reviews | Florida Impact Windows & Doors",
   description:
-    "Read real reviews from South Florida homeowners who chose Florida Impact Windows & Doors for their impact windows and doors. 5-star rated on Google with 2,500+ happy customers.",
+    "Read homeowner comments about Florida Impact Windows & Doors. Find us on Yelp and BBB. We do not publish a fake review count. Hollywood shop. (754) 600-4876.",
   alternates: { canonical: "https://floridaimpactwindowsdoors.com/reviews/" },
 };
 
 const reviews = [
   {
-    name: "Verified Customer",
+    name: "South Florida homeowner",
     location: "Coral Gables, FL",
     date: "November 2024",
     rating: 5,
@@ -18,7 +18,7 @@ const reviews = [
     text: "Florida Impact Windows & Doors transformed our 1960s home with beautiful PGT WinGuard impact windows. From the first estimate to the final walk-through, every interaction was professional and transparent. The installation team arrived on time every day, protected our furniture and floors, and cleaned up completely when they were done. Our energy bills dropped noticeably within the first month, and the noise reduction is remarkable. We used to hear every car passing on the street and now the house is wonderfully quiet. Could not be happier with our decision.",
   },
   {
-    name: "Verified Customer",
+    name: "South Florida homeowner",
     location: "Fort Lauderdale, FL",
     date: "October 2024",
     rating: 5,
@@ -26,7 +26,7 @@ const reviews = [
     text: "After Hurricane Irma showed us the vulnerability of our old jalousie windows, we knew it was time to upgrade. We got quotes from five different companies and Florida Impact Windows & Doors stood out for their honesty and product knowledge. David walked us through every option without pressure and helped us choose CGI windows that fit our budget. The installation crew was outstanding and Miguel personally inspected everything. Our home feels completely different now. Secure, quiet, and cool even on the hottest days.",
   },
   {
-    name: "Verified Customer",
+    name: "South Florida homeowner",
     location: "Boca Raton, FL",
     date: "September 2024",
     rating: 5,
@@ -34,7 +34,7 @@ const reviews = [
     text: "We compared five different companies and Florida Impact Windows & Doors offered the best combination of quality products and competitive pricing. We chose PGT EnergyVue vinyl impact windows for our whole home and the results exceeded our expectations. The vinyl frames look sharp, the Low-E glass keeps our house cooler than ever, and we have already seen a significant reduction in our FPL bill. The permit process was handled entirely by Florida Impact and we did not have to deal with a single piece of paperwork. Highly recommend.",
   },
   {
-    name: "Verified Customer",
+    name: "South Florida homeowner",
     location: "Miami Beach, FL",
     date: "August 2024",
     rating: 5,
@@ -42,7 +42,7 @@ const reviews = [
     text: "Living directly on the beach, we needed the strongest protection available for our condo. Florida Impact Windows & Doors recommended CGI Sentinel windows which are designed for high-rise coastal applications. The coordination with our condo association was handled smoothly and the installation was completed within the scheduled timeframe. The difference in noise reduction alone was worth the investment. We no longer hear the wind howling during storms and the salt spray stays outside where it belongs.",
   },
   {
-    name: "Verified Customer",
+    name: "South Florida homeowner",
     location: "Weston, FL",
     date: "July 2024",
     rating: 5,
@@ -50,7 +50,7 @@ const reviews = [
     text: "As first-time homebuyers on a tight budget, we were worried we could not afford impact windows for our whole house. Florida Impact Windows & Doors introduced us to ES Windows products that gave us genuine hurricane protection at a price we could manage. They also helped us get approved for 0% financing which made the monthly payments very comfortable. The installation team was courteous, efficient, and thorough. We feel so much safer knowing our home is protected and we did not have to break the bank to get there.",
   },
   {
-    name: "Verified Customer",
+    name: "South Florida homeowner",
     location: "Aventura, FL",
     date: "June 2024",
     rating: 5,
@@ -58,7 +58,7 @@ const reviews = [
     text: "We worked with an architect to design a modern home with floor-to-ceiling glass and we needed impact products that could handle the large openings. Florida Impact Windows & Doors brought Custom Window Systems to the table and their multi-slide door system was exactly what we needed. The installation was complex but the Florida Impact crew handled it expertly. The finished product is stunning. We have a twelve-foot-wide opening that slides completely open to our pool deck. Modern design with Category 5 protection. Incredible.",
   },
   {
-    name: "Verified Customer",
+    name: "South Florida homeowner",
     location: "Coconut Grove, FL",
     date: "May 2024",
     rating: 5,
@@ -66,7 +66,7 @@ const reviews = [
     text: "Our 1935 Coconut Grove home needed impact windows that would pass the historic preservation board requirements. Florida Impact Windows & Doors worked patiently with us and the board to specify PGT WinGuard windows with profiles that matched the original window proportions. The result is beautiful. You cannot tell the windows are new unless you look closely, but they provide full hurricane protection and incredible energy efficiency. The craftsmanship of the installation was impeccable.",
   },
   {
-    name: "Verified Customer",
+    name: "South Florida homeowner",
     location: "Doral, FL",
     date: "April 2024",
     rating: 5,
@@ -74,7 +74,7 @@ const reviews = [
     text: "We have referred Florida Impact Windows & Doors to three of our neighbors already and all of them have been just as satisfied as we are. Carlos the owner personally came to our first consultation and you could tell he genuinely cares about every project. The PGT WinGuard windows they installed are top quality, the installation was clean and fast, and the price was thousands less than the next closest quote. Our insurance company gave us a 35% discount on our hurricane premium as soon as we sent them the completion paperwork.",
   },
   {
-    name: "Verified Customer",
+    name: "South Florida homeowner",
     location: "Palm Beach Gardens, FL",
     date: "March 2024",
     rating: 5,
@@ -82,7 +82,7 @@ const reviews = [
     text: "What impressed me most about Florida Impact Windows & Doors was their follow-through. They said the project would take three days and it took exactly three days. They said the permit would be handled and it was handled without a single call from me. They said the windows would reduce noise and our house went from hearing every landscaper in the neighborhood to absolute peace. CGI Estate windows have a premium look and feel that matches the quality of our home. Outstanding experience from start to finish.",
   },
   {
-    name: "Verified Customer",
+    name: "South Florida homeowner",
     location: "Pembroke Pines, FL",
     date: "February 2024",
     rating: 5,
@@ -90,7 +90,7 @@ const reviews = [
     text: "I am a single mom on a budget and Florida Impact Windows & Doors treated me with the same respect and attention they would give to a million-dollar project. David spent over an hour at my house explaining every option and never once pressured me. They recommended ES Windows which fit my budget perfectly and helped me secure financing with payments I could handle. The installers were polite, wore shoe covers in my house, and left everything spotless. I finally feel safe during hurricane season.",
   },
   {
-    name: "Verified Customer",
+    name: "South Florida homeowner",
     location: "Lighthouse Point, FL",
     date: "January 2024",
     rating: 5,
@@ -98,7 +98,7 @@ const reviews = [
     text: "Our waterfront home in Lighthouse Point takes a beating from salt air and we needed windows that could handle the coastal environment without corroding. Florida Impact Windows & Doors recommended CGI Sentinel windows with marine-grade aluminum and the results have been outstanding. Two years in and the finish still looks brand new despite constant salt exposure. The installation team dealt with some tricky framing situations in our older home and handled every challenge professionally. Worth every penny.",
   },
   {
-    name: "Verified Customer",
+    name: "South Florida homeowner",
     location: "Hialeah, FL",
     date: "December 2023",
     rating: 5,
@@ -108,35 +108,47 @@ const reviews = [
 ];
 
 const stats = [
-  { value: "5.0", label: "Google Rating" },
-  { value: "2,500+", label: "Happy Customers" },
-  { value: "100%", label: "Would Recommend" },
-  { value: "500+", label: "5-Star Reviews" },
+  { value: "A+", label: "BBB Rating" },
+  { value: "111", label: "BuildZoom Score" },
+  { value: "Yelp", label: "Public Reviews" },
+  { value: "Hollywood", label: "Shop on Stirling Rd" },
+];
+
+const reviewFaqs = [
+  {
+    question: "Where can I read independent reviews?",
+    answer:
+      "Read our Yelp listing and BBB profile (both linked in the site footer and organization schema). We do not publish a made-up aggregate star count or a 2,500-review total on this page.",
+  },
+  {
+    question: "Are the comments on this page named customers?",
+    answer:
+      "The quotes below are labeled as customer comments, not as a Google aggregate. We do not invent last names or star totals to dress up JSON-LD.",
+  },
+  {
+    question: "How do I get an estimate after reading reviews?",
+    answer:
+      "Request a free in-home estimate or call (754) 600-4876. The shop is at 3000 Stirling Rd, Hollywood, FL 33021.",
+  },
 ];
 
 export default function ReviewsPage() {
-  const reviewSchema = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    name: "Florida Impact Windows & Doors",
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "5.0",
-      reviewCount: "500",
-      bestRating: "5",
-      worstRating: "1",
-    },
-    review: reviews.slice(0, 5).map((r) => ({
-      "@type": "Review",
-      reviewRating: { "@type": "Rating", ratingValue: String(r.rating), bestRating: "5" },
-      author: { "@type": "Person", name: r.name },
-      reviewBody: r.text,
-    })),
-  };
-
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: reviewFaqs.map((faq) => ({
+              "@type": "Question",
+              name: faq.question,
+              acceptedAnswer: { "@type": "Answer", text: faq.answer },
+            })),
+          }),
+        }}
+      />
       {/* Hero Section */}
       <section className="relative py-20 bg-ocean-950 overflow-hidden">
         <div className="absolute inset-0 bg-grid opacity-40" />
@@ -147,13 +159,13 @@ export default function ReviewsPage() {
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/10 rounded-full px-4 py-1.5 mb-6">
               <span className="w-2 h-2 bg-sun-400 rounded-full animate-pulse" />
-              <span className="text-sm text-sun-300 font-medium">5.0 Google Rating</span>
+              <span className="text-sm text-sun-300 font-medium">A+ BBB · Hollywood shop</span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-display text-white leading-tight mb-6">
               Customer <span className="gradient-text">Reviews</span>
             </h1>
             <p className="text-lg text-gray-300 max-w-2xl leading-relaxed">
-              Do not just take our word for it. Hear from the South Florida homeowners who trust Florida Impact Windows & Doors for their impact window and door installations. Real stories from real customers.
+              Homeowner comments about jobs we installed from Hollywood. For third-party listings, use Yelp and BBB — we do not invent a 2,500-review total.
             </p>
           </div>
         </div>
@@ -202,6 +214,17 @@ export default function ReviewsPage() {
         </div>
       </section>
 
+      <section className="py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4 space-y-6">
+          {reviewFaqs.map((faq) => (
+            <div key={faq.question}>
+              <h2 className="text-xl font-bold font-display text-gray-900 mb-2">{faq.question}</h2>
+              <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-20 bg-gradient-to-br from-palm-600 via-ocean-700 to-ocean-900 relative overflow-hidden">
         <div className="absolute inset-0 bg-grid opacity-20" />
@@ -210,7 +233,7 @@ export default function ReviewsPage() {
             Join Our Growing List of Happy Customers
           </h2>
           <p className="text-lg text-white/80 mb-8 max-w-2xl mx-auto">
-            Experience the Florida Impact Windows & Doors difference for yourself. Schedule your free in-home estimate and see why thousands of South Florida homeowners rate us 5 stars.
+            Schedule a free in-home estimate from 3000 Stirling Rd, Hollywood. Call (754) 600-4876.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link

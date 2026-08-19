@@ -21,6 +21,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     alternates: {
       canonical: `https://floridaimpactwindowsdoors.com/areas/${slug}/impact-windows/`,
     },
+    robots: { index: false, follow: false },
   };
 }
 

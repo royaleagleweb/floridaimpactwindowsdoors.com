@@ -4,9 +4,9 @@ import type { Metadata } from "next";
 import RelatedWindowTypes from "@/components/RelatedWindowTypes";
 
 export const metadata: Metadata = {
-  title: "Casement Impact Windows | Florida Impact Windows & Doors",
+  title: "Casement Impact Windows | Tightest Seal, Crank Operation",
   description:
-    "Casement impact windows with crank-operated, outward-swinging design for maximum airflow and unobstructed views. Hurricane-rated protection for South Florida homes. Free estimates.",
+    "Casement impact windows crank outward and seal tighter than a slider. Common on Boca club homes and newer elevations. Installed from Hollywood. (754) 600-4876.",
   alternates: {
     canonical: "https://floridaimpactwindowsdoors.com/services/window-types/casement/",
   },

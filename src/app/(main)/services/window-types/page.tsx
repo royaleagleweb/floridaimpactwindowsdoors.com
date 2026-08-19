@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Impact Window Types | Florida Impact Windows & Doors",
   description:
-    "Explore all impact window styles available from Florida Impact Windows & Doors: single hung, double hung, casement, awning, picture, sliding, bay, bow, and hopper. Hurricane-rated options for every South Florida home.",
+    "Single-hung, casement, sliding, picture, bay, and more — impact window styles we install from Hollywood. HVHZ/NOA in Miami-Dade and Broward. Free estimates. (754) 600-4876.",
   alternates: { canonical: "https://floridaimpactwindowsdoors.com/services/window-types/" },
 };
 
@@ -93,7 +93,7 @@ export default function WindowTypesPage() {
             <span className="gradient-text">Every Home</span>
           </h1>
           <p className="text-lg text-gray-300 max-w-3xl mx-auto mb-10 leading-relaxed">
-            From traditional single hung windows to dramatic bay and bow configurations, Florida Impact Windows & Doors offers every impact window style to match your South Florida home&apos;s architecture and your personal taste. All styles are available with hurricane-rated impact glass.
+            Style is the sash. The stamp is the approval. A single-hung and a casement can both be impact-rated; the NOA or FL# has to match the opening and the county. We install the common South Florida styles from Hollywood.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link

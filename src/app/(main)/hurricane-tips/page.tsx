@@ -5,24 +5,7 @@ import HurricaneChecklist from "@/components/HurricaneChecklist";
 export const metadata: Metadata = {
   title: "Hurricane Preparedness Tips South Florida | Protect Your Home Guide",
   description:
-    "Complete hurricane preparedness guide for South Florida homeowners. Learn how impact windows and doors protect your home, plus essential tips before, during, and after a storm. Fort Lauderdale, Broward & Palm Beach County. Call (754) 600-4876.",
-  keywords: [
-    "hurricane preparedness tips south florida",
-    "hurricane preparedness guide",
-    "hurricane preparation checklist",
-    "south florida hurricane tips",
-    "protect home from hurricane",
-    "impact windows hurricane protection",
-    "hurricane season florida",
-    "fort lauderdale hurricane preparedness",
-    "broward county hurricane tips",
-    "palm beach county hurricane guide",
-    "hurricane shutters vs impact windows",
-    "hurricane insurance discounts florida",
-    "hurricane emergency kit",
-    "hurricane evacuation plan south florida",
-    "HVHZ hurricane protection",
-  ],
+    "Hurricane preparedness for South Florida homes: impact windows vs shutters, OIR-B1-1802 wind-mitigation paperwork, and what to do before the cone. Installed from Hollywood. Call (754) 600-4876.",
   alternates: { canonical: "/hurricane-tips/" },
 };
 
@@ -161,7 +144,7 @@ const impactAdvantages = [
     ),
     title: "Insurance Discounts",
     description:
-      "South Florida homeowners with impact windows on all openings save up to 45% on hurricane insurance premiums. For many families, the annual insurance savings alone offset a significant portion of the monthly financing payment for their new windows.",
+      "Opening protection is all-or-nothing on the OIR-B1-1802 (Rev. 04/26) form. Credits apply only after every opening is protected and your carrier prices the file — not a guaranteed 45%.",
   },
 ];
 

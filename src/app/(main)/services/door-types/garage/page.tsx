@@ -4,9 +4,9 @@ import type { Metadata } from "next";
 import RelatedDoorTypes from "@/components/RelatedDoorTypes";
 
 export const metadata: Metadata = {
-  title: "Impact Garage Doors | Florida Impact Windows & Doors",
+  title: "Impact Garage Doors | The Opening Inspectors Always Check",
   description:
-    "Hurricane-rated impact garage doors for South Florida homes. Wind-rated insulated garage doors that protect vehicles and belongings in Miami-Dade, Broward & Palm Beach County.",
+    "A garage door is an opening. Unprotected, it can fail both the house and the wind-mitigation credit. Impact or reinforced garage doors installed from Hollywood. (754) 600-4876.",
   alternates: {
     canonical: "https://floridaimpactwindowsdoors.com/services/door-types/garage/",
   },

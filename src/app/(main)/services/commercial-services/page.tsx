@@ -4,9 +4,9 @@ import type { Metadata } from "next";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "Commercial Impact Windows & Doors in South Florida | Storefronts & Buildings",
+  title: "Commercial Impact Windows & Storefronts | South Florida",
   description:
-    "Commercial impact window and door solutions for South Florida businesses. Storefronts, office buildings, HOA communities & multi-family properties in Miami-Dade, Broward & Palm Beach County.",
+    "Commercial impact windows and doors for storefronts, offices, and multi-family buildings. HVHZ/NOA in Miami-Dade and Broward. Installed from Hollywood. (754) 600-4876.",
   alternates: { canonical: "https://floridaimpactwindowsdoors.com/services/commercial-services/" },
 };
 
@@ -131,7 +131,7 @@ export default function CommercialServicesPage() {
                 <span className="gradient-text">Commercial</span> Impact Windows & Doors
               </h1>
               <p className="text-lg text-gray-300 mb-8 max-w-xl leading-relaxed">
-                Impact window and door solutions for South Florida businesses, commercial buildings, storefronts, and multi-family residential properties. Full-service from engineering through installation across Miami-Dade, Broward, and Palm Beach County.
+                Commercial openings are larger, and the permit packet is heavier. Storefronts, offices, and multi-family buildings in Miami-Dade and Broward still need HVHZ-approved assemblies. We install from Hollywood and will not treat a storefront like a bedroom single-hung.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link

@@ -5,9 +5,9 @@ import ServiceAreaLinks from "@/components/ServiceAreaLinks";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "Hurricane Shutters Fort Lauderdale | Accordion & Roll-Down Shutter Installation",
+  title: "Hurricane Shutters | Accordion & Roll-Down | Hollywood Installer",
   description:
-    "Hurricane shutter installation in Fort Lauderdale & South Florida. Accordion, roll-down, Bahama & storm panels. Free estimates.",
+    "Hurricane shutters when glass is not the plan: accordion, roll-down, and panels. Code-legal opening protection in HVHZ and Palm Beach. Installed from Hollywood. (754) 600-4876.",
   alternates: { canonical: "/services/hurricane-shutters/" },
 };
 
@@ -125,10 +125,10 @@ export default function HurricaneShuttersPage() {
               <span className="text-sm text-sun-300 font-medium">Accordion, Roll-Down & Panel Shutters</span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-display text-white leading-tight mb-6">
-              Professional <span className="gradient-text">Hurricane Shutters</span> for South Florida
+              <span className="gradient-text">Hurricane Shutters</span> When Glass Is Not the Job
             </h1>
             <p className="text-lg text-gray-300 mb-8 max-w-xl leading-relaxed">
-              Affordable, reliable hurricane shutter installation throughout Miami-Dade, Broward, and Palm Beach County. Accordion, roll-down, Bahama, colonial, and storm panel options to protect every opening on your property.
+              Approved shutters are legal opening protection in Florida if you actually close them. They do not cut daily noise or FPL heat the way laminated glass does, and they do not help if they stay in the garage. We install accordion, roll-down, and panels from Hollywood — or we replace those openings with impact windows instead.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
