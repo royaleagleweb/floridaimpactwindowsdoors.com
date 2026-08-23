@@ -1,20 +1,18 @@
 export default function HeroLeadForm() {
   return (
-    <div className="bg-white/5 backdrop-blur-xl rounded-3xl p-8 shadow-2xl shadow-black/40 border border-white/10 max-w-md w-full">
-      <div className="text-center mb-6">
-        <div className="inline-flex items-center gap-2 bg-palm-500/10 text-palm-400 text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-full mb-3">
-          <span className="w-2 h-2 bg-palm-400 rounded-full animate-pulse" />
-          Free &mdash; No Obligation
-        </div>
-        <h2 className="text-2xl font-bold text-white font-display">
+    <div className="bg-[#0d1b33]/95 backdrop-blur-sm rounded-[1.5rem] p-8 md:p-9 shadow-2xl shadow-black/35 max-w-md w-full ring-1 ring-white/10">
+      <div className="mb-7">
+        <h2 className="text-[1.65rem] font-bold text-white font-display tracking-tight">
           Get Your Free Estimate
         </h2>
-        <p className="text-sm text-gray-500 mt-1">Response within 2 hours</p>
+        <p className="text-sm text-white/70 mt-2">
+          Response within 2 hours
+        </p>
       </div>
       <form
         action="https://formsubmit.co/roy@royaleagleweb.com"
         method="POST"
-        className="space-y-4"
+        className="space-y-3.5"
       >
         <input type="hidden" name="_subject" value="New Lead from Homepage Quick Form" />
         <input type="hidden" name="_captcha" value="false" />
@@ -22,59 +20,65 @@ export default function HeroLeadForm() {
         <input type="hidden" name="_template" value="box" />
         <input type="hidden" name="_autoresponse" value="Thank you for reaching out to Florida Impact Windows & Doors! We've received your request and a member of our team will contact you within 24 hours to discuss your project. If you need immediate assistance, please call us at (754) 600-4876. We look forward to helping protect your home! — The Florida Impact Windows & Doors Team" />
         <div>
+          <label htmlFor="hero-name" className="sr-only">
+            Name
+          </label>
           <input
+            id="hero-name"
             type="text"
             name="name"
-            placeholder="Your Name"
+            placeholder="Name"
             required
-            className="w-full px-4 py-3.5 rounded-xl border border-white/10 bg-white/5 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-palm-500 focus:border-transparent transition text-sm"
+            autoComplete="name"
+            className="w-full px-4 py-3.5 rounded-xl border-0 bg-white text-[#0d1b33] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#e8930f] transition text-[15px]"
           />
         </div>
         <div>
+          <label htmlFor="hero-phone" className="sr-only">
+            Phone
+          </label>
           <input
+            id="hero-phone"
             type="tel"
             name="phone"
-            placeholder="Phone Number"
+            placeholder="Phone"
             required
-            className="w-full px-4 py-3.5 rounded-xl border border-white/10 bg-white/5 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-palm-500 focus:border-transparent transition text-sm"
+            autoComplete="tel"
+            className="w-full px-4 py-3.5 rounded-xl border-0 bg-white text-[#0d1b33] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#e8930f] transition text-[15px]"
           />
         </div>
         <div>
+          <label htmlFor="hero-service" className="sr-only">
+            Service Needed
+          </label>
           <select
+            id="hero-service"
             name="service"
-            className="w-full px-4 py-3.5 rounded-xl border border-white/10 bg-white/5 text-white focus:outline-none focus:ring-2 focus:ring-palm-500 focus:border-transparent transition text-sm appearance-none"
+            className="w-full px-4 py-3.5 rounded-xl border-0 bg-white text-[#0d1b33] focus:outline-none focus:ring-2 focus:ring-[#e8930f] transition text-[15px] appearance-none"
+            defaultValue=""
           >
-            <option value="" style={{ backgroundColor: "#0a1628", color: "#fff" }}>Select a Service</option>
-            <option value="Impact Windows" style={{ backgroundColor: "#0a1628", color: "#fff" }}>Impact Windows</option>
-            <option value="Impact Doors" style={{ backgroundColor: "#0a1628", color: "#fff" }}>Impact Doors</option>
-            <option value="Hurricane Shutters" style={{ backgroundColor: "#0a1628", color: "#fff" }}>Hurricane Shutters</option>
-            <option value="Window Replacement" style={{ backgroundColor: "#0a1628", color: "#fff" }}>Window Replacement</option>
-            <option value="Door Replacement" style={{ backgroundColor: "#0a1628", color: "#fff" }}>Door Replacement</option>
-            <option value="Wind Mitigation Inspection" style={{ backgroundColor: "#0a1628", color: "#fff" }}>Wind Mitigation Inspection</option>
-            <option value="Other / Not Sure" style={{ backgroundColor: "#0a1628", color: "#fff" }}>Other / Not Sure</option>
+            <option value="" disabled>
+              Service Needed
+            </option>
+            <option value="Impact Windows">Impact Windows</option>
+            <option value="Impact Doors">Impact Doors</option>
+            <option value="Hurricane Shutters">Hurricane Shutters</option>
+            <option value="Window Replacement">Window Replacement</option>
+            <option value="Door Replacement">Door Replacement</option>
+            <option value="Wind Mitigation Inspection">Wind Mitigation Inspection</option>
+            <option value="Other / Not Sure">Other / Not Sure</option>
           </select>
         </div>
         <button
           type="submit"
-          className="w-full bg-gradient-to-r from-palm-500 to-palm-600 text-white py-4 rounded-xl font-bold text-base hover:from-palm-600 hover:to-palm-700 transition-all shadow-lg shadow-palm-500/30 hover:shadow-palm-500/50 hover:scale-[1.02] active:scale-[0.98]"
+          className="w-full bg-[#e8930f] hover:bg-[#d17d04] text-white py-4 rounded-xl font-bold text-base transition-colors"
         >
           Get My Free Quote
         </button>
       </form>
-      <div className="flex items-center justify-center gap-4 mt-5 text-xs text-gray-500">
-        <span className="flex items-center gap-1">
-          <svg className="w-3.5 h-3.5 text-palm-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
-          No Spam
-        </span>
-        <span className="flex items-center gap-1">
-          <svg className="w-3.5 h-3.5 text-palm-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
-          No Obligation
-        </span>
-        <span className="flex items-center gap-1">
-          <svg className="w-3.5 h-3.5 text-palm-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
-          100% Free
-        </span>
-      </div>
+      <p className="text-center text-xs text-white/50 mt-6 tracking-wide">
+        Your information is secure and private.
+      </p>
     </div>
   );
 }
