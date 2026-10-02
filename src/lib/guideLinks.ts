@@ -44,6 +44,8 @@ export const impactWindowGuides = guidesBySlugs([
 export const impactDoorGuides = guidesBySlugs([
   "impact-doors-just-as-important-as-impact-windows",
   "impact-sliding-glass-doors-buyers-guide",
+  "impact-french-doors-south-florida",
+  "sliding-glass-door-replacement-south-florida",
   "impact-entry-doors-south-florida",
   "multi-point-locking-systems-impact-windows-doors",
 ]);
@@ -64,6 +66,8 @@ export const windowReplacementGuides = guidesBySlugs([
 export const doorReplacementGuides = guidesBySlugs([
   "impact-entry-doors-south-florida",
   "impact-sliding-glass-doors-buyers-guide",
+  "sliding-glass-door-replacement-south-florida",
+  "impact-french-doors-south-florida",
   "impact-doors-just-as-important-as-impact-windows",
 ]);
 
@@ -80,8 +84,10 @@ export const commercialGuides = guidesBySlugs([
 
 export const financingGuides = guidesBySlugs([
   "financing-options-impact-windows-south-florida",
+  "my-safe-florida-home-grant-impact-windows",
   "roi-impact-windows-south-florida",
   "impact-windows-cost-south-florida-2026",
+  "impact-window-cost-broward-county",
   "impact-windows-tax-deductible-florida",
   "wind-mitigation-inspection-insurance-discount",
   "impact-windows-lower-home-insurance-south-florida",

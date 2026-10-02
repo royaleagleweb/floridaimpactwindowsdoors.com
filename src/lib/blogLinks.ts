@@ -21,6 +21,7 @@ const linkMap: [RegExp, string, string][] = [
   // Door types
   [/\bsliding glass doors?\b/i, "/services/door-types/sliding-glass/", "sliding glass doors"],
   [/\bFrench doors?\b/i, "/services/door-types/french/", "French doors"],
+  [/\bgarage doors?\b/i, "/services/door-types/garage/", "garage doors"],
   [/\bentry doors?\b/i, "/services/door-types/entry/", "entry doors"],
   // Key city pages
   [/\bMiami\b(?![\w-])/, "/areas/miami/", "Miami"],
@@ -36,10 +37,13 @@ const linkMap: [RegExp, string, string][] = [
   [/\bcondensation\b/i, "/blog/impact-windows-reduce-condensation-south-florida/", "condensation"],
   [/\bnoise reduction\b/i, "/blog/noise-reduction-impact-windows-south-florida/", "noise reduction"],
   [/\breturn on investment\b/i, "/blog/roi-impact-windows-south-florida/", "return on investment"],
-  [/\bMy Safe Florida Home\b/, "/blog/financing-options-impact-windows-south-florida/", "My Safe Florida Home"],
+  [/\bMy Safe Florida Home\b/, "/blog/my-safe-florida-home-grant-impact-windows/", "My Safe Florida Home"],
+  [/\bOIR-B1-1802\b/, "/blog/florida-wind-mitigation-form-1802-explained/", "OIR-B1-1802"],
   // Brands
   [/\bPGT\b/, "/brands/pgt/", "PGT"],
   [/\bCGI\b/, "/brands/cgi/", "CGI"],
+  [/\bES Windows\b/, "/brands/es-windows/", "ES Windows"],
+  [/\bCustom Window Systems\b/, "/brands/custom-window-systems/", "Custom Window Systems"],
 ];
 
 export function addBlogInternalLinks(html: string, currentSlug?: string): string {
