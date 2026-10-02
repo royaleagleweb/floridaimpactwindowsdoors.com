@@ -2,8 +2,10 @@ import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
 import ServiceAreaLinks from "@/components/ServiceAreaLinks";
+import RelatedGuides from "@/components/RelatedGuides";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { faqPageJsonLd } from "@/lib/faqSchema";
+import { impactWindowGuides } from "@/lib/guideLinks";
 
 export const metadata: Metadata = {
   title: "Impact Windows Installation | Hollywood HVHZ Installer",
@@ -292,9 +294,14 @@ export default function ImpactWindowsPage() {
         </div>
       </section>
 
+      <RelatedGuides
+        heading="South Florida impact window guides"
+        intro="Cost, HVHZ paperwork, noise, condensation, and insurance forms — the topics we cover on estimates from the Hollywood shop."
+        guides={impactWindowGuides}
+      />
+
       {/* Service Areas */}
       <ServiceAreaLinks
-        serviceSlug="impact-windows"
         title="Impact Window Installation Across South Florida"
         subtitle="We install impact windows throughout the tri-county area, from the Florida Keys to Jupiter."
         counties={[

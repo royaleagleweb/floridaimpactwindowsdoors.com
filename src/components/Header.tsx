@@ -48,7 +48,7 @@ const navigation = [
   },
   {
     name: "Brands",
-    href: "/brands/pgt/",
+    href: "/brands/",
     children: [
       { name: "PGT Windows & Doors", href: "/brands/pgt/" },
       { name: "CGI Windows & Doors", href: "/brands/cgi/" },

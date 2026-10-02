@@ -22,14 +22,6 @@ const services = [
   { name: "Commercial Services", href: "/services/commercial-services/" },
 ];
 
-const cityServices = [
-  { label: "Impact Windows", slug: "impact-windows" },
-  { label: "Impact Doors", slug: "impact-doors" },
-  { label: "Hurricane Shutters", slug: "hurricane-shutters" },
-  { label: "Window Replacement", slug: "window-replacement" },
-  { label: "Door Replacement", slug: "door-replacement" },
-];
-
 const windowTypes = [
   { name: "Single Hung", href: "/services/window-types/single-hung/" },
   { name: "Double Hung", href: "/services/window-types/double-hung/" },
@@ -53,6 +45,7 @@ const doorTypes = [
 ];
 
 const brands = [
+  { name: "All Brands", href: "/brands/" },
   { name: "PGT Windows & Doors", href: "/brands/pgt/" },
   { name: "CGI Windows & Doors", href: "/brands/cgi/" },
   { name: "ES Windows", href: "/brands/es-windows/" },
@@ -71,6 +64,8 @@ const mainPages = [
 
 const resources = [
   { name: "Financing Options", href: "/financing/" },
+  { name: "Hurricane Tips", href: "/hurricane-tips/" },
+  { name: "Contractor Checklist", href: "/contractor-checklist/" },
   { name: "Our Installation Process", href: "/our-process/" },
   { name: "Warranty Information", href: "/warranties/" },
   { name: "Careers", href: "/careers/" },
@@ -78,9 +73,9 @@ const resources = [
   { name: "Terms of Service", href: "/terms-of-service/" },
 ];
 
-const miamDadeCities = cities.filter((c) => c.county === "Miami-Dade County");
-const browardCities = cities.filter((c) => c.county === "Broward County");
-const palmBeachCities = cities.filter((c) => c.county === "Palm Beach County");
+const miamDadeCities = cities.filter((c) => c.county === "Miami-Dade");
+const browardCities = cities.filter((c) => c.county === "Broward");
+const palmBeachCities = cities.filter((c) => c.county === "Palm Beach");
 
 function SitemapSection({ title, children }: { title: string; children: React.ReactNode }) {
   return (
@@ -126,7 +121,7 @@ export default function SitemapPage() {
             Sitemap
           </h1>
           <p className="text-lg text-gray-300">
-            Browse all {cities.length * 5 + blogPosts.length + services.length + windowTypes.length + doorTypes.length + brands.length + mainPages.length + resources.length}+ pages on the Florida Impact Windows & Doors website.
+            Browse services, brands, cities, and articles on the Florida Impact Windows & Doors website.
           </p>
         </div>
       </section>
@@ -186,18 +181,6 @@ export default function SitemapPage() {
                     >
                       {city.name}
                     </Link>
-                    <ul className="mt-1 space-y-0.5">
-                      {cityServices.map((svc) => (
-                        <li key={svc.slug}>
-                          <Link
-                            href={`/areas/${city.slug}/${svc.slug}/`}
-                            className="text-xs text-gray-500 hover:text-palm-600 transition-colors"
-                          >
-                            {svc.label}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
                   </div>
                 ))}
               </div>

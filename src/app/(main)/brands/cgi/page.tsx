@@ -339,11 +339,9 @@ export default function CGIBrandPage() {
           </ol>
           <p className="mt-8 text-gray-600">
             Longer reads:{" "}
-            <Link href="/faq/pgt-vs-cgi/" className="text-palm-600 font-semibold hover:text-palm-700 underline underline-offset-2">PGT vs CGI</Link>
-            ,{" "}
-            <Link href="/faq/pgt-vs-es-windows/" className="text-palm-600 font-semibold hover:text-palm-700 underline underline-offset-2">PGT vs ES Windows</Link>
-            , and the{" "}
-            <Link href="/blog/pgt-vs-cgi-impact-windows-comparison/" className="text-palm-600 font-semibold hover:text-palm-700 underline underline-offset-2">PGT vs CGI blog comparison</Link>.
+            <Link href="/blog/pgt-vs-cgi-impact-windows-comparison/" className="text-palm-600 font-semibold hover:text-palm-700 underline underline-offset-2">PGT vs CGI</Link>
+            {" "}and the{" "}
+            <Link href="/brands/pgt/#compare" className="text-palm-600 font-semibold hover:text-palm-700 underline underline-offset-2">PGT vs ES vs CGI table</Link>.
           </p>
         </div>
       </section>
@@ -359,6 +357,9 @@ export default function CGIBrandPage() {
               { href: "/services/door-types/patio/", label: "Impact patio doors" },
               { href: "/services/window-types/picture/", label: "Picture / fixed impact glass" },
               { href: "/services/commercial-services/", label: "Commercial impact glazing" },
+              { href: "/blog/pgt-vs-cgi-impact-windows-comparison/", label: "PGT vs CGI comparison" },
+              { href: "/blog/best-impact-windows-waterfront-homes-south-florida/", label: "Impact windows for waterfront homes" },
+              { href: "/brands/", label: "All brands we install" },
             ].map((item) => (
               <Link
                 key={item.href}

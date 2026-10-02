@@ -353,10 +353,10 @@ export default function ESWindowsBrandPage() {
             </div>
           </div>
           <p className="mt-8 text-gray-600">
-            Written comparisons:{" "}
-            <Link href="/faq/pgt-vs-es-windows/" className="text-palm-600 font-semibold hover:text-palm-700 underline underline-offset-2">PGT vs ES Windows</Link>
+            Written comparisons: the{" "}
+            <Link href="/brands/pgt/#compare" className="text-palm-600 font-semibold hover:text-palm-700 underline underline-offset-2">PGT vs ES vs CGI table</Link>
             {" "}and{" "}
-            <Link href="/faq/pgt-vs-cgi/" className="text-palm-600 font-semibold hover:text-palm-700 underline underline-offset-2">PGT vs CGI</Link>.
+            <Link href="/blog/pgt-vs-cgi-impact-windows-comparison/" className="text-palm-600 font-semibold hover:text-palm-700 underline underline-offset-2">PGT vs CGI</Link>.
           </p>
         </div>
       </section>
@@ -372,6 +372,9 @@ export default function ESWindowsBrandPage() {
               { href: "/services/window-types/single-hung/", label: "Single-hung impact windows" },
               { href: "/services/door-types/sliding-glass/", label: "Impact sliding glass doors" },
               { href: "/faq/how-much-do-impact-windows-cost-in-south-florida/", label: "What impact windows cost" },
+              { href: "/blog/vinyl-vs-aluminum-impact-window-frames/", label: "Vinyl vs aluminum frames" },
+              { href: "/blog/impact-windows-cost-south-florida-2026/", label: "South Florida cost guide" },
+              { href: "/brands/", label: "All brands we install" },
             ].map((item) => (
               <Link
                 key={item.href}
