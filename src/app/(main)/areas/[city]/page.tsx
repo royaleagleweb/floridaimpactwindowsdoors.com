@@ -4,7 +4,9 @@ import { notFound } from "next/navigation";
 import { cities, getCityBySlug, getCitiesByCounty } from "@/data/cities";
 import { getCityPageOverride } from "@/data/cityPageOverrides";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import RelatedGuides from "@/components/RelatedGuides";
 import { faqPageJsonLd } from "@/lib/faqSchema";
+import { guidesForCity } from "@/lib/guideLinks";
 
 // ---------------------------------------------------------------------------
 // Static params & metadata
@@ -48,14 +50,13 @@ export async function generateMetadata({
 // Data helpers
 // ---------------------------------------------------------------------------
 
-/* Services with city-specific pages use dynamic hrefs */
-function getServices(citySlug: string) {
+function getServices() {
   return [
     {
       title: "Impact Windows",
       description:
         "Hurricane-rated impact windows tested to withstand Category 5 winds and large missile impact.",
-      href: `/areas/${citySlug}/impact-windows/`,
+      href: "/services/impact-windows/",
       icon: (
         <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <rect x="3" y="3" width="18" height="18" rx="2" strokeWidth={1.5} />
@@ -68,7 +69,7 @@ function getServices(citySlug: string) {
       title: "Impact Doors",
       description:
         "Premium impact-rated entry, sliding glass, French, and patio doors for complete home protection.",
-      href: `/areas/${citySlug}/impact-doors/`,
+      href: "/services/impact-doors/",
       icon: (
         <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 3h7v18H3zM10 3h7v18h-7M14 12h.01" />
@@ -79,7 +80,7 @@ function getServices(citySlug: string) {
       title: "Hurricane Shutters",
       description:
         "Accordion, roll-down, and panel hurricane shutters for additional storm protection.",
-      href: `/areas/${citySlug}/hurricane-shutters/`,
+      href: "/services/hurricane-shutters/",
       icon: (
         <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 3v18M15 3v18M3 9h18M3 15h18" />
@@ -91,7 +92,7 @@ function getServices(citySlug: string) {
       title: "Window Replacement",
       description:
         "Full-service window replacement upgrading aging or damaged windows to modern impact protection.",
-      href: `/areas/${citySlug}/window-replacement/`,
+      href: "/services/window-replacement/",
       icon: (
         <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
@@ -102,7 +103,7 @@ function getServices(citySlug: string) {
       title: "Door Replacement",
       description:
         "Complete door replacement services upgrading aging doors to modern impact-rated protection.",
-      href: `/areas/${citySlug}/door-replacement/`,
+      href: "/services/door-replacement/",
       icon: (
         <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
@@ -221,8 +222,17 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
   const countyCities = getCitiesByCounty(city.county).filter(
     (c) => c.slug !== city.slug
   );
+  const countyList = getCitiesByCounty(city.county);
+  const cityPosition = countyList.findIndex((c) => c.slug === city.slug);
+  const featuredNearby: typeof countyList = [];
+  for (let step = 1; featuredNearby.length < 8 && step < countyList.length; step++) {
+    featuredNearby.push(countyList[(cityPosition + step) % countyList.length]);
+  }
+  const featuredSlugs = new Set(featuredNearby.map((c) => c.slug));
+  const otherCountyCities = countyCities.filter((c) => !featuredSlugs.has(c.slug));
+  const cityIndex = cities.findIndex((c) => c.slug === city.slug);
 
-  const services = getServices(city.slug);
+  const services = getServices();
   const override = getCityPageOverride(city.slug);
 
   const defaultFaqs = [
@@ -686,6 +696,12 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
         </div>
       </section>
 
+      <RelatedGuides
+        heading={`Guides for ${city.name} homeowners`}
+        intro={`Code, insurance paperwork, and product choices we use on ${city.county} County jobs measured from our Hollywood shop.`}
+        guides={guidesForCity(cityIndex)}
+      />
+
       {/* Nearby Cities */}
       {countyCities.length > 0 && (
         <section className="py-20 bg-white">
@@ -703,7 +719,7 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
               </p>
             </div>
             <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-              {countyCities.slice(0, 12).map((nearby) => (
+              {featuredNearby.map((nearby) => (
                 <Link
                   key={nearby.slug}
                   href={`/areas/${nearby.slug}/`}
@@ -730,19 +746,30 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
                 </Link>
               ))}
             </div>
-            {countyCities.length > 12 && (
-              <div className="text-center mt-8">
-                <Link
-                  href="/areas/"
-                  className="inline-flex items-center gap-2 text-palm-600 font-semibold hover:text-palm-700 transition-colors"
-                >
-                  View All Service Areas
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </Link>
+            {otherCountyCities.length > 0 && (
+              <div className="mt-8 flex flex-wrap justify-center gap-x-4 gap-y-2">
+                {otherCountyCities.map((nearby) => (
+                  <Link
+                    key={nearby.slug}
+                    href={`/areas/${nearby.slug}/`}
+                    className="text-sm text-palm-700 hover:underline"
+                  >
+                    {nearby.name}
+                  </Link>
+                ))}
               </div>
             )}
+            <div className="text-center mt-8">
+              <Link
+                href="/areas/"
+                className="inline-flex items-center gap-2 text-palm-600 font-semibold hover:text-palm-700 transition-colors"
+              >
+                View All Service Areas
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </Link>
+            </div>
           </div>
         </section>
       )}

@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
+import RelatedGuides from "@/components/RelatedGuides";
+import { serviceIndexGuides } from "@/lib/guideLinks";
 
 export const metadata: Metadata = {
   title: "Our Services | Impact Windows, Doors & Hurricane Protection",
@@ -285,6 +287,12 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
+
+      <RelatedGuides
+        heading="Start with these guides"
+        intro="Style, ratings, shutters, and waterfront exposure — written for homes we measure from Hollywood."
+        guides={serviceIndexGuides}
+      />
 
       {/* CTA */}
       <section className="bg-ocean-900 py-16">

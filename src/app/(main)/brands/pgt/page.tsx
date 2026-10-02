@@ -314,7 +314,7 @@ export default function PGTBrandPage() {
       </section>
 
       {/* PGT vs ES vs CGI — catalog / availability angle */}
-      <section className="py-20 bg-gray-50">
+      <section id="compare" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="max-w-3xl mb-12">
             <span className="inline-block text-sm font-semibold text-palm-600 uppercase tracking-wider mb-3">PGT vs ES vs CGI</span>
@@ -362,11 +362,9 @@ export default function PGTBrandPage() {
             </table>
           </div>
           <p className="mt-6 text-gray-600">
-            Side-by-side writeups:{" "}
-            <Link href="/faq/pgt-vs-es-windows/" className="text-palm-600 font-semibold hover:text-palm-700 underline underline-offset-2">PGT vs ES Windows</Link>
-            {" "}and{" "}
-            <Link href="/faq/pgt-vs-cgi/" className="text-palm-600 font-semibold hover:text-palm-700 underline underline-offset-2">PGT vs CGI</Link>.
-            We also published a longer{" "}
+            Side-by-side writeups: this table for{" "}
+            <Link href="/brands/es-windows/" className="text-palm-600 font-semibold hover:text-palm-700 underline underline-offset-2">PGT vs ES Windows</Link>
+            , and the longer{" "}
             <Link href="/blog/pgt-vs-cgi-impact-windows-comparison/" className="text-palm-600 font-semibold hover:text-palm-700 underline underline-offset-2">PGT vs CGI comparison</Link>.
           </p>
         </div>
@@ -384,6 +382,10 @@ export default function PGTBrandPage() {
               { href: "/services/door-types/sliding-glass/", label: "Impact sliding glass doors" },
               { href: "/services/energy-efficient-windows/", label: "Energy-efficient impact glass" },
               { href: "/faq/do-i-need-permit-for-impact-window-installation/", label: "Permits for impact windows" },
+              { href: "/blog/pgt-vs-cgi-impact-windows-comparison/", label: "PGT vs CGI comparison" },
+              { href: "/blog/impact-windows-cost-south-florida-2026/", label: "What impact windows cost in South Florida" },
+              { href: "/blog/high-velocity-hurricane-zone-miami-dade-broward/", label: "HVHZ rules in Miami-Dade and Broward" },
+              { href: "/brands/", label: "All brands we install" },
             ].map((item) => (
               <Link
                 key={item.href}

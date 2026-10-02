@@ -63,12 +63,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   /* ── Brand pages ────────────────────────────────────── */
-  const brandPages: MetadataRoute.Sitemap = ["pgt", "cgi", "es-windows", "custom-window-systems"].map((b) => ({
-    url: `${BASE}/brands/${b}/`,
-    changeFrequency: "monthly" as const,
-    priority: 0.8,
-    lastModified: now,
-  }));
+  const brandPages: MetadataRoute.Sitemap = [
+    { url: `${BASE}/brands/`, changeFrequency: "monthly" as const, priority: 0.8, lastModified: now },
+    ...["pgt", "cgi", "es-windows", "custom-window-systems"].map((b) => ({
+      url: `${BASE}/brands/${b}/`,
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+      lastModified: now,
+    })),
+  ];
 
   /* ── City pages ─────────────────────────────────────── */
   const cityPages: MetadataRoute.Sitemap = cities.map((c) => ({
@@ -78,8 +81,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: now,
   }));
 
-  /* City × service combo URLs stay generated for generateStaticParams
-     but are noindexed and omitted here so they do not compete with city hubs. */
+  /* City × service URLs 301 to the city hub and are not generated. */
 
   /* ── Blog posts ─────────────────────────────────────── */
   const blogPages: MetadataRoute.Sitemap = blogPosts.map((p) => ({

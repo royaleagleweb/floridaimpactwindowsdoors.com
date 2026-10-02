@@ -2,7 +2,9 @@ import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
 import ServiceAreaLinks from "@/components/ServiceAreaLinks";
+import RelatedGuides from "@/components/RelatedGuides";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import { shutterGuides } from "@/lib/guideLinks";
 
 export const metadata: Metadata = {
   title: "Hurricane Shutters | Accordion & Roll-Down | Hollywood Installer",
@@ -314,9 +316,14 @@ export default function HurricaneShuttersPage() {
         </div>
       </section>
 
+      <RelatedGuides
+        heading="Shutters and storm-prep guides"
+        intro="How shutters compare with impact glass, and what we tell Hollywood-area homeowners before June."
+        guides={shutterGuides}
+      />
+
       {/* Service Areas */}
       <ServiceAreaLinks
-        serviceSlug="hurricane-shutters"
         title="Hurricane Shutter Installation Across South Florida"
         counties={[
           { county: "Miami-Dade County", cities: ["Miami", "Miami Beach", "Coral Gables", "Hialeah", "Doral", "Aventura", "Homestead", "Key Biscayne"], href: "/areas/miami/" },

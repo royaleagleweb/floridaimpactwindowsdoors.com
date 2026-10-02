@@ -99,7 +99,7 @@ const hollywood: CityPageOverride = {
         <InlineLink href="/faq/do-i-need-permit-for-impact-window-installation/">Hollywood permits</InlineLink>,{" "}
         <InlineLink href="/faq/do-impact-windows-lower-insurance-in-florida/">insurance credits</InlineLink>,
         and{" "}
-        <InlineLink href="/faq/pgt-vs-es-windows/">PGT vs ES</InlineLink> if you are still choosing a line.
+        <InlineLink href="/brands/pgt/#compare">PGT vs ES</InlineLink> if you are still choosing a line.
         Call (754) 600-4876 — that number rings the Hollywood office.
       </p>
     </>
@@ -197,8 +197,8 @@ const bocaRaton: CityPageOverride = {
       </p>
       <p>
         If you are comparing Boca quotes, read{" "}
-        <InlineLink href="/faq/pgt-vs-cgi/">PGT vs CGI</InlineLink> and{" "}
-        <InlineLink href="/faq/pgt-vs-es-windows/">PGT vs ES Windows</InlineLink>, then look at{" "}
+        <InlineLink href="/blog/pgt-vs-cgi-impact-windows-comparison/">PGT vs CGI</InlineLink> and{" "}
+        <InlineLink href="/brands/pgt/#compare">PGT vs ES Windows</InlineLink>, then look at{" "}
         <InlineLink href="/faq/do-i-need-permit-for-impact-window-installation/">who pulls the permit</InlineLink>{" "}
         and <InlineLink href="/financing/">financing</InlineLink>.{" "}
         <InlineLink href="/services/window-types/casement/">Casement</InlineLink> and{" "}
@@ -307,7 +307,7 @@ const miramar: CityPageOverride = {
         next city north, not a three-county hop. Pair the estimate with{" "}
         <InlineLink href="/financing/">financing</InlineLink>,{" "}
         <InlineLink href="/faq/do-i-still-need-shutters-with-impact-windows/">whether you still need shutters</InlineLink>,
-        and <InlineLink href="/faq/pgt-vs-es-windows/">PGT vs ES</InlineLink>.{" "}
+        and <InlineLink href="/brands/pgt/#compare">PGT vs ES</InlineLink>.{" "}
         <InlineLink href="/get-estimate/">Get a Miramar estimate</InlineLink> or call (754) 600-4876.
       </p>
     </>

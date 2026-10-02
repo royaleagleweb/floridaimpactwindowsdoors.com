@@ -293,6 +293,13 @@ export default function CWSBrandPage() {
           <p className="text-lg text-gray-600 mb-8 leading-relaxed max-w-3xl mx-auto">
             If you are working with an architect or builder on a custom home or a major renovation, our team can collaborate directly with your design professionals to specify the right CWS products, confirm structural requirements, and coordinate installation scheduling. We bring the local knowledge and hands-on expertise that turns architectural drawings into a finished home protected by some of the most design-forward impact products available.
           </p>
+          <p className="text-lg text-gray-600 mb-8 leading-relaxed max-w-3xl mx-auto">
+            Related reading:{" "}
+            <Link href="/blog/custom-impact-windows-unique-designs/" className="text-palm-600 font-semibold hover:text-palm-700">custom impact windows</Link>,{" "}
+            <Link href="/blog/matching-impact-windows-architectural-style/" className="text-palm-600 font-semibold hover:text-palm-700">matching an architectural style</Link>,{" "}
+            <Link href="/brands/pgt/" className="text-palm-600 font-semibold hover:text-palm-700">PGT</Link>, and{" "}
+            <Link href="/brands/" className="text-palm-600 font-semibold hover:text-palm-700">all four brands we install</Link>.
+          </p>
         </div>
       </section>
 

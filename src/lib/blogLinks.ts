@@ -33,16 +33,21 @@ const linkMap: [RegExp, string, string][] = [
   [/\bfree estimate\b/i, "/get-estimate/", "free estimate"],
   [/\bwind mitigation\b/i, "/blog/wind-mitigation-inspection-insurance-discount/", "wind mitigation"],
   [/\bFlorida Building Code\b/, "/blog/florida-building-code-impact-window-requirements/", "Florida Building Code"],
+  [/\bcondensation\b/i, "/blog/impact-windows-reduce-condensation-south-florida/", "condensation"],
+  [/\bnoise reduction\b/i, "/blog/noise-reduction-impact-windows-south-florida/", "noise reduction"],
+  [/\breturn on investment\b/i, "/blog/roi-impact-windows-south-florida/", "return on investment"],
+  [/\bMy Safe Florida Home\b/, "/blog/financing-options-impact-windows-south-florida/", "My Safe Florida Home"],
   // Brands
   [/\bPGT\b/, "/brands/pgt/", "PGT"],
   [/\bCGI\b/, "/brands/cgi/", "CGI"],
 ];
 
-export function addBlogInternalLinks(html: string): string {
+export function addBlogInternalLinks(html: string, currentSlug?: string): string {
   let result = html;
   const linked = new Set<string>();
 
   for (const [pattern, href, _label] of linkMap) {
+    if (currentSlug && href === `/blog/${currentSlug}/`) continue;
     // Skip if we already linked this URL (avoid duplicate links to same page)
     if (linked.has(href)) continue;
 

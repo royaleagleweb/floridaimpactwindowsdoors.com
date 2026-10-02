@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import HeroLeadForm from "@/components/HeroLeadForm";
 import StickyMobileCTA from "@/components/StickyMobileCTA";
 import HowItWorks from "@/components/HowItWorks";
+import { homeGuides } from "@/lib/guideLinks";
 
 export const metadata: Metadata = {
   title: "Impact Windows & Doors Hollywood | Serving South Florida",
@@ -221,7 +222,7 @@ export default function HomePage() {
             </div>
           </div>
           <p className="mt-16 text-white/65 leading-relaxed max-w-4xl text-[15px]">
-            Insurance credits need form OIR-B1-1802 after every glazed opening is protected. My Safe Florida Home is a separate state grant with a program inspection first — do not start work before written approval. See{" "}
+            Insurance credits need form OIR-B1-1802 after every glazed opening is protected. My Safe Florida Home is a separate state grant with a program inspection first — do not start work before written approval. See the{" "}
             <Link href="/faq/do-impact-windows-lower-insurance-in-florida/" className="text-white underline underline-offset-4 decoration-white/30 hover:decoration-[#e8930f]">
               insurance FAQ
             </Link>
@@ -229,9 +230,17 @@ export default function HomePage() {
             <Link href="/financing/" className="text-white underline underline-offset-4 decoration-white/30 hover:decoration-[#e8930f]">
               financing
             </Link>
-            , and{" "}
+            ,{" "}
             <Link href="/brands/pgt/" className="text-white underline underline-offset-4 decoration-white/30 hover:decoration-[#e8930f]">
               PGT
+            </Link>
+            ,{" "}
+            <Link href="/blog/wind-mitigation-inspection-insurance-discount/" className="text-white underline underline-offset-4 decoration-white/30 hover:decoration-[#e8930f]">
+              wind mitigation inspections
+            </Link>
+            , and{" "}
+            <Link href="/blog/high-velocity-hurricane-zone-miami-dade-broward/" className="text-white underline underline-offset-4 decoration-white/30 hover:decoration-[#e8930f]">
+              HVHZ rules
             </Link>
             .
           </p>
@@ -624,6 +633,21 @@ export default function HomePage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </Link>
+              <p className="mt-6 text-sm text-white/60 leading-relaxed">
+                The grant is not a lender plan. Read{" "}
+                <Link href="/blog/wind-mitigation-inspection-insurance-discount/" className="text-white underline underline-offset-4 decoration-white/30 hover:decoration-[#e8930f]">
+                  how a wind mitigation inspection works
+                </Link>
+                {" "}and{" "}
+                <Link href="/blog/financing-options-impact-windows-south-florida/" className="text-white underline underline-offset-4 decoration-white/30 hover:decoration-[#e8930f]">
+                  financing options
+                </Link>
+                , or compare plans on{" "}
+                <Link href="/financing/" className="text-white underline underline-offset-4 decoration-white/30 hover:decoration-[#e8930f]">
+                  financing
+                </Link>
+                .
+              </p>
             </div>
             <div className="bg-white text-[#0d1b33] rounded-[1.5rem] p-10 md:p-12">
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gray-500 mb-3">Grant up to</p>
@@ -754,20 +778,45 @@ export default function HomePage() {
               {
                 county: "Broward County",
                 note: "HVHZ Certified",
-                cities: ["Fort Lauderdale", "Hollywood", "Pembroke Pines", "Miramar", "Coral Springs", "Plantation", "Weston", "Davie"],
-                href: "/areas/fort-lauderdale/",
+                cities: [
+                  { name: "Fort Lauderdale", href: "/areas/fort-lauderdale/" },
+                  { name: "Hollywood", href: "/areas/hollywood/" },
+                  { name: "Pembroke Pines", href: "/areas/pembroke-pines/" },
+                  { name: "Miramar", href: "/areas/miramar/" },
+                  { name: "Coral Springs", href: "/areas/coral-springs/" },
+                  { name: "Plantation", href: "/areas/plantation/" },
+                  { name: "Pompano Beach", href: "/areas/pompano-beach/" },
+                  { name: "North Lauderdale", href: "/areas/north-lauderdale/" },
+                ],
               },
               {
                 county: "Palm Beach County",
                 note: "",
-                cities: ["West Palm Beach", "Boca Raton", "Boynton Beach", "Delray Beach", "Jupiter", "Palm Beach Gardens", "Wellington", "Lake Worth"],
-                href: "/areas/west-palm-beach/",
+                cities: [
+                  { name: "West Palm Beach", href: "/areas/west-palm-beach/" },
+                  { name: "Boca Raton", href: "/areas/boca-raton/" },
+                  { name: "Boynton Beach", href: "/areas/boynton-beach/" },
+                  { name: "Delray Beach", href: "/areas/delray-beach/" },
+                  { name: "Wellington", href: "/areas/wellington/" },
+                  { name: "Lake Worth Beach", href: "/areas/lake-worth-beach/" },
+                  { name: "Royal Palm Beach", href: "/areas/royal-palm-beach/" },
+                  { name: "Greenacres", href: "/areas/greenacres/" },
+                  { name: "Juno Beach", href: "/areas/juno-beach/" },
+                ],
               },
               {
                 county: "Miami-Dade County",
                 note: "HVHZ Certified",
-                cities: ["Miami", "Miami Beach", "Coral Gables", "Hialeah", "Doral", "Aventura", "Homestead", "Key Biscayne"],
-                href: "/areas/miami/",
+                cities: [
+                  { name: "Miami", href: "/areas/miami/" },
+                  { name: "Miami Beach", href: "/areas/miami-beach/" },
+                  { name: "Coral Gables", href: "/areas/coral-gables/" },
+                  { name: "Hialeah", href: "/areas/hialeah/" },
+                  { name: "Doral", href: "/areas/doral/" },
+                  { name: "Aventura", href: "/areas/aventura/" },
+                  { name: "Homestead", href: "/areas/homestead/" },
+                  { name: "Miami Gardens", href: "/areas/miami-gardens/" },
+                ],
               },
             ].map((area) => (
               <div key={area.county} className="home-card p-8 md:p-9">
@@ -777,12 +826,14 @@ export default function HomePage() {
                 </div>
                 <ul className="space-y-2.5 mb-8">
                   {area.cities.map((city) => (
-                    <li key={city} className="text-gray-600 text-[15px]">
-                      {city}
+                    <li key={city.href} className="text-[15px]">
+                      <Link href={city.href} className="text-gray-600 hover:text-[#e8930f] transition-colors">
+                        {city.name}
+                      </Link>
                     </li>
                   ))}
                 </ul>
-                <Link href={area.href} className="inline-flex items-center gap-2 text-[#0d1b33] font-semibold text-sm border-b border-[#0d1b33]/20 pb-0.5 hover:border-[#e8930f] hover:text-[#e8930f] transition-colors">
+                <Link href="/areas/" className="inline-flex items-center gap-2 text-[#0d1b33] font-semibold text-sm border-b border-[#0d1b33]/20 pb-0.5 hover:border-[#e8930f] hover:text-[#e8930f] transition-colors">
                   View All Cities
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -790,6 +841,21 @@ export default function HomePage() {
                 </Link>
               </div>
             ))}
+          </div>
+          <div className="mt-16 border-t border-gray-200 pt-12">
+            <h3 className="text-2xl font-bold font-display text-[#0d1b33] mb-3">Guides from the Hollywood shop</h3>
+            <p className="text-gray-600 mb-6 max-w-2xl leading-relaxed">
+              Cost, financing, noise, condensation, wind mitigation, and HVHZ rules for Miami-Dade, Broward, and Palm Beach.
+            </p>
+            <ul className="grid md:grid-cols-2 gap-3">
+              {homeGuides.map((guide) => (
+                <li key={guide.href}>
+                  <Link href={guide.href} className="text-[#0d1b33] font-medium border-b border-[#0d1b33]/15 hover:border-[#e8930f] hover:text-[#e8930f] transition-colors">
+                    {guide.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>

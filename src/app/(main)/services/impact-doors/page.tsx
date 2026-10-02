@@ -2,7 +2,9 @@ import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
 import ServiceAreaLinks from "@/components/ServiceAreaLinks";
+import RelatedGuides from "@/components/RelatedGuides";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import { impactDoorGuides } from "@/lib/guideLinks";
 
 export const metadata: Metadata = {
   title: "Impact Doors | Sliding Glass, French & Entry | Hollywood Installer",
@@ -283,9 +285,14 @@ export default function ImpactDoorsPage() {
         </div>
       </section>
 
+      <RelatedGuides
+        heading="Impact door guides"
+        intro="Sliders, entry doors, and locking hardware for Miami-Dade, Broward, and Palm Beach houses."
+        guides={impactDoorGuides}
+      />
+
       {/* Service Areas */}
       <ServiceAreaLinks
-        serviceSlug="impact-doors"
         title="Impact Door Installation Throughout South Florida"
         subtitle="From oceanfront condos in Miami Beach to lakeside estates in Wellington, we install impact doors across the entire tri-county region."
         counties={[

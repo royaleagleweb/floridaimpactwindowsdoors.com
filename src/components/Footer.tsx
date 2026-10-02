@@ -34,6 +34,12 @@ const footerLinks = {
   company: [
     { name: "Reviews", href: "/reviews/" },
     { name: "Blog", href: "/blog/" },
+    { name: "Impact Window Cost", href: "/blog/impact-windows-cost-south-florida-2026/" },
+    { name: "Financing Options", href: "/blog/financing-options-impact-windows-south-florida/" },
+    { name: "Window ROI", href: "/blog/roi-impact-windows-south-florida/" },
+    { name: "Noise Reduction", href: "/blog/noise-reduction-impact-windows-south-florida/" },
+    { name: "Condensation", href: "/blog/impact-windows-reduce-condensation-south-florida/" },
+    { name: "Wind Mitigation", href: "/blog/wind-mitigation-inspection-insurance-discount/" },
     { name: "FAQ", href: "/faq/" },
     { name: "Financing", href: "/financing/" },
     { name: "Our Process", href: "/our-process/" },
@@ -47,6 +53,7 @@ const footerLinks = {
     { name: "Get a Free Estimate", href: "/get-estimate/" },
   ],
   brands: [
+    { name: "All Brands", href: "/brands/" },
     { name: "PGT Windows & Doors", href: "/brands/pgt/" },
     { name: "CGI Windows & Doors", href: "/brands/cgi/" },
     { name: "ES Windows", href: "/brands/es-windows/" },
@@ -63,6 +70,7 @@ const footerLinks = {
     { name: "Homestead", href: "/areas/homestead/" },
     { name: "Key Biscayne", href: "/areas/key-biscayne/" },
     { name: "Pinecrest", href: "/areas/pinecrest/" },
+    { name: "Miami Gardens", href: "/areas/miami-gardens/" },
     // Broward County
     { name: "Fort Lauderdale", href: "/areas/fort-lauderdale/" },
     { name: "Hollywood", href: "/areas/hollywood/" },
@@ -73,6 +81,7 @@ const footerLinks = {
     { name: "Weston", href: "/areas/weston/" },
     { name: "Davie", href: "/areas/davie/" },
     { name: "Pompano Beach", href: "/areas/pompano-beach/" },
+    { name: "North Lauderdale", href: "/areas/north-lauderdale/" },
     { name: "Sunrise", href: "/areas/sunrise/" },
     { name: "Parkland", href: "/areas/parkland/" },
     // Palm Beach County
@@ -85,6 +94,9 @@ const footerLinks = {
     { name: "Wellington", href: "/areas/wellington/" },
     { name: "Lake Worth Beach", href: "/areas/lake-worth-beach/" },
     { name: "Royal Palm Beach", href: "/areas/royal-palm-beach/" },
+    { name: "Greenacres", href: "/areas/greenacres/" },
+    { name: "Juno Beach", href: "/areas/juno-beach/" },
+    { name: "Tequesta", href: "/areas/tequesta/" },
     { name: "View All Cities →", href: "/areas/" },
   ],
 };

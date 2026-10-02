@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { blogPosts } from "@/data/blog";
 import { addBlogInternalLinks } from "@/lib/blogLinks";
+import { linkedPosts } from "@/lib/relatedPosts";
 
 export function generateStaticParams() {
   return blogPosts.map((post) => ({
@@ -58,22 +59,7 @@ export default async function BlogPostPage({
     notFound();
   }
 
-  const relatedPosts = blogPosts
-    .filter((p) => p.id !== post.id && p.category === post.category)
-    .slice(0, 3);
-
-  // If not enough posts in same category, fill with other recent posts
-  const additionalPosts =
-    relatedPosts.length < 3
-      ? blogPosts
-          .filter(
-            (p) =>
-              p.id !== post.id && !relatedPosts.find((rp) => rp.id === p.id)
-          )
-          .slice(0, 3 - relatedPosts.length)
-      : [];
-
-  const allRelated = [...relatedPosts, ...additionalPosts];
+  const { article: articleLinks, sidebar: sidebarLinks, more: moreLinks } = linkedPosts(post);
 
   const articleSchema = {
     "@context": "https://schema.org",
@@ -235,8 +221,23 @@ export default async function BlogPostPage({
               {/* Article Body */}
               <div
                 className="prose prose-lg max-w-none prose-headings:font-display prose-headings:text-gray-900 prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4 prose-p:text-gray-600 prose-p:leading-relaxed prose-a:text-palm-600 prose-a:no-underline hover:prose-a:underline prose-strong:text-gray-900"
-                dangerouslySetInnerHTML={{ __html: addBlogInternalLinks(post.content) }}
+                dangerouslySetInnerHTML={{ __html: addBlogInternalLinks(post.content, post.slug) }}
               />
+
+              {articleLinks.length > 0 && (
+                <div className="mt-12 pt-8 border-t border-gray-200">
+                  <h2 className="text-xl font-bold font-display text-gray-900 mb-4">Keep reading</h2>
+                  <ul className="space-y-3">
+                    {articleLinks.map((related) => (
+                      <li key={related.slug}>
+                        <Link href={`/blog/${related.slug}/`} className="text-palm-700 font-semibold hover:text-palm-800">
+                          {related.title}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
 
               {/* Tags */}
               <div className="mt-12 pt-8 border-t border-gray-200">
@@ -288,7 +289,7 @@ export default async function BlogPostPage({
                   Related Articles
                 </h3>
                 <div className="space-y-6">
-                  {allRelated.map((related) => (
+                  {sidebarLinks.map((related) => (
                     <Link
                       key={related.id}
                       href={`/blog/${related.slug}/`}
@@ -393,10 +394,7 @@ export default async function BlogPostPage({
             </Link>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {blogPosts
-              .filter((p) => p.id !== post.id)
-              .slice(0, 4)
-              .map((p) => (
+            {moreLinks.map((p) => (
                 <Link
                   key={p.id}
                   href={`/blog/${p.slug}/`}

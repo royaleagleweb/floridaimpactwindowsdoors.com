@@ -2,7 +2,9 @@ import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
 import ServiceAreaLinks from "@/components/ServiceAreaLinks";
+import RelatedGuides from "@/components/RelatedGuides";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import { doorReplacementGuides } from "@/lib/guideLinks";
 
 export const metadata: Metadata = {
   title: "Door Replacement in South Florida | Impact Sliding, Entry & French Doors",
@@ -368,9 +370,14 @@ export default function DoorReplacementPage() {
         </div>
       </section>
 
+      <RelatedGuides
+        heading="Door replacement guides"
+        intro="Entry doors and sliders we replace from the Hollywood shop, including why the door opening matters as much as the windows."
+        guides={doorReplacementGuides}
+      />
+
       {/* Service Areas */}
       <ServiceAreaLinks
-        serviceSlug="door-replacement"
         title="Door Replacement Throughout South Florida"
         counties={[
           { county: "Miami-Dade County", cities: ["Miami", "Miami Beach", "Coral Gables", "Hialeah", "Doral", "Aventura", "Pinecrest", "Key Biscayne"], href: "/areas/miami/" },

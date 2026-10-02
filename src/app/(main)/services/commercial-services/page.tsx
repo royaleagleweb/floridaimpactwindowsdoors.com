@@ -2,6 +2,9 @@ import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import RelatedGuides from "@/components/RelatedGuides";
+import ServiceAreaLinks from "@/components/ServiceAreaLinks";
+import { commercialGuides } from "@/lib/guideLinks";
 
 export const metadata: Metadata = {
   title: "Commercial Impact Windows & Storefronts | South Florida",
@@ -368,42 +371,21 @@ export default function CommercialServicesPage() {
         </div>
       </section>
 
-      {/* Service Areas */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <span className="inline-block text-sm font-semibold text-palm-600 uppercase tracking-wider mb-3">Service Areas</span>
-            <h2 className="text-3xl md:text-4xl font-bold font-display text-gray-900 mb-4">
-              Commercial Services Across South Florida
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              We serve commercial properties throughout the tri-county area, from downtown Miami to northern Palm Beach County.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              { county: "Miami-Dade County", cities: ["Downtown Miami", "Brickell", "Miami Beach", "Coral Gables", "Doral", "Aventura", "Sunny Isles", "Hialeah"], href: "/areas/miami/" },
-              { county: "Broward County", cities: ["Fort Lauderdale", "Hollywood", "Pembroke Pines", "Plantation", "Coral Springs", "Weston", "Sunrise", "Pompano Beach"], href: "/areas/fort-lauderdale/" },
-              { county: "Palm Beach County", cities: ["West Palm Beach", "Boca Raton", "Delray Beach", "Jupiter", "Palm Beach Gardens", "Wellington", "Boynton Beach", "Lake Worth"], href: "/areas/west-palm-beach/" },
-            ].map((area) => (
-              <div key={area.county} className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
-                <h3 className="text-xl font-bold text-gray-900 mb-4 font-display">{area.county}</h3>
-                <ul className="space-y-2 mb-6">
-                  {area.cities.map((city) => (
-                    <li key={city} className="flex items-center gap-2 text-gray-600">
-                      <svg className="w-4 h-4 text-palm-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                      {city}
-                    </li>
-                  ))}
-                </ul>
-                <Link href={area.href} className="inline-flex items-center gap-2 text-palm-600 font-semibold hover:text-palm-700 transition-colors text-sm">
-                  View All Cities <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <RelatedGuides
+        heading="Commercial and condo guides"
+        intro="Storefronts, HOA buildings, and multi-family openings in the tri-county area."
+        guides={commercialGuides}
+      />
+
+      <ServiceAreaLinks
+        title="Commercial Services Across South Florida"
+        subtitle="We serve commercial properties throughout the tri-county area, from downtown Miami to northern Palm Beach County."
+        counties={[
+          { county: "Miami-Dade County", cities: ["Miami", "Miami Beach", "Coral Gables", "Doral", "Aventura", "Sunny Isles", "Hialeah"], href: "/areas/miami/" },
+          { county: "Broward County", cities: ["Fort Lauderdale", "Hollywood", "Pembroke Pines", "Plantation", "Coral Springs", "Weston", "Sunrise", "Pompano Beach"], href: "/areas/fort-lauderdale/" },
+          { county: "Palm Beach County", cities: ["West Palm Beach", "Boca Raton", "Delray Beach", "Jupiter", "Palm Beach Gardens", "Wellington", "Boynton Beach", "Lake Worth"], href: "/areas/west-palm-beach/" },
+        ]}
+      />
 
       {/* FAQ Section */}
       <section className="py-20 bg-white">

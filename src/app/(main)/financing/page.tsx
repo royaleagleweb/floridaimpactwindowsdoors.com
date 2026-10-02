@@ -1,7 +1,9 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import PaymentCalculator from "@/components/PaymentCalculator";
+import RelatedGuides from "@/components/RelatedGuides";
 import { faqPageJsonLd } from "@/lib/faqSchema";
+import { financingGuides } from "@/lib/guideLinks";
 
 export const metadata: Metadata = {
   title: "Impact Window Financing | $0 Down, PACE & MSFH | Hollywood",
@@ -377,6 +379,12 @@ export default function FinancingPage() {
       </section>
 
       {/* CTA */}
+      <RelatedGuides
+        heading="Financing, grants, and insurance paperwork"
+        intro="My Safe Florida Home is a state grant with its own inspection and written approval. These articles cover lender plans, cost, and the wind-mitigation form we see after the glass is in. They are not a promise of a dollar credit."
+        guides={financingGuides}
+      />
+
       <section className="py-20 bg-gradient-to-br from-sun-500 via-palm-600 to-ocean-700 relative overflow-hidden">
         <div className="absolute inset-0 bg-grid opacity-20" />
         <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">

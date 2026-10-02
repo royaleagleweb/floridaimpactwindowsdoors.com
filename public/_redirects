@@ -1,4 +1,48 @@
+# Blog year-slug updates and the estimate URL (kept from earlier deploys)
 /blog/impact-windows-cost-south-florida-2025/ /blog/impact-windows-cost-south-florida-2026/ 301
 /blog/modern-window-design-trends-south-florida-2025/ /blog/modern-window-design-trends-south-florida-2026/ 301
 /get-quote /get-estimate/ 301
 /get-quote/ /get-estimate/ 301
+
+# GSC 404s → closest live page
+/faq/pgt-vs-cgi /blog/pgt-vs-cgi-impact-windows-comparison/ 301
+/faq/pgt-vs-cgi/ /blog/pgt-vs-cgi-impact-windows-comparison/ 301
+/faq/pgt-vs-es-windows /brands/pgt/ 301
+/faq/pgt-vs-es-windows/ /brands/pgt/ 301
+/blog/florida-building-code-requirements-impact-windows /blog/florida-building-code-impact-window-requirements/ 301
+/blog/florida-building-code-requirements-impact-windows/ /blog/florida-building-code-impact-window-requirements/ 301
+/blog/wind-mitigation-inspections-maximizing-insurance-discount /blog/wind-mitigation-inspection-insurance-discount/ 301
+/blog/wind-mitigation-inspections-maximizing-insurance-discount/ /blog/wind-mitigation-inspection-insurance-discount/ 301
+/areas/lake-worth /areas/lake-worth-beach/ 301
+/areas/lake-worth/ /areas/lake-worth-beach/ 301
+/areas/lake-worth/impact-windows /areas/lake-worth-beach/ 301
+/areas/lake-worth/impact-windows/ /areas/lake-worth-beach/ 301
+/areas/lake-worth/impact-doors /areas/lake-worth-beach/ 301
+/areas/lake-worth/impact-doors/ /areas/lake-worth-beach/ 301
+/areas/lake-worth/window-replacement /areas/lake-worth-beach/ 301
+/areas/lake-worth/window-replacement/ /areas/lake-worth-beach/ 301
+/areas/lake-worth/door-replacement /areas/lake-worth-beach/ 301
+/areas/lake-worth/door-replacement/ /areas/lake-worth-beach/ 301
+/areas/lake-worth/hurricane-shutters /areas/lake-worth-beach/ 301
+/areas/lake-worth/hurricane-shutters/ /areas/lake-worth-beach/ 301
+
+# WebSite SearchAction target. There is no search page; the schema no longer advertises one.
+/search /faq/ 301
+/search/ /faq/ 301
+
+# Truncated path. Nothing in the site links to /mo. The only "/mo" token is payment shorthand on /financing/.
+/mo /financing/ 301
+/mo/ /financing/ 301
+
+# Dropped city × service URLs. Every city in the site data has a live hub.
+# Static lake-worth rules above win over these placeholders for that old slug.
+/areas/:city/impact-windows /areas/:city/ 301
+/areas/:city/impact-windows/ /areas/:city/ 301
+/areas/:city/impact-doors /areas/:city/ 301
+/areas/:city/impact-doors/ /areas/:city/ 301
+/areas/:city/window-replacement /areas/:city/ 301
+/areas/:city/window-replacement/ /areas/:city/ 301
+/areas/:city/door-replacement /areas/:city/ 301
+/areas/:city/door-replacement/ /areas/:city/ 301
+/areas/:city/hurricane-shutters /areas/:city/ 301
+/areas/:city/hurricane-shutters/ /areas/:city/ 301
