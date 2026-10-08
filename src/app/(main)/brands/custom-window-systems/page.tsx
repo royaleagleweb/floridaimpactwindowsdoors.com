@@ -17,14 +17,14 @@ const cwsFaqs = [
   {
     question: "Are you the CWS factory?",
     answer:
-      "No. Florida Impact Windows & Doors is the dealer-installer at 3000 Stirling Rd, Hollywood. CWS manufactures. We measure, permit, and set the unit. Call (754) 600-4876.",
+      "No. Florida Impact Windows & Doors installs CWS products from 3000 Stirling Rd, Hollywood. CWS manufactures. We measure, permit, and set the unit. That is not an authorized-dealer claim. Call (754) 600-4876.",
   },
 ];
 
 export const metadata: Metadata = {
   title: "CWS Impact Windows | Custom Shapes & Multi-Slides | Hollywood",
   description:
-    "Custom Window Systems (CWS) dealer-installer in Hollywood. Narrow sightlines, custom shapes, and multi-slide doors when a catalog single-hung will not fit. Free estimates. (754) 600-4876.",
+    "We install Custom Window Systems (CWS) products from Hollywood. Narrow sightlines, custom shapes, and multi-slide doors when a catalog single-hung will not fit. Not an authorized-dealer claim. Free estimates. (754) 600-4876.",
   alternates: { canonical: "https://floridaimpactwindowsdoors.com/brands/custom-window-systems/" },
 };
 
@@ -129,11 +129,11 @@ export default function CWSBrandPage() {
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/10 rounded-full px-4 py-1.5 mb-6">
               <span className="w-2 h-2 bg-palm-400 rounded-full animate-pulse" />
-              <span className="text-sm text-palm-300 font-medium">Authorized CWS Dealer</span>
+              <span className="text-sm text-palm-300 font-medium">We install CWS products</span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-display text-white leading-tight mb-6">
               Custom Window Systems{" "}
-              <span className="gradient-text">Authorized Dealer</span>
+              <span className="gradient-text">Installed in South Florida</span>
             </h1>
             <p className="text-lg text-gray-300 mb-8 max-w-2xl leading-relaxed">
               CWS is the line we quote when the opening is not a catalog single-hung: a custom shape, a narrow-sightline wall, or a multi-slide that other plants will not stamp. We are the Hollywood installer — CWS manufactures; we measure, permit, and set the unit.
@@ -280,15 +280,15 @@ export default function CWSBrandPage() {
         </div>
       </section>
 
-      {/* Authorized Dealer Section */}
+      {/* Installer section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <span className="inline-block text-sm font-semibold text-palm-600 uppercase tracking-wider mb-3">Your Local CWS Experts</span>
           <h2 className="text-3xl md:text-4xl font-bold font-display text-gray-900 mb-6">
-            Florida Impact Windows & Doors: Your Authorized CWS Dealer
+            Florida Impact Windows & Doors Installs CWS Products
           </h2>
           <p className="text-lg text-gray-600 mb-6 leading-relaxed max-w-3xl mx-auto">
-            As an authorized CWS dealer, Florida Impact Windows & Doors gives you direct access to the complete CWS product portfolio including their most innovative and custom-fabricated items. Our installation crews understand the precision required to install CWS products correctly, especially the large-format doors and custom geometric windows that demand exacting technique to maintain performance and warranty integrity.
+            We install Custom Window Systems products, including large-format doors and custom shapes when the opening needs them. That is not an authorized-dealer claim and it is not direct factory access. The unit on the order is the configuration the approval covers.
           </p>
           <p className="text-lg text-gray-600 mb-8 leading-relaxed max-w-3xl mx-auto">
             If you are working with an architect or builder on a custom home or a major renovation, our team can collaborate directly with your design professionals to specify the right CWS products, confirm structural requirements, and coordinate installation scheduling. We bring the local knowledge and hands-on expertise that turns architectural drawings into a finished home protected by some of the most design-forward impact products available.

@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Customer Reviews | Florida Impact Windows & Doors",
   description:
-    "Read homeowner comments about Florida Impact Windows & Doors. Find us on Yelp and BBB. We do not publish a fake review count. Hollywood shop. (754) 600-4876.",
+    "Homeowner comments about Florida Impact Windows & Doors. We do not publish a star rating, a review count, or links to unverified profiles. Hollywood shop. (754) 600-4876.",
   alternates: { canonical: "https://floridaimpactwindowsdoors.com/reviews/" },
 };
 
@@ -71,7 +71,7 @@ const reviews = [
     date: "April 2024",
     rating: 5,
     project: "Whole Home - PGT WinGuard",
-    text: "We have referred Florida Impact Windows & Doors to three of our neighbors already and all of them have been just as satisfied as we are. Carlos the owner personally came to our first consultation and you could tell he genuinely cares about every project. The PGT WinGuard windows they installed are top quality, the installation was clean and fast, and the price was thousands less than the next closest quote. Our insurance company gave us a 35% discount on our hurricane premium as soon as we sent them the completion paperwork.",
+    text: "We have referred Florida Impact Windows & Doors to three of our neighbors already. Carlos came to our first consultation. The PGT WinGuard windows they installed were what we ordered, and the installation was clean. Any insurance credit after the work is set by the carrier, not by a percentage we were promised.",
   },
   {
     name: "South Florida homeowner",
@@ -108,17 +108,17 @@ const reviews = [
 ];
 
 const stats = [
-  { value: "A+", label: "BBB Rating" },
-  { value: "111", label: "BuildZoom Score" },
-  { value: "Yelp", label: "Public Reviews" },
-  { value: "Hollywood", label: "Shop on Stirling Rd" },
+  { value: "Hollywood", label: "3000 Stirling Rd" },
+  { value: "(754)", label: "600-4876" },
+  { value: "3", label: "Counties served" },
+  { value: "Free", label: "In-home estimates" },
 ];
 
 const reviewFaqs = [
   {
     question: "Where can I read independent reviews?",
     answer:
-      "Read our Yelp listing and BBB profile (both linked in the site footer and organization schema). We do not publish a made-up aggregate star count or a 2,500-review total on this page.",
+      "We do not link a Yelp or BBB profile, and we do not publish a star average or a review total. Those listings were not verified for this Hollywood shop.",
   },
   {
     question: "Are the comments on this page named customers?",
@@ -159,13 +159,13 @@ export default function ReviewsPage() {
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/10 rounded-full px-4 py-1.5 mb-6">
               <span className="w-2 h-2 bg-sun-400 rounded-full animate-pulse" />
-              <span className="text-sm text-sun-300 font-medium">A+ BBB · Hollywood shop</span>
+              <span className="text-sm text-sun-300 font-medium">Hollywood shop · 3000 Stirling Rd</span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-display text-white leading-tight mb-6">
               Customer <span className="gradient-text">Reviews</span>
             </h1>
             <p className="text-lg text-gray-300 max-w-2xl leading-relaxed">
-              Homeowner comments about jobs we installed from Hollywood. For third-party listings, use Yelp and BBB — we do not invent a 2,500-review total.
+              Homeowner comments about jobs we installed from Hollywood. They are not a Google, Yelp, or BBB rating, and we do not publish a review total.
             </p>
           </div>
         </div>
@@ -197,11 +197,6 @@ export default function ReviewsPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {reviews.map((review, index) => (
               <div key={index} className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-all">
-                <div className="flex items-center gap-1 mb-3">
-                  {[...Array(review.rating)].map((_, i) => (
-                    <svg key={i} className="w-5 h-5 text-sun-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
-                  ))}
-                </div>
                 <p className="text-xs text-palm-600 font-semibold mb-2">{review.project}</p>
                 <p className="text-gray-600 mb-4 leading-relaxed text-sm">&ldquo;{review.text}&rdquo;</p>
                 <div className="border-t border-gray-100 pt-4">

@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     template: "%s | Florida Impact Windows & Doors",
   },
   description:
-    "South Florida's premier impact window and door installation company. Hurricane-rated protection for homes in Broward & Palm Beach County. A+ BBB rated. Call (754) 600-4876 for a free estimate.",
+    "Impact window and door installation from 3000 Stirling Rd, Hollywood. Serving Miami-Dade, Broward, and Palm Beach. Free estimates. Call (754) 600-4876.",
   authors: [{ name: "Florida Impact Windows & Doors" }],
   creator: "Florida Impact Windows & Doors",
   publisher: "Florida Impact Windows & Doors",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Impact Windows & Doors Hollywood | Serving South Florida",
     description:
-      "Premium impact windows & doors at affordable prices. A+ BBB rating. Free estimates. Call (754) 600-4876.",
+      "Impact windows and doors installed from Hollywood. Free estimates. Call (754) 600-4876.",
     images: ["https://floridaimpactwindowsdoors.com/images/og-image.jpg"],
   },
   icons: {
@@ -122,12 +122,8 @@ function LocalBusinessJsonLd() {
         "@type": "OpeningHoursSpecification",
         dayOfWeek: "Saturday",
         opens: "09:00",
-        closes: "14:00",
+        closes: "15:00",
       },
-    ],
-    sameAs: [
-      "https://www.yelp.com/biz/florida-impact-windows-and-doors-hollywood",
-      "https://www.bbb.org/us/fl/hollywood/profile/window-installation/florida-impact-windows-doors-0633-92029751",
     ],
     speakable: {
       "@type": "SpeakableSpecification",

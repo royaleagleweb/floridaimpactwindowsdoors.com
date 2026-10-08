@@ -4,9 +4,9 @@ import PageFaqSection from "@/components/PageFaqSection";
 import { faqPageJsonLd } from "@/lib/faqSchema";
 
 export const metadata: Metadata = {
-  title: "PGT Impact Windows South Florida | Authorized Dealer-Installer",
+  title: "PGT Impact Windows South Florida | We Install PGT Products",
   description:
-    "Florida Impact Windows & Doors installs PGT impact windows in South Florida — WinGuard dealer-installer, not the manufacturer. Permits pulled, Hollywood shop. Free estimates. (754) 600-4876.",
+    "Florida Impact Windows & Doors installs PGT products in South Florida, including WinGuard. We are not the manufacturer and we do not claim authorized-dealer status. Hollywood shop. Free estimates. (754) 600-4876.",
   alternates: { canonical: "https://floridaimpactwindowsdoors.com/brands/pgt/" },
 };
 
@@ -14,7 +14,7 @@ const pgtFaqs = [
   {
     question: "Are you the PGT factory, or a South Florida installer?",
     answer:
-      "We are a dealer-installer. PGT manufactures in Venice, Florida. Florida Impact Windows & Doors measures, permits, and installs PGT impact windows and doors from our Hollywood shop at 3000 Stirling Rd. Factory warranties stay valid when the unit is installed to PGT specifications.",
+      "We install PGT products. PGT manufactures in Venice, Florida. Florida Impact Windows & Doors measures, permits, and installs PGT impact windows and doors from our Hollywood shop at 3000 Stirling Rd. We do not claim authorized-dealer status. A product warranty follows the manufacturer's written terms when the unit is installed to those specifications.",
   },
   {
     question: "Who should choose PGT WinGuard instead of ES Windows or CGI?",
@@ -106,7 +106,7 @@ const features = [
 
 const whyChoose = [
   "Largest impact window and door manufacturer in the southeastern United States",
-  "Over 40 years of experience engineering products for Florida hurricanes",
+  "PGT engineers impact products for Florida hurricanes. We do not publish a years-in-business figure for this shop.",
   "Complete product line spanning aluminum, vinyl, single hung, sliding, casement, and more",
   "Extensive color and finish options including bronze, white, and custom powder coats",
   "Superior laminated glass technology with PVB and SGP interlayer options",
@@ -139,14 +139,14 @@ export default function PGTBrandPage() {
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/10 rounded-full px-4 py-1.5 mb-6">
               <span className="w-2 h-2 bg-palm-400 rounded-full animate-pulse" />
-              <span className="text-sm text-palm-300 font-medium">Authorized PGT Dealer</span>
+              <span className="text-sm text-palm-300 font-medium">We install PGT products</span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-display text-white leading-tight mb-6">
               PGT Impact Windows{" "}
               <span className="gradient-text">Installed in South Florida</span>
             </h1>
             <p className="text-lg text-gray-300 mb-8 max-w-2xl leading-relaxed">
-              We are a Hollywood-based PGT dealer-installer — not the Venice factory. If you want WinGuard impact windows and doors set, permitted, and inspected in Broward or Miami-Dade HVHZ (or an FL# path in Palm Beach), the crew that shows up is ours.
+              We install PGT products from Hollywood. We are not the Venice factory, and we do not claim authorized-dealer status. If you want WinGuard impact windows and doors set, permitted, and inspected in Broward or Miami-Dade HVHZ (or an FL# path in Palm Beach), the crew that shows up is ours.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
@@ -405,18 +405,18 @@ export default function PGTBrandPage() {
         faqs={pgtFaqs}
       />
 
-      {/* Authorized Dealer Section */}
+      {/* Installer section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <span className="inline-block text-sm font-semibold text-palm-600 uppercase tracking-wider mb-3">Your Local PGT Experts</span>
           <h2 className="text-3xl md:text-4xl font-bold font-display text-gray-900 mb-6">
-            Florida Impact Windows & Doors: Your Authorized PGT Dealer in South Florida
+            Florida Impact Windows & Doors Installs PGT Products in South Florida
           </h2>
           <p className="text-lg text-gray-600 mb-6 leading-relaxed max-w-3xl mx-auto">
-            As an authorized PGT dealer, Florida Impact Windows & Doors has direct access to the full PGT product catalog at dealer-direct pricing. Our installation crews are factory-trained on PGT specifications, and we carry the certifications required to maintain your PGT warranty in full effect. When you buy PGT through Florida Impact Windows & Doors, you get manufacturer-backed quality combined with local expertise, personalized service, and competitive pricing that big-box retailers simply cannot match.
+            We install PGT products. That is not an authorized-dealer claim, and it is not dealer-direct pricing. PGT publishes the catalog; we measure the opening, order the configuration the approval covers, pull the permit, and set the unit from our Hollywood shop.
           </p>
           <p className="text-lg text-gray-600 mb-8 leading-relaxed max-w-3xl mx-auto">
-            We handle every step of your PGT project from initial consultation and measurement through permitting, installation, and final inspection. Our team knows the South Florida building code inside and out, and we ensure every PGT product is installed to factory specifications so your warranty remains intact for the life of your home.
+            We handle the project from the consultation and measurement through permitting, installation, and final inspection. The unit is installed to the written specifications on the product approval. Whether a manufacturer warranty applies is decided by those terms, not by a dealer badge on this page.
           </p>
         </div>
       </section>

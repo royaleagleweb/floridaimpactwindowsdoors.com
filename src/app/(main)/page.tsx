@@ -9,58 +9,48 @@ import { homeGuides } from "@/lib/guideLinks";
 export const metadata: Metadata = {
   title: "Impact Windows & Doors Hollywood | Serving South Florida",
   description:
-    "Premium impact windows & doors at affordable prices. Serving Broward & Palm Beach County. A+ BBB rating, 5-star reviews. HVHZ experts. Call (754) 600-4876.",
+    "Impact windows and doors installed from 3000 Stirling Rd, Hollywood. Serving Miami-Dade, Broward, and Palm Beach. Free estimates. Call (754) 600-4876.",
   alternates: { canonical: "https://floridaimpactwindowsdoors.com/" },
 };
 
 const testimonials = [
   {
     name: "Verified Customer",
-    location: "Google Review",
+    location: "Customer comment",
     text: "If I could give 10 stars, I would! We replaced all the windows and doors in the house and the process was a breeze! From the first visit where Abe, who are the company owners, explained the process, realistic timeline and what to expect.",
     rating: 5,
   },
   {
     name: "Verified Customer",
-    location: "Google Review",
+    location: "Customer comment",
     text: "By far this was the best overall experience I have ever had with a contractor. From the initial consult appointment to permitting process to the install, everything went flawless. Thank you to both Abe for an exceptional buying experience.",
     rating: 5,
   },
   {
     name: "Verified Customer",
-    location: "Google Review",
+    location: "Customer comment",
     text: "Abe have built and continue to operate an amazing business. Approaching each job with the utmost professionalism, personal attention and communication. From the first estimate to the installation it was almost effortless.",
     rating: 5,
   },
   {
     name: "Verified Customer",
-    location: "Google Review",
-    text: "From the moment I first met with Abe, I was intrigued by how they've consistently achieved five-star reviews. Now, having experienced their service first-hand with the installation of 15 windows in my home, I've found the answer.",
+    location: "Customer comment",
+    text: "From the moment I first met with Abe, the process was clear. After the installation of 15 windows in my home, the crew did what they said they would do.",
     rating: 5,
   },
   {
     name: "Verified Customer",
-    location: "Google Review",
-    text: "This is the company you want to do your impact windows and sliding glass doors. I got 5 quotes. Three were crazy high. Florida Impact and the other were way less. The other company had no reviews so I went with Florida Impact due to great reviews.",
+    location: "Customer comment",
+    text: "This is the company you want to do your impact windows and sliding glass doors. I got 5 quotes. Three were high. Florida Impact and one other were lower, and I went with Florida Impact.",
     rating: 5,
   },
   {
     name: "Verified Customer",
-    location: "Google Review",
+    location: "Customer comment",
     text: "I have to share a wonderful experience I had working with Florida Impact Windows. From the onset, Abe (the owners) were both very respectful, informative, and professional explaining the window installation process.",
     rating: 5,
   },
 ];
-
-const StarRow = ({ className = "w-4 h-4 text-[#e8930f]" }: { className?: string }) => (
-  <div className="flex">
-    {[...Array(5)].map((_, i) => (
-      <svg key={i} className={className} fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-      </svg>
-    ))}
-  </div>
-);
 
 const CheckIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -158,7 +148,7 @@ export default function HomePage() {
           <div className="grid lg:grid-cols-[1.15fr_0.85fr] gap-12 lg:gap-16 items-center">
             <div>
               <p className="text-sm text-white/90 font-medium mb-6 tracking-wide">
-                5-Star Rated on Google &amp; Yelp
+                Hollywood shop &middot; 3000 Stirling Rd
               </p>
 
               <h1 className="home-title text-4xl md:text-5xl lg:text-[3.6rem] text-white mb-7">
@@ -173,10 +163,7 @@ export default function HomePage() {
               </p>
 
               <p className="text-sm text-white/80 tracking-wide">
-                A+ BBB &nbsp;&middot;&nbsp; Top 4% FL Contractors &nbsp;&middot;&nbsp; 111 BuildZoom
-              </p>
-              <p className="text-sm text-white/65 mt-3 tracking-wide">
-                HVHZ Certified &nbsp;&middot;&nbsp; Fully Insured &nbsp;&middot;&nbsp; Owner-Installed
+                Owner-installed &nbsp;&middot;&nbsp; Free estimates &nbsp;&middot;&nbsp; (754) 600-4876
               </p>
             </div>
 
@@ -209,10 +196,10 @@ export default function HomePage() {
             </div>
             <div className="grid grid-cols-2 gap-4 content-start">
               {[
-                { title: "5-Star Google", sub: "Google & Yelp" },
-                { title: "A+ BBB Rated", sub: "Better Business Bureau" },
-                { title: "HVHZ Certified", sub: "Miami-Dade & Broward" },
-                { title: "Licensed & Insured", sub: "Florida contractor" },
+                { title: "Hollywood Shop", sub: "3000 Stirling Rd" },
+                { title: "Free Estimates", sub: "(754) 600-4876" },
+                { title: "Miami-Dade & Broward", sub: "High-Velocity Hurricane Zone" },
+                { title: "Palm Beach", sub: "Wind-borne debris region" },
               ].map((item) => (
                 <div key={item.title} className="home-card-dark p-5">
                   <div className="text-sm font-semibold">{item.title}</div>
@@ -370,11 +357,11 @@ export default function HomePage() {
                 </div>
                 <div className="p-8 md:p-10 flex flex-col justify-center">
                   <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500 mb-4">
-                    Trusted by 5,000+ Homeowners
+                    Hollywood installer
                   </p>
-                  <h3 className="text-2xl md:text-[1.7rem] font-bold text-[#0d1b33] font-display mb-4 tracking-tight">Local Experts Who Know South Florida</h3>
+                  <h3 className="text-2xl md:text-[1.7rem] font-bold text-[#0d1b33] font-display mb-4 tracking-tight">Local Installers Who Know South Florida</h3>
                   <p className="text-gray-600 leading-relaxed mb-6">
-                    With over 20 years of experience serving South Florida, we understand the unique challenges our climate presents. From hurricane-force winds to year-round UV exposure, we install products engineered specifically for our region.
+                    We install from 3000 Stirling Rd in Hollywood. Hurricane wind, salt air, and year-round sun are the conditions the products have to handle, and the openings are measured for the county the house is in.
                   </p>
                   <Link href="/get-estimate/" className="inline-flex items-center gap-2 text-[#0d1b33] font-semibold border-b border-[#0d1b33]/20 pb-0.5 w-fit hover:border-[#e8930f] hover:text-[#e8930f] transition-colors">
                     Protect Your Home Now
@@ -388,12 +375,12 @@ export default function HomePage() {
               <div className="grid sm:grid-cols-2 gap-6">
                 {[
                   {
-                    title: "Licensed & Insured",
-                    desc: "Fully licensed Florida contractor with comprehensive insurance coverage. Every installation meets or exceeds Florida Building Code.",
+                    title: "Owner-Installed",
+                    desc: "Projects are measured and installed by our own crew from the Hollywood shop. We do not publish a license number on this site.",
                   },
                   {
-                    title: "Premium Products",
-                    desc: "We partner with industry leaders like PGT, CGI, ES Windows, and Custom Window Systems (CWS) to deliver top-tier impact windows and doors built for Florida. We are the dealer-installer, not the factory.",
+                    title: "Products We Install",
+                    desc: "We install PGT, CGI, ES Windows, and Custom Window Systems. Those factories make the units. We are the installer, not an authorized-dealer claim and not the factory.",
                   },
                   {
                     title: "Expert Installation",
@@ -678,20 +665,20 @@ export default function HomePage() {
                 Choose the Right Window &amp; Installer
               </h2>
               <p className="text-gray-600 leading-relaxed mb-5 text-[17px]">
-                We&apos;ve built our reputation on honesty, integrity, and customer service. This commitment has helped us maintain 5-star reviews on Google, Yelp, and the Better Business Bureau, where we proudly hold an A+ Rating.
+                We do not publish a Google rating, a Yelp rating, a BBB grade, or a BuildZoom score. Those figures are not verified for this Hollywood shop.
               </p>
               <p className="text-gray-600 leading-relaxed mb-5 text-[17px]">
-                Our company has earned a score of 111 on BuildZoom, placing us in the <span className="text-[#0d1b33] font-semibold">top 4% of 191,428 licensed contractors in the State of Florida</span>. No shortcuts &mdash; every project is installed by our own team, led by one of our owners.
+                Every project is installed by our own team, led by one of our owners. The shop is at 3000 Stirling Rd, Hollywood, FL 33021.
               </p>
               <p className="text-[#0d1b33] font-medium italic text-lg mb-10 leading-relaxed">
                 &ldquo;Even if you buy the best impact windows, they will not perform as well as they should if they are not installed properly.&rdquo;
               </p>
               <div className="grid grid-cols-2 gap-4">
                 {[
-                  { label: "Google", value: "5 Stars" },
-                  { label: "Yelp", value: "5 Stars" },
-                  { label: "BBB", value: "A+ Rating" },
-                  { label: "BuildZoom", value: "Score: 111" },
+                  { label: "Shop", value: "Hollywood" },
+                  { label: "Phone", value: "(754) 600-4876" },
+                  { label: "Counties", value: "Three" },
+                  { label: "Estimates", value: "Free" },
                 ].map((item) => (
                   <div key={item.label} className="home-card p-5 text-center">
                     <div className="text-lg font-bold text-[#0d1b33] font-display">{item.value}</div>
@@ -723,15 +710,13 @@ export default function HomePage() {
             <h2 className="home-title text-4xl md:text-5xl text-[#0d1b33]">
               What Our Customers Say
             </h2>
-            <div className="flex items-center gap-2 mt-5">
-              <StarRow className="w-5 h-5 text-[#e8930f]" />
-              <span className="text-sm text-gray-500 font-medium">on Google, Yelp &amp; BBB</span>
-            </div>
+            <p className="text-gray-600 mt-5 leading-relaxed">
+              Comments below are not presented as Google, Yelp, or BBB ratings. We do not publish a star average.
+            </p>
           </div>
 
           <div className="home-card p-8 md:p-12 mb-8">
             <div className="max-w-3xl">
-              <StarRow className="w-5 h-5 text-[#e8930f]" />
               <p className="text-xl md:text-2xl text-[#0d1b33] font-medium leading-relaxed my-6 tracking-tight">
                 &ldquo;{testimonials[0].text}&rdquo;
               </p>
@@ -745,7 +730,6 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {testimonials.slice(1, 6).map((t, index) => (
               <div key={index} className="home-card p-8">
-                <StarRow className="w-4 h-4 text-[#e8930f]" />
                 <p className="text-gray-600 text-[15px] leading-relaxed my-5">&ldquo;{t.text}&rdquo;</p>
                 <p className="font-semibold text-[#0d1b33] text-sm">{t.name}</p>
                 <p className="text-xs text-gray-500 mt-0.5">{t.location}</p>
@@ -777,7 +761,7 @@ export default function HomePage() {
             {[
               {
                 county: "Broward County",
-                note: "HVHZ Certified",
+                note: "HVHZ",
                 cities: [
                   { name: "Fort Lauderdale", href: "/areas/fort-lauderdale/" },
                   { name: "Hollywood", href: "/areas/hollywood/" },
@@ -806,7 +790,7 @@ export default function HomePage() {
               },
               {
                 county: "Miami-Dade County",
-                note: "HVHZ Certified",
+                note: "HVHZ",
                 cities: [
                   { name: "Miami", href: "/areas/miami/" },
                   { name: "Miami Beach", href: "/areas/miami-beach/" },

@@ -29,7 +29,7 @@ const manufacturerWarranties = [
       "Includes structural frame integrity and glass seal performance",
       "Hardware and operating mechanisms covered for 10 years",
       "Finish warranty covers fading and corrosion for 10 years",
-      "Must be installed by an authorized dealer to maintain full warranty",
+      "Manufacturer terms may limit coverage if the installation does not match the written instructions. We do not claim authorized-dealer status.",
     ],
   },
   {
@@ -40,7 +40,7 @@ const manufacturerWarranties = [
       "Glass seal failure (insulating glass units) covered for 10 years",
       "Hardware covered for 5 years from date of installation",
       "Frame integrity covered for 10 years against manufacturing defects",
-      "Installation by authorized dealer required for warranty activation",
+      "Warranty activation follows the manufacturer's written terms. We do not claim authorized-dealer status.",
     ],
   },
   {
@@ -117,7 +117,7 @@ const warrantyFaqs = [
   },
   {
     q: "What voids the manufacturer warranty?",
-    a: "Common exclusions include improper installation (which is why using an authorized dealer like Florida Impact Windows & Doors matters), physical damage from misuse or acts of nature, failure to perform routine maintenance, and modifications made by unauthorized parties.",
+    a: "Common exclusions include installation that does not follow the written instructions, physical damage from misuse or acts of nature, failure to perform routine maintenance, and modifications made after the fact. We install the products. That is not an authorized-dealer claim.",
   },
   {
     q: "How do I file a warranty claim?",
@@ -187,7 +187,7 @@ export default function WarrantiesPage() {
               Manufacturer Warranty Coverage by Brand
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Each of our authorized brands provides their own product warranty. As an authorized dealer, Florida Impact Windows & Doors ensures your warranty is fully valid and properly registered.
+              Each manufacturer publishes its own product warranty. We install PGT, CGI, ES Windows, and Custom Window Systems products and can help with registration when the written terms allow it. That is not an authorized-dealer claim.
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">

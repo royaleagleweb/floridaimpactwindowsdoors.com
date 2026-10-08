@@ -93,7 +93,7 @@ const faqs = [
   {
     question: "What brands of impact windows do you install?",
     answer:
-      "We are authorized dealers for the top impact window manufacturers including PGT, CGI, ES Windows, and Custom Window Systems (CWS). Each brand offers unique advantages in terms of design, performance, and warranty coverage. During your free consultation, we help you choose the best brand and product line for your home and budget.",
+      "We install PGT, CGI, ES Windows, and Custom Window Systems (CWS). That is not an authorized-dealer claim. During a free estimate we help you compare the line that fits the opening, the approval, and the budget.",
   },
 ];
 
@@ -174,7 +174,7 @@ export default function ImpactWindowsPage() {
               Insurance credit is not automatic. Florida Statute §627.0629 requires carriers to offer wind-mitigation discounts. A licensed inspector documents openings on form OIR-B1-1802 (the April 1, 2026 revision is required for new inspections). Opening protection is all-or-nothing: one leftover unprotected window can zero the credit. The form is typically good for five years if the house is unchanged.
             </p>
             <p>
-              We are the dealer-installer at 3000 Stirling Rd, Hollywood — not PGT, CGI, ES, or CWS. Those factories make the units. We measure, permit, set the anchors on the approval, and leave the paperwork you need for the inspector and, later, the wind-mitigation inspector. See{" "}
+              We install from 3000 Stirling Rd, Hollywood — we are not PGT, CGI, ES, or CWS, and we do not claim authorized-dealer status. Those factories make the units. We measure, permit, set the anchors on the approval, and leave the paperwork you need for the inspector and, later, the wind-mitigation inspector. See{" "}
               <a href="/faq/how-much-do-impact-windows-cost-in-south-florida/">what impact windows cost</a>,{" "}
               <a href="/financing/">financing</a>, and{" "}
               <a href="/brands/pgt/">PGT</a> if you are still choosing a line.
@@ -222,18 +222,18 @@ export default function ImpactWindowsPage() {
                 Why Choose Florida Impact Windows & Doors for Your Impact Window Installation
               </h2>
               <p className="text-gray-400 mb-8 leading-relaxed">
-                With over 15 years of experience and more than 5,000 impact windows installed across South Florida, Florida Impact Windows & Doors is the trusted choice for homeowners who demand quality, reliability, and honest pricing.
+                Florida Impact Windows & Doors measures, permits, and installs impact windows from 3000 Stirling Rd in Hollywood. We do not publish a project count or years in business.
               </p>
               <ul className="space-y-4">
                 {[
-                  "Authorized dealer for PGT, CGI, ES Windows, and CWS",
-                  "Licensed, insured, and Florida-certified contractor",
+                  "We install PGT, CGI, ES Windows, and CWS — not an authorized-dealer claim",
+                  "No license number is published on this site",
                   "Owner-led crews that measure, permit, and install",
                   "Full permit handling and building department inspections",
                   "Lifetime manufacturer warranties on all products",
                   "Flexible financing with payments starting at $89/month",
                   "Free in-home consultations and transparent estimates",
-                  "5-star rated with hundreds of verified Google reviews",
+                  "We do not publish a star rating or a review count",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
                     <svg className="w-5 h-5 text-palm-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>

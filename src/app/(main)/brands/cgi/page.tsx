@@ -4,9 +4,9 @@ import PageFaqSection from "@/components/PageFaqSection";
 import { faqPageJsonLd } from "@/lib/faqSchema";
 
 export const metadata: Metadata = {
-  title: "CGI Impact Windows South Florida | Sentinel Dealer-Installer",
+  title: "CGI Impact Windows South Florida | We Install CGI Products",
   description:
-    "Florida Impact Windows & Doors installs CGI impact windows in South Florida — Sentinel and Estate for coastal, high-rise, and oversized sliders. Dealer-installer, not the Miami factory. Free estimates. (754) 600-4876.",
+    "Florida Impact Windows & Doors installs CGI products in South Florida — Sentinel and Estate where those lines are still specified, for coastal, high-rise, and oversized sliders. We are not the Miami factory and we do not claim authorized-dealer status. Free estimates. (754) 600-4876.",
   alternates: { canonical: "https://floridaimpactwindowsdoors.com/brands/cgi/" },
 };
 
@@ -100,12 +100,12 @@ const features = [
   {
     title: "Full System Warranty",
     description:
-      "CGI provides a comprehensive limited lifetime warranty covering the frame, glass, hardware, and finish of their impact products when installed by an authorized dealer.",
+      "CGI publishes warranty terms for frame, glass, hardware, and finish. Whether those terms apply depends on the written warranty, not on an authorized-dealer claim from this shop.",
   },
 ];
 
 const whyChoose = [
-  "Over 30 years specializing exclusively in impact-resistant products for Florida",
+  "CGI has specialized in impact-resistant products for Florida. We do not publish a years-in-business figure for this shop or for the factory.",
   "Preferred by architects and builders for demanding high-performance applications",
   "Extensive testing at independent AAMA-accredited laboratories",
   "Superior structural ratings ideal for high-rise and oceanfront installations",
@@ -139,14 +139,14 @@ export default function CGIBrandPage() {
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/10 rounded-full px-4 py-1.5 mb-6">
               <span className="w-2 h-2 bg-ocean-400 rounded-full animate-pulse" />
-              <span className="text-sm text-ocean-300 font-medium">Authorized CGI Dealer</span>
+              <span className="text-sm text-ocean-300 font-medium">We install CGI products</span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-display text-white leading-tight mb-6">
               CGI Impact Windows{" "}
               <span className="gradient-text">for Coastal and High-Load Openings</span>
             </h1>
             <p className="text-lg text-gray-300 mb-8 max-w-2xl leading-relaxed">
-              CGI is the Miami-made line we install when the opening is the problem — ocean fetch, high-rise design pressure, a slider other plants will not stamp. We are the Hollywood dealer-installer, not the factory. If your house is fifteen ordinary single-hungs, start on the PGT or ES pages instead of this one. MITER discontinued most CGI retail lines in late 2025; existing CGI glass still has valid approvals, and new quotes that used to specify Sentinel or Estate are re-specified to a current approved line.
+              CGI is the Miami-made line we install when the opening is the problem — ocean fetch, high-rise design pressure, a slider other plants will not stamp. We install CGI products from Hollywood. We are not the factory, and we do not claim authorized-dealer status. If your house is fifteen ordinary single-hungs, start on the PGT or ES pages instead of this one. MITER discontinued most CGI retail lines in late 2025; existing CGI glass still has valid approvals, and new quotes that used to specify Sentinel or Estate are re-specified to a current approved line.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
@@ -225,8 +225,8 @@ export default function CGIBrandPage() {
             <div className="bg-gradient-to-br from-ocean-50 to-palm-50 rounded-3xl p-10 border border-ocean-100">
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center p-6 bg-white rounded-2xl shadow-sm">
-                  <div className="text-3xl font-bold font-display text-ocean-700 mb-1">30+</div>
-                  <div className="text-sm text-gray-500">Years Experience</div>
+                  <div className="text-3xl font-bold font-display text-ocean-700 mb-1">HVHZ</div>
+                  <div className="text-sm text-gray-500">Approvals we specify</div>
                 </div>
                 <div className="text-center p-6 bg-white rounded-2xl shadow-sm">
                   <div className="text-3xl font-bold font-display text-ocean-700 mb-1">Miami</div>
@@ -380,15 +380,15 @@ export default function CGIBrandPage() {
         accent="ocean"
       />
 
-      {/* Authorized Dealer Section */}
+      {/* Installer section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <span className="inline-block text-sm font-semibold text-palm-600 uppercase tracking-wider mb-3">Your Local CGI Experts</span>
           <h2 className="text-3xl md:text-4xl font-bold font-display text-gray-900 mb-6">
-            Florida Impact Windows & Doors: Your Authorized CGI Dealer
+            Florida Impact Windows & Doors Installs CGI Products
           </h2>
           <p className="text-lg text-gray-600 mb-6 leading-relaxed max-w-3xl mx-auto">
-            As an authorized CGI dealer, Florida Impact Windows & Doors provides access to the complete CGI product portfolio at competitive dealer pricing. Our installation teams are factory-trained in CGI installation techniques and we maintain the certifications needed to preserve your full CGI warranty coverage. From initial measurement to final inspection, we ensure every CGI product is installed to the exacting standards that CGI and the Florida Building Code require.
+            We install CGI products. That is not an authorized-dealer claim and it is not dealer pricing. From measurement to inspection, the unit on the permit is the configuration the approval covers, installed to the written anchorage — not a dealer badge.
           </p>
           <p className="text-lg text-gray-600 mb-8 leading-relaxed max-w-3xl mx-auto">
             Whether you are building a new oceanfront residence, renovating a high-rise condo unit, or upgrading the windows in your family home, Florida Impact Windows & Doors pairs CGI&apos;s commercial-grade products with the attentive local service you deserve. We handle permitting, HOA coordination, and scheduling so that your CGI project goes smoothly from start to finish.

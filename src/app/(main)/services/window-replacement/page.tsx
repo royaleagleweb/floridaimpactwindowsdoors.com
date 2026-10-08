@@ -269,7 +269,7 @@ export default function WindowReplacementPage() {
               </p>
               <ul className="space-y-4">
                 {[
-                  "Over 5,000 windows replaced across South Florida",
+                  "Replacement measured and installed from our Hollywood shop",
                   "Precise laser measurement for custom-fit windows",
                   "In-house crews with manufacturer-certified training",
                   "Complete removal, disposal, and cleanup included",

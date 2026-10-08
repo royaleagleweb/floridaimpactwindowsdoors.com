@@ -192,10 +192,10 @@ export default function FAQPage() {
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold font-display gradient-text-green mb-1">
-                15+
+                3
               </div>
               <div className="text-sm text-gray-500 font-medium">
-                Years Experience
+                Counties Served
               </div>
             </div>
             <div className="text-center">
