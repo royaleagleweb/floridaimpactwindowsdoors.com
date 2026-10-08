@@ -111,7 +111,9 @@ export default function AreasPage() {
                 </div>
                 <div>
                   <h2 className="text-3xl md:text-4xl font-bold font-display text-gray-900 mb-3">
-                    {county} County
+                    <Link href={county === "Miami-Dade" ? "/areas/miami-dade-county/" : county === "Broward" ? "/areas/broward-county/" : "/areas/palm-beach-county/"} className="hover:text-palm-700 transition-colors">
+                      {county} County
+                    </Link>
                   </h2>
                   <p className="text-lg text-gray-600 max-w-3xl leading-relaxed">
                     {countyDescriptions[county]}

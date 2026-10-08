@@ -18,6 +18,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/blog/`, changeFrequency: "weekly", priority: 0.8, lastModified: now },
     { url: `${BASE}/faq/`, changeFrequency: "monthly", priority: 0.7, lastModified: now },
     { url: `${BASE}/areas/`, changeFrequency: "monthly", priority: 0.8, lastModified: now },
+    { url: `${BASE}/areas/broward-county/`, changeFrequency: "monthly", priority: 0.8, lastModified: now },
+    { url: `${BASE}/areas/miami-dade-county/`, changeFrequency: "monthly", priority: 0.8, lastModified: now },
+    { url: `${BASE}/areas/palm-beach-county/`, changeFrequency: "monthly", priority: 0.8, lastModified: now },
+    { url: `${BASE}/my-safe-florida-home/`, changeFrequency: "monthly", priority: 0.8, lastModified: now },
     { url: `${BASE}/financing/`, changeFrequency: "monthly", priority: 0.7, lastModified: now },
     { url: `${BASE}/reviews/`, changeFrequency: "monthly", priority: 0.7, lastModified: now },
     { url: `${BASE}/our-process/`, changeFrequency: "monthly", priority: 0.7, lastModified: now },
@@ -54,7 +58,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   /* ── Door type pages ────────────────────────────────── */
   const doorTypes: MetadataRoute.Sitemap = [
     { url: `${BASE}/services/door-types/`, changeFrequency: "monthly", priority: 0.8, lastModified: now },
-    ...["sliding-glass", "french", "entry", "patio", "pivot", "garage", "storm"].map((d) => ({
+    ...["sliding-glass", "french", "entry", "pivot", "garage", "storm"].map((d) => ({
       url: `${BASE}/services/door-types/${d}/`,
       changeFrequency: "monthly" as const,
       priority: 0.8,

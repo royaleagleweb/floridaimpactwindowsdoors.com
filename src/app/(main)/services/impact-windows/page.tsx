@@ -8,9 +8,9 @@ import { faqPageJsonLd } from "@/lib/faqSchema";
 import { impactWindowGuides } from "@/lib/guideLinks";
 
 export const metadata: Metadata = {
-  title: "Impact Windows Installation | Hollywood HVHZ Installer",
+  title: "Impact & Hurricane Windows in South Florida | Hollywood",
   description:
-    "Impact window installation from 3000 Stirling Rd, Hollywood. Miami-Dade and Broward need NOA products; Palm Beach often accepts an FL#. PGT, CGI, ES, CWS. Free estimates. (754) 600-4876.",
+    "Impact windows, hurricane windows, and hurricane impact windows installed from 3000 Stirling Rd, Hollywood. Miami-Dade and Broward are HVHZ. Palm Beach is a wind-borne debris region. (754) 600-4876.",
   alternates: { canonical: "/services/impact-windows/" },
 };
 
@@ -73,7 +73,7 @@ const faqs = [
   {
     question: "Do impact windows really lower insurance premiums?",
     answer:
-      "Yes. Florida law requires insurance companies to offer premium discounts for hurricane mitigation features, and impact windows qualify for some of the largest discounts available. Most South Florida homeowners see insurance savings of 20% to 45% on their windstorm premiums after full impact window installation. The exact savings depend on your carrier, policy, and whether you protect all openings.",
+      "Florida law requires carriers to offer discounts for hurricane mitigation, and impact windows can be part of that filing after a wind-mitigation inspection. The percentage is set by the carrier, the policy, and whether every opening is protected. We do not publish a savings percentage.",
   },
   {
     question: "What is the difference between impact windows and hurricane shutters?",
@@ -91,9 +91,14 @@ const faqs = [
       "Florida Building Code requires that all new construction and major renovations in the High Velocity Hurricane Zone (HVHZ), which includes Miami-Dade and Broward counties, use impact-rated windows or an approved alternative. Even outside the HVHZ, most South Florida municipalities require some form of hurricane protection on all glazed openings for new permits.",
   },
   {
+    question: "Are hurricane windows the same as impact windows?",
+    answer:
+      "In South Florida searches, hurricane windows, hurricane impact windows, and impact windows are the same product category: laminated glass in a tested frame that is meant to stay in the opening after a debris hit. Shutters are a different product. You deploy shutters. Impact glass stays in the wall. Miami-Dade and Broward permits still need an approval that matches the opening. Palm Beach County is a wind-borne debris region, not the HVHZ.",
+  },
+  {
     question: "What brands of impact windows do you install?",
     answer:
-      "We install PGT, CGI, ES Windows, and Custom Window Systems (CWS). That is not an authorized-dealer claim. During a free estimate we help you compare the line that fits the opening, the approval, and the budget.",
+      "We install PGT, CGI, ES Windows, and Custom Window Systems (CWS). That is not an authorized-dealer claim. During a free estimate we compare the line that fits the opening, the approval, and the budget. Call (754) 600-4876.",
   },
 ];
 
@@ -117,10 +122,10 @@ export default function ImpactWindowsPage() {
               <span className="text-sm text-palm-300 font-medium">South Florida&apos;s Impact Window Specialists</span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-display text-white leading-tight mb-6">
-              <span className="gradient-text">Impact Windows</span> Installed from Hollywood
+              Impact Windows and <span className="gradient-text">Hurricane Windows</span> in South Florida
             </h1>
             <p className="text-lg text-gray-300 mb-8 max-w-xl leading-relaxed">
-              Impact windows are laminated glass in a tested frame — they stay in the opening after a debris hit so wind and water do not enter the house. We install PGT, CGI, ES Windows, and CWS from 3000 Stirling Rd, Hollywood, and pull the permit for Miami-Dade, Broward, and Palm Beach addresses.
+              Hurricane windows and hurricane impact windows are the same conversation as impact windows: laminated glass in a tested frame. We install them from 3000 Stirling Rd in Hollywood for Miami-Dade, Broward, and Palm Beach addresses.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
@@ -174,7 +179,7 @@ export default function ImpactWindowsPage() {
               Insurance credit is not automatic. Florida Statute §627.0629 requires carriers to offer wind-mitigation discounts. A licensed inspector documents openings on form OIR-B1-1802 (the April 1, 2026 revision is required for new inspections). Opening protection is all-or-nothing: one leftover unprotected window can zero the credit. The form is typically good for five years if the house is unchanged.
             </p>
             <p>
-              We install from 3000 Stirling Rd, Hollywood — we are not PGT, CGI, ES, or CWS, and we do not claim authorized-dealer status. Those factories make the units. We measure, permit, set the anchors on the approval, and leave the paperwork you need for the inspector and, later, the wind-mitigation inspector. See{" "}
+              We are the installer at 3000 Stirling Rd, Hollywood — not PGT, CGI, ES, or CWS, and we do not claim authorized-dealer status. Those factories make the units. We measure, permit, set the anchors on the approval, and leave the paperwork you need for the inspector and, later, the wind-mitigation inspector. See{" "}
               <a href="/faq/how-much-do-impact-windows-cost-in-south-florida/">what impact windows cost</a>,{" "}
               <a href="/financing/">financing</a>, and{" "}
               <a href="/brands/pgt/">PGT</a> if you are still choosing a line.
@@ -222,7 +227,7 @@ export default function ImpactWindowsPage() {
                 Why Choose Florida Impact Windows & Doors for Your Impact Window Installation
               </h2>
               <p className="text-gray-400 mb-8 leading-relaxed">
-                Florida Impact Windows & Doors measures, permits, and installs impact windows from 3000 Stirling Rd in Hollywood. We do not publish a project count or years in business.
+                Florida Impact Windows & Doors measures, permits, and installs impact windows and hurricane impact windows from 3000 Stirling Rd in Hollywood. We do not publish a project count or years in business.
               </p>
               <ul className="space-y-4">
                 {[
@@ -230,7 +235,7 @@ export default function ImpactWindowsPage() {
                   "No license number is published on this site",
                   "Owner-led crews that measure, permit, and install",
                   "Full permit handling and building department inspections",
-                  "Lifetime manufacturer warranties on all products",
+                  "Manufacturer warranty follows the written terms for that product",
                   "Flexible financing with payments starting at $89/month",
                   "Free in-home consultations and transparent estimates",
                   "We do not publish a star rating or a review count",

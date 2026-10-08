@@ -162,7 +162,7 @@ const faqs = [
   {
     question: "Is My Safe Florida Home the same as financing?",
     answer:
-      "No. My Safe Florida Home is a Florida Department of Financial Services grant (up to $10,000 for qualifying homesteaded homes) after a program inspection. Typical rules include a site-built home permitted before January 1, 2008, and — except for low-income applicants — an insured dwelling value at or below $700,000. Starting work before written grant approval can disqualify the project. Check MySafeFLHome.com for the current cycle.",
+      "No. My Safe Florida Home is a Florida Department of Financial Services grant (up to $10,000 for qualifying homesteaded homes) after a program inspection. Typical rules include a site-built home permitted before January 1, 2008, and — except for low-income applicants — an insured dwelling value at or below $700,000. Starting work before written grant approval can disqualify the project. The short version is at /my-safe-florida-home/. Check MySafeFLHome.com for the current cycle. If the program site disagrees, the program site wins.",
   },
 ];
 
@@ -186,7 +186,8 @@ export default function FinancingPage() {
               How Do You <span className="gradient-text">Finance Impact Windows</span>?
             </h1>
             <p className="text-lg text-gray-300 max-w-2xl leading-relaxed">
-              Most jobs use a lender plan (promotional 0% or a longer fixed term) or, where it fits, PACE on the tax bill. My Safe Florida Home is not financing — it is a state grant with a program inspection first, homestead rules, and a written approval before any work starts. We walk both paths from Hollywood.
+              Most jobs use a lender plan (promotional 0% or a longer fixed term) or, where it fits, PACE on the tax bill. My Safe Florida Home is not financing — it is a state grant with a program inspection first, homestead rules, and a written approval before any work starts. The grant summary is on the{" "}
+              <Link href="/my-safe-florida-home/" className="text-white underline">My Safe Florida Home</Link> page. We walk both paths from Hollywood.
             </p>
           </div>
         </div>

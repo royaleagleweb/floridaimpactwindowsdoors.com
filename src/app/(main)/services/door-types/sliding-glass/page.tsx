@@ -2,11 +2,13 @@ import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
 import RelatedDoorTypes from "@/components/RelatedDoorTypes";
+import PageFaqSection from "@/components/PageFaqSection";
+import { faqPageJsonLd } from "@/lib/faqSchema";
 
 export const metadata: Metadata = {
-  title: "Impact Sliding Glass Doors | The Opening That Fails the 1802",
+  title: "Impact Sliding Glass & Patio Doors in South Florida",
   description:
-    "Impact sliding glass doors for lanais and water views. Often the largest opening — and the one that zeros a wind-mitigation credit if skipped. Installed from Hollywood. (754) 600-4876.",
+    "Impact sliding glass doors and impact patio doors for South Florida lanais. One page: the multi-panel slider is the patio opening. Permitted from Hollywood. (754) 600-4876.",
   alternates: {
     canonical: "https://floridaimpactwindowsdoors.com/services/door-types/sliding-glass/",
   },
@@ -59,14 +61,37 @@ const bestFor = [
 
 const relatedDoors = [
   { name: "French Doors", href: "/services/door-types/french/" },
-  { name: "Patio Doors", href: "/services/door-types/patio/" },
   { name: "Entry Doors", href: "/services/door-types/entry/" },
   { name: "Pivot Doors", href: "/services/door-types/pivot/" },
+];
+
+const slidingFaqs = [
+  {
+    question: "Are impact patio doors the same as impact sliding glass doors?",
+    answer:
+      "On this site, yes. Impact patio doors and impact sliding glass doors are the multi-panel door on the lanai or pool side. The old patio-door URL redirects here so the two phrases are not split across two pages. A swinging pair is an impact French door, not this page.",
+  },
+  {
+    question: "Why does the slider decide a wind-mitigation credit?",
+    answer:
+      "It is usually the largest glazed opening. Form OIR-B1-1802 looks at opening protection for the house. Rated windows with an old aluminum patio slider still leave an unprotected opening. Any premium credit is set by the insurance carrier.",
+  },
+  {
+    question: "What has to be on the permit for a patio slider?",
+    answer:
+      "The panel count, the size, the glass package, the interlock, and the anchor pattern from the product approval. Miami-Dade and Broward are the High-Velocity Hurricane Zone. Palm Beach County is a wind-borne debris region, not the HVHZ. We measure the existing frame before we order, because a racked opening is not fixed by new rollers alone.",
+  },
+  {
+    question: "Who installs the door?",
+    answer:
+      "Florida Impact Windows & Doors installs it from 3000 Stirling Rd, Hollywood, FL 33021. Call (754) 600-4876. We install PGT, CGI, ES Windows, and Custom Window Systems products when the approval fits. That is not an authorized-dealer claim.",
+  },
 ];
 
 export default function SlidingGlassDoorsPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageJsonLd(slidingFaqs)) }} />
       {/* Hero Section */}
       <section className="relative py-24 lg:py-32 bg-ocean-950 overflow-hidden">
         <div className="absolute inset-0 bg-grid opacity-40" />
@@ -82,11 +107,11 @@ export default function SlidingGlassDoorsPage() {
                 All Door Types
               </Link>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-display text-white leading-tight mb-6">
-                Impact Sliding Glass{" "}
-                <span className="gradient-text">Doors</span>
+                Impact Sliding Glass and Patio Doors in{" "}
+                <span className="gradient-text">South Florida</span>
               </h1>
               <p className="text-lg text-gray-300 mb-8 max-w-2xl leading-relaxed">
-                An impact sliding glass door is a tested multi-panel unit with laminated lites. It is usually the largest opening on a South Florida house — and the one that zeros an OIR-B1-1802 opening-protection credit if you leave the old aluminum slider in the wall.
+                Impact patio doors on this site are impact sliding glass doors: the multi-panel unit on the lanai. It is usually the largest opening, and the one that limits a wind-mitigation credit if the old slider stays.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
@@ -291,6 +316,23 @@ export default function SlidingGlassDoorsPage() {
         </div>
       </section>
 
+      <section className="py-16 bg-white">
+        <div className="max-w-3xl mx-auto px-4 space-y-6 text-gray-700 text-lg leading-relaxed">
+          <h2 className="text-3xl font-bold font-display text-gray-900">Impact patio doors live on this page</h2>
+          <p>
+            Homeowners search impact patio doors and impact sliding glass doors for the same opening: the door from the living room to the patio, pool, or lanai. This page covers both phrases. The old /services/door-types/patio/ address redirects here so the two URLs do not compete.
+          </p>
+          <p>
+            A swinging pair with divided lites is not a slider. That door is an{" "}
+            <Link href="/services/door-types/french/" className="text-palm-700 font-semibold">impact French door</Link>
+            . A pocketing multi-slide is still a sliding system, and it still needs an approval that covers that panel count and size. Two-panel, three-panel, and four-panel units are different tests.
+          </p>
+          <p>
+            Rollers and a track cleaning fix some old sliders. They do not turn non-impact glass into impact glass. Replacement is the conversation when the frame is corroded, the sill ponds, the panel is racked, or the glass is not laminated impact glass. We install from 3000 Stirling Rd, Hollywood, FL 33021. Call (754) 600-4876.
+          </p>
+        </div>
+      </section>
+      <PageFaqSection heading="Impact sliding glass and patio door questions" faqs={slidingFaqs} />
       <RelatedDoorTypes current="/services/door-types/sliding-glass/" />
 
       {/* CTA Section */}

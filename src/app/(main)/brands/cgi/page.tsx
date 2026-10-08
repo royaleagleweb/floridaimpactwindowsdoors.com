@@ -353,8 +353,7 @@ export default function CGIBrandPage() {
             {[
               { href: "/get-estimate/", label: "Free CGI estimate" },
               { href: "/financing/", label: "Financing" },
-              { href: "/services/door-types/sliding-glass/", label: "Impact sliding glass doors" },
-              { href: "/services/door-types/patio/", label: "Impact patio doors" },
+              { href: "/services/door-types/sliding-glass/", label: "Impact sliding glass and patio doors" },
               { href: "/services/window-types/picture/", label: "Picture / fixed impact glass" },
               { href: "/services/commercial-services/", label: "Commercial impact glazing" },
               { href: "/blog/pgt-vs-cgi-impact-windows-comparison/", label: "PGT vs CGI comparison" },

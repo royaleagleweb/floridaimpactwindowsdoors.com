@@ -2,11 +2,13 @@ import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
 import RelatedDoorTypes from "@/components/RelatedDoorTypes";
+import PageFaqSection from "@/components/PageFaqSection";
+import { faqPageJsonLd } from "@/lib/faqSchema";
 
 export const metadata: Metadata = {
-  title: "Impact Entry Doors | Front Door That Counts on the 1802",
+  title: "Impact Entry Doors in South Florida | Front Door Installation",
   description:
-    "Impact entry doors are a glazed opening on the OIR-B1-1802 form. We install permitted units from Hollywood. Free estimates. (754) 600-4876.",
+    "Impact entry doors and impact front doors for South Florida homes. Glazed openings on the wind-mitigation form, permitted from Hollywood. Free estimates. (754) 600-4876.",
   alternates: {
     canonical: "https://floridaimpactwindowsdoors.com/services/door-types/entry/",
   },
@@ -61,12 +63,36 @@ const relatedDoors = [
   { name: "French Doors", href: "/services/door-types/french/" },
   { name: "Pivot Doors", href: "/services/door-types/pivot/" },
   { name: "Storm Doors", href: "/services/door-types/storm/" },
-  { name: "Sliding Glass Doors", href: "/services/door-types/sliding-glass/" },
+  { name: "Sliding Glass & Patio Doors", href: "/services/door-types/sliding-glass/" },
+];
+
+const entryFaqs = [
+  {
+    question: "Are impact entry doors and impact front doors the same thing?",
+    answer:
+      "On a South Florida house they are the same opening: the front door. People search both phrases. If the door has glass, or it is paired with sidelites or a transom, those lites are glazed openings and they belong on the permit with the door slab.",
+  },
+  {
+    question: "Does an impact entry door count on the wind-mitigation form?",
+    answer:
+      "Yes, when it is a glazed opening. Form OIR-B1-1802 looks at opening protection for the whole house. A rated front door does not cover an unprotected slider or garage door. Any premium credit after the inspection is set by the insurance carrier.",
+  },
+  {
+    question: "What has to match on a Miami-Dade or Broward permit?",
+    answer:
+      "Miami-Dade and Broward are the High-Velocity Hurricane Zone. The product approval has to cover the door size, the glass package, and the anchor pattern. Palm Beach County is a wind-borne debris region, not the HVHZ, and often accepts a Florida Product Approval. We install from 3000 Stirling Rd, Hollywood. That is not an authorized-dealer claim.",
+  },
+  {
+    question: "Should a South Florida entry door swing out?",
+    answer:
+      "Out-swing is the usual choice on an exposed front door because wind-driven rain and positive pressure push the leaf against the stop. A deep covered entry can still use an in-swing. The overhang, the sill, and the floor inside decide it. We write the swing on the order after we see the opening.",
+  },
 ];
 
 export default function EntryDoorsPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageJsonLd(entryFaqs)) }} />
       {/* Hero Section */}
       <section className="relative py-24 lg:py-32 bg-ocean-950 overflow-hidden">
         <div className="absolute inset-0 bg-grid opacity-40" />
@@ -82,11 +108,11 @@ export default function EntryDoorsPage() {
                 All Door Types
               </Link>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-display text-white leading-tight mb-6">
-                Impact Entry{" "}
-                <span className="gradient-text">Doors</span>
+                Impact Entry Doors in{" "}
+                <span className="gradient-text">South Florida</span>
               </h1>
               <p className="text-lg text-gray-300 mb-8 max-w-2xl leading-relaxed">
-                Make a powerful first impression while protecting your family. Our impact-rated entry doors combine striking design, unbreakable security, and Category 5 hurricane protection for South Florida homes.
+                Impact entry doors and impact front doors are the front opening on a South Florida house. We measure the slab, the sidelites, and the transom, then permit the tested unit from our Hollywood shop.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
@@ -291,6 +317,22 @@ export default function EntryDoorsPage() {
         </div>
       </section>
 
+      <section className="py-16 bg-white">
+        <div className="max-w-3xl mx-auto px-4 space-y-6 text-gray-700 text-lg leading-relaxed">
+          <h2 className="text-3xl font-bold font-display text-gray-900">What an impact front door has to include</h2>
+          <p>
+            A decorative front door is still an opening. If the lite, the sidelites, or the transom are glass, each one has to be the glass package on the product approval. A solid slab with a separate unprotected sidelite does not make the entry impact-rated. We write the configuration that the approval covers, not a catalog photo with a different glass package.
+          </p>
+          <p>
+            Miami-Dade and Broward permits expect HVHZ paperwork. Palm Beach County is a wind-borne debris region, so a Florida Product Approval is often enough there. The hinge side, the threshold, and whether the door swings out are part of the water and pressure detail, especially on an exposed elevation with no deep cover.
+          </p>
+          <p>
+            We install PGT, CGI, ES Windows, and Custom Window Systems entry doors when the line fits the opening. Installing a brand is not an authorized-dealer claim. French doors, which are a pair of swinging leaves rather than a single front door, are on the{" "}
+            <Link href="/services/door-types/french/" className="text-palm-700 font-semibold">impact French doors</Link> page. The shop is 3000 Stirling Rd, Hollywood, FL 33021. Call (754) 600-4876.
+          </p>
+        </div>
+      </section>
+      <PageFaqSection heading="Impact entry door questions" faqs={entryFaqs} />
       <RelatedDoorTypes current="/services/door-types/entry/" />
 
       {/* CTA Section */}

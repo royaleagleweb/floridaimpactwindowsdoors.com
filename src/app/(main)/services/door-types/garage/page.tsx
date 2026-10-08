@@ -2,11 +2,13 @@ import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
 import RelatedDoorTypes from "@/components/RelatedDoorTypes";
+import PageFaqSection from "@/components/PageFaqSection";
+import { faqPageJsonLd } from "@/lib/faqSchema";
 
 export const metadata: Metadata = {
-  title: "Impact Garage Doors | The Opening Inspectors Always Check",
+  title: "Impact Garage Doors in South Florida | Wind-Rated Openings",
   description:
-    "A garage door is an opening. Unprotected, it can fail both the house and the wind-mitigation credit. Impact or reinforced garage doors installed from Hollywood. (754) 600-4876.",
+    "Impact garage doors for South Florida homes. The door, track, and reinforcement are one tested opening. Permitted from Hollywood. Free estimates. (754) 600-4876.",
   alternates: {
     canonical: "https://floridaimpactwindowsdoors.com/services/door-types/garage/",
   },
@@ -60,13 +62,36 @@ const bestFor = [
 const relatedDoors = [
   { name: "Entry Doors", href: "/services/door-types/entry/" },
   { name: "Storm Doors", href: "/services/door-types/storm/" },
-  { name: "Sliding Glass Doors", href: "/services/door-types/sliding-glass/" },
-  { name: "Patio Doors", href: "/services/door-types/patio/" },
+  { name: "Sliding Glass & Patio Doors", href: "/services/door-types/sliding-glass/" },
+];
+
+const garageFaqs = [
+  {
+    question: "What is an impact garage door?",
+    answer:
+      "An impact garage door is a wind-rated door assembly: the sections, the track, the reinforcement, and any glass in the sections, tested together. A rated section on an unrated track, or a window lite that was never part of the test, is not the approved door.",
+  },
+  {
+    question: "Why do inspectors look at the garage first?",
+    answer:
+      "The garage is often the largest opening on the house. On form OIR-B1-1802 it is its own line. Impact windows on the living area do not cover an unrated garage door. Leaving it unprotected is a common reason a wind-mitigation credit is limited. The carrier sets any premium change.",
+  },
+  {
+    question: "Does design pressure apply to a garage door?",
+    answer:
+      "Yes. The approval states the wind load the assembly was tested to. A wide two-car door is not the same test as a single-car door. We match the width, the glass option, and the reinforcement to the approval before it goes on the permit.",
+  },
+  {
+    question: "Is the garage door rule different in Palm Beach?",
+    answer:
+      "The garage is still an opening. Miami-Dade and Broward are the High-Velocity Hurricane Zone. Palm Beach County is a wind-borne debris region, not the HVHZ, and often accepts a Florida Product Approval. We install from 3000 Stirling Rd, Hollywood. Call (754) 600-4876.",
+  },
 ];
 
 export default function GarageDoorsPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageJsonLd(garageFaqs)) }} />
       {/* Hero Section */}
       <section className="relative py-24 lg:py-32 bg-ocean-950 overflow-hidden">
         <div className="absolute inset-0 bg-grid opacity-40" />
@@ -82,11 +107,11 @@ export default function GarageDoorsPage() {
                 All Door Types
               </Link>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-display text-white leading-tight mb-6">
-                Impact Garage{" "}
-                <span className="gradient-text">Doors</span>
+                Impact Garage Doors in{" "}
+                <span className="gradient-text">South Florida</span>
               </h1>
               <p className="text-lg text-gray-300 mb-8 max-w-2xl leading-relaxed">
-                Seal your home&apos;s largest vulnerability with hurricane-rated impact garage doors. Engineered for South Florida wind loads, our garage doors protect your vehicles and belongings while enhancing curb appeal.
+                An impact garage door is a tested opening, not a decorative panel. The sections, the track, and any glass have to be the assembly on the approval. We permit them from Hollywood.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
@@ -314,6 +339,24 @@ export default function GarageDoorsPage() {
         </div>
       </section>
 
+      <section className="py-16 bg-white">
+        <div className="max-w-3xl mx-auto px-4 space-y-6 text-gray-700 text-lg leading-relaxed">
+          <h2 className="text-3xl font-bold font-display text-gray-900">The garage is an opening, not a wall</h2>
+          <p>
+            Wind load on a garage door is a pressure number for that width and height. A two-car door sees more area than a single-car door, and glass lites change the assembly. The Notice of Acceptance or Florida Product Approval has to name the door you are buying, including the reinforcement and the track hardware that were in the test.
+          </p>
+          <p>
+            Mixing a rated section with an unrated track, or cutting in a decorative window that was never tested, is how a door can look finished and still fail inspection. If the existing opening is out of square, the repair is the opening, not a smaller number on a quote. We measure before we order.
+          </p>
+          <p>
+            Field notes are in{" "}
+            <Link href="/blog/impact-garage-doors-hvhz-south-florida/" className="text-palm-700 font-semibold">impact garage doors and the HVHZ</Link>
+            . The rest of the door family is on the{" "}
+            <Link href="/services/impact-doors/" className="text-palm-700 font-semibold">impact doors</Link> page. Shop: 3000 Stirling Rd, Hollywood, FL 33021. (754) 600-4876.
+          </p>
+        </div>
+      </section>
+      <PageFaqSection heading="Impact garage door questions" faqs={garageFaqs} />
       <RelatedDoorTypes current="/services/door-types/garage/" />
 
       {/* CTA Section */}
