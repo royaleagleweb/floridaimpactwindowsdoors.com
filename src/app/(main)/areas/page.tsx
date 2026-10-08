@@ -90,8 +90,8 @@ export default function AreasPage() {
               <div className="text-sm text-gray-500 font-medium">Cities & Towns</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold font-display gradient-text-green mb-1">5,000+</div>
-              <div className="text-sm text-gray-500 font-medium">Projects Completed</div>
+              <div className="text-3xl md:text-4xl font-bold font-display gradient-text-green mb-1">Free</div>
+              <div className="text-sm text-gray-500 font-medium">In-Home Estimates</div>
             </div>
           </div>
         </div>

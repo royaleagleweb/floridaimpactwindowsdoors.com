@@ -65,10 +65,10 @@ const included = [
 ];
 
 const trustSignals = [
-  { value: "15+", label: "Years Experience" },
-  { value: "5,000+", label: "Homes Protected" },
-  { value: "4.9", label: "Google Rating" },
-  { value: "24hr", label: "Response Time" },
+  { value: "Hollywood", label: "3000 Stirling Rd" },
+  { value: "3", label: "Counties Served" },
+  { value: "Free", label: "In-Home Estimates" },
+  { value: "(754)", label: "600-4876" },
 ];
 
 export default function GetEstimatePage() {
@@ -321,7 +321,7 @@ export default function GetEstimatePage() {
                     {[
                       "No high-pressure sales tactics — ever",
                       "Transparent pricing with no hidden fees",
-                      "Licensed, bonded & insured (FL License #)",
+                      "Hollywood shop at 3000 Stirling Rd — we do not publish a license number",
                       "Written warranty on every installation",
                     ].map((promise) => (
                       <div key={promise} className="flex items-start gap-3">

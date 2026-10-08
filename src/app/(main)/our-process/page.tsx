@@ -94,7 +94,7 @@ const processSteps = [
     step: "05",
     title: "Professional Installation",
     description:
-      "Our factory-trained installation crews arrive on the scheduled date to begin your installation. We protect your home interior with drop cloths and plastic sheeting, carefully remove old windows and doors, prepare openings with proper flashing and waterproofing, and install your new impact products according to manufacturer specifications and Florida Building Code requirements.",
+      "Our installation crews arrive on the scheduled date to begin your installation. We protect your home interior with drop cloths and plastic sheeting, carefully remove old windows and doors, prepare openings with proper flashing and waterproofing, and install your new impact products according to manufacturer specifications and Florida Building Code requirements.",
     details: [
       "Interior protection of furniture, floors, and walls",
       "Careful removal and disposal of old windows and doors",
@@ -212,7 +212,7 @@ export default function OurProcessPage() {
               What Are the Six Steps from Estimate to Inspection?
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              We have refined our process over 15 years and 5,000+ installations to make your experience seamless and stress-free.
+              The same six steps apply on every job we run from the Hollywood shop, so you know what happens between the estimate and the inspection.
             </p>
           </div>
           <div className="space-y-16">

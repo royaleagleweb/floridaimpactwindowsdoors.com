@@ -4,9 +4,9 @@ import PageFaqSection from "@/components/PageFaqSection";
 import { faqPageJsonLd } from "@/lib/faqSchema";
 
 export const metadata: Metadata = {
-  title: "ES Windows Impact Windows South Florida | Local Dealer-Installer",
+  title: "ES Windows Impact Windows South Florida | We Install ES Products",
   description:
-    "Florida Impact Windows & Doors installs ES Windows impact windows in South Florida. South Florida-made aluminum, shorter lead times, HVHZ NOA. Dealer-installer — not the factory. Free estimates. (754) 600-4876.",
+    "Florida Impact Windows & Doors installs ES Windows products in South Florida. South Florida-made aluminum, HVHZ NOA on the lines we specify. We are not the factory and we do not claim authorized-dealer status. Free estimates. (754) 600-4876.",
   alternates: { canonical: "https://floridaimpactwindowsdoors.com/brands/es-windows/" },
 };
 
@@ -139,14 +139,14 @@ export default function ESWindowsBrandPage() {
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/10 rounded-full px-4 py-1.5 mb-6">
               <span className="w-2 h-2 bg-sun-400 rounded-full animate-pulse" />
-              <span className="text-sm text-sun-300 font-medium">Authorized ES Windows Dealer</span>
+              <span className="text-sm text-sun-300 font-medium">We install ES Windows products</span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-display text-white leading-tight mb-6">
               ES Windows Impact Windows{" "}
               <span className="gradient-text">from a South Florida Installer</span>
             </h1>
             <p className="text-lg text-gray-300 mb-8 max-w-2xl leading-relaxed">
-              ES is the South Florida-made line we install when the job is every opening, not a showroom wall. We are the Hollywood dealer-installer — we pull the permit and set the units. ES builds the frames. If you wanted PGT&apos;s full catalog or CGI&apos;s coastal custom shop, those pages are a click away; this page is the value-and-lead-time argument.
+              ES is the South Florida-made line we install when the job is every opening, not a showroom wall. We install ES products from Hollywood — we pull the permit and set the units. ES builds the frames. We do not claim authorized-dealer status. If you wanted PGT&apos;s catalog or CGI&apos;s coastal work, those pages are a click away; this page is the value-and-lead-time argument.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
@@ -395,15 +395,15 @@ export default function ESWindowsBrandPage() {
         accent="sun"
       />
 
-      {/* Authorized Dealer Section */}
+      {/* Installer section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <span className="inline-block text-sm font-semibold text-palm-600 uppercase tracking-wider mb-3">Your Local ES Windows Experts</span>
           <h2 className="text-3xl md:text-4xl font-bold font-display text-gray-900 mb-6">
-            Florida Impact Windows & Doors: Your Authorized ES Windows Dealer
+            Florida Impact Windows & Doors Installs ES Windows Products
           </h2>
           <p className="text-lg text-gray-600 mb-6 leading-relaxed max-w-3xl mx-auto">
-            As an authorized ES Windows dealer, Florida Impact Windows & Doors offers the complete ES product line at competitive dealer-direct pricing. We pair ES Windows&apos; value-driven products with our own expert installation, full permitting service, and attentive customer support. The result is a turnkey impact window project that protects your home and your wallet.
+            We install ES Windows products. That is not an authorized-dealer claim and it is not dealer-direct pricing. We pair the ES line we specify with measurement, permitting, and installation from the Hollywood shop.
           </p>
           <p className="text-lg text-gray-600 mb-8 leading-relaxed max-w-3xl mx-auto">
             Our team will help you determine whether ES Windows is the right fit for your home based on your priorities, your budget, and the specific requirements of your property. We are transparent about the differences between brands and will always recommend the product that best matches your situation, because our goal is a satisfied customer, not just a sale.
