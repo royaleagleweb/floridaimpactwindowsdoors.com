@@ -4,16 +4,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Impact Door Types | Florida Impact Windows & Doors",
   description:
-    "Impact sliding glass, French, entry, patio, garage, and storm doors installed from Hollywood. Opening protection is all-or-nothing on the OIR-B1-1802 form. (754) 600-4876.",
+    "Impact sliding glass and patio doors, French doors, entry doors, garage doors, and storm doors installed from Hollywood. Opening protection is all-or-nothing on the OIR-B1-1802 form. (754) 600-4876.",
   alternates: { canonical: "https://floridaimpactwindowsdoors.com/services/door-types/" },
 };
 
 const doorTypes = [
   {
-    name: "Sliding Glass Doors",
+    name: "Sliding Glass & Patio Doors",
     href: "/services/door-types/sliding-glass/",
     description:
-      "Wide-opening impact sliding glass doors that flood your South Florida home with natural light while providing hurricane-rated protection and effortless indoor-outdoor living.",
+      "Impact sliding glass doors and impact patio doors for South Florida lanais. The multi-panel slider is the patio opening. A swinging pair is a French door.",
     features: ["Large glass panels", "Smooth gliding operation", "Indoor-outdoor living", "Maximum natural light"],
   },
   {
@@ -29,13 +29,6 @@ const doorTypes = [
     description:
       "Make a powerful first impression with impact-rated entry doors designed for South Florida. Combining curb appeal, security, and Category 5 hurricane protection.",
     features: ["Bold curb appeal", "Maximum security", "Custom designs", "Energy efficient"],
-  },
-  {
-    name: "Patio Doors",
-    href: "/services/door-types/patio/",
-    description:
-      "Impact patio doors built for the South Florida lifestyle. Seamlessly connect your living space with your outdoor area while maintaining full storm protection.",
-    features: ["Seamless transitions", "Wide openings", "Weather sealed", "Multiple configurations"],
   },
   {
     name: "Pivot Doors",

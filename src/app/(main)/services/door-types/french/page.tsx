@@ -2,11 +2,13 @@ import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
 import RelatedDoorTypes from "@/components/RelatedDoorTypes";
+import PageFaqSection from "@/components/PageFaqSection";
+import { faqPageJsonLd } from "@/lib/faqSchema";
 
 export const metadata: Metadata = {
-  title: "Impact French Doors | Swing Pair, Tested Glass",
+  title: "Impact French Doors in South Florida | Swing Pairs",
   description:
-    "Impact French doors for lanais and Mizner-style elevations. Count as glazed openings on the wind-mitigation form. Installed from Hollywood. (754) 600-4876.",
+    "Impact French doors for South Florida lanais and formal elevations. Both leaves are a tested glazed opening. Installed from Hollywood. Free estimates. (754) 600-4876.",
   alternates: {
     canonical: "https://floridaimpactwindowsdoors.com/services/door-types/french/",
   },
@@ -58,15 +60,38 @@ const bestFor = [
 ];
 
 const relatedDoors = [
-  { name: "Sliding Glass Doors", href: "/services/door-types/sliding-glass/" },
+  { name: "Sliding Glass & Patio Doors", href: "/services/door-types/sliding-glass/" },
   { name: "Entry Doors", href: "/services/door-types/entry/" },
-  { name: "Patio Doors", href: "/services/door-types/patio/" },
   { name: "Pivot Doors", href: "/services/door-types/pivot/" },
+];
+
+const frenchFaqs = [
+  {
+    question: "What are impact French doors?",
+    answer:
+      "Impact French doors are a pair of swinging leaves with laminated glass in a tested frame. They are a glazed opening, the same category as the windows around them. A decorative pair with impact glass in only one lite is not the tested assembly.",
+  },
+  {
+    question: "Should impact French doors swing out in South Florida?",
+    answer:
+      "Out-swing is the usual choice on an exposed patio because the leaves can bear against the frame under positive pressure and the sill can shed water away from the room. In-swing pairs still get used under a deep cover. The overhang and the floor inside decide the swing, not a catalog photo.",
+  },
+  {
+    question: "Are impact French doors different from impact patio doors?",
+    answer:
+      "People use patio door for both a sliding glass door and a swinging pair. On this site, a sliding patio door is the impact sliding glass door page. A swinging pair is this French door page. Both have to be the product on the permit.",
+  },
+  {
+    question: "Do both counties use the same approval?",
+    answer:
+      "Miami-Dade and Broward are the High-Velocity Hurricane Zone and expect a Miami-Dade product approval that matches the size. Palm Beach County is a wind-borne debris region, not the HVHZ, and often accepts a Florida Product Approval. We install from 3000 Stirling Rd, Hollywood. Call (754) 600-4876.",
+  },
 ];
 
 export default function FrenchDoorsPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageJsonLd(frenchFaqs)) }} />
       {/* Hero Section */}
       <section className="relative py-24 lg:py-32 bg-ocean-950 overflow-hidden">
         <div className="absolute inset-0 bg-grid opacity-40" />
@@ -82,11 +107,11 @@ export default function FrenchDoorsPage() {
                 All Door Types
               </Link>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-display text-white leading-tight mb-6">
-                Impact French{" "}
-                <span className="gradient-text">Doors</span>
+                Impact French Doors in{" "}
+                <span className="gradient-text">South Florida</span>
               </h1>
               <p className="text-lg text-gray-300 mb-8 max-w-2xl leading-relaxed">
-                Timeless double-swing elegance meets Category 5 hurricane protection. Our impact French doors add architectural beauty and gracious living to any South Florida home while keeping your family safe.
+                Impact French doors keep the double swing and the divided-lite look, and both leaves have to be the tested glass. We permit and install them from Hollywood for lanais and formal elevations.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
@@ -291,6 +316,24 @@ export default function FrenchDoorsPage() {
         </div>
       </section>
 
+      <section className="py-16 bg-white">
+        <div className="max-w-3xl mx-auto px-4 space-y-6 text-gray-700 text-lg leading-relaxed">
+          <h2 className="text-3xl font-bold font-display text-gray-900">Where impact French doors belong</h2>
+          <p>
+            A lot of South Florida houses were drawn with a pair of glazed leaves from the dining room to the patio, or on a formal elevation. When those doors are original wood or non-impact aluminum, they are a large hole in the envelope. An impact French door keeps the swing. It does not turn a non-impact pair into a rated pair by adding a sticker to one lite.
+          </p>
+          <p>
+            The astragal, the multi-point lock, the sill, and the hinge anchors are part of the test. Mixing a rated leaf with an unrated frame, or cutting the pair down past the approval, is how a door looks finished and still fails inspection. Active-passive pairs and two operating leaves are different hardware sets. We specify the one the opening and the approval allow.
+          </p>
+          <p>
+            The longer field notes are in{" "}
+            <Link href="/blog/impact-french-doors-south-florida/" className="text-palm-700 font-semibold">impact French doors in South Florida</Link>
+            . Sliding patio doors, which are a different operation, are on the{" "}
+            <Link href="/services/door-types/sliding-glass/" className="text-palm-700 font-semibold">impact sliding glass and patio door</Link> page. The shop is 3000 Stirling Rd, Hollywood, FL 33021.
+          </p>
+        </div>
+      </section>
+      <PageFaqSection heading="Impact French door questions" faqs={frenchFaqs} />
       <RelatedDoorTypes current="/services/door-types/french/" />
 
       {/* CTA Section */}
