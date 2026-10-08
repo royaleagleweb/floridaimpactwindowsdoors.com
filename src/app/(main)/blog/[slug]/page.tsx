@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { blogPosts } from "@/data/blog";
 import { addBlogInternalLinks } from "@/lib/blogLinks";
 import { linkedPosts } from "@/lib/relatedPosts";
+import { faqPageJsonLd } from "@/lib/faqSchema";
 
 export function generateStaticParams() {
   return blogPosts.map((post) => ({
@@ -98,6 +99,9 @@ export default async function BlogPostPage({
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      {post.faqs && post.faqs.length > 0 && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageJsonLd(post.faqs)) }} />
+      )}
 
       {/* Hero / Header */}
       <section className="relative bg-ocean-950 overflow-hidden">
@@ -219,10 +223,20 @@ export default async function BlogPostPage({
               </div>
 
               {/* Article Body */}
-              <div
-                className="prose prose-lg max-w-none prose-headings:font-display prose-headings:text-gray-900 prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4 prose-p:text-gray-600 prose-p:leading-relaxed prose-a:text-palm-600 prose-a:no-underline hover:prose-a:underline prose-strong:text-gray-900"
-                dangerouslySetInnerHTML={{ __html: addBlogInternalLinks(post.content, post.slug) }}
-              />
+              <div className="prose prose-lg max-w-none prose-headings:font-display prose-headings:text-gray-900 prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4 prose-h3:text-xl prose-h3:mt-6 prose-h3:mb-2 prose-p:text-gray-600 prose-p:leading-relaxed prose-a:text-palm-600 prose-a:no-underline hover:prose-a:underline prose-strong:text-gray-900">
+                <div dangerouslySetInnerHTML={{ __html: addBlogInternalLinks(post.content, post.slug) }} />
+                {post.faqs && post.faqs.length > 0 && (
+                  <div>
+                    <h2>Frequently Asked Questions</h2>
+                    {post.faqs.map((faq) => (
+                      <div key={faq.question}>
+                        <h3>{faq.question}</h3>
+                        <p>{faq.answer}</p>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
 
               {articleLinks.length > 0 && (
                 <div className="mt-12 pt-8 border-t border-gray-200">
