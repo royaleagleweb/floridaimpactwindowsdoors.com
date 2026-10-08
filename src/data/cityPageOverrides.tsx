@@ -13,6 +13,87 @@ import {
   weston,
   westPalmBeach,
 } from "./cityHubOverrides";
+import {
+  daniaBeach,
+  deerfieldBeach,
+  hallandaleBeach,
+  hillsboroBeach,
+  lauderdaleByTheSea,
+  lighthousePoint,
+  pompanoBeach,
+  seaRanchLakes,
+} from "./browardCoastalHubs";
+import {
+  balHarbour,
+  bayHarborIslands,
+  coralGables,
+  cutlerBay,
+  doral,
+  floridaCity,
+  goldenBeach,
+  hialeah,
+  hialeahGardens,
+  homestead,
+  kendall,
+  keyBiscayne,
+  medley,
+  miamiBeach,
+  miamiGardens,
+  miamiLakes,
+  miamiShores,
+  miamiSprings,
+  northMiami,
+  northMiamiBeach,
+  palmettoBay,
+  pinecrest,
+  southMiami,
+  sunnyIslesBeach,
+  surfside,
+  sweetwater,
+  westchester,
+} from "./miamiDadeHubs";
+import {
+  atlantis,
+  boyntonBeach,
+  brinyBreezes,
+  greenacres,
+  gulfStream,
+  highlandBeach,
+  hypoluxo,
+  junoBeach,
+  jupiter,
+  lakePark,
+  lakeWorthBeach,
+  lantana,
+  loxahatchee,
+  manalapan,
+  northPalmBeach,
+  oceanRidge,
+  palmBeachGardens,
+  palmBeachTown,
+  palmSpringsVillage,
+  portStLucie,
+  rivieraBeach,
+  royalPalmBeach,
+  southPalmBeach,
+  tequesta,
+  wellington,
+} from "./palmBeachHubs";
+import {
+  coconutCreek,
+  cooperCity,
+  lauderdaleLakes,
+  lauderhill,
+  margate,
+  northLauderdale,
+  oaklandPark,
+  parkland,
+  southwestRanches,
+  sunrise,
+  tamarac,
+  westPark,
+  wiltonManors,
+} from "./browardInlandHubs";
 
 export interface CityPageOverride {
   title: string;
@@ -26,6 +107,13 @@ export interface CityPageOverride {
   hurricaneZone: string;
   buildingCodeNote?: string;
   officeLine?: string;
+  /** Geographically adjacent hubs, used for the nearby-city links. */
+  nearbySlugs?: string[];
+  /**
+   * Shown in quick facts and schema when the directory county is wrong.
+   * Port St. Lucie stays grouped with Palm Beach hubs but is St. Lucie County.
+   */
+  countyLabel?: string;
   faqs: FaqItem[];
 }
 
@@ -38,12 +126,12 @@ function InlineLink({ href, children }: { href: string; children: ReactNode }) {
 }
 
 const hollywood: CityPageOverride = {
-  title: "Impact Windows in Hollywood, FL | Stirling Rd Installer",
+  title: "Impact Windows & Doors in Hollywood, FL | Broward County",
   description:
-    "Florida Impact Windows & Doors installs impact windows in Hollywood, FL from our shop at 3000 Stirling Rd. Broward HVHZ / Miami-Dade NOA products, permits pulled, free estimates. Call (754) 600-4876.",
+    "Impact windows and doors in Hollywood, FL, installed from our shop at 3000 Stirling Rd. Broward HVHZ / Miami-Dade NOA products, City of Hollywood permit. Call (754) 600-4876.",
   h1: (
     <>
-      Impact Windows in <span className="gradient-text">Hollywood</span>, FL — Installed from Stirling Road
+      Impact Windows &amp; Doors in <span className="gradient-text">Hollywood</span>, FL
     </>
   ),
   heroIntro: (
@@ -102,6 +190,19 @@ const hollywood: CityPageOverride = {
         <InlineLink href="/brands/pgt/#compare">PGT vs ES</InlineLink> if you are still choosing a line.
         Call (754) 600-4876 — that number rings the Hollywood office.
       </p>
+      <p>
+        A homesteaded Hollywood house permitted before January 1, 2008 may qualify for My Safe
+        Florida Home, the state grant of up to $10,000 after a program inspection — not the same
+        thing as <InlineLink href="/financing/">financing</InlineLink>. Except for low-income
+        applicants, insured value is typically at or below $700,000, and starting before written
+        approval can disqualify the project. Broadwalk condominiums are usually an association
+        job instead. County pricing context is{" "}
+        <InlineLink href="/blog/impact-window-cost-broward-county/">impact window cost in Broward</InlineLink>.
+        The next cities over are <InlineLink href="/areas/hallandale-beach/">Hallandale Beach</InlineLink>,{" "}
+        <InlineLink href="/areas/west-park/">West Park</InlineLink>,{" "}
+        <InlineLink href="/areas/dania-beach/">Dania Beach</InlineLink>, and{" "}
+        <InlineLink href="/areas/pembroke-pines/">Pembroke Pines</InlineLink>.
+      </p>
     </>
   ),
   codeParagraph: (
@@ -116,6 +217,7 @@ const hollywood: CityPageOverride = {
   hurricaneZone: "HVHZ (Broward)",
   buildingCodeNote: "City of Hollywood + FBC / NOA",
   officeLine: "3000 Stirling Rd, 33021 (HQ)",
+  nearbySlugs: ["hallandale-beach", "west-park", "dania-beach", "pembroke-pines", "davie"],
   faqs: [
     {
       question: "Where is Florida Impact Windows & Doors in Hollywood?",
@@ -146,12 +248,12 @@ const hollywood: CityPageOverride = {
 };
 
 const bocaRaton: CityPageOverride = {
-  title: "Impact Windows Boca Raton | Palm Beach County Installer",
+  title: "Impact Windows & Doors in Boca Raton, FL | Palm Beach County",
   description:
-    "Impact windows in Boca Raton installed by Florida Impact Windows & Doors. Palm Beach County is a wind-borne debris region, not HVHZ — FL# products are often accepted. Permits pulled. Free estimates. (754) 600-4876.",
+    "Impact windows and doors in Boca Raton, FL. Palm Beach wind-borne debris, not HVHZ — an FL# is often accepted. East Boca salt and west Boca club reviews. City permit. (754) 600-4876.",
   h1: (
     <>
-      Impact Windows in <span className="gradient-text">Boca Raton</span> — Palm Beach Rules, Not Broward HVHZ
+      Impact Windows &amp; Doors in <span className="gradient-text">Boca Raton</span>, FL
     </>
   ),
   heroIntro: (
@@ -204,6 +306,16 @@ const bocaRaton: CityPageOverride = {
         <InlineLink href="/services/window-types/casement/">Casement</InlineLink> and{" "}
         <InlineLink href="/services/door-types/sliding-glass/">sliding glass doors</InlineLink> show up
         constantly on Boca club homes; picture windows and French doors show up on the Mizner elevations.
+        A homesteaded site-built Boca house permitted before January 1, 2008 can sometimes use My
+        Safe Florida Home: Florida DFS, up to $10,000, after the program inspection. Except for
+        low-income applicants, insured dwelling value is typically at or below $700,000. Many club
+        and east-side addresses miss that value test. Do not start before written approval. Condo
+        and country-club projects are often an association path, not that grant. Read{" "}
+        <InlineLink href="/financing/">financing</InlineLink> and{" "}
+        <InlineLink href="/blog/impact-window-cost-palm-beach-county/">Palm Beach impact window cost</InlineLink>.
+        The county line is real: <InlineLink href="/areas/deerfield-beach/">Deerfield Beach</InlineLink>{" "}
+        is Broward HVHZ. <InlineLink href="/areas/highland-beach/">Highland Beach</InlineLink> and{" "}
+        <InlineLink href="/areas/delray-beach/">Delray Beach</InlineLink> stay on Palm Beach rules.
         Start with a free <InlineLink href="/get-estimate/">Boca Raton estimate</InlineLink> — (754) 600-4876.
       </p>
     </>
@@ -221,6 +333,7 @@ const bocaRaton: CityPageOverride = {
   hurricaneZone: "Wind-borne debris (not HVHZ)",
   buildingCodeNote: "City of Boca Raton · FL# often accepted",
   officeLine: "Served from Hollywood HQ",
+  nearbySlugs: ["deerfield-beach", "highland-beach", "delray-beach", "parkland"],
   faqs: [
     {
       question: "Is Boca Raton in the High-Velocity Hurricane Zone?",
@@ -251,12 +364,12 @@ const bocaRaton: CityPageOverride = {
 };
 
 const miramar: CityPageOverride = {
-  title: "Hurricane Windows & Impact Windows in Miramar, FL",
+  title: "Impact Windows & Doors in Miramar, FL | Broward County",
   description:
-    "Hurricane windows and impact windows in Miramar, FL — Sunset Lakes, Riviera Isles, Town Center, and west Miramar. Broward HVHZ / NOA products, permits pulled, free estimates. Florida Impact Windows & Doors. (754) 600-4876.",
+    "Impact windows and doors in Miramar, FL — Sunset Lakes, Riviera Isles, Town Center, and west Miramar. Broward HVHZ / NOA products, City of Miramar permit, from Hollywood. (754) 600-4876.",
   h1: (
     <>
-      Hurricane Windows and Impact Windows in <span className="gradient-text">Miramar</span>
+      Impact Windows &amp; Doors in <span className="gradient-text">Miramar</span>, FL
     </>
   ),
   heroIntro: (
@@ -310,6 +423,19 @@ const miramar: CityPageOverride = {
         and <InlineLink href="/brands/pgt/#compare">PGT vs ES</InlineLink>.{" "}
         <InlineLink href="/get-estimate/">Get a Miramar estimate</InlineLink> or call (754) 600-4876.
       </p>
+      <p>
+        West Miramar houses permitted before January 1, 2008 are the My Safe Florida Home
+        conversation: a state grant up to $10,000 for a qualifying homesteaded site-built home,
+        after the program inspection, with insured value typically at or below $700,000 except
+        for low-income applicants. Do not start before written approval. Town Center mixed-use
+        is not that grant. Rules live on <InlineLink href="/financing/">financing</InlineLink>{" "}
+        and the <InlineLink href="/blog/impact-window-cost-broward-county/">Broward cost guide</InlineLink>.
+        The garage door is still an opening — see{" "}
+        <InlineLink href="/services/door-types/garage/">HVHZ garage doors</InlineLink>. Next door:{" "}
+        <InlineLink href="/areas/pembroke-pines/">Pembroke Pines</InlineLink>,{" "}
+        <InlineLink href="/areas/west-park/">West Park</InlineLink>, and{" "}
+        <InlineLink href="/areas/hollywood/">Hollywood</InlineLink>.
+      </p>
     </>
   ),
   codeParagraph: (
@@ -324,6 +450,7 @@ const miramar: CityPageOverride = {
   hurricaneZone: "HVHZ (Broward)",
   buildingCodeNote: "City of Miramar + FBC / NOA",
   officeLine: "Served from Hollywood HQ",
+  nearbySlugs: ["pembroke-pines", "west-park", "hollywood", "cooper-city"],
   faqs: [
     {
       question: "Do I need hurricane windows in Miramar if my house already has shutters?",
@@ -367,6 +494,79 @@ export const cityPageOverrides: Record<string, CityPageOverride> = {
   aventura,
   "delray-beach": delrayBeach,
   "west-palm-beach": westPalmBeach,
+  "miami-beach": miamiBeach,
+  "coral-gables": coralGables,
+  hialeah,
+  doral,
+  homestead,
+  "cutler-bay": cutlerBay,
+  "miami-gardens": miamiGardens,
+  "north-miami": northMiami,
+  "north-miami-beach": northMiamiBeach,
+  "sunny-isles-beach": sunnyIslesBeach,
+  "key-biscayne": keyBiscayne,
+  pinecrest,
+  "palmetto-bay": palmettoBay,
+  "miami-lakes": miamiLakes,
+  "hialeah-gardens": hialeahGardens,
+  "miami-springs": miamiSprings,
+  "south-miami": southMiami,
+  surfside,
+  "bal-harbour": balHarbour,
+  "bay-harbor-islands": bayHarborIslands,
+  sweetwater,
+  "miami-shores": miamiShores,
+  kendall,
+  westchester,
+  "florida-city": floridaCity,
+  "golden-beach": goldenBeach,
+  medley,
+  "boynton-beach": boyntonBeach,
+  jupiter,
+  "palm-beach-gardens": palmBeachGardens,
+  wellington,
+  "royal-palm-beach": royalPalmBeach,
+  "lake-worth-beach": lakeWorthBeach,
+  "riviera-beach": rivieraBeach,
+  greenacres,
+  "palm-beach": palmBeachTown,
+  "north-palm-beach": northPalmBeach,
+  lantana,
+  "palm-springs": palmSpringsVillage,
+  tequesta,
+  "juno-beach": junoBeach,
+  "lake-park": lakePark,
+  hypoluxo,
+  manalapan,
+  "ocean-ridge": oceanRidge,
+  "gulf-stream": gulfStream,
+  "highland-beach": highlandBeach,
+  "briny-breezes": brinyBreezes,
+  "south-palm-beach": southPalmBeach,
+  atlantis,
+  loxahatchee,
+  "port-st-lucie": portStLucie,
+  "deerfield-beach": deerfieldBeach,
+  "pompano-beach": pompanoBeach,
+  "lighthouse-point": lighthousePoint,
+  "hillsboro-beach": hillsboroBeach,
+  "lauderdale-by-the-sea": lauderdaleByTheSea,
+  "sea-ranch-lakes": seaRanchLakes,
+  "hallandale-beach": hallandaleBeach,
+  "dania-beach": daniaBeach,
+  sunrise,
+  "coconut-creek": coconutCreek,
+  tamarac,
+  margate,
+  "north-lauderdale": northLauderdale,
+  lauderhill,
+  "lauderdale-lakes": lauderdaleLakes,
+  "oakland-park": oaklandPark,
+  "wilton-manors": wiltonManors,
+  "cooper-city": cooperCity,
+  parkland,
+  "southwest-ranches": southwestRanches,
+  "west-park": westPark,
 };
 
 export function getCityPageOverride(slug: string): CityPageOverride | undefined {
