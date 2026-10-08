@@ -14,6 +14,7 @@ import {
   westPalmBeach,
 } from "./cityHubOverrides";
 import {
+  daniaBeach,
   deerfieldBeach,
   hallandaleBeach,
   hillsboroBeach,
@@ -22,6 +23,62 @@ import {
   pompanoBeach,
   seaRanchLakes,
 } from "./browardCoastalHubs";
+import {
+  balHarbour,
+  bayHarborIslands,
+  coralGables,
+  cutlerBay,
+  doral,
+  floridaCity,
+  goldenBeach,
+  hialeah,
+  hialeahGardens,
+  homestead,
+  kendall,
+  keyBiscayne,
+  medley,
+  miamiBeach,
+  miamiGardens,
+  miamiLakes,
+  miamiShores,
+  miamiSprings,
+  northMiami,
+  northMiamiBeach,
+  palmettoBay,
+  pinecrest,
+  southMiami,
+  sunnyIslesBeach,
+  surfside,
+  sweetwater,
+  westchester,
+} from "./miamiDadeHubs";
+import {
+  atlantis,
+  boyntonBeach,
+  brinyBreezes,
+  greenacres,
+  gulfStream,
+  highlandBeach,
+  hypoluxo,
+  junoBeach,
+  jupiter,
+  lakePark,
+  lakeWorthBeach,
+  lantana,
+  loxahatchee,
+  manalapan,
+  northPalmBeach,
+  oceanRidge,
+  palmBeachGardens,
+  palmBeachTown,
+  palmSpringsVillage,
+  portStLucie,
+  rivieraBeach,
+  royalPalmBeach,
+  southPalmBeach,
+  tequesta,
+  wellington,
+} from "./palmBeachHubs";
 import {
   coconutCreek,
   cooperCity,
@@ -52,6 +109,11 @@ export interface CityPageOverride {
   officeLine?: string;
   /** Geographically adjacent hubs, used for the nearby-city links. */
   nearbySlugs?: string[];
+  /**
+   * Shown in quick facts and schema when the directory county is wrong.
+   * Port St. Lucie stays grouped with Palm Beach hubs but is St. Lucie County.
+   */
+  countyLabel?: string;
   faqs: FaqItem[];
 }
 
@@ -186,12 +248,12 @@ const hollywood: CityPageOverride = {
 };
 
 const bocaRaton: CityPageOverride = {
-  title: "Impact Windows Boca Raton | Palm Beach County Installer",
+  title: "Impact Windows & Doors in Boca Raton, FL | Palm Beach County",
   description:
-    "Impact windows in Boca Raton installed by Florida Impact Windows & Doors. Palm Beach County is a wind-borne debris region, not HVHZ — FL# products are often accepted. Permits pulled. Free estimates. (754) 600-4876.",
+    "Impact windows and doors in Boca Raton, FL. Palm Beach wind-borne debris, not HVHZ — an FL# is often accepted. East Boca salt and west Boca club reviews. City permit. (754) 600-4876.",
   h1: (
     <>
-      Impact Windows in <span className="gradient-text">Boca Raton</span> — Palm Beach Rules, Not Broward HVHZ
+      Impact Windows &amp; Doors in <span className="gradient-text">Boca Raton</span>, FL
     </>
   ),
   heroIntro: (
@@ -244,6 +306,16 @@ const bocaRaton: CityPageOverride = {
         <InlineLink href="/services/window-types/casement/">Casement</InlineLink> and{" "}
         <InlineLink href="/services/door-types/sliding-glass/">sliding glass doors</InlineLink> show up
         constantly on Boca club homes; picture windows and French doors show up on the Mizner elevations.
+        A homesteaded site-built Boca house permitted before January 1, 2008 can sometimes use My
+        Safe Florida Home: Florida DFS, up to $10,000, after the program inspection. Except for
+        low-income applicants, insured dwelling value is typically at or below $700,000. Many club
+        and east-side addresses miss that value test. Do not start before written approval. Condo
+        and country-club projects are often an association path, not that grant. Read{" "}
+        <InlineLink href="/financing/">financing</InlineLink> and{" "}
+        <InlineLink href="/blog/impact-window-cost-palm-beach-county/">Palm Beach impact window cost</InlineLink>.
+        The county line is real: <InlineLink href="/areas/deerfield-beach/">Deerfield Beach</InlineLink>{" "}
+        is Broward HVHZ. <InlineLink href="/areas/highland-beach/">Highland Beach</InlineLink> and{" "}
+        <InlineLink href="/areas/delray-beach/">Delray Beach</InlineLink> stay on Palm Beach rules.
         Start with a free <InlineLink href="/get-estimate/">Boca Raton estimate</InlineLink> — (754) 600-4876.
       </p>
     </>
@@ -261,6 +333,7 @@ const bocaRaton: CityPageOverride = {
   hurricaneZone: "Wind-borne debris (not HVHZ)",
   buildingCodeNote: "City of Boca Raton · FL# often accepted",
   officeLine: "Served from Hollywood HQ",
+  nearbySlugs: ["deerfield-beach", "highland-beach", "delray-beach", "parkland"],
   faqs: [
     {
       question: "Is Boca Raton in the High-Velocity Hurricane Zone?",
@@ -421,6 +494,58 @@ export const cityPageOverrides: Record<string, CityPageOverride> = {
   aventura,
   "delray-beach": delrayBeach,
   "west-palm-beach": westPalmBeach,
+  "miami-beach": miamiBeach,
+  "coral-gables": coralGables,
+  hialeah,
+  doral,
+  homestead,
+  "cutler-bay": cutlerBay,
+  "miami-gardens": miamiGardens,
+  "north-miami": northMiami,
+  "north-miami-beach": northMiamiBeach,
+  "sunny-isles-beach": sunnyIslesBeach,
+  "key-biscayne": keyBiscayne,
+  pinecrest,
+  "palmetto-bay": palmettoBay,
+  "miami-lakes": miamiLakes,
+  "hialeah-gardens": hialeahGardens,
+  "miami-springs": miamiSprings,
+  "south-miami": southMiami,
+  surfside,
+  "bal-harbour": balHarbour,
+  "bay-harbor-islands": bayHarborIslands,
+  sweetwater,
+  "miami-shores": miamiShores,
+  kendall,
+  westchester,
+  "florida-city": floridaCity,
+  "golden-beach": goldenBeach,
+  medley,
+  "boynton-beach": boyntonBeach,
+  jupiter,
+  "palm-beach-gardens": palmBeachGardens,
+  wellington,
+  "royal-palm-beach": royalPalmBeach,
+  "lake-worth-beach": lakeWorthBeach,
+  "riviera-beach": rivieraBeach,
+  greenacres,
+  "palm-beach": palmBeachTown,
+  "north-palm-beach": northPalmBeach,
+  lantana,
+  "palm-springs": palmSpringsVillage,
+  tequesta,
+  "juno-beach": junoBeach,
+  "lake-park": lakePark,
+  hypoluxo,
+  manalapan,
+  "ocean-ridge": oceanRidge,
+  "gulf-stream": gulfStream,
+  "highland-beach": highlandBeach,
+  "briny-breezes": brinyBreezes,
+  "south-palm-beach": southPalmBeach,
+  atlantis,
+  loxahatchee,
+  "port-st-lucie": portStLucie,
   "deerfield-beach": deerfieldBeach,
   "pompano-beach": pompanoBeach,
   "lighthouse-point": lighthousePoint,
@@ -428,6 +553,7 @@ export const cityPageOverrides: Record<string, CityPageOverride> = {
   "lauderdale-by-the-sea": lauderdaleByTheSea,
   "sea-ranch-lakes": seaRanchLakes,
   "hallandale-beach": hallandaleBeach,
+  "dania-beach": daniaBeach,
   sunrise,
   "coconut-creek": coconutCreek,
   tamarac,

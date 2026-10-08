@@ -659,3 +659,91 @@ export const hallandaleBeach: CityPageOverride = {
     },
   ],
 };
+
+export const daniaBeach: CityPageOverride = {
+  title: "Impact Windows & Doors in Dania Beach, FL | Broward County",
+  description:
+    "Impact windows and doors in Dania Beach, FL. Broward HVHZ between Fort Lauderdale and Hollywood — current NOA, City of Dania Beach permit. Not a Miami-Dade packet. (754) 600-4876.",
+  h1: (
+    <>
+      Impact Windows &amp; Doors in <span className="gradient-text">Dania Beach</span>, FL
+    </>
+  ),
+  heroIntro: (
+    <>
+      Dania Beach is one of the oldest cities in Broward County, between Fort Lauderdale and our
+      Hollywood shop. It is High-Velocity Hurricane Zone. A Miami-Dade city packet is the wrong
+      office even though the product approval is often a Miami-Dade NOA. We pull the City of Dania
+      Beach permit.
+    </>
+  ),
+  countyBadge: "Dania Beach · Broward HVHZ",
+  uniqueHeading: "Broward city hall, NOA glass, and three kinds of openings",
+  uniqueBody: (
+    <>
+      <p>
+        Dania Beach Heights and the antique-district blocks along US-1 still have early wood-frame
+        and later CBS houses with openings that are not a modern single-hung. Melaleuca Gardens and
+        the Griffin Road streets are more conventional houses. The beach and John U. Lloyd side, plus
+        the Intracoastal and the Port Everglades channel, are the water problem: low ground and more
+        than one way for wind-driven rain to reach a wall. Wilma and Irma are the recent storms on
+        our city notes. None of that makes the permit Miami-Dade County. The city is Broward HVHZ,
+        so the glass generally needs a current Miami-Dade Notice of Acceptance and a City of Dania
+        Beach Building Department permit.
+      </p>
+      <p>
+        Older odd openings are a <L href="/brands/pgt/">PGT</L> or{" "}
+        <L href="/brands/custom-window-systems/">Custom Window Systems</L> conversation.{" "}
+        <L href="/brands/es-windows/">ES Windows</L> when the goal is every leftover aluminum or
+        jalousie unit. <L href="/brands/cgi/">CGI</L> for a water-facing slider. Salt hardware
+        belongs on the beach and canal elevations, not on every inland bedroom. The shop is at 3000
+        Stirling Rd in Hollywood, a short drive, which is why Dania is a core city rather than a
+        remote one.
+      </p>
+      <p>
+        Homesteaded site-built houses permitted before January 1, 2008 can sometimes use My Safe
+        Florida Home: Florida DFS, up to $10,000, only after the program inspection. Except for
+        low-income applicants, insured dwelling value is typically at or below $700,000. Starting
+        work before written approval can disqualify the project. It is not a loan. See{" "}
+        <L href="/financing/">financing</L> and{" "}
+        <L href="/blog/impact-window-cost-broward-county/">Broward impact window cost</L>. Neighbors:{" "}
+        <L href="/areas/hollywood/">Hollywood</L>, <L href="/areas/fort-lauderdale/">Fort Lauderdale</L>,
+        and <L href="/areas/hallandale-beach/">Hallandale Beach</L>.
+      </p>
+    </>
+  ),
+  codeParagraph: (
+    <>
+      Dania Beach is in Broward&apos;s High-Velocity Hurricane Zone. Replacement impact windows and
+      doors generally need a current Miami-Dade NOA and a City of Dania Beach Building Department
+      permit. That is a different counter from Miami-Dade County and from the City of Hollywood next
+      door. We do not publish the city&apos;s fee.
+    </>
+  ),
+  hurricaneZone: "HVHZ (Broward)",
+  buildingCodeNote: "City of Dania Beach + NOA",
+  officeLine: "Served from Hollywood HQ",
+  nearbySlugs: ["hollywood", "fort-lauderdale", "hallandale-beach", "davie"],
+  faqs: [
+    {
+      question: "Is Dania Beach in Broward or Miami-Dade?",
+      answer:
+        "Broward. Dania Beach is a Broward city in the High-Velocity Hurricane Zone, between Fort Lauderdale and Hollywood. The permit is the City of Dania Beach. The product approval is generally a current Miami-Dade NOA because of the HVHZ, not because the city is in Miami-Dade County.",
+    },
+    {
+      question: "Do older Dania Beach houses have standard window sizes?",
+      answer:
+        "Often no. Early houses in the historic downtown and Dania Beach Heights need to be measured. Melaleuca Gardens is closer to a conventional list. Call (754) 600-4876.",
+    },
+    {
+      question: "Does the Port Everglades side need different hardware?",
+      answer:
+        "Water and channel elevations are a corrosion and design-pressure conversation. Inland bedrooms are not automatically the same specification. The wind zone is HVHZ either way.",
+    },
+    {
+      question: "Can a Dania Beach house use My Safe Florida Home?",
+      answer:
+        "If it is a qualifying homesteaded, site-built home permitted before January 1, 2008, after the program inspection, and work has not started before written approval. The grant is up to $10,000. Except for low-income applicants, insured dwelling value is typically at or below $700,000. See MySafeFLHome.com.",
+    },
+  ],
+};

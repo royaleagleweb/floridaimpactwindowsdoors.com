@@ -225,6 +225,7 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
   const countyList = getCitiesByCounty(city.county);
   const cityPosition = countyList.findIndex((c) => c.slug === city.slug);
   const override = getCityPageOverride(city.slug);
+  const servedCounty = override?.countyLabel ?? city.county;
   const linkedNearby = (override?.nearbySlugs ?? []).flatMap((nearbySlug) => {
     const nearby = getCityBySlug(nearbySlug);
     if (!nearby || nearby.slug === city.slug) return [];
@@ -298,7 +299,7 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
       name: city.name,
       containedIn: {
         "@type": "County",
-        name: `${city.county} County`,
+        name: `${servedCounty} County`,
         containedIn: { "@type": "State", name: "Florida" },
       },
     },
@@ -331,17 +332,25 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
       name: city.name,
       containedInPlace: {
         "@type": "AdministrativeArea",
-        name: `${city.county} County`,
+        name: `${servedCounty} County`,
         containedInPlace: { "@type": "State", name: "Florida" },
       },
     },
   };
 
-  const browardGuide = guidesBySlugs(["impact-window-cost-broward-county"]);
-  const rotatedGuides = guidesForCity(cityIndex, city.county === "Broward" ? 2 : 3);
-  const cityGuides =
+  const countyCostSlug =
     city.county === "Broward"
-      ? [...browardGuide, ...rotatedGuides.filter((guide) => guide.href !== browardGuide[0]?.href)]
+      ? "impact-window-cost-broward-county"
+      : city.county === "Miami-Dade"
+        ? "impact-window-cost-miami-dade-county"
+        : city.county === "Palm Beach"
+          ? "impact-window-cost-palm-beach-county"
+          : null;
+  const pinnedGuides = countyCostSlug ? guidesBySlugs([countyCostSlug]) : [];
+  const rotatedGuides = guidesForCity(cityIndex, pinnedGuides.length > 0 ? 2 : 3);
+  const cityGuides =
+    pinnedGuides.length > 0
+      ? [...pinnedGuides, ...rotatedGuides.filter((guide) => guide.href !== pinnedGuides[0]?.href)]
       : rotatedGuides;
 
   return (
@@ -656,7 +665,7 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
                 <p>
                   Florida Impact Windows & Doors has been serving {city.name} homeowners with
                   professional impact window and door installation. Our deep knowledge of{" "}
-                  {city.county} County building codes,
+                  {servedCounty} County building codes,
                   permitting processes, and local architecture ensures every
                   project is completed to the highest standards.
                 </p>
@@ -686,7 +695,7 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
               <dl className="space-y-4">
                 <div className="flex justify-between items-center py-3 border-b border-gray-100">
                   <dt className="text-gray-500 font-medium">County</dt>
-                  <dd className="text-gray-900 font-semibold">{city.county}</dd>
+                  <dd className="text-gray-900 font-semibold">{servedCounty}</dd>
                 </div>
                 {override?.officeLine && (
                   <div className="flex justify-between items-center py-3 border-b border-gray-100">
@@ -747,7 +756,7 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
 
       <RelatedGuides
         heading={`Guides for ${city.name} homeowners`}
-        intro={`Code, insurance paperwork, and product choices we use on ${city.county} County jobs measured from our Hollywood shop.`}
+        intro={`Code, insurance paperwork, and product choices we use on ${servedCounty} County jobs measured from our Hollywood shop.`}
         guides={cityGuides}
       />
 
@@ -872,7 +881,7 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
             Ready to Protect Your {city.name} Home?
           </h2>
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-            Join thousands of {city.county} County homeowners who trust Florida Impact
+            Join {servedCounty} County homeowners who trust Florida Impact
             Windows for their impact window and door needs. Schedule your free
             in-home consultation in {city.name} today.
           </p>

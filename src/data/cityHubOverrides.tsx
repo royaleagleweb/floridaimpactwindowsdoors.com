@@ -129,12 +129,12 @@ export const fortLauderdale: CityPageOverride = {
 };
 
 export const miami: CityPageOverride = {
-  title: "Impact Windows in Miami | Miami-Dade NOA Installer",
+  title: "Impact Windows & Doors in Miami, FL | Miami-Dade County",
   description:
-    "Impact windows in Miami installed by Florida Impact Windows & Doors. Miami-Dade HVHZ — current NOA products, Miami-Dade permit, from our Hollywood shop. Brickell to Coconut Grove. Free estimates. (754) 600-4876.",
+    "Impact windows and doors in Miami, FL. Brickell towers, Coconut Grove houses, and Little Havana jalousie — all Miami-Dade HVHZ. Current NOA. City of Miami permit. (754) 600-4876.",
   h1: (
     <>
-      Impact Windows in <span className="gradient-text">Miami</span> — Miami-Dade NOA, Hollywood Crew
+      Impact Windows &amp; Doors in <span className="gradient-text">Miami</span>, FL
     </>
   ),
   heroIntro: (
@@ -164,8 +164,19 @@ export const miami: CityPageOverride = {
         you want every opening done.
       </p>
       <p>
-        My Safe Florida Home can help some homesteaded homes permitted before January 1, 2008 — only
-        after the program inspection, and only if you do not start work before written approval.{" "}
+        My Safe Florida Home can help some homesteaded, site-built Miami houses permitted before
+        January 1, 2008 — a Florida DFS grant, up to $10,000, only after the program inspection.
+        Except for low-income applicants, insured dwelling value is typically at or below $700,000.
+        Starting work before written approval can disqualify the project. Brickell and Edgewater
+        condominiums are usually an association project, not that grant. See{" "}
+        <InlineLink href="/financing/">financing</InlineLink> and{" "}
+        <InlineLink href="/blog/impact-window-cost-miami-dade-county/">Miami-Dade impact window cost</InlineLink>.
+        The permit for a City of Miami address is the City of Miami, not Miami Beach and not
+        unincorporated Kendall. Neighbors on this site:{" "}
+        <InlineLink href="/areas/miami-beach/">Miami Beach</InlineLink>,{" "}
+        <InlineLink href="/areas/coral-gables/">Coral Gables</InlineLink>,{" "}
+        <InlineLink href="/areas/miami-shores/">Miami Shores</InlineLink>, and{" "}
+        <InlineLink href="/areas/key-biscayne/">Key Biscayne</InlineLink>.{" "}
         <InlineLink href="/get-estimate/">Get a Miami estimate</InlineLink> or call (754) 600-4876.
       </p>
     </>
@@ -179,8 +190,9 @@ export const miami: CityPageOverride = {
     </>
   ),
   hurricaneZone: "HVHZ (Miami-Dade)",
-  buildingCodeNote: "Miami-Dade NOA required",
+  buildingCodeNote: "City of Miami + NOA",
   officeLine: "Served from Hollywood HQ",
+  nearbySlugs: ["miami-beach", "coral-gables", "south-miami", "miami-shores", "key-biscayne", "sweetwater"],
   faqs: [
     {
       question: "Can I install FL#-only impact windows in Miami?",
@@ -621,12 +633,12 @@ export const davie: CityPageOverride = {
 };
 
 export const aventura: CityPageOverride = {
-  title: "Impact Windows in Aventura | Miami-Dade Condo & High-Rise",
+  title: "Impact Windows & Doors in Aventura, FL | Miami-Dade County",
   description:
-    "Impact windows in Aventura — Turnberry, Williams Island, Aventura Lakes. Miami-Dade HVHZ / NOA, association approval, from Hollywood. Free estimates. (754) 600-4876.",
+    "Impact windows and doors in Aventura, FL. Turnberry, Williams Island, and Aventura Lakes. Miami-Dade HVHZ / NOA plus the association. City of Aventura permit. (754) 600-4876.",
   h1: (
     <>
-      Impact Windows in <span className="gradient-text">Aventura</span> — Condos, NOA, Board Packets
+      Impact Windows &amp; Doors in <span className="gradient-text">Aventura</span>, FL
     </>
   ),
   heroIntro: (
@@ -647,7 +659,26 @@ export const aventura: CityPageOverride = {
         <InlineLink href="/brands/pgt/">PGT</InlineLink> both show up. Single-family lakes homes
         are a more typical{" "}
         <InlineLink href="/brands/es-windows/">ES</InlineLink> or PGT whole-house list.{" "}
-        <InlineLink href="/get-estimate/">Get an Aventura estimate</InlineLink>.
+        <InlineLink href="/brands/custom-window-systems/">Custom Window Systems</InlineLink> is the
+        odd-opening conversation, not the tower default. Upper floors need the design pressure for
+        that elevation. A ground-floor suburban single-hung is the wrong unit on a Biscayne
+        Boulevard slider. ZIP 33180 and 33160 also show up on neighboring cities, so the permit
+        names the City of Aventura.
+      </p>
+      <p>
+        My Safe Florida Home is a poor fit for Turnberry, Williams Island, Porto Vita, and Mystic
+        Pointe. The grant is Florida DFS, up to $10,000, for a qualifying homesteaded site-built
+        home permitted before January 1, 2008, after the program inspection. Except for low-income
+        applicants, insured dwelling value is typically at or below $700,000. Do not start before
+        written approval. A house in Aventura Lakes or Hamptons South might be that question. A
+        tower stack is an association project. See <InlineLink href="/financing/">financing</InlineLink>{" "}
+        and{" "}
+        <InlineLink href="/blog/impact-window-cost-miami-dade-county/">Miami-Dade impact window cost</InlineLink>.
+        Neighbors: <InlineLink href="/areas/sunny-isles-beach/">Sunny Isles Beach</InlineLink>,{" "}
+        <InlineLink href="/areas/golden-beach/">Golden Beach</InlineLink>,{" "}
+        <InlineLink href="/areas/hallandale-beach/">Hallandale Beach</InlineLink>, and{" "}
+        <InlineLink href="/areas/north-miami-beach/">North Miami Beach</InlineLink>.{" "}
+        <InlineLink href="/get-estimate/">Get an Aventura estimate</InlineLink> or call (754) 600-4876.
       </p>
     </>
   ),
@@ -659,8 +690,9 @@ export const aventura: CityPageOverride = {
     </>
   ),
   hurricaneZone: "HVHZ (Miami-Dade)",
-  buildingCodeNote: "Miami-Dade NOA + association approval",
+  buildingCodeNote: "City of Aventura + NOA + association",
   officeLine: "Served from Hollywood HQ",
+  nearbySlugs: ["sunny-isles-beach", "golden-beach", "north-miami-beach", "hallandale-beach", "bal-harbour"],
   faqs: [
     {
       question: "Do Aventura condos require Miami-Dade NOA windows?",
@@ -681,12 +713,12 @@ export const aventura: CityPageOverride = {
 };
 
 export const delrayBeach: CityPageOverride = {
-  title: "Impact Windows in Delray Beach | Palm Beach (Not HVHZ)",
+  title: "Impact Windows & Doors in Delray Beach, FL | Palm Beach County",
   description:
-    "Impact windows in Delray Beach. Palm Beach is a wind-borne debris region, not HVHZ — FL# products are often accepted. Pineapple Grove, Seagate, High Point. Free estimates. (754) 600-4876.",
+    "Impact windows and doors in Delray Beach, FL. Palm Beach wind-borne debris, not HVHZ — an FL# is often accepted. Pineapple Grove, Seagate, Lake Ida, High Point. (754) 600-4876.",
   h1: (
     <>
-      Impact Windows in <span className="gradient-text">Delray Beach</span> — Palm Beach Rules
+      Impact Windows &amp; Doors in <span className="gradient-text">Delray Beach</span>, FL
     </>
   ),
   heroIntro: (
@@ -708,8 +740,27 @@ export const delrayBeach: CityPageOverride = {
       </p>
       <p>
         If a quote insists every Delray window needs a Miami-Dade NOA, ask why. NOA products are
-        accepted because they exceed the local rule; they are not automatically required.{" "}
-        <InlineLink href="/get-estimate/">Get a Delray estimate</InlineLink>.
+        accepted because they exceed the local rule; they are not automatically required. Atlantic
+        Avenue storefronts are commercial openings. Lake Ida is mid-century houses. Tropic Isle and
+        Seagate are the water side. High Point and Rainberry Bay are association communities with
+        repeated openings. <InlineLink href="/brands/pgt/">PGT</InlineLink> covers most house lists.{" "}
+        <InlineLink href="/brands/cgi/">CGI</InlineLink> is the ocean-slider conversation.{" "}
+        <InlineLink href="/brands/es-windows/">ES Windows</InlineLink> is the value line when every
+        opening has to be done. <InlineLink href="/brands/custom-window-systems/">CWS</InlineLink>{" "}
+        fits an older Pineapple Grove opening that is not a stock size.
+      </p>
+      <p>
+        A homesteaded site-built house permitted before January 1, 2008 can sometimes use My Safe
+        Florida Home: Florida DFS, up to $10,000, after the program inspection. Except for low-income
+        applicants, insured dwelling value is typically at or below $700,000. Do not start before
+        written approval. High Point is usually an association project, not that grant. See{" "}
+        <InlineLink href="/financing/">financing</InlineLink> and{" "}
+        <InlineLink href="/blog/impact-window-cost-palm-beach-county/">Palm Beach impact window cost</InlineLink>.
+        Neighbors: <InlineLink href="/areas/boynton-beach/">Boynton Beach</InlineLink>,{" "}
+        <InlineLink href="/areas/gulf-stream/">Gulf Stream</InlineLink>,{" "}
+        <InlineLink href="/areas/highland-beach/">Highland Beach</InlineLink>, and{" "}
+        <InlineLink href="/areas/boca-raton/">Boca Raton</InlineLink>.{" "}
+        <InlineLink href="/get-estimate/">Get a Delray estimate</InlineLink> or call (754) 600-4876.
       </p>
     </>
   ),
@@ -723,6 +774,7 @@ export const delrayBeach: CityPageOverride = {
   hurricaneZone: "Wind-borne debris (not HVHZ)",
   buildingCodeNote: "City of Delray Beach · FL# often accepted",
   officeLine: "Served from Hollywood HQ",
+  nearbySlugs: ["boynton-beach", "gulf-stream", "highland-beach", "boca-raton"],
   faqs: [
     {
       question: "Is Delray Beach in the HVHZ?",
@@ -743,12 +795,12 @@ export const delrayBeach: CityPageOverride = {
 };
 
 export const westPalmBeach: CityPageOverride = {
-  title: "Impact Windows in West Palm Beach | Palm Beach FL# Path",
+  title: "Impact Windows & Doors in West Palm Beach, FL | Palm Beach County",
   description:
-    "Impact windows in West Palm Beach. Palm Beach County is not HVHZ — FL# products are often accepted. El Cid, Flamingo Park, downtown. Installed from Hollywood. Free estimates. (754) 600-4876.",
+    "Impact windows and doors in West Palm Beach, FL. Palm Beach wind-borne debris, not HVHZ — an FL# is often accepted. El Cid, Flamingo Park, Northwood, downtown. (754) 600-4876.",
   h1: (
     <>
-      Impact Windows in <span className="gradient-text">West Palm Beach</span> — Not Broward HVHZ
+      Impact Windows &amp; Doors in <span className="gradient-text">West Palm Beach</span>, FL
     </>
   ),
   heroIntro: (
@@ -771,8 +823,24 @@ export const westPalmBeach: CityPageOverride = {
         <InlineLink href="/brands/pgt/">PGT</InlineLink> for most single-family lists.{" "}
         <InlineLink href="/brands/cgi/">CGI</InlineLink> for oversized or high-rise glass.{" "}
         <InlineLink href="/brands/es-windows/">ES Windows</InlineLink> when every opening needs to
-        be done.{" "}
-        <InlineLink href="/get-estimate/">Get a West Palm Beach estimate</InlineLink>.
+        be done. <InlineLink href="/brands/custom-window-systems/">Custom Window Systems</InlineLink>{" "}
+        is the odd historic opening. Northwood, Grandview Heights, SoSo, and Prospect Park are not
+        the same list as a downtown tower or a western house out toward Palmwood. The City of West
+        Palm Beach permit is not the Town of Palm Beach permit. The island is the next hub east, and
+        it is still not HVHZ.
+      </p>
+      <p>
+        Older homesteaded houses are the My Safe Florida Home question: Florida DFS, up to $10,000,
+        site-built, permitted before January 1, 2008, after the program inspection. Except for
+        low-income applicants, insured dwelling value is typically at or below $700,000. Do not start
+        before written approval. A downtown condominium is an association project. See{" "}
+        <InlineLink href="/financing/">financing</InlineLink> and{" "}
+        <InlineLink href="/blog/impact-window-cost-palm-beach-county/">Palm Beach impact window cost</InlineLink>.
+        Neighbors: <InlineLink href="/areas/palm-beach/">Palm Beach</InlineLink>,{" "}
+        <InlineLink href="/areas/lake-park/">Lake Park</InlineLink>,{" "}
+        <InlineLink href="/areas/riviera-beach/">Riviera Beach</InlineLink>, and{" "}
+        <InlineLink href="/areas/palm-springs/">Palm Springs</InlineLink>.{" "}
+        <InlineLink href="/get-estimate/">Get a West Palm Beach estimate</InlineLink> or call (754) 600-4876.
       </p>
     </>
   ),
@@ -786,6 +854,7 @@ export const westPalmBeach: CityPageOverride = {
   hurricaneZone: "Wind-borne debris (not HVHZ)",
   buildingCodeNote: "City of West Palm Beach · FL# often accepted",
   officeLine: "Served from Hollywood HQ",
+  nearbySlugs: ["palm-beach", "lake-park", "riviera-beach", "palm-springs", "greenacres", "wellington"],
   faqs: [
     {
       question: "Is West Palm Beach in the HVHZ?",
