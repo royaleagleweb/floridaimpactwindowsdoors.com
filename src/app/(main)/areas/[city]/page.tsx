@@ -6,7 +6,7 @@ import { getCityPageOverride } from "@/data/cityPageOverrides";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import RelatedGuides from "@/components/RelatedGuides";
 import { faqPageJsonLd } from "@/lib/faqSchema";
-import { guidesForCity } from "@/lib/guideLinks";
+import { guidesBySlugs, guidesForCity } from "@/lib/guideLinks";
 
 // ---------------------------------------------------------------------------
 // Static params & metadata
@@ -224,16 +224,25 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
   );
   const countyList = getCitiesByCounty(city.county);
   const cityPosition = countyList.findIndex((c) => c.slug === city.slug);
+  const override = getCityPageOverride(city.slug);
+  const linkedNearby = (override?.nearbySlugs ?? []).flatMap((nearbySlug) => {
+    const nearby = getCityBySlug(nearbySlug);
+    if (!nearby || nearby.slug === city.slug) return [];
+    return [nearby];
+  });
   const featuredNearby: typeof countyList = [];
-  for (let step = 1; featuredNearby.length < 8 && step < countyList.length; step++) {
-    featuredNearby.push(countyList[(cityPosition + step) % countyList.length]);
+  if (linkedNearby.length > 0) {
+    featuredNearby.push(...linkedNearby.slice(0, 8));
+  } else {
+    for (let step = 1; featuredNearby.length < 8 && step < countyList.length; step++) {
+      featuredNearby.push(countyList[(cityPosition + step) % countyList.length]);
+    }
   }
   const featuredSlugs = new Set(featuredNearby.map((c) => c.slug));
   const otherCountyCities = countyCities.filter((c) => !featuredSlugs.has(c.slug));
   const cityIndex = cities.findIndex((c) => c.slug === city.slug);
 
   const services = getServices();
-  const override = getCityPageOverride(city.slug);
 
   const defaultFaqs = [
     {
@@ -296,11 +305,51 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
     priceRange: "$$",
   };
 
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: `Impact Windows & Doors in ${city.name}, FL`,
+    serviceType: "Impact window and door installation",
+    url: `https://floridaimpactwindowsdoors.com/areas/${city.slug}/`,
+    provider: {
+      "@type": "HomeAndConstructionBusiness",
+      "@id": "https://floridaimpactwindowsdoors.com/#organization",
+      name: "Florida Impact Windows & Doors",
+      telephone: "+1-754-600-4876",
+      email: "info@floridaimpactwindowsdoors.com",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "3000 Stirling Rd",
+        addressLocality: "Hollywood",
+        addressRegion: "FL",
+        postalCode: "33021",
+        addressCountry: "US",
+      },
+    },
+    areaServed: {
+      "@type": "City",
+      name: city.name,
+      containedInPlace: {
+        "@type": "AdministrativeArea",
+        name: `${city.county} County`,
+        containedInPlace: { "@type": "State", name: "Florida" },
+      },
+    },
+  };
+
+  const browardGuide = guidesBySlugs(["impact-window-cost-broward-county"]);
+  const rotatedGuides = guidesForCity(cityIndex, city.county === "Broward" ? 2 : 3);
+  const cityGuides =
+    city.county === "Broward"
+      ? [...browardGuide, ...rotatedGuides.filter((guide) => guide.href !== browardGuide[0]?.href)]
+      : rotatedGuides;
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
 
       {/* Hero Section */}
       <section className="relative bg-ocean-950 overflow-hidden">
@@ -699,7 +748,7 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
       <RelatedGuides
         heading={`Guides for ${city.name} homeowners`}
         intro={`Code, insurance paperwork, and product choices we use on ${city.county} County jobs measured from our Hollywood shop.`}
-        guides={guidesForCity(cityIndex)}
+        guides={cityGuides}
       />
 
       {/* Nearby Cities */}
@@ -711,11 +760,14 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
                 Nearby Service Areas
               </span>
               <h2 className="text-3xl md:text-4xl font-bold font-display text-gray-900 mb-4">
-                Other Cities We Serve in {city.county} County
+                {override?.nearbySlugs?.length
+                  ? `Nearby Cities Around ${city.name}`
+                  : `Other Cities We Serve in ${city.county} County`}
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                In addition to {city.name}, Florida Impact Windows & Doors provides impact window
-                and door installation throughout {city.county} County.
+                {override?.nearbySlugs?.length
+                  ? `These are the next hubs out from ${city.name}. Each one is a different permit and a different housing stock, even when the drive is short.`
+                  : `In addition to ${city.name}, Florida Impact Windows & Doors provides impact window and door installation throughout ${city.county} County.`}
               </p>
             </div>
             <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">

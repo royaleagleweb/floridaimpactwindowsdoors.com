@@ -14,6 +14,8 @@ type CityPageOverride = {
   hurricaneZone: string;
   buildingCodeNote?: string;
   officeLine?: string;
+  /** Geographically adjacent hubs, used for the nearby-city links. */
+  nearbySlugs?: string[];
   faqs: FaqItem[];
 };
 
@@ -26,12 +28,12 @@ function InlineLink({ href, children }: { href: string; children: ReactNode }) {
 }
 
 export const fortLauderdale: CityPageOverride = {
-  title: "Impact Windows in Fort Lauderdale | Broward HVHZ Installer",
+  title: "Impact Windows & Doors in Fort Lauderdale, FL | Broward County",
   description:
-    "Impact windows in Fort Lauderdale installed from our Hollywood shop. Las Olas, Victoria Park, and beach high-rises sit in Broward HVHZ — Miami-Dade NOA products, City of Fort Lauderdale permit. Free estimates. (754) 600-4876.",
+    "Impact windows and doors in Fort Lauderdale, FL, installed from our Hollywood shop. Las Olas, Victoria Park, and beach high-rises sit in Broward HVHZ — Miami-Dade NOA products, City of Fort Lauderdale permit. (754) 600-4876.",
   h1: (
     <>
-      Impact Windows in <span className="gradient-text">Fort Lauderdale</span> — Installed from Hollywood
+      Impact Windows &amp; Doors in <span className="gradient-text">Fort Lauderdale</span>, FL
     </>
   ),
   heroIntro: (
@@ -65,7 +67,27 @@ export const fortLauderdale: CityPageOverride = {
         Opening protection for insurance is all-or-nothing on the{" "}
         <InlineLink href="/faq/do-impact-windows-lower-insurance-in-florida/">OIR-B1-1802</InlineLink>{" "}
         form. One leftover jalousie on a garage can kill the credit. We pull the City of Fort Lauderdale
-        permit and install to the NOA.{" "}
+        Building Department permit and install to the NOA. We do not publish the city&apos;s fee.
+      </p>
+      <p>
+        A homesteaded house in Victoria Park or Sailboat Bend that was permitted before January 1,
+        2008 can sometimes use My Safe Florida Home: a Florida Department of Financial Services
+        grant, up to $10,000, only after the program inspection. Except for low-income applicants,
+        insured value is typically at or below $700,000, and starting work before written approval
+        can disqualify the job. A beach high-rise association is not that application — see{" "}
+        <InlineLink href="/financing/">financing</InlineLink> and{" "}
+        <InlineLink href="/blog/condo-hoa-impact-window-installation-south-florida/">
+          condo board installs
+        </InlineLink>
+        . Cost context for the county is{" "}
+        <InlineLink href="/blog/impact-window-cost-broward-county/">
+          impact window cost in Broward
+        </InlineLink>
+        . Nearby hubs: <InlineLink href="/areas/oakland-park/">Oakland Park</InlineLink>,{" "}
+        <InlineLink href="/areas/wilton-manors/">Wilton Manors</InlineLink>,{" "}
+        <InlineLink href="/areas/lauderdale-by-the-sea/">Lauderdale-by-the-Sea</InlineLink>,{" "}
+        <InlineLink href="/areas/davie/">Davie</InlineLink>, and{" "}
+        <InlineLink href="/areas/hollywood/">Hollywood</InlineLink>.{" "}
         <InlineLink href="/get-estimate/">Get a Fort Lauderdale estimate</InlineLink> — (754) 600-4876.
       </p>
     </>
@@ -81,6 +103,7 @@ export const fortLauderdale: CityPageOverride = {
   hurricaneZone: "HVHZ (Broward)",
   buildingCodeNote: "City of Fort Lauderdale + FBC / NOA",
   officeLine: "Served from Hollywood HQ",
+  nearbySlugs: ["oakland-park", "wilton-manors", "lauderdale-by-the-sea", "davie", "hollywood"],
   faqs: [
     {
       question: "Is Florida Impact Windows & Doors based in Fort Lauderdale?",
@@ -96,6 +119,11 @@ export const fortLauderdale: CityPageOverride = {
       question: "Do you install impact windows in Las Olas and the beach high-rises?",
       answer:
         "Yes. We install throughout Fort Lauderdale, including Las Olas Isles, Victoria Park, Rio Vista, Coral Ridge, Harbor Beach, and beach condominiums. High-rise and association jobs add board approval and often a heavier slider spec; the wind zone is still Broward HVHZ.",
+    },
+    {
+      question: "Can a Fort Lauderdale house use the My Safe Florida Home grant?",
+      answer:
+        "A qualifying homesteaded, site-built home permitted before January 1, 2008 may, after the program inspection and only if work has not started before written approval. The grant is up to $10,000. Except for low-income applicants, insured dwelling value is typically at or below $700,000. Beach condominium projects are a different path. Check MySafeFLHome.com and our financing page.",
     },
   ],
 };
@@ -173,12 +201,12 @@ export const miami: CityPageOverride = {
 };
 
 export const weston: CityPageOverride = {
-  title: "Impact Windows in Weston, FL | Broward HVHZ (Not Coastal)",
+  title: "Impact Windows & Doors in Weston, FL | Broward County",
   description:
-    "Impact windows in Weston, FL — Weston Hills, The Ridges, Windmill Ranch. Broward HVHZ / NOA products, City of Weston permit, installed from Hollywood. Free estimates. (754) 600-4876.",
+    "Impact windows and doors in Weston, FL — Weston Hills, The Ridges, Windmill Ranch. Broward HVHZ / NOA products, City of Weston permit, not a salt-air spec. From Hollywood. (754) 600-4876.",
   h1: (
     <>
-      Impact Windows in <span className="gradient-text">Weston</span> — Everglades Fetch, Not Salt Air
+      Impact Windows &amp; Doors in <span className="gradient-text">Weston</span>, FL
     </>
   ),
   heroIntro: (
@@ -207,7 +235,28 @@ export const weston: CityPageOverride = {
         on a budget matters more. CGI is for the occasional tall or wide unit, not a trophy logo.
       </p>
       <p>
-        Permits are City of Weston / Broward HVHZ.{" "}
+        Permits are the City of Weston Building Department. The wind zone is Broward HVHZ even
+        though the city never touches the Atlantic. We do not publish the city&apos;s fee.
+      </p>
+      <p>
+        Housing is master-planned two-stories from the 1980s through the 2000s: tile roofs, lanai
+        sliders, and HOA color sheets in Weston Hills, Savanna, Indian Trace, Country Isles, The
+        Falls, and Windmill Ranch Estates. Wilma&apos;s damage here was roofs and the tile those
+        roofs became. Salt-air hardware is the wrong upsell. The{" "}
+        <InlineLink href="/services/door-types/garage/">garage door</InlineLink> is the opening
+        that still fails a wind-mitigation form after the windows are done.
+      </p>
+      <p>
+        Homesteaded Weston houses permitted before January 1, 2008 sometimes qualify for My Safe
+        Florida Home — up to $10,000 after the program inspection, not a loan. Except for
+        low-income applicants, insured value is typically at or below $700,000, and starting
+        before written approval can disqualify the project. Larger houses often miss that cap.
+        See <InlineLink href="/financing/">financing</InlineLink> and{" "}
+        <InlineLink href="/blog/impact-window-cost-broward-county/">Broward cost</InlineLink>.
+        The open land west is <InlineLink href="/areas/southwest-ranches/">Southwest Ranches</InlineLink>;
+        east and south are <InlineLink href="/areas/sunrise/">Sunrise</InlineLink>,{" "}
+        <InlineLink href="/areas/davie/">Davie</InlineLink>, and{" "}
+        <InlineLink href="/areas/pembroke-pines/">Pembroke Pines</InlineLink>.{" "}
         <InlineLink href="/get-estimate/">Get a Weston estimate</InlineLink> — (754) 600-4876.
       </p>
     </>
@@ -222,6 +271,7 @@ export const weston: CityPageOverride = {
   hurricaneZone: "HVHZ (Broward)",
   buildingCodeNote: "City of Weston + FBC / NOA",
   officeLine: "Served from Hollywood HQ",
+  nearbySlugs: ["southwest-ranches", "davie", "sunrise", "pembroke-pines"],
   faqs: [
     {
       question: "Is Weston in the High-Velocity Hurricane Zone?",
@@ -242,12 +292,12 @@ export const weston: CityPageOverride = {
 };
 
 export const pembrokePines: CityPageOverride = {
-  title: "Impact Windows in Pembroke Pines | Broward HVHZ Installer",
+  title: "Impact Windows & Doors in Pembroke Pines, FL | Broward County",
   description:
-    "Impact windows in Pembroke Pines — Chapel Trail, Silver Lakes, Century Village. Broward HVHZ / NOA, City of Pembroke Pines permit, from Hollywood. Free estimates. (754) 600-4876.",
+    "Impact windows and doors in Pembroke Pines, FL — Chapel Trail, Silver Lakes, Century Village. Broward HVHZ / NOA, City of Pembroke Pines permit, from Hollywood. (754) 600-4876.",
   h1: (
     <>
-      Impact Windows in <span className="gradient-text">Pembroke Pines</span>
+      Impact Windows &amp; Doors in <span className="gradient-text">Pembroke Pines</span>, FL
     </>
   ),
   heroIntro: (
@@ -275,7 +325,28 @@ export const pembrokePines: CityPageOverride = {
         <InlineLink href="/faq/do-i-still-need-shutters-with-impact-windows/">
           You do not stack shutters on the same opening
         </InlineLink>{" "}
-        once that opening is impact-rated.{" "}
+        once that opening is impact-rated. The{" "}
+        <InlineLink href="/services/door-types/garage/">garage door</InlineLink> is the other
+        opening inspectors still photograph.
+      </p>
+      <p>
+        Century Village Pembroke Pines is an association and a repeated opening, not the same
+        community as Century Village Deerfield. Chapel Trail, Silver Lakes, Pembroke Falls, Grand
+        Palms, and The Estates are two-story CBS with tile. Western streets took Wilma off the
+        open land; they are not a salt specification. Permits are the City of Pembroke Pines
+        Building Department. We file them and we do not quote the city fee.
+      </p>
+      <p>
+        Homesteaded houses permitted before January 1, 2008 may qualify for My Safe Florida Home
+        (up to $10,000 after the program inspection; insured value typically at or below $700,000
+        except low-income applicants; no work before written approval). Century Village is
+        usually the association path instead. See{" "}
+        <InlineLink href="/financing/">financing</InlineLink> and{" "}
+        <InlineLink href="/blog/impact-window-cost-broward-county/">Broward cost</InlineLink>.
+        Neighbors: <InlineLink href="/areas/miramar/">Miramar</InlineLink>,{" "}
+        <InlineLink href="/areas/cooper-city/">Cooper City</InlineLink>,{" "}
+        <InlineLink href="/areas/west-park/">West Park</InlineLink>,{" "}
+        <InlineLink href="/areas/hollywood/">Hollywood</InlineLink>.{" "}
         <InlineLink href="/get-estimate/">Get a Pembroke Pines estimate</InlineLink>.
       </p>
     </>
@@ -290,6 +361,7 @@ export const pembrokePines: CityPageOverride = {
   hurricaneZone: "HVHZ (Broward)",
   buildingCodeNote: "City of Pembroke Pines + FBC / NOA",
   officeLine: "Served from Hollywood HQ",
+  nearbySlugs: ["miramar", "cooper-city", "west-park", "hollywood", "davie"],
   faqs: [
     {
       question: "Do I need impact windows in Pembroke Pines if I already have shutters?",
@@ -310,12 +382,12 @@ export const pembrokePines: CityPageOverride = {
 };
 
 export const coralSprings: CityPageOverride = {
-  title: "Impact Windows in Coral Springs | Broward HVHZ Installer",
+  title: "Impact Windows & Doors in Coral Springs, FL | Broward County",
   description:
-    "Impact windows in Coral Springs — Heron Bay, Eagle Trace, Ramblewood. Broward HVHZ / NOA, City of Coral Springs permit, from Hollywood. Free estimates. (754) 600-4876.",
+    "Impact windows and doors in Coral Springs, FL — Heron Bay, Eagle Trace, Ramblewood. Inland Broward HVHZ / NOA, City of Coral Springs permit, from Hollywood. (754) 600-4876.",
   h1: (
     <>
-      Impact Windows in <span className="gradient-text">Coral Springs</span>
+      Impact Windows &amp; Doors in <span className="gradient-text">Coral Springs</span>, FL
     </>
   ),
   heroIntro: (
@@ -338,6 +410,27 @@ export const coralSprings: CityPageOverride = {
         <InlineLink href="/brands/pgt/">PGT WinGuard</InlineLink> is the usual spec.{" "}
         <InlineLink href="/brands/es-windows/">ES Windows</InlineLink> when covering every opening
         matters more than a broader catalog.{" "}
+        <InlineLink href="/brands/cgi/">CGI</InlineLink> is for a wide lanai, not a default on a
+        Ramblewood bedroom.
+      </p>
+      <p>
+        The 1970s through 1990s stock — Forest Hills, Cypress Run, Country Glen, The Walk,
+        Riverside Park, Wyndham Lakes — still has original aluminum next to later additions.
+        Heron Bay also shows up on the Parkland side of our city list; the permit follows the
+        city of the address, City of Coral Springs Building Department or City of Parkland.
+        Tree debris, not salt, is the local missile. HOA grids are the paperwork delay.
+      </p>
+      <p>
+        A homesteaded Coral Springs house permitted before January 1, 2008 may use My Safe
+        Florida Home: up to $10,000 after the program inspection, insured value typically at or
+        below $700,000 except for low-income applicants, and no work before written approval.
+        See <InlineLink href="/financing/">financing</InlineLink>. Neighbors:{" "}
+        <InlineLink href="/areas/parkland/">Parkland</InlineLink>,{" "}
+        <InlineLink href="/areas/coconut-creek/">Coconut Creek</InlineLink>,{" "}
+        <InlineLink href="/areas/margate/">Margate</InlineLink>, and{" "}
+        <InlineLink href="/areas/tamarac/">Tamarac</InlineLink>.{" "}
+        <InlineLink href="/blog/impact-window-cost-broward-county/">Broward cost</InlineLink>{" "}
+        explains why an inland NOA job is not a Palm Beach FL# price.{" "}
         <InlineLink href="/get-estimate/">Get a Coral Springs estimate</InlineLink>.
       </p>
     </>
@@ -351,6 +444,7 @@ export const coralSprings: CityPageOverride = {
   hurricaneZone: "HVHZ (Broward)",
   buildingCodeNote: "City of Coral Springs + FBC / NOA",
   officeLine: "Served from Hollywood HQ",
+  nearbySlugs: ["parkland", "coconut-creek", "margate", "tamarac"],
   faqs: [
     {
       question: "Is Coral Springs in the HVHZ?",
@@ -371,12 +465,12 @@ export const coralSprings: CityPageOverride = {
 };
 
 export const plantation: CityPageOverride = {
-  title: "Impact Windows in Plantation, FL | Broward HVHZ Installer",
+  title: "Impact Windows & Doors in Plantation, FL | Broward County",
   description:
-    "Impact windows in Plantation — Jacaranda, Plantation Acres, Central Park. Broward HVHZ / NOA, City of Plantation permit, from Hollywood. Free estimates. (754) 600-4876.",
+    "Impact windows and doors in Plantation, FL — Jacaranda, Plantation Acres, Central Park. Mid-Broward HVHZ / NOA, City of Plantation permit, from Hollywood. (754) 600-4876.",
   h1: (
     <>
-      Impact Windows in <span className="gradient-text">Plantation</span>
+      Impact Windows &amp; Doors in <span className="gradient-text">Plantation</span>, FL
     </>
   ),
   heroIntro: (
@@ -394,7 +488,25 @@ export const plantation: CityPageOverride = {
         Plantation Acres still has larger lots and some custom openings. Jacaranda and Pine Island
         Ridge are denser 1970s–90s CBS. The debris story is trees and tile, not ocean fetch.{" "}
         <InlineLink href="/brands/pgt/">PGT</InlineLink> and{" "}
-        <InlineLink href="/brands/es-windows/">ES Windows</InlineLink> cover most of those lists.{" "}
+        <InlineLink href="/brands/es-windows/">ES Windows</InlineLink> cover most of those lists.
+        <InlineLink href="/brands/cgi/">CGI</InlineLink> is the Acres conversation when a custom
+        opening is actually wide. <InlineLink href="/brands/custom-window-systems/">CWS</InlineLink>{" "}
+        is the other custom option. This is tree and tile debris, not A1A salt, even though
+        Wilma dropped oaks through glass in Jacaranda.
+      </p>
+      <p>
+        Plantation Acres lots are larger and less repetitive than Central Park, Pine Island Ridge,
+        or Lauderdale West. One city permit — City of Plantation Building Department — covers
+        both, with different opening lists. The{" "}
+        <InlineLink href="/services/door-types/garage/">garage</InlineLink> still counts on the
+        wind-mitigation form. Homesteaded houses permitted before January 1, 2008 may qualify for
+        My Safe Florida Home (up to $10,000 after the program inspection; value typically at or
+        below $700,000 except low-income applicants; do not start before written approval). See{" "}
+        <InlineLink href="/financing/">financing</InlineLink>. Nearby:{" "}
+        <InlineLink href="/areas/davie/">Davie</InlineLink>,{" "}
+        <InlineLink href="/areas/sunrise/">Sunrise</InlineLink>,{" "}
+        <InlineLink href="/areas/lauderhill/">Lauderhill</InlineLink>,{" "}
+        <InlineLink href="/areas/fort-lauderdale/">Fort Lauderdale</InlineLink>.{" "}
         <InlineLink href="/get-estimate/">Get a Plantation estimate</InlineLink>.
       </p>
     </>
@@ -408,6 +520,7 @@ export const plantation: CityPageOverride = {
   hurricaneZone: "HVHZ (Broward)",
   buildingCodeNote: "City of Plantation + FBC / NOA",
   officeLine: "Served from Hollywood HQ",
+  nearbySlugs: ["davie", "sunrise", "lauderhill", "fort-lauderdale"],
   faqs: [
     {
       question: "Is Plantation in the HVHZ?",
@@ -428,12 +541,12 @@ export const plantation: CityPageOverride = {
 };
 
 export const davie: CityPageOverride = {
-  title: "Impact Windows in Davie, FL | Broward HVHZ Installer",
+  title: "Impact Windows & Doors in Davie, FL | Broward County",
   description:
-    "Impact windows in Davie — horse country, Hawkes Bluff, Nova area. Broward HVHZ / NOA, Town of Davie permit, from Hollywood. Free estimates. (754) 600-4876.",
+    "Impact windows and doors in Davie, FL — horse country, Hawkes Bluff, Nova area. Broward HVHZ / NOA, Town of Davie permit, from Hollywood. (754) 600-4876.",
   h1: (
     <>
-      Impact Windows in <span className="gradient-text">Davie</span>
+      Impact Windows &amp; Doors in <span className="gradient-text">Davie</span>, FL
     </>
   ),
   heroIntro: (
@@ -452,6 +565,28 @@ export const davie: CityPageOverride = {
         Shenandoah look like any west-Broward two-story. One quote sheet does not fit both.{" "}
         <InlineLink href="/brands/pgt/">PGT</InlineLink> for standard lists.{" "}
         <InlineLink href="/brands/cgi/">CGI</InlineLink> when a lanai wall is oversized.{" "}
+        <InlineLink href="/brands/custom-window-systems/">Custom Window Systems</InlineLink> is
+        the other route for a non-rectangular ranch opening.{" "}
+        <InlineLink href="/brands/es-windows/">ES Windows</InlineLink> fits the subdivision lists
+        in Hawkes Bluff and Shenandoah when the goal is every opening.
+      </p>
+      <p>
+        Horse Country and the Flamingo Gardens area are open. Wilma and Irma both put debris
+        through ranch glass because there is less of a neighboring house to block it. That is
+        wind, not salt. The Town of Davie building department — not the City of Weston and not
+        Fort Lauderdale — is the permit counter. We file it. Outbuildings are only in the scope
+        if you want them; a barn is not assumed.
+      </p>
+      <p>
+        Homesteaded Davie houses permitted before January 1, 2008 may qualify for My Safe Florida
+        Home, up to $10,000 after the program inspection. Except for low-income applicants,
+        insured value is typically at or below $700,000, and early work can disqualify the grant.
+        See <InlineLink href="/financing/">financing</InlineLink> and{" "}
+        <InlineLink href="/blog/impact-window-cost-broward-county/">Broward cost</InlineLink>.
+        Neighbors: <InlineLink href="/areas/plantation/">Plantation</InlineLink>,{" "}
+        <InlineLink href="/areas/cooper-city/">Cooper City</InlineLink>,{" "}
+        <InlineLink href="/areas/southwest-ranches/">Southwest Ranches</InlineLink>,{" "}
+        <InlineLink href="/areas/weston/">Weston</InlineLink>.{" "}
         <InlineLink href="/get-estimate/">Get a Davie estimate</InlineLink>.
       </p>
     </>
@@ -465,6 +600,7 @@ export const davie: CityPageOverride = {
   hurricaneZone: "HVHZ (Broward)",
   buildingCodeNote: "Town of Davie + FBC / NOA",
   officeLine: "Served from Hollywood HQ",
+  nearbySlugs: ["plantation", "cooper-city", "southwest-ranches", "weston", "fort-lauderdale"],
   faqs: [
     {
       question: "Is Davie in the HVHZ?",

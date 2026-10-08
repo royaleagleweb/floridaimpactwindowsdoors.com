@@ -122,6 +122,54 @@ export default function AreasPage() {
                 </div>
               </div>
 
+              {county === "Broward" && (
+                <div className="mb-10 max-w-4xl space-y-4 text-gray-700 leading-relaxed">
+                  <p>
+                    Every Broward city below is in the High-Velocity Hurricane Zone. Crews leave from our shop at 3000 Stirling Rd in{" "}
+                    <Link href="/areas/hollywood/" className="text-palm-700 font-semibold hover:underline">Hollywood</Link>.
+                    The page that sits on the Palm Beach line — where a Boca-style FL# quote is the wrong packet — is{" "}
+                    <Link href="/areas/deerfield-beach/" className="text-palm-700 font-semibold hover:underline">Deerfield Beach</Link>.
+                    Read{" "}
+                    <Link href="/blog/impact-window-cost-broward-county/" className="text-palm-700 font-semibold hover:underline">what changes the price of impact windows in Broward County</Link>{" "}
+                    before you compare cities.
+                  </p>
+                  <p>
+                    Coastal and canal hubs:{" "}
+                    <Link href="/areas/pompano-beach/" className="text-palm-700 font-semibold hover:underline">Pompano Beach</Link>,{" "}
+                    <Link href="/areas/lighthouse-point/" className="text-palm-700 font-semibold hover:underline">Lighthouse Point</Link>,{" "}
+                    <Link href="/areas/hillsboro-beach/" className="text-palm-700 font-semibold hover:underline">Hillsboro Beach</Link>,{" "}
+                    <Link href="/areas/lauderdale-by-the-sea/" className="text-palm-700 font-semibold hover:underline">Lauderdale-by-the-Sea</Link>,{" "}
+                    <Link href="/areas/sea-ranch-lakes/" className="text-palm-700 font-semibold hover:underline">Sea Ranch Lakes</Link>,{" "}
+                    <Link href="/areas/fort-lauderdale/" className="text-palm-700 font-semibold hover:underline">Fort Lauderdale</Link>,{" "}
+                    <Link href="/areas/oakland-park/" className="text-palm-700 font-semibold hover:underline">Oakland Park</Link>,{" "}
+                    <Link href="/areas/wilton-manors/" className="text-palm-700 font-semibold hover:underline">Wilton Manors</Link>,{" "}
+                    <Link href="/areas/dania-beach/" className="text-palm-700 font-semibold hover:underline">Dania Beach</Link>,{" "}
+                    <Link href="/areas/hollywood/" className="text-palm-700 font-semibold hover:underline">Hollywood</Link>, and{" "}
+                    <Link href="/areas/hallandale-beach/" className="text-palm-700 font-semibold hover:underline">Hallandale Beach</Link>.
+                  </p>
+                  <p>
+                    Inland and west Broward hubs:{" "}
+                    <Link href="/areas/coconut-creek/" className="text-palm-700 font-semibold hover:underline">Coconut Creek</Link>,{" "}
+                    <Link href="/areas/margate/" className="text-palm-700 font-semibold hover:underline">Margate</Link>,{" "}
+                    <Link href="/areas/coral-springs/" className="text-palm-700 font-semibold hover:underline">Coral Springs</Link>,{" "}
+                    <Link href="/areas/parkland/" className="text-palm-700 font-semibold hover:underline">Parkland</Link>,{" "}
+                    <Link href="/areas/tamarac/" className="text-palm-700 font-semibold hover:underline">Tamarac</Link>,{" "}
+                    <Link href="/areas/north-lauderdale/" className="text-palm-700 font-semibold hover:underline">North Lauderdale</Link>,{" "}
+                    <Link href="/areas/sunrise/" className="text-palm-700 font-semibold hover:underline">Sunrise</Link>,{" "}
+                    <Link href="/areas/lauderhill/" className="text-palm-700 font-semibold hover:underline">Lauderhill</Link>,{" "}
+                    <Link href="/areas/lauderdale-lakes/" className="text-palm-700 font-semibold hover:underline">Lauderdale Lakes</Link>,{" "}
+                    <Link href="/areas/plantation/" className="text-palm-700 font-semibold hover:underline">Plantation</Link>,{" "}
+                    <Link href="/areas/davie/" className="text-palm-700 font-semibold hover:underline">Davie</Link>,{" "}
+                    <Link href="/areas/cooper-city/" className="text-palm-700 font-semibold hover:underline">Cooper City</Link>,{" "}
+                    <Link href="/areas/weston/" className="text-palm-700 font-semibold hover:underline">Weston</Link>,{" "}
+                    <Link href="/areas/southwest-ranches/" className="text-palm-700 font-semibold hover:underline">Southwest Ranches</Link>,{" "}
+                    <Link href="/areas/pembroke-pines/" className="text-palm-700 font-semibold hover:underline">Pembroke Pines</Link>,{" "}
+                    <Link href="/areas/miramar/" className="text-palm-700 font-semibold hover:underline">Miramar</Link>, and{" "}
+                    <Link href="/areas/west-park/" className="text-palm-700 font-semibold hover:underline">West Park</Link>.
+                  </p>
+                </div>
+              )}
+
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
                 {countyCities.map((city) => (
                   <Link

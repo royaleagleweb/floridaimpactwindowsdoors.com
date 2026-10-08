@@ -13,6 +13,30 @@ import {
   weston,
   westPalmBeach,
 } from "./cityHubOverrides";
+import {
+  deerfieldBeach,
+  hallandaleBeach,
+  hillsboroBeach,
+  lauderdaleByTheSea,
+  lighthousePoint,
+  pompanoBeach,
+  seaRanchLakes,
+} from "./browardCoastalHubs";
+import {
+  coconutCreek,
+  cooperCity,
+  lauderdaleLakes,
+  lauderhill,
+  margate,
+  northLauderdale,
+  oaklandPark,
+  parkland,
+  southwestRanches,
+  sunrise,
+  tamarac,
+  westPark,
+  wiltonManors,
+} from "./browardInlandHubs";
 
 export interface CityPageOverride {
   title: string;
@@ -26,6 +50,8 @@ export interface CityPageOverride {
   hurricaneZone: string;
   buildingCodeNote?: string;
   officeLine?: string;
+  /** Geographically adjacent hubs, used for the nearby-city links. */
+  nearbySlugs?: string[];
   faqs: FaqItem[];
 }
 
@@ -38,12 +64,12 @@ function InlineLink({ href, children }: { href: string; children: ReactNode }) {
 }
 
 const hollywood: CityPageOverride = {
-  title: "Impact Windows in Hollywood, FL | Stirling Rd Installer",
+  title: "Impact Windows & Doors in Hollywood, FL | Broward County",
   description:
-    "Florida Impact Windows & Doors installs impact windows in Hollywood, FL from our shop at 3000 Stirling Rd. Broward HVHZ / Miami-Dade NOA products, permits pulled, free estimates. Call (754) 600-4876.",
+    "Impact windows and doors in Hollywood, FL, installed from our shop at 3000 Stirling Rd. Broward HVHZ / Miami-Dade NOA products, City of Hollywood permit. Call (754) 600-4876.",
   h1: (
     <>
-      Impact Windows in <span className="gradient-text">Hollywood</span>, FL — Installed from Stirling Road
+      Impact Windows &amp; Doors in <span className="gradient-text">Hollywood</span>, FL
     </>
   ),
   heroIntro: (
@@ -102,6 +128,19 @@ const hollywood: CityPageOverride = {
         <InlineLink href="/brands/pgt/#compare">PGT vs ES</InlineLink> if you are still choosing a line.
         Call (754) 600-4876 — that number rings the Hollywood office.
       </p>
+      <p>
+        A homesteaded Hollywood house permitted before January 1, 2008 may qualify for My Safe
+        Florida Home, the state grant of up to $10,000 after a program inspection — not the same
+        thing as <InlineLink href="/financing/">financing</InlineLink>. Except for low-income
+        applicants, insured value is typically at or below $700,000, and starting before written
+        approval can disqualify the project. Broadwalk condominiums are usually an association
+        job instead. County pricing context is{" "}
+        <InlineLink href="/blog/impact-window-cost-broward-county/">impact window cost in Broward</InlineLink>.
+        The next cities over are <InlineLink href="/areas/hallandale-beach/">Hallandale Beach</InlineLink>,{" "}
+        <InlineLink href="/areas/west-park/">West Park</InlineLink>,{" "}
+        <InlineLink href="/areas/dania-beach/">Dania Beach</InlineLink>, and{" "}
+        <InlineLink href="/areas/pembroke-pines/">Pembroke Pines</InlineLink>.
+      </p>
     </>
   ),
   codeParagraph: (
@@ -116,6 +155,7 @@ const hollywood: CityPageOverride = {
   hurricaneZone: "HVHZ (Broward)",
   buildingCodeNote: "City of Hollywood + FBC / NOA",
   officeLine: "3000 Stirling Rd, 33021 (HQ)",
+  nearbySlugs: ["hallandale-beach", "west-park", "dania-beach", "pembroke-pines", "davie"],
   faqs: [
     {
       question: "Where is Florida Impact Windows & Doors in Hollywood?",
@@ -251,12 +291,12 @@ const bocaRaton: CityPageOverride = {
 };
 
 const miramar: CityPageOverride = {
-  title: "Hurricane Windows & Impact Windows in Miramar, FL",
+  title: "Impact Windows & Doors in Miramar, FL | Broward County",
   description:
-    "Hurricane windows and impact windows in Miramar, FL — Sunset Lakes, Riviera Isles, Town Center, and west Miramar. Broward HVHZ / NOA products, permits pulled, free estimates. Florida Impact Windows & Doors. (754) 600-4876.",
+    "Impact windows and doors in Miramar, FL — Sunset Lakes, Riviera Isles, Town Center, and west Miramar. Broward HVHZ / NOA products, City of Miramar permit, from Hollywood. (754) 600-4876.",
   h1: (
     <>
-      Hurricane Windows and Impact Windows in <span className="gradient-text">Miramar</span>
+      Impact Windows &amp; Doors in <span className="gradient-text">Miramar</span>, FL
     </>
   ),
   heroIntro: (
@@ -310,6 +350,19 @@ const miramar: CityPageOverride = {
         and <InlineLink href="/brands/pgt/#compare">PGT vs ES</InlineLink>.{" "}
         <InlineLink href="/get-estimate/">Get a Miramar estimate</InlineLink> or call (754) 600-4876.
       </p>
+      <p>
+        West Miramar houses permitted before January 1, 2008 are the My Safe Florida Home
+        conversation: a state grant up to $10,000 for a qualifying homesteaded site-built home,
+        after the program inspection, with insured value typically at or below $700,000 except
+        for low-income applicants. Do not start before written approval. Town Center mixed-use
+        is not that grant. Rules live on <InlineLink href="/financing/">financing</InlineLink>{" "}
+        and the <InlineLink href="/blog/impact-window-cost-broward-county/">Broward cost guide</InlineLink>.
+        The garage door is still an opening — see{" "}
+        <InlineLink href="/services/door-types/garage/">HVHZ garage doors</InlineLink>. Next door:{" "}
+        <InlineLink href="/areas/pembroke-pines/">Pembroke Pines</InlineLink>,{" "}
+        <InlineLink href="/areas/west-park/">West Park</InlineLink>, and{" "}
+        <InlineLink href="/areas/hollywood/">Hollywood</InlineLink>.
+      </p>
     </>
   ),
   codeParagraph: (
@@ -324,6 +377,7 @@ const miramar: CityPageOverride = {
   hurricaneZone: "HVHZ (Broward)",
   buildingCodeNote: "City of Miramar + FBC / NOA",
   officeLine: "Served from Hollywood HQ",
+  nearbySlugs: ["pembroke-pines", "west-park", "hollywood", "cooper-city"],
   faqs: [
     {
       question: "Do I need hurricane windows in Miramar if my house already has shutters?",
@@ -367,6 +421,26 @@ export const cityPageOverrides: Record<string, CityPageOverride> = {
   aventura,
   "delray-beach": delrayBeach,
   "west-palm-beach": westPalmBeach,
+  "deerfield-beach": deerfieldBeach,
+  "pompano-beach": pompanoBeach,
+  "lighthouse-point": lighthousePoint,
+  "hillsboro-beach": hillsboroBeach,
+  "lauderdale-by-the-sea": lauderdaleByTheSea,
+  "sea-ranch-lakes": seaRanchLakes,
+  "hallandale-beach": hallandaleBeach,
+  sunrise,
+  "coconut-creek": coconutCreek,
+  tamarac,
+  margate,
+  "north-lauderdale": northLauderdale,
+  lauderhill,
+  "lauderdale-lakes": lauderdaleLakes,
+  "oakland-park": oaklandPark,
+  "wilton-manors": wiltonManors,
+  "cooper-city": cooperCity,
+  parkland,
+  "southwest-ranches": southwestRanches,
+  "west-park": westPark,
 };
 
 export function getCityPageOverride(slug: string): CityPageOverride | undefined {

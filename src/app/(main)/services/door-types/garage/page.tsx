@@ -251,14 +251,37 @@ export default function GarageDoorsPage() {
           <h2 className="text-3xl font-bold font-display text-gray-900 mb-4">
             Impact Garage Door Installation Across South Florida
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-10">
-            From Homestead to Jupiter, our team provides professional impact garage door installation throughout Miami-Dade, Broward, and Palm Beach County.
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-6">
+            From Homestead to Jupiter, our team provides professional impact garage door installation throughout Miami-Dade, Broward, and Palm Beach County. In Broward HVHZ the garage is its own opening on a wind-mitigation form. Two-story houses in{" "}
+            <Link href="/areas/pembroke-pines/" className="text-palm-700 font-semibold hover:underline">Pembroke Pines</Link>,{" "}
+            <Link href="/areas/cooper-city/" className="text-palm-700 font-semibold hover:underline">Cooper City</Link>,{" "}
+            <Link href="/areas/coral-springs/" className="text-palm-700 font-semibold hover:underline">Coral Springs</Link>,{" "}
+            <Link href="/areas/weston/" className="text-palm-700 font-semibold hover:underline">Weston</Link>,{" "}
+            <Link href="/areas/davie/" className="text-palm-700 font-semibold hover:underline">Davie</Link>, and{" "}
+            <Link href="/areas/plantation/" className="text-palm-700 font-semibold hover:underline">Plantation</Link>{" "}
+            are where we most often find new windows and the original garage door. Coastal houses in{" "}
+            <Link href="/areas/deerfield-beach/" className="text-palm-700 font-semibold hover:underline">Deerfield Beach</Link>,{" "}
+            <Link href="/areas/fort-lauderdale/" className="text-palm-700 font-semibold hover:underline">Fort Lauderdale</Link>, and{" "}
+            <Link href="/areas/hollywood/" className="text-palm-700 font-semibold hover:underline">Hollywood</Link>{" "}
+            have the same rule. How that changes a Broward quote is in{" "}
+            <Link href="/blog/impact-window-cost-broward-county/" className="text-palm-700 font-semibold hover:underline">impact window cost in Broward County</Link>.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
-            {["Miami", "Fort Lauderdale", "West Palm Beach", "Boca Raton", "Coral Gables", "Hollywood", "Pembroke Pines", "Aventura", "Doral", "Weston", "Jupiter", "Delray Beach"].map((city) => (
-              <span key={city} className="bg-white rounded-full px-5 py-2.5 text-sm font-medium text-gray-700 border border-gray-200 shadow-sm">
+            {[
+              ["Miami", "/areas/miami/"],
+              ["Fort Lauderdale", "/areas/fort-lauderdale/"],
+              ["West Palm Beach", "/areas/west-palm-beach/"],
+              ["Boca Raton", "/areas/boca-raton/"],
+              ["Hollywood", "/areas/hollywood/"],
+              ["Pembroke Pines", "/areas/pembroke-pines/"],
+              ["Deerfield Beach", "/areas/deerfield-beach/"],
+              ["Weston", "/areas/weston/"],
+              ["Davie", "/areas/davie/"],
+              ["Miramar", "/areas/miramar/"],
+            ].map(([city, href]) => (
+              <Link key={city} href={href} className="bg-white rounded-full px-5 py-2.5 text-sm font-medium text-gray-700 border border-gray-200 shadow-sm hover:border-palm-300 hover:text-palm-700">
                 {city}
-              </span>
+              </Link>
             ))}
           </div>
         </div>

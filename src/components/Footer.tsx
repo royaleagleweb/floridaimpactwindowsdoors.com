@@ -81,6 +81,7 @@ const footerLinks = {
     { name: "Weston", href: "/areas/weston/" },
     { name: "Davie", href: "/areas/davie/" },
     { name: "Pompano Beach", href: "/areas/pompano-beach/" },
+    { name: "Deerfield Beach", href: "/areas/deerfield-beach/" },
     { name: "North Lauderdale", href: "/areas/north-lauderdale/" },
     { name: "Sunrise", href: "/areas/sunrise/" },
     { name: "Parkland", href: "/areas/parkland/" },
