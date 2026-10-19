@@ -65,7 +65,7 @@ export default function BrandsPage() {
               Impact window brands we install in South Florida
             </h1>
             <p className="text-lg text-gray-300 leading-relaxed">
-              Florida Impact Windows & Doors is the dealer-installer at 3000 Stirling Rd, Hollywood.
+              Florida Impact Windows & Doors installs these products from 3000 Stirling Rd, Hollywood. That is not an authorized-dealer claim.
               PGT, CGI, ES Windows, and Custom Window Systems make the units. We measure, pull the
               permit, and set them in Miami-Dade, Broward, and Palm Beach.
             </p>

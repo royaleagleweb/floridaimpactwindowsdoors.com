@@ -46,3 +46,7 @@
 /areas/:city/door-replacement/ /areas/:city/ 301
 /areas/:city/hurricane-shutters /areas/:city/ 301
 /areas/:city/hurricane-shutters/ /areas/:city/ 301
+
+# Patio and sliding glass doors are the same opening. One page.
+/services/door-types/patio /services/door-types/sliding-glass/ 301
+/services/door-types/patio/ /services/door-types/sliding-glass/ 301

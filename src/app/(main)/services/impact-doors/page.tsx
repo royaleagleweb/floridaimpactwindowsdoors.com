@@ -5,11 +5,12 @@ import ServiceAreaLinks from "@/components/ServiceAreaLinks";
 import RelatedGuides from "@/components/RelatedGuides";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { impactDoorGuides } from "@/lib/guideLinks";
+import { faqPageJsonLd } from "@/lib/faqSchema";
 
 export const metadata: Metadata = {
-  title: "Impact Doors | Sliding Glass, French & Entry | Hollywood Installer",
+  title: "Impact Doors in South Florida | Installation and Replacement",
   description:
-    "Impact-rated sliding glass, French, and entry doors installed from Hollywood. HVHZ/NOA in Miami-Dade and Broward; FL# often accepted in Palm Beach. Free estimates. (754) 600-4876.",
+    "Impact doors in South Florida: sliding glass, French, entry, and garage. Installation and replacement from Hollywood, with the product approval on the permit. Free estimates. (754) 600-4876.",
   alternates: { canonical: "/services/impact-doors/" },
 };
 
@@ -53,10 +54,9 @@ const benefits = [
 ];
 
 const doorTypes = [
-  { name: "Sliding Glass Doors", href: "/services/door-types/sliding-glass/" },
+  { name: "Sliding Glass & Patio Doors", href: "/services/door-types/sliding-glass/" },
   { name: "French Doors", href: "/services/door-types/french/" },
   { name: "Entry Doors", href: "/services/door-types/entry/" },
-  { name: "Patio Doors", href: "/services/door-types/patio/" },
   { name: "Pivot Doors", href: "/services/door-types/pivot/" },
   { name: "Garage Impact Doors", href: "/services/door-types/garage/" },
 ];
@@ -65,7 +65,7 @@ const faqs = [
   {
     question: "What types of impact doors are available for South Florida homes?",
     answer:
-      "We install a full range of impact-rated doors including sliding glass doors, French doors, front entry doors, patio doors, pivot doors, and garage impact doors. Each type is available in multiple styles, colors, and finishes to complement your home's architecture. Sliding glass impact doors are the most popular choice in South Florida due to the region's indoor-outdoor lifestyle and waterfront living.",
+      "We install impact sliding glass doors (also called impact patio doors), French doors, front entry doors, pivot doors, and garage impact doors. Each one is a tested assembly. Sliding glass doors are the usual lanai opening in South Florida. A swinging pair is a French door, covered on its own page.",
   },
   {
     question: "How much do impact doors cost in Miami and South Florida?",
@@ -80,7 +80,7 @@ const faqs = [
   {
     question: "Do impact doors qualify for insurance discounts in Florida?",
     answer:
-      "Absolutely. Impact-rated doors are a key component of a whole-home hurricane mitigation system. When all openings including windows, doors, and the garage door are protected with impact-rated products, South Florida homeowners qualify for the maximum wind mitigation discount on their insurance premiums, which can save 20% to 45% or more annually.",
+      "Impact-rated doors are part of opening protection. When the windows, doors, and garage door are protected, a wind-mitigation inspection can be filed on form OIR-B1-1802. Any premium credit is set by the insurance carrier. We do not publish a savings percentage.",
   },
   {
     question: "What is the difference between impact glass doors and standard doors with shutters?",
@@ -92,6 +92,7 @@ const faqs = [
 export default function ImpactDoorsPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageJsonLd(faqs)) }} />
       {/* Hero Section */}
       <section className="relative min-h-[60vh] flex items-center bg-ocean-950 overflow-hidden">
         <div className="absolute inset-0 bg-grid opacity-40" />
@@ -108,10 +109,10 @@ export default function ImpactDoorsPage() {
               <span className="text-sm text-palm-300 font-medium">Hurricane-Rated Impact Doors</span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-display text-white leading-tight mb-6">
-              <span className="gradient-text">Impact Doors</span> — Sliders, French, and Entry
+              Impact Doors in <span className="gradient-text">South Florida</span>
             </h1>
             <p className="text-lg text-gray-300 mb-8 max-w-xl leading-relaxed">
-              An impact door is a tested door and laminated lite that stays in the opening after a debris hit. Sliding glass doors are usually the largest opening on a South Florida house — and the one that fails the OIR-B1-1802 credit if you skip them. We install from Hollywood.
+              Impact doors are tested door and glass assemblies for South Florida houses: sliders, French doors, entry doors, and garage doors. We measure, permit, and install them from Hollywood.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
@@ -301,6 +302,25 @@ export default function ImpactDoorsPage() {
           { county: "Palm Beach County", cities: ["West Palm Beach", "Boca Raton", "Delray Beach", "Jupiter", "Palm Beach Gardens", "Wellington", "Boynton Beach", "Lake Worth"], href: "/areas/west-palm-beach/" },
         ]}
       />
+
+      <section className="py-16 bg-white">
+        <div className="max-w-3xl mx-auto px-4 space-y-6 text-gray-700 text-lg leading-relaxed">
+          <h2 className="text-3xl font-bold font-display text-gray-900">Impact door installation and replacement</h2>
+          <p>
+            Impact door installation in South Florida starts with the opening, not a style name. A lanai slider, a front door with sidelites, a French pair, and a garage door are different tests. Replacement means the old frame comes out and the new unit is the configuration on the product approval, anchored the way that approval shows.
+          </p>
+          <p>
+            Miami-Dade and Broward are the High-Velocity Hurricane Zone. Palm Beach County is a wind-borne debris region, not the HVHZ. We install PGT, CGI, ES Windows, and Custom Window Systems products when the approval fits the size. That is not an authorized-dealer claim. Pages for each type:{" "}
+            <Link href="/services/door-types/entry/" className="text-palm-700 font-semibold">impact entry doors</Link>,{" "}
+            <Link href="/services/door-types/french/" className="text-palm-700 font-semibold">impact French doors</Link>,{" "}
+            <Link href="/services/door-types/sliding-glass/" className="text-palm-700 font-semibold">impact sliding glass and patio doors</Link>, and{" "}
+            <Link href="/services/door-types/garage/" className="text-palm-700 font-semibold">impact garage doors</Link>.
+          </p>
+          <p>
+            The shop is 3000 Stirling Rd, Hollywood, FL 33021. Call (754) 600-4876 for a free estimate. We do not publish a license number, a review score, or a years-in-business figure.
+          </p>
+        </div>
+      </section>
 
       {/* FAQ Section */}
       <section className="py-20 bg-white">

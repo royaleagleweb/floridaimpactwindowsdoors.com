@@ -9,11 +9,6 @@ const CheckCircle = () => (
     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
   </svg>
 );
-const Star = () => (
-  <svg className="w-5 h-5 text-sun-400" fill="currentColor" viewBox="0 0 20 20">
-    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.957a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.37 2.448a1 1 0 00-.364 1.118l1.287 3.957c.3.921-.755 1.688-1.54 1.118l-3.37-2.448a1 1 0 00-1.176 0l-3.37 2.448c-.784.57-1.838-.197-1.539-1.118l1.287-3.957a1 1 0 00-.364-1.118L2.063 9.384c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.95-.69l1.286-3.957z" />
-  </svg>
-);
 const Phone = ({ className = "w-5 h-5" }: { className?: string }) => (
   <svg className={className} fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
     <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -50,30 +45,6 @@ const Volume = () => (
   </svg>
 );
 
-/* ───────────────────── counter hook ───────────────────── */
-function useCounter(end: number, duration = 2000) {
-  const [count, setCount] = useState(0);
-  const [started, setStarted] = useState(false);
-
-  useEffect(() => {
-    if (!started) return;
-    let start = 0;
-    const step = end / (duration / 16);
-    const timer = setInterval(() => {
-      start += step;
-      if (start >= end) {
-        setCount(end);
-        clearInterval(timer);
-      } else {
-        setCount(Math.floor(start));
-      }
-    }, 16);
-    return () => clearInterval(timer);
-  }, [started, end, duration]);
-
-  return { count, start: () => setStarted(true) };
-}
-
 /* ───────────────────── MAIN COMPONENT ───────────────────── */
 export default function LandingPage() {
   const [formData, setFormData] = useState({
@@ -91,23 +62,12 @@ export default function LandingPage() {
   });
   const [showSticky, setShowSticky] = useState(false);
 
-  const counter1 = useCounter(2500);
-  const counter2 = useCounter(15);
-  const counter3 = useCounter(98);
-
   useEffect(() => {
     const handleScroll = () => {
       setShowSticky(window.scrollY > 600);
-      // Start counters when user scrolls past 400px
-      if (window.scrollY > 400) {
-        counter1.start();
-        counter2.start();
-        counter3.start();
-      }
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const FORM_ENDPOINT = "https://formsubmit.co/roy@royaleagleweb.com";
@@ -156,10 +116,6 @@ export default function LandingPage() {
             </div>
           </div>
           <div className="flex items-center gap-4">
-            <div className="hidden md:flex items-center gap-1.5 text-sun-400 text-sm font-semibold">
-              <div className="flex">{[...Array(5)].map((_, i) => <Star key={i} />)}</div>
-              <span className="text-white/70 ml-1">4.9/5 (2,500+ reviews)</span>
-            </div>
             <a
               href="tel:+17546004876"
               className="inline-flex items-center gap-2 bg-palm-500 hover:bg-palm-600 text-white px-5 py-2.5 rounded-full font-bold text-sm transition-all hover:scale-105"
@@ -210,8 +166,8 @@ export default function LandingPage() {
               </h1>
 
               <p className="text-lg md:text-xl text-ocean-200 mb-8 max-w-xl leading-relaxed">
-                South Florida&apos;s top-rated impact window &amp; door installer. Hurricane-rated
-                protection, expert installation, and financing available &mdash; get your{" "}
+                Impact window and door installation from Hollywood. Hurricane-rated
+                protection and financing options &mdash; get your{" "}
                 <strong className="text-white">free estimate today</strong>.
               </p>
 
@@ -220,8 +176,8 @@ export default function LandingPage() {
                 <div className="flex items-center gap-2 text-white/80 text-sm">
                   <Shield />
                   <div>
-                    <div className="font-bold text-white">Licensed &amp; Insured</div>
-                    <div className="text-ocean-300 text-xs">FL State License</div>
+                    <div className="font-bold text-white">Hollywood Shop</div>
+                    <div className="text-ocean-300 text-xs">3000 Stirling Rd</div>
                   </div>
                 </div>
                 <div className="flex items-center gap-2 text-white/80 text-sm">
@@ -229,8 +185,8 @@ export default function LandingPage() {
                     <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
                   </svg>
                   <div>
-                    <div className="font-bold text-white">A+ BBB Rating</div>
-                    <div className="text-ocean-300 text-xs">Better Business Bureau</div>
+                    <div className="font-bold text-white">Free Estimates</div>
+                    <div className="text-ocean-300 text-xs">(754) 600-4876</div>
                   </div>
                 </div>
                 <div className="flex items-center gap-2 text-white/80 text-sm">
@@ -342,10 +298,10 @@ export default function LandingPage() {
       <section className="bg-gray-50 border-b border-gray-200">
         <div className="max-w-5xl mx-auto px-4 py-10 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           {[
-            { value: `${counter1.count.toLocaleString()}+`, label: "Projects Completed" },
-            { value: `${counter2.count}+`, label: "Years Experience" },
-            { value: `${counter3.count}%`, label: "Customer Satisfaction" },
-            { value: "A+", label: "BBB Rating" },
+            { value: "Hollywood", label: "3000 Stirling Rd" },
+            { value: "3", label: "Counties Served" },
+            { value: "Free", label: "In-Home Estimates" },
+            { value: "(754)", label: "600-4876" },
           ].map((stat) => (
             <div key={stat.label}>
               <div className="text-3xl md:text-4xl font-black font-display text-ocean-900">
@@ -498,8 +454,8 @@ export default function LandingPage() {
             {[
               { step: "1", title: "Free Consultation", desc: "We visit your home, measure everything, and give you a free, no-pressure quote." },
               { step: "2", title: "Custom Design", desc: "Choose your windows, frames, and finishes. We help with grant paperwork too." },
-              { step: "3", title: "Expert Install", desc: "Our licensed crew installs everything — clean, fast, and up to code." },
-              { step: "4", title: "Final Inspection", desc: "We handle the county inspection and make sure you're 100% satisfied." },
+              { step: "3", title: "Install", desc: "Our crew installs the openings and cleans up. We do not publish a license number." },
+              { step: "4", title: "Final Inspection", desc: "We schedule the county inspection and walk the finished openings with you." },
             ].map((s, i) => (
               <div key={i} className="text-center relative">
                 <div className="w-20 h-20 bg-gradient-to-br from-palm-500 to-ocean-600 rounded-full flex items-center justify-center text-white font-black text-2xl font-display mx-auto mb-4 shadow-lg relative z-10">
@@ -521,16 +477,13 @@ export default function LandingPage() {
         <div className="relative max-w-6xl mx-auto px-4">
           <div className="text-center mb-14">
             <span className="inline-block text-sm font-semibold text-palm-400 uppercase tracking-wider mb-3">
-              Real Reviews
+              Comments
             </span>
             <h2 className="text-3xl md:text-4xl font-black font-display mb-4">
-              What Our Customers Say
+              What Customers Have Said
             </h2>
-            <div className="flex items-center justify-center gap-1 mb-2">
-              {[...Array(5)].map((_, i) => <Star key={i} />)}
-            </div>
             <p className="text-ocean-300">
-              4.9 out of 5 based on 2,500+ verified reviews
+              These comments are not a star rating, a review count, or a Google, Yelp, or BBB score.
             </p>
           </div>
 
@@ -539,12 +492,12 @@ export default function LandingPage() {
               {
                 name: "Maria S.",
                 loc: "Fort Lauderdale",
-                text: "They replaced every window in our home before hurricane season. The crew was professional, showed up on time, and cleaned up after themselves. Our insurance went down 40%. Couldn't be happier.",
+                text: "They replaced every window in our home before hurricane season. The crew was professional, showed up on time, and cleaned up after themselves. Any insurance credit after the work is set by the carrier.",
               },
               {
                 name: "James R.",
                 loc: "Boca Raton",
-                text: "Got quotes from 5 companies and Florida Impact Windows gave us the best price and the best product. They helped us with the My Safe Florida Home grant — saved us almost $8,000. These guys know what they're doing.",
+                text: "Got quotes from 5 companies. They walked us through how My Safe Florida Home works, including that work should not start before written approval. The crew did the installation we agreed to.",
               },
               {
                 name: "Patricia K.",
@@ -553,9 +506,6 @@ export default function LandingPage() {
               },
             ].map((review, i) => (
               <div key={i} className="glass rounded-2xl p-8">
-                <div className="flex gap-0.5 mb-4">
-                  {[...Array(5)].map((_, j) => <Star key={j} />)}
-                </div>
                 <p className="text-ocean-100 mb-6 leading-relaxed">
                   &ldquo;{review.text}&rdquo;
                 </p>
@@ -648,8 +598,8 @@ export default function LandingPage() {
                 Ready to Protect Your Home?
               </h2>
               <p className="text-ocean-200 text-lg mb-8 leading-relaxed">
-                Join 2,500+ South Florida homeowners who trust us with their hurricane protection.
-                Get a free, no-obligation estimate and see how much you can save.
+                Request a free, no-obligation estimate from our Hollywood shop.
+                We do not publish a project count or a savings percentage.
               </p>
 
               <div className="space-y-4 mb-8">
@@ -657,7 +607,7 @@ export default function LandingPage() {
                   "Free in-home consultation & measurement",
                   "We handle My Safe Florida Home grant paperwork",
                   "0% financing available on approved credit",
-                  "Licensed, insured & locally owned",
+                  "Installed from our Hollywood shop — no license number published here",
                   "Lifetime warranty on all installations",
                 ].map((item) => (
                   <div key={item} className="flex items-start gap-3">
@@ -786,7 +736,7 @@ export default function LandingPage() {
             </span>
           </div>
           <p className="text-ocean-400 text-sm mb-3">
-            Serving Broward County &amp; Palm Beach County &bull; Licensed &amp; Insured
+            Serving Miami-Dade, Broward &amp; Palm Beach &bull; 3000 Stirling Rd, Hollywood
           </p>
           <a href="tel:+17546004876" className="text-palm-400 hover:text-palm-300 font-semibold transition-colors">
             (754) 600-4876

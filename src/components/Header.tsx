@@ -37,10 +37,9 @@ const navigation = [
     name: "Door Types",
     href: "/services/door-types/",
     children: [
-      { name: "Sliding Glass Doors", href: "/services/door-types/sliding-glass/" },
+      { name: "Sliding Glass & Patio Doors", href: "/services/door-types/sliding-glass/" },
       { name: "French Doors", href: "/services/door-types/french/" },
       { name: "Entry Doors", href: "/services/door-types/entry/" },
-      { name: "Patio Doors", href: "/services/door-types/patio/" },
       { name: "Pivot Doors", href: "/services/door-types/pivot/" },
       { name: "Garage Doors", href: "/services/door-types/garage/" },
       { name: "Storm Doors", href: "/services/door-types/storm/" },

@@ -41,10 +41,10 @@ export default function TermsOfServicePage() {
               <div>
                 <h2 className="text-2xl font-bold text-gray-900 font-display mb-4">2. Description of Services</h2>
                 <p className="mb-4">
-                  Florida Impact Windows & Doors is a Florida State Certified General Contractor specializing in the sale, installation, and replacement of impact windows, impact doors, and hurricane protection products for residential and commercial properties throughout South Florida, including Miami-Dade, Broward, and Palm Beach County.
+                  Florida Impact Windows & Doors installs and replaces impact windows, impact doors, and hurricane protection products for residential and commercial properties throughout South Florida, including Miami-Dade, Broward, and Palm Beach County. This site does not publish a license number.
                 </p>
                 <p className="mb-4">
-                  Our services include but are not limited to: in-home consultations and estimates, custom measurement and product selection, building permit application and management, professional installation by factory-trained crews, final inspection coordination, and warranty registration. We are authorized dealers for PGT, CGI, ES Windows, and Custom Window Systems.
+                  Our services include but are not limited to: in-home consultations and estimates, custom measurement and product selection, building permit application and management, installation, final inspection coordination, and help registering a product warranty when the manufacturer’s terms allow it. We install PGT, CGI, ES Windows, and Custom Window Systems products. That is not an authorized-dealer claim.
                 </p>
                 <p>
                   The information provided on this Site is for general informational purposes only and does not constitute a binding offer, contract, or guarantee of specific products, pricing, or availability. All services are subject to a separate written installation contract executed between the customer and Florida Impact Windows & Doors.

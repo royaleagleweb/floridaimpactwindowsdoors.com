@@ -65,7 +65,7 @@ export const windowTypes: WindowType[] = [
 
 Built with laminated impact-resistant glass and heavy-duty aluminum or vinyl frames, our single hung impact windows meet and exceed the stringent Miami-Dade County Notice of Acceptance (NOA) and Florida Building Code requirements for high-velocity hurricane zones. The interlocking sash design creates a tight seal against wind-driven rain, while the reduced number of moving parts translates to lower maintenance demands and a longer operational lifespan compared to more complex window configurations.
 
-At Florida Impact Windows & Doors, we install premium single hung impact windows from industry-leading manufacturers including PGT, CGI, and ES Windows. Our factory-trained installation teams ensure every window is fitted with precision, backed by comprehensive warranties and our commitment to delivering the highest standard of craftsmanship throughout South Florida. Whether you are upgrading a single room or replacing every window in your home, our single hung impact windows offer an unbeatable combination of affordability, durability, and storm-rated performance.`,
+At Florida Impact Windows & Doors, we install premium single hung impact windows from industry-leading manufacturers including PGT, CGI, and ES Windows. Our installation teams fit every window to the opening, backed by comprehensive warranties and our commitment to delivering the highest standard of craftsmanship throughout South Florida. Whether you are upgrading a single room or replacing every window in your home, our single hung impact windows offer an unbeatable combination of affordability, durability, and storm-rated performance.`,
     features: [
       "Laminated impact-resistant glass meeting Miami-Dade HVHZ standards",
       "Heavy-duty aluminum or vinyl frame construction",
@@ -977,9 +977,9 @@ export const brands: Brand[] = [
     id: "pgt",
     name: "PGT",
     slug: "pgt",
-    description: `PGT Industries is one of the largest and most recognized manufacturers of impact-resistant windows and doors in the United States, headquartered in Venice, Florida. With over five decades of experience engineering products specifically for the demanding hurricane zones of Florida and the Gulf Coast, PGT has established itself as the go-to brand for homeowners and builders who demand proven performance, extensive product selection, and reliable availability. Their WinGuard line of impact windows and doors is one of the most widely installed impact product families in South Florida, trusted by hundreds of thousands of homeowners to protect their properties season after season.
+    description: `PGT Industries manufactures impact-resistant windows and doors and is headquartered in Venice, Florida. WinGuard is one of the PGT impact lines used on South Florida houses. We do not publish a years-in-business figure, a market-share rank, or an installation count for PGT or for this shop.
 
-Florida Impact Windows & Doors is an authorized dealer and installer of PGT impact windows and doors, giving our customers access to the full PGT product catalog along with factory-backed warranties and technical support. PGT products consistently earn top ratings for structural performance, energy efficiency, and design versatility, with options ranging from budget-friendly vinyl impact windows to premium aluminum and custom architectural solutions. Whether you are building a new home, replacing existing windows, or upgrading to impact-rated protection, PGT offers a solution for every need and budget.`,
+Florida Impact Windows & Doors installs PGT impact windows and doors. That is not an authorized-dealer claim. PGT makes the units; we measure, permit, and install them from Hollywood. Product lines include WinGuard and EnergyVue, in aluminum and vinyl, for openings that match a current approval.`,
     features: [
       "WinGuard impact-resistant window and door product line",
       "EnergyVue energy-efficient impact window series",

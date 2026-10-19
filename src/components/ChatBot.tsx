@@ -76,7 +76,7 @@ const knowledgeBase: KnowledgeEntry[] = [
   {
     keywords: ["brand", "brands", "pgt", "cgi", "es windows", "cws", "custom window systems", "manufacturer"],
     answer:
-      "We're an authorized dealer for 4 premium brands: PGT Windows & Doors (WinGuard, EnergyVue, ClassicVue), CGI Windows & Doors (Sentinel, Estate), ES Windows, and Custom Window Systems. All are tested to Miami-Dade NOA standards. We focus on these 4 brands for consistent quality and reliable warranty support.",
+      "We install products from four manufacturers: PGT (WinGuard, EnergyVue, ClassicVue), CGI (Sentinel, Estate, where those lines are still available), ES Windows, and Custom Window Systems. Installing a brand is not an authorized-dealer claim. The products we specify are chosen because they carry the approvals the opening needs.",
     links: [
       { label: "PGT", href: "/brands/pgt/" },
       { label: "CGI", href: "/brands/cgi/" },
@@ -150,7 +150,7 @@ const knowledgeBase: KnowledgeEntry[] = [
   {
     keywords: ["free estimate", "quote", "consultation", "schedule", "appointment", "visit"],
     answer:
-      "Our free in-home estimate is the best way to get started! Abe, our owner, personally visits your home (60-90 minutes) to assess your windows, discuss options across our 4 authorized brands, estimate insurance/energy savings, and deliver a detailed written proposal within 48 hours.",
+      "A free in-home estimate starts with a visit from our Hollywood shop. We measure the openings, talk through PGT, CGI, ES Windows, and Custom Window Systems without calling ourselves an authorized dealer, and follow up with a written proposal. Call (754) 600-4876.",
     links: [{ label: "Request Free Estimate", href: "/get-estimate/" }],
   },
   {
@@ -174,12 +174,12 @@ const knowledgeBase: KnowledgeEntry[] = [
   {
     keywords: ["hvhz", "high velocity", "hurricane zone", "miami dade code", "dade county"],
     answer:
-      "HVHZ stands for High Velocity Hurricane Zone - Miami-Dade and Broward counties have the strictest hurricane codes in the US. Our installers are HVHZ certified and all our products meet these demanding standards.",
+      "HVHZ stands for High Velocity Hurricane Zone - Miami-Dade and Broward counties have the strictest hurricane codes in the US. We install products that carry Miami-Dade product approvals for those codes. We do not claim a separate installer certification.",
   },
   {
     keywords: ["review", "reviews", "rating", "testimonial", "google", "yelp", "bbb"],
     answer:
-      "We have a 5-star rating on Google and Yelp, A+ rating with the BBB, and a BuildZoom score of 111 (top 4% of Florida contractors). Over 5,000 installations completed in 15+ years of business.",
+      "We do not publish a star rating, a review count, a BBB grade, or a BuildZoom score. Those figures are not verified for this Hollywood shop. Call (754) 600-4876 or request a free estimate if you want to talk through a project.",
     links: [{ label: "Read Reviews", href: "/reviews/" }],
   },
   {

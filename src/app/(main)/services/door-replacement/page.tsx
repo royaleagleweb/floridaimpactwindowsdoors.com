@@ -53,10 +53,7 @@ const benefits = [
 ];
 
 const doorTypes = [
-  { name: "Sliding Glass Doors", href: "/services/door-types/sliding-glass/" },
-  { name: "French Doors", href: "/services/door-types/french/" },
-  { name: "Entry Doors", href: "/services/door-types/entry/" },
-  { name: "Patio Doors", href: "/services/door-types/patio/" },
+  { name: "Sliding Glass & Patio Doors", href: "/services/door-types/sliding-glass/" },
   { name: "Pivot Doors", href: "/services/door-types/pivot/" },
   { name: "Garage Doors", href: "/services/door-types/garage/" },
 ];
@@ -304,7 +301,7 @@ export default function DoorReplacementPage() {
               Premium Impact Door Brands We Carry
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              We are authorized dealers for the top impact door manufacturers in the industry. Each brand offers distinct advantages in design, durability, and warranty coverage.
+              We install impact doors from PGT, CGI, ES Windows, and Custom Window Systems. That is not an authorized-dealer claim. Each line has a different frame, glass, and hardware set.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">

@@ -75,10 +75,10 @@ export default function GetQuotePage() {
         <div className="max-w-4xl mx-auto px-4">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
             {[
-              { value: "15+", label: "Years Experience" },
-              { value: "5,000+", label: "Homes Protected" },
-              { value: "4.9", label: "Google Rating" },
-              { value: "24hr", label: "Response Time" },
+              { value: "Hollywood", label: "3000 Stirling Rd" },
+              { value: "3", label: "Counties Served" },
+              { value: "Free", label: "In-Home Estimates" },
+              { value: "(754)", label: "600-4876" },
             ].map((stat) => (
               <div key={stat.label}>
                 <div className="text-2xl font-bold text-palm-400 font-display">
