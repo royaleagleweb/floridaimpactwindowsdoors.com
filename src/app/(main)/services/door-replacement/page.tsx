@@ -53,10 +53,7 @@ const benefits = [
 ];
 
 const doorTypes = [
-  { name: "Sliding Glass Doors", href: "/services/door-types/sliding-glass/" },
-  { name: "French Doors", href: "/services/door-types/french/" },
-  { name: "Entry Doors", href: "/services/door-types/entry/" },
-  { name: "Patio Doors", href: "/services/door-types/patio/" },
+  { name: "Sliding Glass & Patio Doors", href: "/services/door-types/sliding-glass/" },
   { name: "Pivot Doors", href: "/services/door-types/pivot/" },
   { name: "Garage Doors", href: "/services/door-types/garage/" },
 ];

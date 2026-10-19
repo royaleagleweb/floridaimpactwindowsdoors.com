@@ -5,11 +5,12 @@ import ServiceAreaLinks from "@/components/ServiceAreaLinks";
 import RelatedGuides from "@/components/RelatedGuides";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { windowReplacementGuides } from "@/lib/guideLinks";
+import { faqPageJsonLd } from "@/lib/faqSchema";
 
 export const metadata: Metadata = {
-  title: "Window Replacement | Impact Glass from Hollywood",
+  title: "Impact Window Replacement in South Florida | Hollywood",
   description:
-    "Replace aging aluminum or jalousie windows with permitted impact glass. Miami-Dade/Broward NOA path; Palm Beach often FL#. Free estimates from Hollywood. (754) 600-4876.",
+    "Impact window replacement for South Florida houses. Old aluminum and jalousie openings come out. Permitted impact glass goes in, from the Hollywood shop. Free estimates. (754) 600-4876.",
   alternates: { canonical: "/services/window-replacement/" },
 };
 
@@ -76,6 +77,11 @@ const windowTypes = [
 
 const faqs = [
   {
+    question: "What is impact window replacement?",
+    answer:
+      "Impact window replacement is taking out the existing window — often 1970s to 1990s aluminum or jalousie glass in South Florida — and setting a new impact-rated unit in that opening. The new unit is permitted. In Miami-Dade and Broward the approval is an HVHZ document for that size. Palm Beach County is a wind-borne debris region, not the HVHZ. We do the work from 3000 Stirling Rd, Hollywood. Call (754) 600-4876.",
+  },
+  {
     question: "How do I know if my South Florida windows need to be replaced?",
     answer:
       "Common signs that your windows need replacement include difficulty opening or closing, visible frame deterioration or corrosion, condensation between glass panes, drafts or air leaks, excessive noise penetration, and rising energy bills. If your home was built before 2002 in South Florida, your windows almost certainly pre-date current impact requirements and should be evaluated. We offer free in-home assessments to determine the condition of your windows and recommend the best course of action.",
@@ -110,6 +116,7 @@ const faqs = [
 export default function WindowReplacementPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageJsonLd(faqs)) }} />
       {/* Hero Section */}
       <section className="relative min-h-[60vh] flex items-center bg-ocean-950 overflow-hidden">
         <div className="absolute inset-0 bg-grid opacity-40" />
@@ -126,10 +133,10 @@ export default function WindowReplacementPage() {
               <span className="text-sm text-palm-300 font-medium">Full-Service Window Replacement</span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-display text-white leading-tight mb-6">
-              <span className="gradient-text">Window Replacement</span> with Impact Glass
+              Impact Window Replacement in <span className="gradient-text">South Florida</span>
             </h1>
             <p className="text-lg text-gray-300 mb-8 max-w-xl leading-relaxed">
-              Most South Florida replacements are 1970s–90s aluminum or jalousie openings that leak air and fail a wind-mitigation form. We replace them with permitted impact units from PGT, CGI, ES, or CWS and pull the local permit from our Hollywood shop.
+              Impact window replacement is the job when the openings are old aluminum or jalousie and the new glass has to be permitted impact glass. We measure and install from Hollywood.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link

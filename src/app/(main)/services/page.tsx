@@ -234,10 +234,7 @@ export default function ServicesPage() {
               </h2>
               <div className="grid grid-cols-2 gap-3">
                 {[
-                  { name: "Sliding Glass", href: "/services/door-types/sliding-glass/" },
-                  { name: "French Doors", href: "/services/door-types/french/" },
-                  { name: "Entry Doors", href: "/services/door-types/entry/" },
-                  { name: "Patio Doors", href: "/services/door-types/patio/" },
+                  { name: "Sliding Glass & Patio", href: "/services/door-types/sliding-glass/" },
                   { name: "Pivot Doors", href: "/services/door-types/pivot/" },
                   { name: "Garage Doors", href: "/services/door-types/garage/" },
                   { name: "Storm Doors", href: "/services/door-types/storm/" },

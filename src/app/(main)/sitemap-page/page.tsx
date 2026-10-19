@@ -35,10 +35,7 @@ const windowTypes = [
 ];
 
 const doorTypes = [
-  { name: "Sliding Glass", href: "/services/door-types/sliding-glass/" },
-  { name: "French", href: "/services/door-types/french/" },
-  { name: "Entry", href: "/services/door-types/entry/" },
-  { name: "Patio", href: "/services/door-types/patio/" },
+  { name: "Sliding Glass & Patio", href: "/services/door-types/sliding-glass/" },
   { name: "Pivot", href: "/services/door-types/pivot/" },
   { name: "Garage", href: "/services/door-types/garage/" },
   { name: "Storm", href: "/services/door-types/storm/" },
@@ -60,10 +57,14 @@ const mainPages = [
   { name: "FAQ", href: "/faq/" },
   { name: "Blog", href: "/blog/" },
   { name: "All Service Areas", href: "/areas/" },
+  { name: "Broward County", href: "/areas/broward-county/" },
+  { name: "Miami-Dade County", href: "/areas/miami-dade-county/" },
+  { name: "Palm Beach County", href: "/areas/palm-beach-county/" },
 ];
 
 const resources = [
   { name: "Financing Options", href: "/financing/" },
+  { name: "My Safe Florida Home", href: "/my-safe-florida-home/" },
   { name: "Hurricane Tips", href: "/hurricane-tips/" },
   { name: "Contractor Checklist", href: "/contractor-checklist/" },
   { name: "Our Installation Process", href: "/our-process/" },

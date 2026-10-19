@@ -4,9 +4,9 @@ import PageFaqSection from "@/components/PageFaqSection";
 import { faqPageJsonLd } from "@/lib/faqSchema";
 
 export const metadata: Metadata = {
-  title: "PGT Impact Windows South Florida | We Install PGT Products",
+  title: "PGT Windows in South Florida | How to Read PGT Reviews",
   description:
-    "Florida Impact Windows & Doors installs PGT products in South Florida, including WinGuard. We are not the manufacturer and we do not claim authorized-dealer status. Hollywood shop. Free estimates. (754) 600-4876.",
+    "PGT windows installed in South Florida, including WinGuard. How to evaluate PGT windows reviews without a star score on this page. We do not claim authorized-dealer status. Hollywood shop. Free estimates. (754) 600-4876.",
   alternates: { canonical: "https://floridaimpactwindowsdoors.com/brands/pgt/" },
 };
 
@@ -14,7 +14,7 @@ const pgtFaqs = [
   {
     question: "Are you the PGT factory, or a South Florida installer?",
     answer:
-      "We install PGT products. PGT manufactures in Venice, Florida. Florida Impact Windows & Doors measures, permits, and installs PGT impact windows and doors from our Hollywood shop at 3000 Stirling Rd. We do not claim authorized-dealer status. A product warranty follows the manufacturer's written terms when the unit is installed to those specifications.",
+      "We install PGT products. PGT manufactures in Venice, Florida. Florida Impact Windows & Doors measures, permits, and installs PGT impact windows and doors from 3000 Stirling Rd, Hollywood, FL 33021. That is not an authorized-dealer claim. A product warranty follows the manufacturer's written terms when the unit is installed to those specifications.",
   },
   {
     question: "Who should choose PGT WinGuard instead of ES Windows or CGI?",
@@ -30,6 +30,11 @@ const pgtFaqs = [
     question: "How long do PGT impact windows take to arrive?",
     answer:
       "PGT runs a large Venice campus, so common WinGuard sizes are a predictable production path compared with one-off coastal custom work. Lead time still depends on color, configuration, and season — we give a written production window on the estimate, not a verbal “about a month.” ES Windows, made in South Florida, is often the faster conversation on simple aluminum openings. CGI oversized sliders can run longer because the opening is the hard part.",
+  },
+  {
+    question: "How should I read PGT windows reviews?",
+    answer:
+      "This page does not publish a star rating, a review count, or sample quotes. A useful PGT windows review names the series (WinGuard, EnergyVue, ClassicVue, or another current line), the frame material, and whether the installer pulled a permit. Ask for the product approval number on the proposal and confirm it matches the size. Manufacturer warranty language is the written warranty, not a sentence on a review site. Call (754) 600-4876 if you want the opening list measured.",
   },
   {
     question: "Can I finance a PGT installation?",
@@ -80,17 +85,17 @@ const features = [
   {
     title: "Florida Product Approval",
     description:
-      "Every PGT product line holds current Florida Product Approvals, ensuring code compliance across all Florida building jurisdictions from the Keys to the Panhandle.",
+      "PGT lines used on Florida permits carry Florida Product Approvals. The approval still has to match the opening we measured.",
   },
   {
     title: "ENERGY STAR Certified",
     description:
-      "Select PGT product lines carry the ENERGY STAR certification, qualifying for utility rebates and delivering measurable energy cost savings in hot South Florida climates.",
+      "Some PGT lines are labeled ENERGY STAR. A rebate, if one is open, follows that program's current rules. We do not publish a savings percentage.",
   },
   {
-    title: "Industry-Leading Warranties",
+    title: "Written product warranty",
     description:
-      "PGT backs their products with limited lifetime warranties covering manufacturing defects, glass seal failure, and hardware malfunction for as long as you own your home.",
+      "PGT publishes warranty terms by product line. What applies is that document, after an installation that matches the instructions. We do not restate it as a lifetime promise on this page.",
   },
   {
     title: "Made in Florida",
@@ -105,12 +110,11 @@ const features = [
 ];
 
 const whyChoose = [
-  "Largest impact window and door manufacturer in the southeastern United States",
-  "PGT engineers impact products for Florida hurricanes. We do not publish a years-in-business figure for this shop.",
-  "Complete product line spanning aluminum, vinyl, single hung, sliding, casement, and more",
-  "Extensive color and finish options including bronze, white, and custom powder coats",
-  "Superior laminated glass technology with PVB and SGP interlayer options",
-  "Consistent lead times backed by a 1.2-million-square-foot manufacturing facility",
+  "PGT publishes impact lines used on South Florida houses, including WinGuard",
+  "Aluminum and vinyl, plus single hung, sliding, casement, and door configurations, when the approval covers that opening",
+  "Color and finish options that have to be the finish on the order, not a showroom sample that was never approved",
+  "Laminated glass packages that are specific to the Notice of Acceptance or Florida Product Approval",
+  "We install the unit from Hollywood. We do not publish a factory rank, a square footage, or a years-in-business figure",
 ];
 
 export default function PGTBrandPage() {
@@ -139,14 +143,14 @@ export default function PGTBrandPage() {
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/10 rounded-full px-4 py-1.5 mb-6">
               <span className="w-2 h-2 bg-palm-400 rounded-full animate-pulse" />
-              <span className="text-sm text-palm-300 font-medium">We install PGT products</span>
+              <span className="text-sm text-palm-300 font-medium">We install PGT windows</span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-display text-white leading-tight mb-6">
-              PGT Impact Windows{" "}
-              <span className="gradient-text">Installed in South Florida</span>
+              PGT Windows{" "}
+              <span className="gradient-text">in South Florida</span>
             </h1>
             <p className="text-lg text-gray-300 mb-8 max-w-2xl leading-relaxed">
-              We install PGT products from Hollywood. We are not the Venice factory, and we do not claim authorized-dealer status. If you want WinGuard impact windows and doors set, permitted, and inspected in Broward or Miami-Dade HVHZ (or an FL# path in Palm Beach), the crew that shows up is ours.
+              We install PGT windows and doors, including WinGuard, from Hollywood. PGT builds them in Venice, Florida. We are not the factory, and this page is not an authorized-dealer claim or a review score. If you want those units set, permitted, and inspected in Broward or Miami-Dade HVHZ (or an FL# path in Palm Beach), the crew that shows up is ours.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
@@ -173,17 +177,17 @@ export default function PGTBrandPage() {
         <div className="max-w-4xl mx-auto px-4">
           <span className="inline-block text-sm font-semibold text-palm-600 uppercase tracking-wider mb-3">About PGT</span>
           <h2 className="text-3xl md:text-4xl font-bold font-display text-gray-900 mb-8">
-            Florida&apos;s Most Trusted Impact Window Manufacturer
+            PGT windows: the lines we specify
           </h2>
           <div className="space-y-6 text-gray-600 leading-relaxed text-lg">
             <p>
-              PGT Innovations, headquartered in Venice, Florida, has been manufacturing impact-resistant windows and doors for more than four decades. Founded in 1980, PGT grew from a small regional fabricator into the largest producer of impact-resistant openings in the southeastern United States. Their expansive 1.2-million-square-foot manufacturing campus turns out thousands of custom-sized units every week, serving homeowners, builders, and commercial developers throughout Florida and the Gulf Coast states.
+              PGT makes impact-resistant windows and doors and is headquartered in Venice, Florida. The names that come up on South Florida houses are WinGuard, EnergyVue, and ClassicVue, plus door configurations in those families. Which name belongs on a permit is the approval for that size and glass package, not the logo.
             </p>
             <p>
-              What sets PGT apart from competitors is the breadth and depth of their product catalog. Whether you need an affordable aluminum single hung window, a high-performance vinyl casement with triple-pane insulating glass, or an oversized multi-slide door system, PGT offers a solution engineered specifically for the demands of the Florida climate. Every product undergoes rigorous testing at their in-house test lab, which simulates hurricane-force wind pressures, large and small missile impacts, and forced-entry attempts before any unit leaves the factory floor.
+              WinGuard is the impact line people mean when they say PGT windows: laminated glass in aluminum or vinyl, in the window and door styles the current catalog still offers. EnergyVue is the vinyl impact line aimed at insulating glass and Low-E. ClassicVue Max is an aluminum impact line with a slimmer sightline. Eze-Breeze is a porch and lanai panel system, not a substitute for an HVHZ window approval. If a line is discontinued or the approval does not cover the opening, we re-specify. We do not keep a dead series on a quote to match an old review.
             </p>
             <p>
-              PGT holds Miami-Dade County Notices of Acceptance and Florida Product Approvals across their entire lineup, giving South Florida homeowners confidence that their windows and doors will perform when the next major storm arrives. Beyond hurricane protection, PGT products deliver tangible everyday benefits including significant reductions in energy consumption, outside noise, and harmful UV radiation that damages interior furnishings. When you choose PGT through Florida Impact Windows & Doors, you get the full backing of Florida&apos;s premier manufacturer combined with our expert local installation.
+              Florida Impact Windows &amp; Doors installs the unit from 3000 Stirling Rd, Hollywood, FL 33021. We measure, pull the permit, and set the anchors the approval shows. Installing PGT products is not an authorized-dealer claim. Miami-Dade and Broward are the High-Velocity Hurricane Zone. Palm Beach County is a wind-borne debris region, not the HVHZ.
             </p>
           </div>
         </div>
@@ -400,6 +404,20 @@ export default function PGTBrandPage() {
         </div>
       </section>
 
+      <section className="py-16 bg-white">
+        <div className="max-w-3xl mx-auto px-4 space-y-6 text-gray-700 text-lg leading-relaxed">
+          <h2 className="text-3xl font-bold font-display text-gray-900">How to evaluate PGT windows reviews</h2>
+          <p>
+            This site does not publish PGT windows reviews, a star average, or a quote presented as a Google or Yelp score. A review that only says the crew was nice does not tell you whether the glass was WinGuard, whether the permit was closed, or whether the approval matched the size.
+          </p>
+          <p>
+            Read a review for four facts: the series name, the frame material, the county (HVHZ versus Palm Beach&apos;s wind-borne debris region), and whether the writer mentions a permit and a final inspection. Then compare that to the proposal in your hand. If the proposal says &quot;PGT impact&quot; and does not name the series and the approval number, ask for both before you sign. Warranty coverage is whatever PGT&apos;s written warranty says for that product when the installation matches the instructions.
+          </p>
+          <p>
+            If you want the openings measured, request a free estimate or call (754) 600-4876. info@floridaimpactwindowsdoors.com. 3000 Stirling Rd, Hollywood, FL 33021.
+          </p>
+        </div>
+      </section>
       <PageFaqSection
         heading="PGT impact windows — questions we get in the Hollywood shop"
         faqs={pgtFaqs}
@@ -408,12 +426,12 @@ export default function PGTBrandPage() {
       {/* Installer section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <span className="inline-block text-sm font-semibold text-palm-600 uppercase tracking-wider mb-3">Your Local PGT Experts</span>
+          <span className="inline-block text-sm font-semibold text-palm-600 uppercase tracking-wider mb-3">Hollywood shop</span>
           <h2 className="text-3xl md:text-4xl font-bold font-display text-gray-900 mb-6">
-            Florida Impact Windows & Doors Installs PGT Products in South Florida
+            Florida Impact Windows & Doors Installs PGT Windows in South Florida
           </h2>
           <p className="text-lg text-gray-600 mb-6 leading-relaxed max-w-3xl mx-auto">
-            We install PGT products. That is not an authorized-dealer claim, and it is not dealer-direct pricing. PGT publishes the catalog; we measure the opening, order the configuration the approval covers, pull the permit, and set the unit from our Hollywood shop.
+            We install PGT windows. That is not an authorized-dealer claim, and it is not dealer-direct pricing. PGT publishes the catalog. We measure the opening, order the configuration the approval covers, pull the permit, and set the unit from 3000 Stirling Rd, Hollywood, FL 33021. That is not a factory certification. Call (754) 600-4876.
           </p>
           <p className="text-lg text-gray-600 mb-8 leading-relaxed max-w-3xl mx-auto">
             We handle the project from the consultation and measurement through permitting, installation, and final inspection. The unit is installed to the written specifications on the product approval. Whether a manufacturer warranty applies is decided by those terms, not by a dealer badge on this page.

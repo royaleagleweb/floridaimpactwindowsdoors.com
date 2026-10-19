@@ -60,8 +60,7 @@ const bestFor = [
 const relatedDoors = [
   { name: "Entry Doors", href: "/services/door-types/entry/" },
   { name: "French Doors", href: "/services/door-types/french/" },
-  { name: "Sliding Glass Doors", href: "/services/door-types/sliding-glass/" },
-  { name: "Patio Doors", href: "/services/door-types/patio/" },
+  { name: "Sliding Glass & Patio Doors", href: "/services/door-types/sliding-glass/" },
 ];
 
 export default function PivotDoorsPage() {
