@@ -1,4 +1,29 @@
+"use client";
+
+import { useState } from "react";
+import { notifyLead } from "@/lib/notifyLead";
+
 export default function HeroLeadForm() {
+  const [pending, setPending] = useState(false);
+
+  async function onSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    if (pending) return;
+
+    const form = event.currentTarget;
+    const data = new FormData(form);
+    setPending(true);
+
+    await notifyLead({
+      source: "New Lead from Homepage Quick Form",
+      name: String(data.get("name") ?? ""),
+      phone: String(data.get("phone") ?? ""),
+      service: String(data.get("service") ?? ""),
+    });
+
+    form.submit();
+  }
+
   return (
     <div className="bg-[#0d1b33]/95 backdrop-blur-sm rounded-[1.5rem] p-8 md:p-9 shadow-2xl shadow-black/35 max-w-md w-full ring-1 ring-white/10">
       <div className="mb-7">
@@ -13,6 +38,7 @@ export default function HeroLeadForm() {
         action="https://formsubmit.co/roy@royaleagleweb.com"
         method="POST"
         className="space-y-3.5"
+        onSubmit={onSubmit}
       >
         <input type="hidden" name="_subject" value="New Lead from Homepage Quick Form" />
         <input type="hidden" name="_captcha" value="false" />
@@ -71,7 +97,8 @@ export default function HeroLeadForm() {
         </div>
         <button
           type="submit"
-          className="w-full bg-[#e8930f] hover:bg-[#d17d04] text-white py-4 rounded-xl font-bold text-base transition-colors"
+          disabled={pending}
+          className="w-full bg-[#e8930f] hover:bg-[#d17d04] text-white py-4 rounded-xl font-bold text-base transition-colors disabled:opacity-70"
         >
           Get My Free Quote
         </button>

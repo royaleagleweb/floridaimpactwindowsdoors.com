@@ -2,9 +2,33 @@
   "$schema": "https://unpkg.com/wrangler@latest/config-schema.json",
   "name": "floridaimpactwindowsdoors",
   "compatibility_date": "2025-04-01",
+  "main": "worker/index.ts",
+  // /api/lead posts form leads to WhatsApp. Set each GREEN_API_* value with
+  // `npx wrangler secret put <NAME>` before deploying. See .dev.vars.example.
+  "observability": {
+    "enabled": true,
+    "logs": {
+      "enabled": true,
+      "head_sampling_rate": 1
+    },
+    "traces": {
+      "enabled": true,
+      "head_sampling_rate": 0.01
+    }
+  },
   "assets": {
     "directory": "./out",
+    "binding": "ASSETS",
     "not_found_handling": "404-page",
-    "html_handling": "auto-trailing-slash"
+    "html_handling": "auto-trailing-slash",
+    "run_worker_first": ["/api/*"]
+  },
+  "secrets": {
+    "required": [
+      "GREEN_API_TOKEN",
+      "GREEN_API_ID_INSTANCE",
+      "GREEN_API_API_URL",
+      "GREEN_API_GROUP_CHAT_ID"
+    ]
   }
 }

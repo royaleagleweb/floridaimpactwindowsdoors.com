@@ -1,0 +1,13 @@
+# Local secrets for `npx wrangler dev`. Copy this file to `.dev.vars` and fill in
+# the real values. `.dev.vars` is gitignored. Never commit the Green API token.
+#
+# Production uses Worker secrets, not this file:
+#   npx wrangler secret put GREEN_API_TOKEN
+#   npx wrangler secret put GREEN_API_ID_INSTANCE
+#   npx wrangler secret put GREEN_API_API_URL
+#   npx wrangler secret put GREEN_API_GROUP_CHAT_ID
+
+GREEN_API_TOKEN=
+GREEN_API_ID_INSTANCE=
+GREEN_API_API_URL=https://example.api.greenapi.com
+GREEN_API_GROUP_CHAT_ID=
