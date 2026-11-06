@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
   title: "Contact Florida Impact Windows & Doors | Call, Email, or Visit Us",
@@ -102,52 +103,7 @@ export default function ContactPage() {
               <h2 className="text-3xl font-bold font-display text-gray-900 mb-2">Send Us a Message</h2>
               <p className="text-gray-600 mb-8">Fill out the form below and a member of our team will get back to you within 24 hours.</p>
 
-              <form action="https://formsubmit.co/roy@royaleagleweb.com" method="POST" className="space-y-6">
-                <input type="hidden" name="_subject" value="New Contact Message from Contact Page" />
-                <input type="hidden" name="_captcha" value="false" />
-                <input type="hidden" name="_next" value="https://floridaimpactwindowsdoors.com/thank-you/" />
-                <input type="hidden" name="_template" value="box" />
-                <input type="hidden" name="_autoresponse" value="Thank you for contacting Florida Impact Windows & Doors! We've received your message and will get back to you within 24 hours. If you need immediate assistance, please call us at (754) 600-4876. We appreciate your interest! — The Florida Impact Windows & Doors Team" />
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="firstName" className="block text-sm font-semibold text-gray-700 mb-2">First Name *</label>
-                    <input type="text" id="firstName" name="firstName" required className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-palm-500 focus:ring-2 focus:ring-palm-500/20 outline-none transition-all" placeholder="John" />
-                  </div>
-                  <div>
-                    <label htmlFor="lastName" className="block text-sm font-semibold text-gray-700 mb-2">Last Name *</label>
-                    <input type="text" id="lastName" name="lastName" required className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-palm-500 focus:ring-2 focus:ring-palm-500/20 outline-none transition-all" placeholder="Doe" />
-                  </div>
-                </div>
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">Email Address *</label>
-                    <input type="email" id="email" name="email" required className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-palm-500 focus:ring-2 focus:ring-palm-500/20 outline-none transition-all" placeholder="john@example.com" />
-                  </div>
-                  <div>
-                    <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2">Phone Number *</label>
-                    <input type="tel" id="phone" name="phone" required className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-palm-500 focus:ring-2 focus:ring-palm-500/20 outline-none transition-all" placeholder="(754) 600-4876" />
-                  </div>
-                </div>
-                <div>
-                  <label htmlFor="subject" className="block text-sm font-semibold text-gray-700 mb-2">Subject</label>
-                  <select id="subject" name="subject" className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-palm-500 focus:ring-2 focus:ring-palm-500/20 outline-none transition-all bg-white">
-                    <option value="">Select a topic</option>
-                    <option value="estimate">Request an Estimate</option>
-                    <option value="question">General Question</option>
-                    <option value="service">Service / Warranty</option>
-                    <option value="careers">Careers</option>
-                    <option value="other">Other</option>
-                  </select>
-                </div>
-                <div>
-                  <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2">Message *</label>
-                  <textarea id="message" name="message" rows={6} required className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-palm-500 focus:ring-2 focus:ring-palm-500/20 outline-none transition-all resize-none" placeholder="Tell us about your project or question..." />
-                </div>
-                <button type="submit" className="inline-flex items-center gap-2 bg-gradient-to-r from-palm-500 to-palm-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:from-palm-600 hover:to-palm-700 transition-all shadow-lg shadow-palm-500/25">
-                  Send Message
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-                </button>
-              </form>
+              <ContactForm />
             </div>
 
             {/* Sidebar Info */}

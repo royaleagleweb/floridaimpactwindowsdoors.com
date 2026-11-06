@@ -7,7 +7,8 @@
     "build": "npx tsx scripts/generate-rss.ts && next build",
     "start": "next start",
     "lint": "next lint",
-    "test:worker": "node --experimental-strip-types --test worker/lead.test.ts"
+    "test:worker": "node --experimental-strip-types --test worker/lead.test.ts",
+    "test": "node --experimental-strip-types --test worker/lead.test.ts src/lib/notifyLead.test.ts"
   },
   "keywords": [],
   "author": "",
