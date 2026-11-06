@@ -1,27 +1,44 @@
 "use client";
 
-import { useState } from "react";
-import { notifyLead } from "@/lib/notifyLead";
+import { useRef, useState } from "react";
+import { deliverLead } from "@/lib/notifyLead";
+
+const THANK_YOU_PATH = "/thank-you/";
 
 export default function HeroLeadForm() {
   const [pending, setPending] = useState(false);
+  const submitting = useRef(false);
 
   async function onSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    if (pending) return;
+    if (submitting.current) return;
+    submitting.current = true;
 
-    const form = event.currentTarget;
-    const data = new FormData(form);
+    const data = new FormData(event.currentTarget);
+    const name = String(data.get("name") ?? "").trim();
+    const phone = String(data.get("phone") ?? "").trim();
+    const service = String(data.get("service") ?? "").trim();
     setPending(true);
 
-    await notifyLead({
-      source: "New Lead from Homepage Quick Form",
-      name: String(data.get("name") ?? ""),
-      phone: String(data.get("phone") ?? ""),
-      service: String(data.get("service") ?? ""),
-    });
+    await deliverLead(
+      {
+        _subject: String(data.get("_subject") ?? ""),
+        _captcha: String(data.get("_captcha") ?? "false"),
+        _template: String(data.get("_template") ?? "box"),
+        _autoresponse: String(data.get("_autoresponse") ?? ""),
+        name,
+        phone,
+        service,
+      },
+      {
+        source: "New Lead from Homepage Quick Form",
+        name,
+        phone,
+        service,
+      },
+    );
 
-    form.submit();
+    window.location.assign(THANK_YOU_PATH);
   }
 
   return (
@@ -98,9 +115,9 @@ export default function HeroLeadForm() {
         <button
           type="submit"
           disabled={pending}
-          className="w-full bg-[#e8930f] hover:bg-[#d17d04] text-white py-4 rounded-xl font-bold text-base transition-colors disabled:opacity-70"
+          className="w-full bg-[#e8930f] hover:bg-[#d17d04] text-white py-4 rounded-xl font-bold text-base transition-colors disabled:opacity-70 disabled:cursor-not-allowed"
         >
-          Get My Free Quote
+          {pending ? "Sending..." : "Get My Free Quote"}
         </button>
       </form>
       <p className="text-center text-xs text-white/50 mt-6 tracking-wide">
