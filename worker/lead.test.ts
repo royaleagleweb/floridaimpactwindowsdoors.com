@@ -45,6 +45,51 @@ test("formats a homepage lead and drops empty and hidden fields", () => {
   assert.doesNotMatch(message, new RegExp(TOKEN));
 });
 
+test("formats a contact page lead and drops FormSubmit hidden fields", () => {
+  const message = formatLeadMessage({
+    source: "New Contact Message from Contact Page",
+    name: "John Doe",
+    email: "john@example.com",
+    phone: "(754) 555-0100",
+    subject: "question",
+    message: "Need a quote for the front windows.",
+    _subject: "New Contact Message from Contact Page",
+    _captcha: "false",
+    _autoresponse: "Thank you for contacting Florida Impact Windows & Doors!",
+  });
+
+  assert.ok(message);
+  assert.match(message, /Source: New Contact Message from Contact Page/);
+  assert.match(message, /Name: John Doe/);
+  assert.match(message, /Email: john@example.com/);
+  assert.match(message, /Phone: \(754\) 555-0100/);
+  assert.match(message, /Subject: question/);
+  assert.match(message, /Message: Need a quote for the front windows\./);
+  assert.doesNotMatch(message, /_captcha/);
+  assert.doesNotMatch(message, /Thank you for contacting/);
+});
+
+test("formats an estimate request with project details", () => {
+  const message = formatLeadMessage({
+    source: "New Estimate Request from Get Estimate Page",
+    name: "Grace Hopper",
+    email: "grace@example.com",
+    phone: "754-555-0100",
+    address: "3000 Stirling Rd",
+    project_type: "windows",
+    openings: "6-10",
+    message: "Need this before storm season.",
+  });
+
+  assert.ok(message);
+  assert.match(message, /Source: New Estimate Request from Get Estimate Page/);
+  assert.match(message, /Name: Grace Hopper/);
+  assert.match(message, /Address: 3000 Stirling Rd/);
+  assert.match(message, /Openings: 6-10/);
+  assert.match(message, /Project Type: windows/);
+  assert.match(message, /Message: Need this before storm season\./);
+});
+
 test("formats a multi-step quote in a stable field order", () => {
   const message = formatLeadMessage({
     timeline: "ASAP",
