@@ -45,6 +45,36 @@ test("formats a homepage lead and drops empty and hidden fields", () => {
   assert.doesNotMatch(message, new RegExp(TOKEN));
 });
 
+test("formats landing page leads", () => {
+  const top = formatLeadMessage({
+    source: "New Lead from Landing Page",
+    name: "Ada Lovelace",
+    phone: "754-555-0100",
+    email: "ada@example.com",
+    service: "Impact Windows",
+    _subject: "New Lead from Landing Page",
+    _next: "https://floridaimpactwindowsdoors.com/thank-you/",
+  });
+  assert.ok(top);
+  assert.match(top, /Source: New Lead from Landing Page$/m);
+  assert.match(top, /Name: Ada Lovelace/);
+  assert.match(top, /Service: Impact Windows/);
+  assert.doesNotMatch(top, /thank-you/);
+
+  const bottom = formatLeadMessage({
+    source: "New Lead from Landing Page (Bottom Form)",
+    name: "Grace Hopper",
+    phone: "754-555-0199",
+    email: "grace@example.com",
+    address: "3000 Stirling Rd",
+    service: "Impact Doors",
+  });
+  assert.ok(bottom);
+  assert.match(bottom, /Source: New Lead from Landing Page \(Bottom Form\)/);
+  assert.match(bottom, /Address: 3000 Stirling Rd/);
+  assert.match(bottom, /Service: Impact Doors/);
+});
+
 test("formats a contact page lead and drops FormSubmit hidden fields", () => {
   const message = formatLeadMessage({
     source: "New Contact Message from Contact Page",

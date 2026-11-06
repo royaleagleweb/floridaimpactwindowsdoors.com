@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useRef, useState, useEffect } from "react";
+import { deliverLead } from "@/lib/notifyLead";
 import Image from "next/image";
 
 /* ───────────────────── tiny SVG icons ───────────────────── */
@@ -74,6 +75,42 @@ function useCounter(end: number, duration = 2000) {
   return { count, start: () => setStarted(true) };
 }
 
+const THANK_YOU_PATH = "/thank-you/";
+
+function textField(data: FormData, name: string): string {
+  return String(data.get(name) ?? "").trim();
+}
+
+async function submitLandingLead(
+  event: React.FormEvent<HTMLFormElement>,
+  source: string,
+  lock: { current: boolean },
+  setPending: (pending: boolean) => void,
+  fieldNames: readonly string[],
+) {
+  event.preventDefault();
+  if (lock.current) return;
+  lock.current = true;
+
+  const data = new FormData(event.currentTarget);
+  const fields: Record<string, string> = {};
+  for (const name of fieldNames) fields[name] = textField(data, name);
+  setPending(true);
+
+  await deliverLead(
+    {
+      _subject: String(data.get("_subject") ?? ""),
+      _captcha: String(data.get("_captcha") ?? "false"),
+      _template: String(data.get("_template") ?? "box"),
+      _autoresponse: String(data.get("_autoresponse") ?? ""),
+      ...fields,
+    },
+    { source, ...fields },
+  );
+
+  window.location.assign(THANK_YOU_PATH);
+}
+
 /* ───────────────────── MAIN COMPONENT ───────────────────── */
 export default function LandingPage() {
   const [formData, setFormData] = useState({
@@ -90,6 +127,10 @@ export default function LandingPage() {
     address: "",
   });
   const [showSticky, setShowSticky] = useState(false);
+  const [topPending, setTopPending] = useState(false);
+  const [bottomPending, setBottomPending] = useState(false);
+  const topLock = useRef(false);
+  const bottomLock = useRef(false);
 
   const counter1 = useCounter(2500);
   const counter2 = useCounter(15);
@@ -269,7 +310,20 @@ export default function LandingPage() {
                   </p>
                 </div>
 
-                <form action={FORM_ENDPOINT} method="POST" className="space-y-4">
+                <form
+                  action={FORM_ENDPOINT}
+                  method="POST"
+                  className="space-y-4"
+                  onSubmit={(event) =>
+                    submitLandingLead(
+                      event,
+                      "New Lead from Landing Page",
+                      topLock,
+                      setTopPending,
+                      ["name", "phone", "email", "service"],
+                    )
+                  }
+                >
                   <input type="hidden" name="_subject" value="New Lead from Landing Page" />
                   <input type="hidden" name="_captcha" value="false" />
                   <input type="hidden" name="_next" value="https://floridaimpactwindowsdoors.com/thank-you/" />
@@ -316,9 +370,10 @@ export default function LandingPage() {
                   </select>
                   <button
                     type="submit"
-                    className="w-full bg-gradient-to-r from-palm-500 to-palm-600 text-white py-4 rounded-xl font-bold text-lg hover:from-palm-600 hover:to-palm-700 transition-all shadow-lg shadow-palm-500/30 hover:shadow-palm-500/50 hover:scale-[1.02] active:scale-[0.98]"
+                    disabled={topPending}
+                    className="w-full bg-gradient-to-r from-palm-500 to-palm-600 text-white py-4 rounded-xl font-bold text-lg hover:from-palm-600 hover:to-palm-700 transition-all shadow-lg shadow-palm-500/30 hover:shadow-palm-500/50 hover:scale-[1.02] active:scale-[0.98] disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:scale-100"
                   >
-                    Get My Free Quote &rarr;
+                    {topPending ? "Sending..." : "Get My Free Quote →"}
                   </button>
                 </form>
 
@@ -693,6 +748,15 @@ export default function LandingPage() {
                   action={FORM_ENDPOINT}
                   method="POST"
                   className="space-y-4"
+                  onSubmit={(event) =>
+                    submitLandingLead(
+                      event,
+                      "New Lead from Landing Page (Bottom Form)",
+                      bottomLock,
+                      setBottomPending,
+                      ["name", "phone", "email", "address", "service"],
+                    )
+                  }
                 >
                   <input type="hidden" name="_subject" value="New Lead from Landing Page (Bottom Form)" />
                   <input type="hidden" name="_captcha" value="false" />
@@ -750,9 +814,10 @@ export default function LandingPage() {
                   </select>
                   <button
                     type="submit"
-                    className="w-full bg-gradient-to-r from-palm-500 to-palm-600 text-white py-4 rounded-xl font-bold text-lg hover:from-palm-600 hover:to-palm-700 transition-all shadow-lg shadow-palm-500/30 hover:shadow-palm-500/50 hover:scale-[1.02] active:scale-[0.98]"
+                    disabled={bottomPending}
+                    className="w-full bg-gradient-to-r from-palm-500 to-palm-600 text-white py-4 rounded-xl font-bold text-lg hover:from-palm-600 hover:to-palm-700 transition-all shadow-lg shadow-palm-500/30 hover:shadow-palm-500/50 hover:scale-[1.02] active:scale-[0.98] disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:scale-100"
                   >
-                    Get My Free Quote &rarr;
+                    {bottomPending ? "Sending..." : "Get My Free Quote →"}
                   </button>
                 </form>
 
