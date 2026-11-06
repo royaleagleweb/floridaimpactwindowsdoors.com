@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useRef } from "react";
+import { notifyLead } from "@/lib/notifyLead";
 
 /* ── Data ──────────────────────────────────────────────── */
 
@@ -113,6 +114,7 @@ export default function MultiStepQuoteForm() {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [submitted, setSubmitted] = useState(false);
   const [direction, setDirection] = useState<"forward" | "back">("forward");
+  const submitting = useRef(false);
 
   /* helpers */
   const toggle = useCallback(
@@ -182,27 +184,35 @@ export default function MultiStepQuoteForm() {
   };
 
   const handleSubmit = () => {
-    if (!validate()) return;
+    if (!validate() || submitting.current) return;
+    submitting.current = true;
+    const quoteFields = {
+      name: form.name,
+      email: form.email,
+      phone: form.phone,
+      address: form.address,
+      city: form.city,
+      services: form.services.join(", "),
+      property_type: form.propertyType,
+      openings: form.openings,
+      property_age: form.propertyAge,
+      brand_preferences: form.brands.join(", "),
+      budget: form.budget,
+      timeline: form.timeline,
+    };
     fetch("https://formsubmit.co/ajax/roy@royaleagleweb.com", {
       method: "POST",
       headers: { "Content-Type": "application/json", Accept: "application/json" },
       body: JSON.stringify({
         _subject: "New Multi-Step Quote Request",
         _template: "box",
-        name: form.name,
-        email: form.email,
-        phone: form.phone,
-        address: form.address,
-        city: form.city,
-        services: form.services.join(", "),
-        property_type: form.propertyType,
-        openings: form.openings,
-        property_age: form.propertyAge,
-        brand_preferences: form.brands.join(", "),
-        budget: form.budget,
-        timeline: form.timeline,
+        ...quoteFields,
       }),
     }).catch(() => {});
+    void notifyLead({
+      source: "New Multi-Step Quote Request",
+      ...quoteFields,
+    });
     setSubmitted(true);
   };
 
