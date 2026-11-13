@@ -122,6 +122,152 @@ export default function AreasPage() {
                 </div>
               </div>
 
+              {county === "Miami-Dade" && (
+                <div className="mb-10 max-w-4xl space-y-4 text-gray-700 leading-relaxed">
+                  <p>
+                    Every Miami-Dade city below is in the High-Velocity Hurricane Zone. Replacement impact windows and doors generally need a current Miami-Dade NOA. Crews leave from our shop at 3000 Stirling Rd in{" "}
+                    <Link href="/areas/hollywood/" className="text-palm-700 font-semibold hover:underline">Hollywood</Link>.
+                    Kendall and Westchester are unincorporated, so those permits are Miami-Dade County rather than a city hall. Read{" "}
+                    <Link href="/blog/impact-window-cost-miami-dade-county/" className="text-palm-700 font-semibold hover:underline">what changes the price of impact windows in Miami-Dade County</Link>{" "}
+                    before you compare a Brickell tower with a Carol City ranch.
+                  </p>
+                  <p>
+                    Coastal and bay hubs:{" "}
+                    <Link href="/areas/miami-beach/" className="text-palm-700 font-semibold hover:underline">Miami Beach</Link>,{" "}
+                    <Link href="/areas/key-biscayne/" className="text-palm-700 font-semibold hover:underline">Key Biscayne</Link>,{" "}
+                    <Link href="/areas/surfside/" className="text-palm-700 font-semibold hover:underline">Surfside</Link>,{" "}
+                    <Link href="/areas/bal-harbour/" className="text-palm-700 font-semibold hover:underline">Bal Harbour</Link>,{" "}
+                    <Link href="/areas/bay-harbor-islands/" className="text-palm-700 font-semibold hover:underline">Bay Harbor Islands</Link>,{" "}
+                    <Link href="/areas/sunny-isles-beach/" className="text-palm-700 font-semibold hover:underline">Sunny Isles Beach</Link>,{" "}
+                    <Link href="/areas/golden-beach/" className="text-palm-700 font-semibold hover:underline">Golden Beach</Link>,{" "}
+                    <Link href="/areas/aventura/" className="text-palm-700 font-semibold hover:underline">Aventura</Link>,{" "}
+                    <Link href="/areas/north-miami-beach/" className="text-palm-700 font-semibold hover:underline">North Miami Beach</Link>,{" "}
+                    <Link href="/areas/north-miami/" className="text-palm-700 font-semibold hover:underline">North Miami</Link>, and{" "}
+                    <Link href="/areas/miami-shores/" className="text-palm-700 font-semibold hover:underline">Miami Shores</Link>.
+                  </p>
+                  <p>
+                    City of Miami and the southern villages:{" "}
+                    <Link href="/areas/miami/" className="text-palm-700 font-semibold hover:underline">Miami</Link>,{" "}
+                    <Link href="/areas/coral-gables/" className="text-palm-700 font-semibold hover:underline">Coral Gables</Link>,{" "}
+                    <Link href="/areas/south-miami/" className="text-palm-700 font-semibold hover:underline">South Miami</Link>,{" "}
+                    <Link href="/areas/pinecrest/" className="text-palm-700 font-semibold hover:underline">Pinecrest</Link>,{" "}
+                    <Link href="/areas/palmetto-bay/" className="text-palm-700 font-semibold hover:underline">Palmetto Bay</Link>,{" "}
+                    <Link href="/areas/cutler-bay/" className="text-palm-700 font-semibold hover:underline">Cutler Bay</Link>,{" "}
+                    <Link href="/areas/homestead/" className="text-palm-700 font-semibold hover:underline">Homestead</Link>, and{" "}
+                    <Link href="/areas/florida-city/" className="text-palm-700 font-semibold hover:underline">Florida City</Link>.
+                  </p>
+                  <p>
+                    Inland and west hubs:{" "}
+                    <Link href="/areas/miami-gardens/" className="text-palm-700 font-semibold hover:underline">Miami Gardens</Link>,{" "}
+                    <Link href="/areas/hialeah/" className="text-palm-700 font-semibold hover:underline">Hialeah</Link>,{" "}
+                    <Link href="/areas/hialeah-gardens/" className="text-palm-700 font-semibold hover:underline">Hialeah Gardens</Link>,{" "}
+                    <Link href="/areas/miami-lakes/" className="text-palm-700 font-semibold hover:underline">Miami Lakes</Link>,{" "}
+                    <Link href="/areas/miami-springs/" className="text-palm-700 font-semibold hover:underline">Miami Springs</Link>,{" "}
+                    <Link href="/areas/medley/" className="text-palm-700 font-semibold hover:underline">Medley</Link>,{" "}
+                    <Link href="/areas/doral/" className="text-palm-700 font-semibold hover:underline">Doral</Link>,{" "}
+                    <Link href="/areas/sweetwater/" className="text-palm-700 font-semibold hover:underline">Sweetwater</Link>,{" "}
+                    <Link href="/areas/westchester/" className="text-palm-700 font-semibold hover:underline">Westchester</Link>, and{" "}
+                    <Link href="/areas/kendall/" className="text-palm-700 font-semibold hover:underline">Kendall</Link>.
+                  </p>
+                </div>
+              )}
+
+              {county === "Broward" && (
+                <div className="mb-10 max-w-4xl space-y-4 text-gray-700 leading-relaxed">
+                  <p>
+                    Every Broward city below is in the High-Velocity Hurricane Zone. Crews leave from our shop at 3000 Stirling Rd in{" "}
+                    <Link href="/areas/hollywood/" className="text-palm-700 font-semibold hover:underline">Hollywood</Link>.
+                    The page that sits on the Palm Beach line — where a Boca-style FL# quote is the wrong packet — is{" "}
+                    <Link href="/areas/deerfield-beach/" className="text-palm-700 font-semibold hover:underline">Deerfield Beach</Link>.
+                    Read{" "}
+                    <Link href="/blog/impact-window-cost-broward-county/" className="text-palm-700 font-semibold hover:underline">what changes the price of impact windows in Broward County</Link>{" "}
+                    before you compare cities.
+                  </p>
+                  <p>
+                    Coastal and canal hubs:{" "}
+                    <Link href="/areas/pompano-beach/" className="text-palm-700 font-semibold hover:underline">Pompano Beach</Link>,{" "}
+                    <Link href="/areas/lighthouse-point/" className="text-palm-700 font-semibold hover:underline">Lighthouse Point</Link>,{" "}
+                    <Link href="/areas/hillsboro-beach/" className="text-palm-700 font-semibold hover:underline">Hillsboro Beach</Link>,{" "}
+                    <Link href="/areas/lauderdale-by-the-sea/" className="text-palm-700 font-semibold hover:underline">Lauderdale-by-the-Sea</Link>,{" "}
+                    <Link href="/areas/sea-ranch-lakes/" className="text-palm-700 font-semibold hover:underline">Sea Ranch Lakes</Link>,{" "}
+                    <Link href="/areas/fort-lauderdale/" className="text-palm-700 font-semibold hover:underline">Fort Lauderdale</Link>,{" "}
+                    <Link href="/areas/oakland-park/" className="text-palm-700 font-semibold hover:underline">Oakland Park</Link>,{" "}
+                    <Link href="/areas/wilton-manors/" className="text-palm-700 font-semibold hover:underline">Wilton Manors</Link>,{" "}
+                    <Link href="/areas/dania-beach/" className="text-palm-700 font-semibold hover:underline">Dania Beach</Link>,{" "}
+                    <Link href="/areas/hollywood/" className="text-palm-700 font-semibold hover:underline">Hollywood</Link>, and{" "}
+                    <Link href="/areas/hallandale-beach/" className="text-palm-700 font-semibold hover:underline">Hallandale Beach</Link>.
+                  </p>
+                  <p>
+                    Inland and west Broward hubs:{" "}
+                    <Link href="/areas/coconut-creek/" className="text-palm-700 font-semibold hover:underline">Coconut Creek</Link>,{" "}
+                    <Link href="/areas/margate/" className="text-palm-700 font-semibold hover:underline">Margate</Link>,{" "}
+                    <Link href="/areas/coral-springs/" className="text-palm-700 font-semibold hover:underline">Coral Springs</Link>,{" "}
+                    <Link href="/areas/parkland/" className="text-palm-700 font-semibold hover:underline">Parkland</Link>,{" "}
+                    <Link href="/areas/tamarac/" className="text-palm-700 font-semibold hover:underline">Tamarac</Link>,{" "}
+                    <Link href="/areas/north-lauderdale/" className="text-palm-700 font-semibold hover:underline">North Lauderdale</Link>,{" "}
+                    <Link href="/areas/sunrise/" className="text-palm-700 font-semibold hover:underline">Sunrise</Link>,{" "}
+                    <Link href="/areas/lauderhill/" className="text-palm-700 font-semibold hover:underline">Lauderhill</Link>,{" "}
+                    <Link href="/areas/lauderdale-lakes/" className="text-palm-700 font-semibold hover:underline">Lauderdale Lakes</Link>,{" "}
+                    <Link href="/areas/plantation/" className="text-palm-700 font-semibold hover:underline">Plantation</Link>,{" "}
+                    <Link href="/areas/davie/" className="text-palm-700 font-semibold hover:underline">Davie</Link>,{" "}
+                    <Link href="/areas/cooper-city/" className="text-palm-700 font-semibold hover:underline">Cooper City</Link>,{" "}
+                    <Link href="/areas/weston/" className="text-palm-700 font-semibold hover:underline">Weston</Link>,{" "}
+                    <Link href="/areas/southwest-ranches/" className="text-palm-700 font-semibold hover:underline">Southwest Ranches</Link>,{" "}
+                    <Link href="/areas/pembroke-pines/" className="text-palm-700 font-semibold hover:underline">Pembroke Pines</Link>,{" "}
+                    <Link href="/areas/miramar/" className="text-palm-700 font-semibold hover:underline">Miramar</Link>, and{" "}
+                    <Link href="/areas/west-park/" className="text-palm-700 font-semibold hover:underline">West Park</Link>.
+                  </p>
+                </div>
+              )}
+
+              {county === "Palm Beach" && (
+                <div className="mb-10 max-w-4xl space-y-4 text-gray-700 leading-relaxed">
+                  <p>
+                    Palm Beach County is a wind-borne debris region. It is not the High-Velocity Hurricane Zone that covers Miami-Dade and Broward. A Florida Product Approval is often accepted here. A Miami-Dade NOA is allowed when it is the right product. It is not the automatic packet. Read{" "}
+                    <Link href="/blog/impact-window-cost-palm-beach-county/" className="text-palm-700 font-semibold hover:underline">what changes the price of impact windows in Palm Beach County</Link>.
+                    The county line that people mix up is{" "}
+                    <Link href="/areas/boca-raton/" className="text-palm-700 font-semibold hover:underline">Boca Raton</Link>{" "}
+                    versus{" "}
+                    <Link href="/areas/deerfield-beach/" className="text-palm-700 font-semibold hover:underline">Deerfield Beach</Link>.
+                  </p>
+                  <p>
+                    Barrier-island and Intracoastal hubs:{" "}
+                    <Link href="/areas/jupiter/" className="text-palm-700 font-semibold hover:underline">Jupiter</Link>,{" "}
+                    <Link href="/areas/tequesta/" className="text-palm-700 font-semibold hover:underline">Tequesta</Link>,{" "}
+                    <Link href="/areas/juno-beach/" className="text-palm-700 font-semibold hover:underline">Juno Beach</Link>,{" "}
+                    <Link href="/areas/north-palm-beach/" className="text-palm-700 font-semibold hover:underline">North Palm Beach</Link>,{" "}
+                    <Link href="/areas/riviera-beach/" className="text-palm-700 font-semibold hover:underline">Riviera Beach</Link>,{" "}
+                    <Link href="/areas/palm-beach/" className="text-palm-700 font-semibold hover:underline">Palm Beach</Link>,{" "}
+                    <Link href="/areas/south-palm-beach/" className="text-palm-700 font-semibold hover:underline">South Palm Beach</Link>,{" "}
+                    <Link href="/areas/lake-worth-beach/" className="text-palm-700 font-semibold hover:underline">Lake Worth Beach</Link>,{" "}
+                    <Link href="/areas/lantana/" className="text-palm-700 font-semibold hover:underline">Lantana</Link>,{" "}
+                    <Link href="/areas/hypoluxo/" className="text-palm-700 font-semibold hover:underline">Hypoluxo</Link>,{" "}
+                    <Link href="/areas/manalapan/" className="text-palm-700 font-semibold hover:underline">Manalapan</Link>,{" "}
+                    <Link href="/areas/ocean-ridge/" className="text-palm-700 font-semibold hover:underline">Ocean Ridge</Link>,{" "}
+                    <Link href="/areas/briny-breezes/" className="text-palm-700 font-semibold hover:underline">Briny Breezes</Link>,{" "}
+                    <Link href="/areas/gulf-stream/" className="text-palm-700 font-semibold hover:underline">Gulf Stream</Link>,{" "}
+                    <Link href="/areas/highland-beach/" className="text-palm-700 font-semibold hover:underline">Highland Beach</Link>,{" "}
+                    <Link href="/areas/delray-beach/" className="text-palm-700 font-semibold hover:underline">Delray Beach</Link>,{" "}
+                    <Link href="/areas/boynton-beach/" className="text-palm-700 font-semibold hover:underline">Boynton Beach</Link>, and{" "}
+                    <Link href="/areas/boca-raton/" className="text-palm-700 font-semibold hover:underline">Boca Raton</Link>.
+                  </p>
+                  <p>
+                    Inland and western hubs:{" "}
+                    <Link href="/areas/palm-beach-gardens/" className="text-palm-700 font-semibold hover:underline">Palm Beach Gardens</Link>,{" "}
+                    <Link href="/areas/west-palm-beach/" className="text-palm-700 font-semibold hover:underline">West Palm Beach</Link>,{" "}
+                    <Link href="/areas/lake-park/" className="text-palm-700 font-semibold hover:underline">Lake Park</Link>,{" "}
+                    <Link href="/areas/palm-springs/" className="text-palm-700 font-semibold hover:underline">Palm Springs</Link>,{" "}
+                    <Link href="/areas/greenacres/" className="text-palm-700 font-semibold hover:underline">Greenacres</Link>,{" "}
+                    <Link href="/areas/atlantis/" className="text-palm-700 font-semibold hover:underline">Atlantis</Link>,{" "}
+                    <Link href="/areas/wellington/" className="text-palm-700 font-semibold hover:underline">Wellington</Link>,{" "}
+                    <Link href="/areas/royal-palm-beach/" className="text-palm-700 font-semibold hover:underline">Royal Palm Beach</Link>, and{" "}
+                    <Link href="/areas/loxahatchee/" className="text-palm-700 font-semibold hover:underline">Loxahatchee</Link>.{" "}
+                    <Link href="/areas/port-st-lucie/" className="text-palm-700 font-semibold hover:underline">Port St. Lucie</Link>{" "}
+                    is listed with this county in the directory below, but it is St. Lucie County: wind-borne debris, not HVHZ, and not a Palm Beach city hall.
+                  </p>
+                </div>
+              )}
+
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
                 {countyCities.map((city) => (
                   <Link
