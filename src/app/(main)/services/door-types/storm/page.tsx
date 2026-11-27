@@ -108,11 +108,12 @@ export default function StormDoorsPage() {
             <div className="hidden lg:block">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-black/30 border border-white/10">
                 <Image
-                  src="/images/doors5.jpg"
+                  src="/images/doors5.webp"
                   alt="Impact-rated storm doors protecting a South Florida home"
                   width={600}
                   height={450}
                   className="w-full h-auto object-cover"
+                  fetchPriority="high"
                   priority
                 />
               </div>

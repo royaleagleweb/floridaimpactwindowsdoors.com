@@ -19,49 +19,49 @@ const services = [
     description:
       "Hurricane-rated impact windows tested to withstand Category 5 winds. Energy-efficient Low-E glass options available. Miami-Dade NOA approved.",
     href: "/services/impact-windows/",
-    image: "/images/windows3.jpg",
+    image: "/images/windows3.webp",
   },
   {
     title: "Impact Doors",
     description:
       "Premium impact doors including sliding glass, French, entry, and patio doors. Full hurricane protection without sacrificing style.",
     href: "/services/impact-doors/",
-    image: "/images/doors.jpg",
+    image: "/images/doors.webp",
   },
   {
     title: "Hurricane Shutters",
     description:
       "Accordion, roll-down, Bahama, and panel hurricane shutters. Affordable storm protection for windows and doors.",
     href: "/services/hurricane-shutters/",
-    image: "/images/windows5.jpg",
+    image: "/images/windows5.webp",
   },
   {
     title: "Energy Efficient Windows",
     description:
       "Low-E coated impact windows that reflect 70-85% of the sun's heat. Save on FPL bills while protecting your home.",
     href: "/services/energy-efficient-windows/",
-    image: "/images/windows2.jpg",
+    image: "/images/windows2.webp",
   },
   {
     title: "Window Replacement",
     description:
       "Full-frame and retrofit window replacement for South Florida homes. Upgrade from jalousie, single-pane, or aging windows.",
     href: "/services/window-replacement/",
-    image: "/images/windows4.jpg",
+    image: "/images/windows4.webp",
   },
   {
     title: "Door Replacement",
     description:
       "Replace outdated doors with hurricane-rated impact doors. Sliding glass, French, entry, and patio door options.",
     href: "/services/door-replacement/",
-    image: "/images/doors4.jpg",
+    image: "/images/doors4.webp",
   },
   {
     title: "Commercial Services",
     description:
       "Impact window and door solutions for commercial properties, storefronts, condos, and HOA communities across South Florida.",
     href: "/services/commercial-services/",
-    image: "/images/doors5.jpg",
+    image: "/images/doors5.webp",
   },
 ];
 
@@ -130,9 +130,10 @@ export default function ServicesPage() {
                   <Image
                     src={service.image}
                     alt={`${service.title} installation in South Florida`}
-                    fill
+                    width={1168}
+                    height={784}
                     loading="lazy"
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-ocean-950 via-ocean-950/40 to-transparent" />
                 </div>

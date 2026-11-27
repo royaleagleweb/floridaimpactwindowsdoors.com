@@ -120,11 +120,12 @@ export default function HopperPage() {
             <div className="hidden lg:block">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-black/30 border border-white/10">
                 <Image
-                  src="/images/windows4.jpg"
+                  src="/images/windows4.webp"
                   alt="Hopper impact windows for compact spaces in South Florida"
                   width={600}
                   height={450}
                   className="w-full h-auto object-cover"
+                  fetchPriority="high"
                   priority
                 />
               </div>

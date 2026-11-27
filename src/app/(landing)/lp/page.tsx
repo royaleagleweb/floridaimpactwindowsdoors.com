@@ -1,7 +1,8 @@
 "use client";
 
 import { useRef, useState, useEffect } from "react";
-import { deliverLead } from "@/lib/notifyLead";
+import { trackGenerateLead } from "@/lib/analytics";
+import { deliverLeadResult } from "@/lib/notifyLead";
 import Image from "next/image";
 
 /* ───────────────────── tiny SVG icons ───────────────────── */
@@ -97,7 +98,7 @@ async function submitLandingLead(
   for (const name of fieldNames) fields[name] = textField(data, name);
   setPending(true);
 
-  await deliverLead(
+  const accepted = await deliverLeadResult(
     {
       _subject: String(data.get("_subject") ?? ""),
       _captcha: String(data.get("_captcha") ?? "false"),
@@ -107,6 +108,7 @@ async function submitLandingLead(
     },
     { source, ...fields },
   );
+  if (accepted) trackGenerateLead("lp");
 
   window.location.assign(THANK_YOU_PATH);
 }
@@ -183,11 +185,13 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <Image
-              src="/images/logo.png"
+              src="/images/logo.webp"
               alt="Florida Impact Windows & Doors"
               width={48}
               height={48}
               className="rounded-lg"
+              loading="eager"
+              fetchPriority="low"
             />
             <div>
               <div className="text-white font-bold text-lg font-display leading-tight">
@@ -219,11 +223,13 @@ export default function LandingPage() {
       <section className="relative bg-ocean-950 overflow-hidden">
         {/* Hero background image */}
         <Image
-          src="/images/windows4.jpg"
+          src="/images/windows4.webp"
           alt="Impact windows installed on South Florida home"
-          fill
-          className="object-cover opacity-25"
+          width={1168}
+          height={784}
+          className="absolute inset-0 h-full w-full object-cover opacity-25"
           priority
+          fetchPriority="high"
           sizes="100vw"
         />
         {/* Background effects */}
@@ -840,11 +846,12 @@ export default function LandingPage() {
         <div className="max-w-5xl mx-auto px-4 text-center">
           <div className="flex items-center justify-center gap-3 mb-4">
             <Image
-              src="/images/logo.png"
+              src="/images/logo.webp"
               alt="Florida Impact Windows & Doors"
               width={32}
               height={32}
               className="rounded"
+              loading="lazy"
             />
             <span className="text-white font-bold font-display">
               Florida Impact Windows &amp; Doors

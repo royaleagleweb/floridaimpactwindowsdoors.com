@@ -1,7 +1,8 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { deliverLead } from "@/lib/notifyLead";
+import { trackGenerateLead } from "@/lib/analytics";
+import { deliverLeadResult } from "@/lib/notifyLead";
 
 const THANK_YOU_PATH = "/thank-you/";
 
@@ -20,7 +21,7 @@ export default function HeroLeadForm() {
     const service = String(data.get("service") ?? "").trim();
     setPending(true);
 
-    await deliverLead(
+    const accepted = await deliverLeadResult(
       {
         _subject: String(data.get("_subject") ?? ""),
         _captcha: String(data.get("_captcha") ?? "false"),
@@ -37,6 +38,7 @@ export default function HeroLeadForm() {
         service,
       },
     );
+    if (accepted) trackGenerateLead("hero");
 
     window.location.assign(THANK_YOU_PATH);
   }

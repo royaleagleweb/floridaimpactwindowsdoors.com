@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { deliverLead, emailLead, FORMSUBMIT_AJAX_URL, notifyLead } from "./notifyLead.ts";
+import { deliverLead, deliverLeadResult, emailLead, FORMSUBMIT_AJAX_URL, notifyLead, postLead } from "./notifyLead.ts";
 
 const originalFetch = globalThis.fetch;
 
@@ -100,4 +100,34 @@ test("notifyLead resolves when /api/lead fails", async () => {
   }) as typeof fetch;
 
   await notifyLead({ name: "Ada", phone: "754-555-0100" });
+});
+
+test("postLead reports whether /api/lead accepted the body", async () => {
+  globalThis.fetch = (async () => Response.json({ ok: false }, { status: 502 })) as typeof fetch;
+  assert.equal(await postLead({ source: "chatbot", name: "Ada", phone: "754-555-0100" }), false);
+
+  globalThis.fetch = (async (_input: RequestInfo | URL, init?: RequestInit) => {
+    const fields = JSON.parse(String(init?.body ?? "{}")) as Record<string, string>;
+    assert.equal(fields.source, "chatbot");
+    return Response.json({ ok: true });
+  }) as typeof fetch;
+  assert.equal(await postLead({ source: "chatbot", name: "Ada", phone: "754-555-0100" }), true);
+});
+
+test("deliverLeadResult fires FormSubmit and returns the WhatsApp result", async () => {
+  const calls: string[] = [];
+  globalThis.fetch = (async (input: RequestInfo | URL) => {
+    const url = String(input);
+    calls.push(url);
+    if (url === FORMSUBMIT_AJAX_URL) return Response.json({ ok: true });
+    return Response.json({ ok: true });
+  }) as typeof fetch;
+
+  const ok = await deliverLeadResult(
+    { _subject: "New Estimate Request from Chatbot", name: "Ada" },
+    { source: "chatbot", name: "Ada", phone: "754-555-0100" },
+  );
+
+  assert.equal(ok, true);
+  assert.deepEqual(calls, [FORMSUBMIT_AJAX_URL, "/api/lead"]);
 });

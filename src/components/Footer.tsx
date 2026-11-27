@@ -112,11 +112,12 @@ export default function Footer() {
             <div className="col-span-2 md:col-span-3 lg:col-span-1">
               <Link href="/" className="flex items-center gap-3 mb-4">
                 <Image
-                  src="/images/logo.png"
+                  src="/images/logo.webp"
                   alt="Florida Impact Windows & Doors"
-                  width={120}
-                  height={120}
+                  width={64}
+                  height={64}
                   className="h-16 w-16 object-contain rounded-lg bg-white p-1"
+                  loading="lazy"
                 />
                 <div>
                   <span className="text-lg font-bold font-display">Florida<span className="text-palm-400">Impact</span></span>
