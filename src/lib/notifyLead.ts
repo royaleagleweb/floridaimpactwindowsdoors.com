@@ -2,8 +2,11 @@ const LEAD_TIMEOUT_MS = 5000;
 
 export const FORMSUBMIT_AJAX_URL = "https://formsubmit.co/ajax/roy@royaleagleweb.com";
 
-/** Best-effort WhatsApp notification. Resolves even when /api/lead fails or times out. */
-export function notifyLead(fields: Record<string, string>): Promise<void> {
+/**
+ * POST /api/lead. Resolves true only when the endpoint accepts the lead.
+ * Network errors, timeouts, and non-OK responses resolve false.
+ */
+export function postLead(fields: Record<string, string>): Promise<boolean> {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), LEAD_TIMEOUT_MS);
 
@@ -17,9 +20,14 @@ export function notifyLead(fields: Record<string, string>): Promise<void> {
     keepalive: true,
     signal: controller.signal,
   })
-    .then(() => undefined)
-    .catch(() => undefined)
+    .then((response) => response.ok)
+    .catch(() => false)
     .finally(() => clearTimeout(timer));
+}
+
+/** Best-effort WhatsApp notification. Resolves even when /api/lead fails or times out. */
+export function notifyLead(fields: Record<string, string>): Promise<void> {
+  return postLead(fields).then(() => undefined);
 }
 
 /**
@@ -49,4 +57,16 @@ export function deliverLead(
 ): Promise<void> {
   emailLead(emailFields);
   return notifyLead(whatsappFields);
+}
+
+/**
+ * Same delivery as deliverLead, but reports whether /api/lead accepted the lead.
+ * FormSubmit stays in the background and does not decide the result.
+ */
+export function deliverLeadResult(
+  emailFields: Record<string, string>,
+  whatsappFields: Record<string, string>,
+): Promise<boolean> {
+  emailLead(emailFields);
+  return postLead(whatsappFields);
 }

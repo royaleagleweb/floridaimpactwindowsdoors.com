@@ -35,6 +35,45 @@ test("Pages onRequest returns JSON for GET instead of the static site", async ()
   assert.match(response.headers.get("content-type") ?? "", /application\/json/);
 });
 
+test("Pages onRequest labels a chatbot lead without calling a real Green API host", async () => {
+  const originalFetch = globalThis.fetch;
+  let capturedUrl = "";
+  let capturedBody = "";
+  globalThis.fetch = (async (input: RequestInfo | URL, init?: RequestInit) => {
+    capturedUrl = String(input);
+    capturedBody = String(init?.body ?? "");
+    return Response.json({ idMessage: "mock-chatbot" });
+  }) as typeof fetch;
+
+  try {
+    const response = await onRequest({
+      request: post(
+        JSON.stringify({
+          source: "chatbot",
+          name: "Ada Lovelace",
+          phone: "(754) 600-4876",
+          city: "33021",
+          service: "Impact windows",
+          message: "Front of the house",
+        }),
+      ),
+      env: ENV,
+    });
+    const sent = JSON.parse(capturedBody) as { chatId: string; message: string };
+
+    assert.equal(response.status, 200);
+    assert.deepEqual(await response.json(), { ok: true });
+    assert.match(capturedUrl, /^https:\/\/1234\.api\.greenapi\.com\/waInstance/);
+    assert.equal(sent.chatId, CHAT_ID);
+    assert.match(sent.message, /Source: chatbot/);
+    assert.match(sent.message, /City: 33021/);
+    assert.match(sent.message, /Service: Impact windows/);
+    assert.doesNotMatch(capturedUrl, /api\.green-api\.com|wa\.me|graph\.facebook/);
+  } finally {
+    globalThis.fetch = originalFetch;
+  }
+});
+
 test("Pages onRequest posts a lead through handleLead", async () => {
   const originalFetch = globalThis.fetch;
   let capturedUrl = "";
