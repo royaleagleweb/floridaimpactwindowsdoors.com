@@ -108,11 +108,12 @@ export default function PatioDoorsPage() {
             <div className="hidden lg:block">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-black/30 border border-white/10">
                 <Image
-                  src="/images/doors4.jpg"
+                  src="/images/doors4.webp"
                   alt="Impact-rated patio doors on a South Florida home"
                   width={600}
                   height={450}
                   className="w-full h-auto object-cover"
+                  fetchPriority="high"
                   priority
                 />
               </div>

@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import "../globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ChatBot from "@/components/ChatBot";
+import ClickTracking from "@/components/ClickTracking";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
+import { inter, outfit } from "@/lib/fonts";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://floridaimpactwindowsdoors.com"),
@@ -216,18 +218,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${inter.variable} ${outfit.variable}`}>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap"
-          rel="stylesheet"
-        />
         <link rel="alternate" type="application/rss+xml" href="https://floridaimpactwindowsdoors.com/feed.xml" title="Florida Impact Windows & Doors Blog" />
         <link rel="alternate" type="text/plain" href="https://floridaimpactwindowsdoors.com/llms.txt" title="LLM-readable site info" />
         <link rel="alternate" type="text/plain" href="https://floridaimpactwindowsdoors.com/llms-full.txt" title="Full LLM context" />
@@ -235,13 +227,8 @@ export default function RootLayout({
         <WebSiteJsonLd />
       </head>
       <body className="font-sans antialiased">
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-SKF6705HJM"
-          strategy="afterInteractive"
-        />
-        <Script id="gtag-init" strategy="afterInteractive">
-          {`window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-SKF6705HJM');`}
-        </Script>
+        <GoogleAnalytics />
+        <ClickTracking />
         <Header />
         <main>{children}</main>
         <Footer />

@@ -151,12 +151,13 @@ export default function Header() {
             {/* Logo */}
             <Link href="/" className="flex items-center group relative -my-4">
               <Image
-                src="/images/logo.png"
+                src="/images/logo.webp"
                 alt="Florida Impact Windows & Doors"
-                width={200}
-                height={200}
+                width={80}
+                height={80}
                 className="h-20 w-20 object-contain"
-                priority
+                loading="eager"
+                fetchPriority="low"
               />
               <div className="ml-2 hidden sm:block">
                 <span className="text-lg font-bold text-ocean-950 font-display leading-tight block">

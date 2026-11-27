@@ -133,11 +133,12 @@ export default function DoorReplacementPage() {
             <div>
               <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-black/30 border border-white/10">
                 <Image
-                  src="/images/doors-3.jpg"
+                  src="/images/doors-3.webp"
                   alt="Door replacement with impact doors on a South Florida home"
                   width={600}
                   height={450}
                   className="w-full h-auto object-cover"
+                  fetchPriority="high"
                   priority
                 />
               </div>

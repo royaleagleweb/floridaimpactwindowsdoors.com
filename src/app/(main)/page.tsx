@@ -144,11 +144,13 @@ export default function HomePage() {
       <section id="hero" className="relative overflow-hidden min-h-[680px] lg:min-h-[820px]">
         <div className="absolute inset-0">
           <Image
-            src="/images/hero-bg.jpg"
+            src="/images/hero-bg.webp"
             alt="South Florida home with impact sliding glass doors at dusk"
-            fill
-            className="object-cover object-[center_35%] scale-[1.02]"
+            width={1600}
+            height={1067}
+            className="absolute inset-0 h-full w-full object-cover object-[center_35%] scale-[1.02]"
             priority
+            fetchPriority="high"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#0d1b33]/70 via-[#0d1b33]/28 to-transparent" />
           <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#0d1b33]/35 to-transparent" />
@@ -366,7 +368,7 @@ export default function HomePage() {
             <div className="lg:col-span-2 space-y-8">
               <div className="home-card overflow-hidden grid md:grid-cols-2">
                 <div className="relative h-72 md:h-auto min-h-[320px]">
-                  <Image src="/images/windows.jpg" alt="South Florida home with impact windows installed" fill loading="lazy" className="object-cover" />
+                  <Image src="/images/windows.webp" alt="South Florida home with impact windows installed" width={1168} height={784} loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
                 </div>
                 <div className="p-8 md:p-10 flex flex-col justify-center">
                   <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500 mb-4">
@@ -452,22 +454,23 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-12 gap-4 md:gap-5">
             {[
-              { src: "/images/doors-2.jpg", alt: "Impact door installation crew working on Fort Lauderdale home", className: "col-span-12 md:col-span-7 h-[280px] md:h-[460px]" },
-              { src: "/images/windows4.jpg", alt: "Completed impact window installation on South Florida home with palm trees", className: "col-span-12 md:col-span-5 h-[280px] md:h-[460px]" },
-              { src: "/images/doors4.jpg", alt: "Aerial view of full impact window and door replacement project", className: "col-span-6 md:col-span-4 h-[220px] md:h-[320px]" },
-              { src: "/images/windows6.jpg", alt: "Installation crew installing impact windows on residential home", className: "col-span-6 md:col-span-4 h-[220px] md:h-[320px]" },
-              { src: "/images/doors5.jpg", alt: "Professional crew installing impact doors on Florida home", className: "col-span-12 md:col-span-4 h-[220px] md:h-[320px]" },
-              { src: "/images/windows.jpg", alt: "Completed impact window installation on two-story Florida home", className: "col-span-12 md:col-span-8 h-[240px] md:h-[360px]" },
-              { src: "/images/impact-doors.jpg", alt: "Impact door installation in progress on South Florida residence", className: "col-span-6 md:col-span-4 h-[240px] md:h-[360px]" },
-              { src: "/images/picture-window.jpg", alt: "Large impact picture window installed on Florida home", className: "col-span-6 md:col-span-12 h-[240px] md:h-[380px]" },
+              { src: "/images/doors-2.webp", alt: "Impact door installation crew working on Fort Lauderdale home", width: 1168, height: 784, className: "col-span-12 md:col-span-7 h-[280px] md:h-[460px]" },
+              { src: "/images/windows4.webp", alt: "Completed impact window installation on South Florida home with palm trees", width: 1168, height: 784, className: "col-span-12 md:col-span-5 h-[280px] md:h-[460px]" },
+              { src: "/images/doors4.webp", alt: "Aerial view of full impact window and door replacement project", width: 1168, height: 784, className: "col-span-6 md:col-span-4 h-[220px] md:h-[320px]" },
+              { src: "/images/windows6.webp", alt: "Installation crew installing impact windows on residential home", width: 1168, height: 784, className: "col-span-6 md:col-span-4 h-[220px] md:h-[320px]" },
+              { src: "/images/doors5.webp", alt: "Professional crew installing impact doors on Florida home", width: 1168, height: 784, className: "col-span-12 md:col-span-4 h-[220px] md:h-[320px]" },
+              { src: "/images/windows.webp", alt: "Completed impact window installation on two-story Florida home", width: 1168, height: 784, className: "col-span-12 md:col-span-8 h-[240px] md:h-[360px]" },
+              { src: "/images/impact-doors.webp", alt: "Impact door installation in progress on South Florida residence", width: 1168, height: 784, className: "col-span-6 md:col-span-4 h-[240px] md:h-[360px]" },
+              { src: "/images/picture-window.webp", alt: "Large impact picture window installed on Florida home", width: 1168, height: 784, className: "col-span-6 md:col-span-12 h-[240px] md:h-[380px]" },
             ].map((img) => (
               <figure key={img.src} className={`group relative overflow-hidden rounded-[1.25rem] ${img.className}`}>
                 <Image
                   src={img.src}
                   alt={img.alt}
-                  fill
+                  width={img.width}
+                  height={img.height}
                   loading="lazy"
-                  className="object-cover group-hover:scale-[1.03] transition-transform duration-700"
+                  className="absolute inset-0 h-full w-full object-cover group-hover:scale-[1.03] transition-transform duration-700"
                 />
                 <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#0d1b33]/75 via-[#0d1b33]/20 to-transparent px-5 pb-4 pt-16">
                   <p className="text-white text-sm leading-snug">{img.alt}</p>
@@ -702,11 +705,12 @@ export default function HomePage() {
             </div>
             <div className="relative h-80 lg:h-[540px] rounded-[1.25rem] overflow-hidden">
               <Image
-                src="/images/doors-3.jpg"
+                src="/images/doors-3.webp"
                 alt="Florida Impact Windows and Doors professional installation team installing hurricane rated impact doors in Fort Lauderdale home"
-                fill
+                width={1168}
+                height={784}
                 loading="lazy"
-                className="object-cover"
+                className="absolute inset-0 h-full w-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0d1b33]/50 to-transparent" />
               <div className="absolute bottom-6 left-6 right-6">

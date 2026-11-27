@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import { useRef, useState } from "react";
-import { deliverLead } from "@/lib/notifyLead";
+import { trackGenerateLead } from "@/lib/analytics";
+import { deliverLeadResult } from "@/lib/notifyLead";
 
 const THANK_YOU_PATH = "/thank-you/";
 
@@ -26,7 +27,7 @@ export default function EstimateRequestForm() {
     const notes = String(data.get("notes") ?? "").trim();
     setPending(true);
 
-    await deliverLead(
+    const accepted = await deliverLeadResult(
       {
         _subject: String(data.get("_subject") ?? ""),
         _captcha: String(data.get("_captcha") ?? "false"),
@@ -52,6 +53,7 @@ export default function EstimateRequestForm() {
         message: notes,
       },
     );
+    if (accepted) trackGenerateLead("get_estimate");
 
     window.location.assign(THANK_YOU_PATH);
   }
