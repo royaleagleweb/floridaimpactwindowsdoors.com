@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "../globals.css";
+import ChatBot from "@/components/ChatBot";
 
 export const metadata: Metadata = {
   robots: {
@@ -35,7 +36,10 @@ export default function LandingLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="font-sans antialiased">{children}</body>
+      <body className="font-sans antialiased">
+        {children}
+        <ChatBot />
+      </body>
     </html>
   );
 }
